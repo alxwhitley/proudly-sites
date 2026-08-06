@@ -1,0 +1,13 @@
+## Now
+
+**Current Priority:** Repo scaffolded, `PRODUCT.md` and a trimmed `DESIGN.md` ported from the Framer build, live homepage content pulled from Framer New-build (`ibncrjpdo`) and reconciled against `home-copy.md` (`content-reconciliation.md`, this session). `/impeccable craft` has not been run — homepage is not yet built in Astro.
+**Next Action:** Get Alex's call on the 10 open items in `content-reconciliation.md` (Jubala Coffee vs. Vital Watch, Hero/Nav CTA labels, the stale "Search & AI Visibility" card body, case-study tag chip copy, testimonial grid shape, footer structure, the Smith Cash proof-strip tag bug, and the pricing-copy approach) before running `/impeccable craft` on the homepage — craft will read whatever copy exists as ground truth, so unresolved conflicts should be settled first, not built around.
+
+## Recent
+
+### [Thursday Aug 6, 2026 · Time TBD] — Code
+- **Did:** Scaffolded this Astro repo (`npm create astro@latest`, minimal template, no Decap/OAuth — no CMS on this build) and committed the initial scaffold. Ported `PRODUCT.md` as-is from `framer/proudly/PRODUCT.md`. Built `DESIGN.md` from `framer/proudly/design.md`'s frontmatter token block plus its 8 canonical sections (Overview through Motion — Motion pulled up from below the Framer-specific comment marker since it's still canonical per Impeccable's spec), dropping the Framer Component Map, node IDs, and Open Gaps section; carried the dark-section-card-surface and pricing-number decisions forward as plain notes in a new "Open Decisions" section instead. Connected to the Framer New-build branch via the Framer agent CLI (`session new`, then `getBranches()` + `.switch()` to reach `ibncrjpdo` — the session defaults to `main`), pulled the live homepage (`augiA20Il`) via `serialize`, cross-checked against a full-page screenshot, and wrote `content-reconciliation.md` documenting every place live content disagrees with `pages/home-copy.md`. Did not resolve any conflict — flagged all of them per instructions.
+- **Decided:** Did not run `/impeccable craft` — explicitly out of scope for this session, a separate approval step.
+- **Blocked:** Nothing blocking repo/doc work. The Astro build itself is blocked on Alex resolving the reconciliation conflicts (see `## Now` Next Action).
+
+**Files touched:** New repo `astro/proudly/` created — `.gitignore`, `astro.config.mjs`, `package.json`, `package-lock.json`, `tsconfig.json`, `public/favicon.ico`, `public/favicon.svg`, `src/pages/index.astro` (scaffold defaults, commit 1); `PRODUCT.md`, `DESIGN.md` (commit 2); `content-reconciliation.md`, this `plan.md` (commit 3, pending). No files under `framer/proudly/` were edited by this repo's work — see that project's own `log.md` for its Code entry on this session.
