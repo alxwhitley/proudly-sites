@@ -13,6 +13,7 @@ colors:
   sand: "rgb(237,232,224)"
   oat: "rgb(228,221,211)"
   clay-beige: "rgb(218,207,196)"
+  dark-card: "rgb(61,36,22)"
   warm-taupe: "rgb(156,142,135)"
   hairline-grey: "rgb(221,217,213)"
   true-black: "rgb(0,0,0)"
@@ -149,6 +150,7 @@ The palette reads warm, grounded, and restrained: cream work-surfaces and espres
 - **Espresso Black / 65%** (`rgba(26,15,10,0.65)`): body text on light surfaces.
 - **Pure White / 65%** (`rgba(255,255,255,0.65)`): body text on dark surfaces.
 - **Sand** (`rgb(237,232,224)`) / **Oat** (`rgb(228,221,211)`) / **Clay Beige** (`rgb(218,207,196)`): a stepped card-shade scale, each one layer deeper than Warm Cream.
+- **Dark Card** (`rgb(61,36,22)`): the dedicated inset surface for cards placed on Espresso Black sections, paired with a subtle translucent white hairline.
 - **Warm Taupe** (`rgb(156,142,135)`): muted text and tag text.
 - **Hairline Grey** (`rgb(221,217,213)`): the default 1px border for surfaces and tags.
 - **True Black** (`rgb(0,0,0)`) / **Mid Grey** (`rgb(130,130,130)`) / **Charcoal Grey** (`rgb(84,84,84)`): held in the token scale for edge cases; none are part of the primary visual language above.
@@ -203,6 +205,7 @@ The system is flat by default. Depth appears exactly once, as a deliberate excep
 - **Testimonial Card**: a 2×2 grid, not CSS masonry. Quotes set in Highlight.
 - **Service Card**: one glyph treatment only — no per-service color tinting.
 - Card backgrounds step through the Warm Cream → Sand → Oat → Clay Beige scale depending on surface layering.
+- Cards inset into Espresso Black sections use Dark Card with a subtle translucent white hairline.
 
 ### Navigation
 - **Topbar / Nav Bar**: Pale Nav Grey pill background.
@@ -218,7 +221,6 @@ The system is flat by default. Depth appears exactly once, as a deliberate excep
 ### Don't:
 - **Don't** reintroduce the old amber `rgb(250,177,100)` — it no longer maps to any live token.
 - **Don't** add a third accent color, a per-service tint, or the mockup's second gold (`#C49A3C`) — they collapse into the single Honey Gold accent.
-- **Don't** default to creating a new dark-mode card token casually — see Open Decisions below. Resolve deliberately.
 - **Don't** loop, parallax, or keep anything moving after it settles — motion is appear/scroll-reveal only, and fully off under `prefers-reduced-motion`.
 
 ## Motion
@@ -228,6 +230,4 @@ Nothing loops, parallaxes, or moves after settling. Appear/scroll-reveal only. H
 ## Open Decisions
 
 Carried forward from the Framer build as still-open content/design calls, not yet Framer-specific build detail:
-
-- **Dark-section card surface.** No token yet defined for a card surface used on dark section backgrounds. Decide between a dedicated card-on-dark color (`rgb(61,36,22)` in the original mockup) or reusing Espresso Black with a subtle ~12% white hairline border. Leaning toward the latter to avoid growing the token set, but not yet decided.
 - **Pricing number.** The homepage referenced a placeholder pricing range ("$4,000–$8,000") in two spots (About block, CTA subline) in the Framer build. The pricing tier was moving and the new number was never confirmed. Do not hardcode that old range into the Astro build — treat pricing copy as a flagged placeholder until Alex confirms a number.

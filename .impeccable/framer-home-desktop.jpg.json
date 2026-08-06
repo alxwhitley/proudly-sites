@@ -1,0 +1,8 @@
+{
+  "approved": true,
+  "source": "Current Framer New-build homepage desktop breakpoint",
+  "sourceBranch": "ibncrjpdo",
+  "surface": "src/pages/index.astro",
+  "mobileComp": ".impeccable/framer-home-mobile.jpg",
+  "instruction": "Reproduce the existing design exactly; do not reinterpret it."
+}
