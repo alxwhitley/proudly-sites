@@ -1,0 +1,380 @@
+---
+/*
+  Contact route (/contact) — Persuade surface, extension of the homepage's
+  "Grounded Workshop" world. Human/contact ledger on the left, a single flat
+  form card on the right; the system's one terracotta stacked-shadow CTA is
+  spent on Send. Form posts to Web3Forms (host-agnostic, public access key);
+  JS enhances to an inline success state, native POST is the no-JS fallback.
+  Route-specific composition lives here; shared chrome + tokens come from
+  BaseLayout / global.css. See .impeccable/surfaces for the surface brief.
+*/
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Contact · Proudly Sites"
+  description="Work directly with Alex Whitley, the one person who designs, writes, and builds your Proudly site. Tell me about your business and where your current site is holding you back."
+>
+  <section class="section contact">
+    <!--
+      THESIS: reaching a real, accountable person, not a support queue; refuses the
+        generic centered-form-on-a-slab contact template.
+      OWN-WORLD: Warm Cream ground, Playfair display + Lato, one flat white form card
+        with a hairline edge, the lone terracotta stacked-shadow CTA on Send.
+      STORY: a cautious founder sees Alex's face and direct line, believes one person
+        will own the work, and sends a short qualified message.
+      FIRST VIEWPORT: full-width Playfair H1 + lead, then human ledger (portrait, name,
+        email/phone/studio) left and the form card right; Send sits at the card's foot.
+      FORM: two-column ledger + card, established-world extension (no concept roll).
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md.
+    -->
+    <header class="contact-head">
+      <h1>Let&rsquo;s talk about your website.</h1>
+      <p class="lead">You&rsquo;ll be working with me directly, from the first message through launch. Tell me about your business and where your current site is holding you back, and I&rsquo;ll take it from there.</p>
+    </header>
+
+    <div class="contact-grid">
+      <aside class="contact-aside">
+        <div class="person">
+          <img class="person-photo" src="/images/alex-whitley.jpeg" width="112" height="112" alt="Alex Whitley, founder of Proudly Sites" />
+          <div class="person-id">
+            <p class="person-name">Alex Whitley</p>
+            <p class="person-role">Founder, Proudly Sites</p>
+          </div>
+        </div>
+
+        <ul class="methods">
+          <li>
+            <span class="method-label">Email</span>
+            <a href="mailto:alex@proudlysites.com">alex@proudlysites.com</a>
+          </li>
+          <li>
+            <span class="method-label">Call</span>
+            <a href="tel:+19196348169">(919) 634-8169</a>
+          </li>
+          <li>
+            <span class="method-label">Studio</span>
+            <span class="method-value">Raleigh, North Carolina</span>
+          </li>
+        </ul>
+
+        <div class="assurance">
+          <h2>What happens next</h2>
+          <p>I read every message myself. If it looks like a fit, we&rsquo;ll set up a short call to talk through your site and where it&rsquo;s falling short.</p>
+        </div>
+      </aside>
+
+      <div class="contact-form-card">
+        <h2 class="form-title">Send a message</h2>
+
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+          <!-- TODO: replace with the real Web3Forms access key (public, safe to commit). -->
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="New inquiry from proudlysites.com" />
+          <input type="hidden" name="from_name" value="Proudly Sites website" />
+          <!-- Honeypot: real people leave this untouched; bots trip it. -->
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+          <div class="field">
+            <label for="cf-name">Name <span class="req" aria-hidden="true">*</span></label>
+            <input id="cf-name" name="name" type="text" required autocomplete="name" placeholder="Your name" />
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="cf-email">Email <span class="req" aria-hidden="true">*</span></label>
+              <input id="cf-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" />
+            </div>
+            <div class="field">
+              <label for="cf-phone">Phone <span class="optional">optional</span></label>
+              <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="(919) 000-0000" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="cf-need">What do you need? <span class="req" aria-hidden="true">*</span></label>
+            <select id="cf-need" name="need" required>
+              <option value="" disabled selected>Choose one</option>
+              <option value="A new website">A new website</option>
+              <option value="A redesign of my current site">A redesign of my current site</option>
+              <option value="Not sure yet, let's talk">Not sure yet, let&rsquo;s talk</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="cf-message">Message <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="cf-message" name="message" rows="5" required placeholder="Tell me about your business and what you're looking for."></textarea>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert" hidden>
+            Something went wrong sending that. Email me directly at
+            <a href="mailto:alex@proudlysites.com">alex@proudlysites.com</a> and I&rsquo;ll get right back to you.
+          </p>
+
+          <button type="submit" class="primary-button form-submit">Send message</button>
+          <p class="form-note">You&rsquo;ll hear back from me personally.</p>
+        </form>
+
+        <div class="form-success" id="form-success" role="status" tabindex="-1" hidden>
+          <span class="success-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+          </span>
+          <h2>Message sent</h2>
+          <p>Thanks, it&rsquo;s on its way. You&rsquo;ll hear back from me personally.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Route-specific composition for /contact. Tokens + chrome are global. */
+  .section.contact {
+    padding-top: 120px;
+    padding-bottom: 140px;
+    max-width: 1180px;
+  }
+
+  .contact-head {
+    max-width: 620px;
+    margin-bottom: 56px;
+  }
+  .contact-head h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.4vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin: 0 0 20px;
+  }
+  .contact-head .lead {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 0.82fr 1.18fr;
+    gap: 60px;
+    align-items: start;
+  }
+
+  /* ---- Left: the human ledger ---- */
+  .contact-aside { padding-top: 6px; }
+  .person { display: flex; align-items: center; gap: 16px; margin-bottom: 34px; }
+  .person-photo {
+    width: 72px; height: 72px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--line);
+  }
+  .person-name { font-weight: 700; font-size: 16px; margin: 0 0 3px; }
+  .person-role { font-size: 14px; color: #6d635c; margin: 0; }
+
+  .methods { list-style: none; margin: 0; padding: 0; }
+  .methods li {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
+  }
+  .methods li:last-child { border-bottom: 1px solid var(--line); }
+  .method-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6d635c;
+  }
+  .methods a, .method-value { font-size: 16px; color: var(--espresso); }
+  .methods a { transition: color 0.18s ease; }
+  .methods a:hover { color: var(--terracotta); }
+
+  .assurance { margin-top: 32px; }
+  .assurance h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .assurance p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0;
+    max-width: 30ch;
+  }
+
+  /* ---- Right: the form card ---- */
+  .contact-form-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 40px;
+  }
+  .form-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    margin: 0 0 24px;
+  }
+
+  .field { margin-bottom: 18px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--espresso);
+    margin-bottom: 7px;
+  }
+  .req { color: var(--terracotta); }
+  .optional { font-weight: 400; color: #6d635c; font-size: 12px; }
+
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    color: var(--espresso);
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .field textarea { resize: vertical; min-height: 120px; line-height: 1.5; }
+  .field input::placeholder,
+  .field textarea::placeholder { color: #6d635c; }
+  .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%236d635c' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    cursor: pointer;
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--terracotta) 18%, transparent);
+  }
+
+  /* Honeypot stays off-screen for humans. */
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+  .form-error {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--espresso);
+    background: var(--sand);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 0 18px;
+  }
+  .form-error a { color: var(--espresso); text-decoration: underline; }
+
+  button.primary-button.form-submit {
+    width: 100%;
+    margin-top: 6px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .form-note {
+    font-size: 14px;
+    color: #6d635c;
+    text-align: center;
+    margin: 14px 0 0;
+  }
+
+  /* ---- Inline success ---- */
+  .form-success { text-align: center; padding: 24px 8px; }
+  .form-success:focus { outline: none; }
+  .success-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: var(--sand);
+    color: var(--espresso);
+    margin-bottom: 18px;
+  }
+  .success-mark svg { width: 26px; height: 26px; }
+  .form-success h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .form-success p { font-size: 16px; line-height: 1.6; color: var(--muted); margin: 0; max-width: 340px; margin-inline: auto; }
+
+  /* ---- Motion: one authored load moment ---- */
+  @media (prefers-reduced-motion: no-preference) {
+    .contact-head, .contact-aside, .contact-form-card {
+      animation: contact-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .contact-aside { animation-delay: 0.07s; }
+    .contact-form-card { animation-delay: 0.13s; }
+  }
+  @keyframes contact-rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 800px) {
+    .section.contact { padding-top: 64px; padding-bottom: 80px; }
+    .contact-head { margin-bottom: 36px; }
+    .contact-head .lead { font-size: 16px; }
+    .contact-grid { display: flex; flex-direction: column; gap: 32px; }
+    .contact-form-card { order: -1; padding: 26px 22px; }
+    .field-row { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+
+<script>
+  const form = document.getElementById("contact-form") as HTMLFormElement | null;
+  const success = document.getElementById("form-success");
+  const errorEl = document.getElementById("form-error");
+
+  if (form && success && errorEl) {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      const label = btn ? btn.textContent : "";
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      errorEl.hidden = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          form.hidden = true;
+          success.hidden = false;
+          (success as HTMLElement).focus();
+        } else {
+          throw new Error(data.message || "Request failed");
+        }
+      } catch (err) {
+        errorEl.hidden = false;
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+      }
+    });
+  }
+</script>

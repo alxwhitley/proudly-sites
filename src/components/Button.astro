@@ -1,0 +1,10 @@
+---
+/*
+  Primary action button (the system's single terracotta CTA with the offset
+  shadow). Renders an anchor; styling lives in src/styles/global.css
+  (.primary-button). Pass `href`, optional extra `class` for placement tweaks.
+*/
+const { href, class: className } = Astro.props;
+const cls = className ? `primary-button ${className}` : "primary-button";
+---
+<a class={cls} href={href}><slot /></a>

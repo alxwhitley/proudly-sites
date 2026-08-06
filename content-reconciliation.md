@@ -4,6 +4,23 @@
 
 Sections where live matches home-copy.md (Proof Strip client-tag intent, Featured Work eyebrow/H2, Process, most Testimonials, CTA headline/body) are not listed as conflicts below unless a specific line differs.
 
+## Resolutions (decided Thursday Aug 6, 2026)
+
+All items below were decided with Alex on 2026-08-06. The analysis is kept for reference; these are the calls the Astro build now follows.
+
+1. Jubala vs Vital Watch: follow live. Vital Watch stays in the Proof Strip, Featured Work, and Footer; Jubala stays out.
+2. Hero vs bottom CTA: keep live. Hero "Get in Touch", bottom CTA "Let's Work Together".
+3. Nav CTA label: "Get in Touch". (This first landed on "Book a Free Call", then Alex changed it to "Get in Touch" the same session; the shared Header already reads "Get in Touch".)
+4. Nav structure: build the full secondary-page set (Work, Services, Pricing, Blog, About) and match the live nav.
+5. Third Services card: rewritten for real "Search & AI Visibility" positioning (done on the homepage this session).
+6. Case-study tag chips: keep the live 4-tag chips.
+7. Testimonials: keep live, 3 real quotes plus the "5.0 Google" stat tile.
+8. Footer: full sitemap as-is.
+9. Smith Cash proof-strip tag: confirmed a live-only wiring bug; the Astro build already renders "Family Law" correctly, so no change needed.
+10. Pricing: carry the live number-free pricing copy forward.
+
+Plus: keep the mobile 16px text floor on the homepage.
+
 ---
 
 ## Nav

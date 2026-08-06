@@ -2,7 +2,7 @@
 name: Proudly Sites
 description: Custom Framer marketing site for a solo-operator web design studio serving reputation-led service businesses.
 colors:
-  burnt-terracotta: "rgb(231,85,28)"
+  burnt-terracotta: "rgb(204,70,19)"
   honey-gold: "rgb(243,192,69)"
   pure-white: "rgb(255,255,255)"
   warm-cream: "rgb(245,243,239)"
@@ -15,6 +15,7 @@ colors:
   clay-beige: "rgb(218,207,196)"
   dark-card: "rgb(61,36,22)"
   warm-taupe: "rgb(156,142,135)"
+  muted-label: "rgb(109,99,92)"
   hairline-grey: "rgb(221,217,213)"
   true-black: "rgb(0,0,0)"
   mid-grey: "rgb(130,130,130)"
@@ -137,7 +138,7 @@ The system is a deliberate maturation past the original mockup's more folksy $4�
 The palette reads warm, grounded, and restrained: cream work-surfaces and espresso-dark sections, with a single decisive accent reserved for action.
 
 ### Primary
-- **Burnt Terracotta** (`rgb(231,85,28)`): the only action color in the system — CTAs, primary buttons, link hover, key highlights. Never shared with any other role.
+- **Burnt Terracotta** (`rgb(204,70,19)`): the only action color in the system — CTAs, primary buttons, link hover, key highlights. Never shared with any other role. Deepened from the original `rgb(231,85,28)` on 2026-08-06 so white button text clears WCAG AA (~4.7:1, was 3.7:1); still a single burnt-terracotta accent.
 
 ### Secondary
 - **Honey Gold** (`rgb(243,192,69)`): decorative only — the eyebrow tick, review stars, and the dedicated accent surface. Never a button, never a full-bleed field.
@@ -152,6 +153,7 @@ The palette reads warm, grounded, and restrained: cream work-surfaces and espres
 - **Sand** (`rgb(237,232,224)`) / **Oat** (`rgb(228,221,211)`) / **Clay Beige** (`rgb(218,207,196)`): a stepped card-shade scale, each one layer deeper than Warm Cream.
 - **Dark Card** (`rgb(61,36,22)`): the dedicated inset surface for cards placed on Espresso Black sections, paired with a subtle translucent white hairline.
 - **Warm Taupe** (`rgb(156,142,135)`): muted text and tag text.
+- **Muted Label** (`rgb(109,99,92)` / `#6d635c`): small uppercase eyebrows, captions, cites, and footer labels — a deeper taupe that clears WCAG AA (≥4.5:1) on cream, white, and the beige surfaces, replacing the earlier ad-hoc light greys (#8e8079 / #867b75 / #8d817a / #81756f) on 2026-08-06.
 - **Hairline Grey** (`rgb(221,217,213)`): the default 1px border for surfaces and tags.
 - **True Black** (`rgb(0,0,0)`) / **Mid Grey** (`rgb(130,130,130)`) / **Charcoal Grey** (`rgb(84,84,84)`): held in the token scale for edge cases; none are part of the primary visual language above.
 
@@ -202,7 +204,7 @@ The system is flat by default. Depth appears exactly once, as a deliberate excep
 - **Section Tag**, paired with the Eyebrow text style: the small uppercase, tracked label opening each section.
 
 ### Cards
-- **Testimonial Card**: a 2×2 grid, not CSS masonry. Quotes set in Highlight.
+- **Testimonial Card**: a three-up row of the real testimonials, Playfair Highlight quotes. Previously a 2×2 that padded three testimonials with a standalone "5.0" rating tile; the redundant tile was removed on 2026-08-06 so only real testimonials show.
 - **Service Card**: one glyph treatment only — no per-service color tinting.
 - Card backgrounds step through the Warm Cream → Sand → Oat → Clay Beige scale depending on surface layering.
 - Cards inset into Espresso Black sections use Dark Card with a subtle translucent white hairline.

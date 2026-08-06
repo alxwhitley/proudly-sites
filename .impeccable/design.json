@@ -1,14 +1,15 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-06T14:30:00Z",
+  "generatedAt": "2026-08-06T19:21:06Z",
   "title": "Design System: Proudly Sites",
   "extensions": {
     "colorMeta": {
-      "burnt-terracotta": { "role": "primary", "displayName": "Burnt Terracotta", "canonical": "rgb(231,85,28)", "tonalRamp": ["#431202", "#6f2007", "#9c300d", "#ca4214", "#e7551c", "#f17e50", "#f8ae91", "#fde0d4"] },
+      "burnt-terracotta": { "role": "primary", "displayName": "Burnt Terracotta", "canonical": "rgb(204,70,19)", "tonalRamp": ["#431202", "#6f2007", "#9c300d", "#cc4613", "#db6537", "#eb936f", "#f5c4ad", "#fce8df"] },
       "honey-gold": { "role": "secondary", "displayName": "Honey Gold", "canonical": "rgb(243,192,69)", "tonalRamp": ["#392902", "#604708", "#88670f", "#b18a1c", "#d9ad30", "#f3c045", "#f8d985", "#fdf0c8"] },
       "warm-cream": { "role": "neutral", "displayName": "Warm Cream", "canonical": "rgb(245,243,239)", "tonalRamp": ["#25221e", "#4a4540", "#706a64", "#98918a", "#beb8b1", "#ddd8d2", "#eeeae5", "#f5f3ef"] },
       "espresso-black": { "role": "neutral", "displayName": "Espresso Black", "canonical": "rgb(26,15,10)", "tonalRamp": ["#1a0f0a", "#3e2b22", "#634a3e", "#896b5d", "#af8f80", "#d0b6a9", "#eadbd4", "#f8efeb"] },
-      "dark-card": { "role": "neutral", "displayName": "Dark Card", "canonical": "rgb(61,36,22)", "tonalRamp": ["#26150c", "#3d2416", "#624332", "#886553", "#ad8a77", "#ceb2a3", "#e8d9d1", "#f7efeb"] }
+      "dark-card": { "role": "neutral", "displayName": "Dark Card", "canonical": "rgb(61,36,22)", "tonalRamp": ["#26150c", "#3d2416", "#624332", "#886553", "#ad8a77", "#ceb2a3", "#e8d9d1", "#f7efeb"] },
+      "muted-label": { "role": "neutral", "displayName": "Muted Label", "canonical": "rgb(109,99,92)", "tonalRamp": ["#1c1917", "#38322e", "#544b45", "#6d635c", "#8d817a", "#b0a69f", "#d3ccc6", "#eeeae7"] }
     },
     "typographyMeta": {
       "heading-1": { "displayName": "Heading 1", "purpose": "Primary hero statement." },
@@ -35,35 +36,42 @@
       "refersTo": "button-primary",
       "description": "Terracotta conversion action with the system's sole hard offset shadow.",
       "html": "<button class=\"ds-btn-primary\">GET IN TOUCH</button>",
-      "css": ".ds-btn-primary{background:rgb(231,85,28);color:#fff;border:1.5px solid rgb(26,15,10);border-radius:7px;padding:15px 27px;box-shadow:6px 6px 0 rgb(26,15,10);font:400 16px/1.3 Lato,sans-serif;transition:transform .2s ease,box-shadow .2s ease}.ds-btn-primary:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 rgb(26,15,10)}.ds-btn-primary:focus-visible{outline:3px solid rgb(243,192,69);outline-offset:4px}"
+      "css": ".ds-btn-primary{background:rgb(204,70,19);color:#fff;border:1.5px solid rgb(26,15,10);border-radius:7px;padding:15px 27px;box-shadow:6px 6px 0 rgb(26,15,10);font:400 16px/1.3 Lato,sans-serif;transition:transform .2s ease,box-shadow .2s ease}.ds-btn-primary:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 rgb(26,15,10)}.ds-btn-primary:focus-visible{outline:3px solid rgb(243,192,69);outline-offset:4px}"
     },
     {
       "name": "Founder Chip",
       "kind": "chip",
       "description": "Compact proof of direct founder involvement.",
       "html": "<span class=\"ds-founder-chip\"><span class=\"ds-founder-avatar\">AW</span><span><strong>You work directly with me.</strong><small>Alex Whitley, Founder</small></span></span>",
-      "css": ".ds-founder-chip{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid #ebe7e2;border-radius:999px;padding:6px 20px 6px 7px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-founder-avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgb(237,232,224);font-size:11px}.ds-founder-chip strong,.ds-founder-chip small{display:block}.ds-founder-chip strong{font-size:13px}.ds-founder-chip small{font-size:10px;color:#8e8079;margin-top:1px}"
+      "css": ".ds-founder-chip{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid #ebe7e2;border-radius:999px;padding:6px 20px 6px 7px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-founder-avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgb(237,232,224);font-size:11px}.ds-founder-chip strong,.ds-founder-chip small{display:block}.ds-founder-chip strong{font-size:14px}.ds-founder-chip small{font-size:12px;color:#6d635c;margin-top:1px}"
     },
     {
       "name": "Service Card",
       "kind": "card",
       "description": "Flat light service surface with a restrained hairline.",
       "html": "<article class=\"ds-service-card\"><span class=\"ds-service-icon\">◎</span><h3>Branding</h3><p>A brand that earns trust before you say a word.</p></article>",
-      "css": ".ds-service-card{background:#fff;border:1px solid rgb(221,217,213);border-radius:14px;padding:34px 30px 38px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-service-icon{width:38px;height:38px;display:grid;place-items:center;background:#fff0e9;color:rgb(231,85,28);border-radius:8px;margin-bottom:42px}.ds-service-card h3{font:500 28px/1.2 'Playfair Display',Georgia,serif;letter-spacing:-.035em;margin:0 0 15px}.ds-service-card p{color:rgba(26,15,10,.65);font-size:14px;margin:0}"
+      "css": ".ds-service-card{background:#fff;border:1px solid rgb(221,217,213);border-radius:14px;padding:34px 30px 38px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-service-icon{width:38px;height:38px;display:grid;place-items:center;background:#fff0e9;color:rgb(204,70,19);border-radius:8px;margin-bottom:42px}.ds-service-card h3{font:500 28px/1.2 'Playfair Display',Georgia,serif;letter-spacing:-.035em;margin:0 0 15px}.ds-service-card p{color:rgba(26,15,10,.65);font-size:16px;margin:0}"
     },
     {
       "name": "Process Card",
       "kind": "card",
       "description": "Dark inset card for process steps on Espresso Black.",
       "html": "<article class=\"ds-process-card\"><b>1</b><h3>We Talk, Founder to Founder</h3><p>Tell me about your business and what is not working.</p></article>",
-      "css": ".ds-process-card{background:rgb(61,36,22);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px 25px 32px;min-height:240px;color:#fff;font-family:Lato,sans-serif}.ds-process-card b{color:rgb(243,192,69);font-size:14px}.ds-process-card h3{font:500 20px/1.25 'Playfair Display',Georgia,serif;margin:42px 0 15px}.ds-process-card p{font-size:13px;line-height:1.45;color:rgba(255,255,255,.63);margin:0}"
+      "css": ".ds-process-card{background:rgb(61,36,22);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px 25px 32px;min-height:290px;color:#fff;font-family:Lato,sans-serif}.ds-process-card b{color:rgb(243,192,69);font-size:14px}.ds-process-card h3{font:500 20px/1.25 'Playfair Display',Georgia,serif;margin:42px 0 15px}.ds-process-card p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.7);margin:0}"
     },
     {
       "name": "Navigation Bar",
       "kind": "nav",
       "description": "Pale neutral pill framed by the espresso system color.",
-      "html": "<nav class=\"ds-nav\"><strong>Proudly Sites</strong><span><a href=\"#work\">Work</a><a href=\"#services\">Services</a></span><a class=\"ds-nav-cta\" href=\"#contact\">Book a Free Call</a></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:28px;background:rgb(247,247,247);border:1.5px solid rgb(26,15,10);border-radius:11px;padding:14px 20px 14px 28px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-nav span{display:flex;gap:24px}.ds-nav a{color:inherit;text-decoration:none;font-size:14px}.ds-nav-cta{background:rgb(26,15,10);color:#fff!important;border-radius:7px;padding:14px 20px}.ds-nav a:hover{color:rgb(231,85,28)}.ds-nav a:focus-visible{outline:3px solid rgb(243,192,69);outline-offset:4px}"
+      "html": "<nav class=\"ds-nav\"><strong>Proudly Sites</strong><span><a href=\"#work\">Work</a><a href=\"#services\">Services</a></span><a class=\"ds-nav-cta\" href=\"#contact\">Get in Touch</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:28px;background:rgb(247,247,247);border:1.5px solid rgb(26,15,10);border-radius:11px;padding:14px 20px 14px 28px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-nav span{display:flex;gap:24px}.ds-nav a{color:inherit;text-decoration:none;font-size:15px}.ds-nav-cta{background:rgb(26,15,10);color:#fff!important;border:1px solid rgb(26,15,10);border-radius:7px;padding:13px 19px;transition:background .2s ease}.ds-nav-cta:hover{background:#33241b}.ds-nav a:hover{color:rgb(204,70,19)}.ds-nav a:focus-visible{outline:3px solid rgb(243,192,69);outline-offset:4px}"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "description": "Flat hairline pill listing a project's scope; never colored, never a button.",
+      "html": "<ul class=\"ds-tags\"><li>17-Page Site</li><li>Trust-First Brand Identity</li><li>High-Intent Legal SEO</li></ul>",
+      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none;font-family:Lato,sans-serif}.ds-tags li{background:#f1eee9;border:1px solid #e3ddd7;border-radius:999px;padding:7px 11px;color:#746862;font-size:12px}"
     }
   ],
   "narrative": {
