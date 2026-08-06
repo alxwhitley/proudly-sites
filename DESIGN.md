@@ -169,7 +169,7 @@ The palette reads warm, grounded, and restrained: cream work-surfaces and espres
 
 ### Hierarchy
 - **Heading 1** (Playfair 500, 56px, 1.1 line-height, -0.03em): the hero H1 — the largest serif moment on the page.
-- **Heading 2** (Lato, 40px, 1.1, -0.03em): major section headings.
+- **Heading 2** (40px, 1.1, -0.03em): major section headings, rendered in one of two faces by section type — **Lato** for labelled/eyebrow-led grid sections (Featured Work, Reviews), and **Playfair 500** for narrative and closing sections (About, Process, Closing CTA, and the wall-to-wall-narrative /about page). Same size and role, face chosen by whether the section reads as a data grid or as prose.
 - **Heading 3** (Playfair 500, 32px, 1.3, -0.04em): sub-section serif headings.
 - **Heading 4** (Lato, 24px, 1.4, -0.04em): minor headings.
 - **Heading 5** (Playfair 500, 20px, 1.3, 0em): small serif headings.

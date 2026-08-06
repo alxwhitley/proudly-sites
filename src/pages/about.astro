@@ -1,0 +1,486 @@
+---
+/*
+  About route (/about) — Persuade surface, established-world extension of the
+  homepage's "Grounded Workshop." No new world, no concept roll. Rebuilt on the
+  live shared system (BaseLayout / global.css tokens + chrome); the Framer
+  about-mockup is a structural reference only, its stale tokens dropped. One real
+  photo (alex-whitley.jpeg) carries the page; the story is text-forward, the one
+  terracotta stacked-shadow CTA is spent on the close. Route-specific composition
+  lives here; shared chrome + tokens come from BaseLayout / global.css.
+  See .impeccable/surfaces for the surface brief.
+*/
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="About · Proudly Sites"
+  description="Proudly Sites is a one-person web design studio in Raleigh, run by Alex Whitley. Strategy, copy, design, and build from one accountable person, start to finish."
+>
+  <section class="section about-hero">
+    <!--
+      THESIS: make the one-person model read as an asset, not a risk; refuse the agency "About us" team-grid and stock-values template.
+      OWN-WORLD: the homepage's Grounded Workshop, inherited whole - Warm Cream ground, Espresso Black close, Playfair editorial headings on Lato text, Honey Gold decorating only, one Burnt Terracotta stacked-shadow CTA.
+      STORY: a skeptical, referred founder reads why Proudly exists, how Alex works, and the honest answer to "is one person enough," then takes the ask.
+      FIRST VIEWPORT: two columns - H1 "The Person Behind Your Project" plus a short lead left, Alex's real 4:5 headshot right; the primary action waits at the close.
+      FORM: established-world extension (no concept roll).
+      FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md.
+    -->
+    <div class="hero-copy">
+      <h1>The Person Behind Your Project</h1>
+      <p class="lead">I&rsquo;m Alex Whitley, and Proudly Sites is a one-person web design studio in Raleigh. If we work together, this page is who you&rsquo;re working with. All of it.</p>
+    </div>
+    <img
+      class="hero-photo"
+      src="/images/alex-whitley.jpeg"
+      width="520"
+      height="650"
+      alt="Alex Whitley, founder of Proudly Sites"
+    />
+  </section>
+
+  <div class="surface-white">
+    <section class="section story rv">
+      <p class="eyebrow">Why This Exists</p>
+      <h2>Great businesses, stuck with websites beneath their work</h2>
+      <div class="story-body">
+        <p>Every business I admire has the same gap. The work is excellent. The reputation is real. Clients rave, referrals come in, and then those referrals land on a website that looks like it was set up in a weekend years ago and never touched again.</p>
+        <p class="pullquote">A referral is a moment of trust, and the website is where that trust either holds or hesitates.</p>
+        <p>That gap is the whole reason Proudly Sites exists. Not because businesses need more leads or better funnels.</p>
+        <p>I build sites for businesses that win on reputation. The kind where someone already said &ldquo;you should call them,&rdquo; and the site&rsquo;s only job is to confirm they were right.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="section principles">
+    <div class="principles-head rv">
+      <p class="eyebrow">How I Work</p>
+      <h2>Three things I won&rsquo;t compromise on</h2>
+    </div>
+    <ol class="principle-list stagger">
+      <li class="principle">
+        <span class="principle-num" aria-hidden="true">1</span>
+        <div>
+          <h3>Strategy before design</h3>
+          <p>Before anything gets styled, we get clear on who your clients are, what they need to believe, and what your site has to prove. A beautiful site built on a wrong assumption is still a wrong site.</p>
+        </div>
+      </li>
+      <li class="principle">
+        <span class="principle-num" aria-hidden="true">2</span>
+        <div>
+          <h3>One person, start to finish</h3>
+          <p>The person on your discovery call writes your copy, designs your pages, builds the site, and answers your emails. Nothing gets lost in a handoff because there are no handoffs.</p>
+        </div>
+      </li>
+      <li class="principle">
+        <span class="principle-num" aria-hidden="true">3</span>
+        <div>
+          <h3>Reputation assets, not lead machines</h3>
+          <p>I don&rsquo;t build funnels. I build sites that make the trust you&rsquo;ve already earned visible, so every referral arrives and thinks &ldquo;yes, this is what I was told.&rdquo;</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <div class="surface-white">
+    <section class="section question rv">
+      <p class="eyebrow">The Honest Question</p>
+      <h2 class="question-h2">&ldquo;Is one person really enough?&rdquo;</h2>
+      <div class="question-body">
+        <p>It&rsquo;s a fair question, and I&rsquo;d rather answer it here than have you wonder.</p>
+        <p>Here&rsquo;s what one person means in practice. It means the strategy, copy, design, and build all come from the same brain, so nothing gets diluted between departments. It means when you email, the person who answers is the person who can actually fix the thing. It means your project is never the account a junior got assigned to.</p>
+        <p>What it doesn&rsquo;t mean is small output. Modern tools let one careful person deliver what used to take a team, and the judgment stays in one place the whole way through.</p>
+        <ul class="chips">
+          <li>Multi-location e-commerce</li>
+          <li>Booking systems</li>
+          <li>Full brand systems</li>
+        </ul>
+        <p>If your project genuinely needs a ten-person agency, I&rsquo;ll tell you that on the first call. Most don&rsquo;t.</p>
+        <p class="question-sub">Honest advice on the first call, even if the advice is &ldquo;you don&rsquo;t need me.&rdquo;</p>
+      </div>
+    </section>
+  </div>
+
+  <div class="cred">
+    <div class="cred-inner">
+      <span>Based in Raleigh, NC</span>
+      <span class="cred-reviews"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>Rated 5.0 on Google Reviews</span>
+      <span>5 years in business</span>
+    </div>
+  </div>
+
+  <div class="surface-dark">
+    <section class="section closing rv">
+      <div class="closing-copy">
+        <h2>Your Work Deserves a Website That Proves It</h2>
+        <p>Send a message about your business. You&rsquo;ll hear back from me, not a sales team, within a day, with honest advice on whether a new site is even the right move.</p>
+        <a class="primary-button" href="/contact">Let&rsquo;s Work Together</a>
+        <p class="closing-sub">Live in weeks, not months.</p>
+      </div>
+      <aside class="alex-card">
+        <img
+          class="alex-card-photo"
+          src="/images/alex-whitley.jpeg"
+          width="64"
+          height="64"
+          loading="lazy"
+          alt=""
+        />
+        <p class="alex-card-name">Alex Whitley</p>
+        <p class="alex-card-role">Founder, Proudly Sites. Every project, start to finish, is mine.</p>
+        <p class="alex-card-anchor">Member, Triangle Christian Chamber of Commerce</p>
+      </aside>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  /* Route-specific composition for /about. Tokens + chrome are global. */
+
+  /* ---- Full-bleed surface bands ---- */
+  .surface-white { background: var(--white); }
+  .surface-dark { background: var(--espresso); color: #fff; }
+
+  /* ---- Shared eyebrow (world-consistent section tag) ---- */
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+    margin: 0 0 18px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ---- Hero ---- */
+  .section.about-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 64px;
+    align-items: center;
+    padding-top: clamp(56px, 7vw, 104px);
+    padding-bottom: clamp(64px, 7vw, 120px);
+  }
+  .about-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.4vw, 56px);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin: 0 0 22px;
+  }
+  .about-hero .lead {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--muted);
+    margin: 0;
+    max-width: 30rem;
+  }
+  .hero-photo {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 28%;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+  }
+
+  /* ---- Story (text-forward) ---- */
+  .section.story { max-width: 900px; }
+  .story h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 3.6vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0 0 30px;
+    max-width: 22ch;
+  }
+  .story-body { max-width: 37rem; }
+  .story-body p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--muted);
+    margin: 0 0 22px;
+  }
+  .story-body p:last-child { margin-bottom: 0; }
+  .pullquote {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(24px, 2.8vw, 32px);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--espresso);
+    max-width: 34rem;
+    margin: 36px 0 !important;
+  }
+
+  /* ---- Principles ---- */
+  .section.principles { max-width: 920px; }
+  .principles-head { margin-bottom: 52px; }
+  .principles-head h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 3.6vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+  .principle-list { list-style: none; margin: 0; padding: 0; }
+  .principle {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 32px;
+    align-items: start;
+    padding: 36px 0;
+    border-top: 1px solid var(--line);
+  }
+  .principle-num {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 32px;
+    line-height: 1;
+    color: #6d635c;
+  }
+  .principle h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .principle p {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+    max-width: 54ch;
+  }
+
+  /* ---- The honest question ---- */
+  .section.question { max-width: 760px; }
+  .question-h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: clamp(24px, 3.4vw, 36px);
+    line-height: 1.24;
+    letter-spacing: -0.02em;
+    margin: 0 0 26px;
+  }
+  .question-body { max-width: 37rem; }
+  .question-body p {
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--muted);
+    margin: 0 0 22px;
+  }
+  .chips {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    padding: 0;
+    margin: 26px 0;
+  }
+  .chips li {
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 8px 16px;
+    font-size: 14px;
+    color: var(--espresso);
+  }
+  .question-sub {
+    margin: 30px 0 0;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6d635c;
+  }
+
+  /* ---- Trust bar ---- */
+  .cred {
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .cred-inner {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 28px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px 48px;
+    font-size: 14px;
+    color: var(--muted);
+  }
+  .cred-inner span { white-space: nowrap; }
+  .cred-reviews {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--espresso);
+  }
+  .stars { color: var(--gold); letter-spacing: 2px; }
+
+  /* ---- Closing CTA (dark, two-column) ---- */
+  .section.closing {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: center;
+    /* Footer is also espresso; trim the section's own padding so the two dark
+       bands don't stack into an oversized void before the footer columns. */
+    padding-top: clamp(72px, 8vw, 120px);
+    padding-bottom: clamp(52px, 6vw, 92px);
+  }
+  .closing-copy h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 3.4vw, 40px);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+    color: #fff;
+    margin: 0 0 20px;
+  }
+  .closing-copy p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0 0 30px;
+    max-width: 34rem;
+  }
+  .closing-sub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 20px 0 0;
+  }
+  .alex-card {
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 14px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+  .alex-card-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 28%;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+  }
+  .alex-card-name { font-size: 16px; font-weight: 700; color: #fff; margin: 0; }
+  .alex-card-role {
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+  }
+  .alex-card-anchor {
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.6);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 14px;
+    margin: 6px 0 0;
+  }
+
+  /* ---- Motion: one authored load moment + scroll reveal ---- */
+  @media (prefers-reduced-motion: no-preference) {
+    .about-hero .hero-copy > *,
+    .about-hero .hero-photo {
+      opacity: 0;
+      animation: about-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .about-hero .hero-copy .lead { animation-delay: 0.08s; }
+    .about-hero .hero-photo { animation-delay: 0.16s; }
+  }
+  @keyframes about-rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* Scroll reveal is gated behind the JS-added .reveal class so content stays
+     visible with no JS and under reduced motion (the script skips both). */
+  :global(.reveal) .rv {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .rv.in { opacity: 1; transform: none; }
+  :global(.reveal) .stagger > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .stagger.in > * { opacity: 1; transform: none; }
+  :global(.reveal) .stagger.in > *:nth-child(2) { transition-delay: 0.08s; }
+  :global(.reveal) .stagger.in > *:nth-child(3) { transition-delay: 0.16s; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 800px) {
+    .section.about-hero {
+      grid-template-columns: 1fr;
+      gap: 30px;
+      padding-top: 40px;
+      padding-bottom: 8px;
+    }
+    .about-hero .lead { font-size: 16px; }
+    .hero-photo { max-width: 280px; }
+
+    .principle { grid-template-columns: auto 1fr; gap: 18px; padding: 28px 0; }
+    .principle-num { font-size: 24px; }
+
+    .section.closing { grid-template-columns: 1fr; gap: 30px; }
+    .closing-copy p { font-size: 16px; }
+
+    .cred-inner {
+      justify-content: flex-start;
+      gap: 12px 26px;
+      padding: 22px 20px;
+    }
+  }
+</style>
+
+<script>
+  // Scroll reveal: opt in only when motion is welcome. Adding `.reveal` here is
+  // what arms the hidden-then-in transition, so no-JS and reduced-motion
+  // visitors get fully visible content.
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reduce.matches) {
+    document.documentElement.classList.add("reveal");
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+    document.querySelectorAll(".rv, .stagger").forEach((el) => io.observe(el));
+  }
+</script>
