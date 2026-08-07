@@ -32,6 +32,12 @@ Format per entry: `path | used on | status (real/placeholder/missing) | notes`
 - Smith Cash, After Hours, Strictly Clean: no live URL on hand -> fresh live-site screenshots skipped, need Alex to supply URLs.
 - Legacy: URL on hand (legacykitchenbathroomrenovations.com) but a real screenshot already existed, so no fresh Playwright capture was run this session.
 
+## About
+
+| Asset | Used on | Status | Notes |
+|---|---|---|---|
+| On-palette placeholder panel (Sand/Oat, "Real photo pending") | `/about` Principles section (photo-split, 2026-08-07 layout reshape) | placeholder | Reshape reverses the page's prior "no placeholder imagery" call with Alex's explicit go-ahead — the section needs a real candid workspace/process photo of Alex, portrait orientation (3:4–4:5), to replace this panel. Not sourced yet; swap before this branch ships. |
+
 ---
 Status key:
 - **real** — actual client asset, ship-ready
