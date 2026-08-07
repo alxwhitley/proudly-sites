@@ -187,13 +187,15 @@ const claims = [
   }
   .svc-arrow {
     flex: none;
-    color: var(--terracotta);
+    color: var(--espresso);
     font-size: 24px;
     line-height: 1;
-    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .svc-row:hover .svc-arrow,
-  .svc-row:focus-visible .svc-arrow { transform: translateX(7px); }
+  @media (prefers-reduced-motion: no-preference) {
+    .svc-arrow { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+    .svc-row:hover .svc-arrow,
+    .svc-row:focus-visible .svc-arrow { transform: translateX(7px); }
+  }
 
   /* ---- Claim blocks (Layout Discipline: Paired Claim + Alternating Fold) ---- */
   .section.claims-wrap {
@@ -225,7 +227,7 @@ const claims = [
     align-items: center;
     justify-content: center;
     gap: 8px;
-    aspect-ratio: 3 / 2;
+    aspect-ratio: 16 / 10;
     background: var(--oat);
     border: 1px solid var(--line);
     border-radius: 10px;
@@ -264,15 +266,17 @@ const claims = [
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: var(--terracotta);
+    color: var(--espresso);
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
     border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease, transform 0.2s ease;
   }
-  .claim-link:hover,
-  .claim-link:focus-visible { border-color: var(--terracotta); }
+  @media (prefers-reduced-motion: no-preference) {
+    .claim-link { transition: transform 0.2s ease; }
+    .claim-link:hover,
+    .claim-link:focus-visible { transform: translateX(4px); }
+  }
 
   /* ---- Closing CTA (homepage instance, verbatim) ---- */
   .closing-cta { min-height: 520px; background: var(--espresso); color: #fff; text-align: center; padding: 125px 24px 115px; }

@@ -151,7 +151,10 @@ const {
     padding-bottom: 2px;
     white-space: nowrap;
   }
-  .live-link:hover { border-color: var(--terracotta); color: var(--terracotta); }
+  @media (prefers-reduced-motion: no-preference) {
+    .live-link { transition: transform 0.2s ease; }
+    .live-link:hover, .live-link:focus-visible { transform: translateX(4px); }
+  }
   .case-hero h1 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 500;
@@ -175,7 +178,7 @@ const {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    aspect-ratio: 2 / 1;
+    aspect-ratio: 16 / 10;
     background: var(--oat);
     border: 1px solid var(--line);
     border-radius: 16px;
@@ -294,7 +297,11 @@ const {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
   }
-  .next-link a { color: var(--terracotta); font-weight: 700; }
+  .next-link a { display: inline-block; color: #fff; font-weight: 700; }
+  @media (prefers-reduced-motion: no-preference) {
+    .next-link a { transition: transform 0.2s ease; }
+    .next-link a:hover, .next-link a:focus-visible { transform: translateX(4px); }
+  }
 
   /* ---- Motion: hero load fade-up + gated scroll reveal ---- */
   @media (prefers-reduced-motion: no-preference) {
