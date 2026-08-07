@@ -1,0 +1,39 @@
+# Assets Index — astro/proudly
+
+Raw asset staging for the Astro build. Mirrors the Framer project's `assets/` + `assets.md`
+convention. Real, shippable images copied into `public/images/` when used; this file tracks
+what's on hand, what's placeholder, and what's still missing.
+
+Format per entry: `path | used on | status (real/placeholder/missing) | notes`
+
+**Session note (2026-08-06 overnight):** The Framer Works CMS was UNREACHABLE this run (Framer plugin not connected — expected for an unattended session). So the runbook C4 pulls (Legacy / Strictly Clean banner + Kevin W. quote / After Hours imagery from the CMS) could not happen. Real existing assets were used where on hand; the two cases with no local asset use on-palette placeholder panels (not gradients, not fake photos), all logged below and in the morning queue. No live-site Playwright captures were attempted this run (see Missing captures).
+
+## Case studies
+
+| Asset | Used on | Status | Notes |
+|---|---|---|---|
+| `public/images/smith-cash.jpeg` | `/work/smith-cash-family-law` hero | real | Existing approved Smith Cash site screenshot (same asset the homepage uses). |
+| `public/images/legacy-renovations.jpeg` | `/work/legacy-renovations` hero | real | Existing approved Legacy screenshot; live-site link also shown (legacykitchenbathroomrenovations.com). |
+| On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/strictly-clean-detailing` hero | placeholder | No local asset; CMS unreachable. CSS panel, not an image file. Swap for a real Strictly Clean photo/screenshot when available. |
+| On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/after-hours-ministry` hero | placeholder | No local asset; CMS unreachable. Swap for a real After Hours photo/screenshot when available. |
+| Strictly Clean "Kevin W." quote | `/work/strictly-clean-detailing` quote band | missing | Real quote lives in the unreachable CMS. Quote band OMITTED rather than fabricated. Supply the real quote to add it. |
+| On-palette placeholder panel (Oat, "Capture pending") | `/work` index card (Strictly Clean, After Hours) | placeholder | Same two cases lack a card thumbnail; placeholder panels used. |
+
+## Services
+
+| Asset | Used on | Status | Notes |
+|---|---|---|---|
+| `public/images/smith-cash.jpeg` | `/services/branding` + `/services/web-design` proof 1 | real | Existing Smith Cash screenshot; satisfies the B4 live-site-proof requirement from an asset on hand. |
+| `public/images/legacy-renovations.jpeg` | `/services/branding` + `/services/web-design` proof 2 | real | Existing Legacy screenshot; satisfies B4 from an asset on hand. |
+| On-palette placeholder panel (Oat, "Live-site capture pending") | `/services/branding` + `/services/web-design` proof 3 (After Hours) | placeholder | No local After Hours asset; CMS unreachable. Swap for a real After Hours brand-in-context capture when available. |
+| (none — no proof imagery by design) | `/services/ai-and-search-visibility` | N/A | New service, no live precedent (runbook B4). No screenshot proof — expected gap, not an error. |
+
+### Missing live-site captures (queued — no placeholder screenshot substituted, per runbook Section C)
+- Smith Cash, After Hours, Strictly Clean: no live URL on hand -> fresh live-site screenshots skipped, need Alex to supply URLs.
+- Legacy: URL on hand (legacykitchenbathroomrenovations.com) but a real screenshot already existed, so no fresh Playwright capture was run this session.
+
+---
+Status key:
+- **real** — actual client asset, ship-ready
+- **placeholder** — stand-in used because no real asset existed at build time; flagged for morning fill-in
+- **missing** — no asset available, no placeholder found either; page/section skipped, queued
