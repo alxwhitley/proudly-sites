@@ -1,0 +1,216 @@
+---
+/*
+  Services index (/services) - Persuade surface, established-world extension of the
+  homepage's "Grounded Workshop." The overview page for the three service detail
+  routes. Reuses the homepage services-section copy as the card content, each card
+  linking to its detail page. One-person differentiator stated once (in the lead).
+  Shared chrome + tokens from BaseLayout / global.css; route-specific composition here.
+  See .impeccable/surfaces/src-pages-services.md for the cluster brief.
+*/
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const services = [
+  {
+    glyph: "◎",
+    title: "Branding",
+    href: "/services/branding",
+    body: "A brand that earns trust before you say a word. Color, type, and voice built around how your clients actually decide.",
+  },
+  {
+    glyph: "▣",
+    title: "Web Design",
+    href: "/services/web-design",
+    body: "Design that makes the right people stop and stay. Every section built around your client’s problem and how you solve it, not a template.",
+  },
+  {
+    glyph: "⌁",
+    title: "Search & AI Visibility",
+    href: "/services/ai-and-search-visibility",
+    body: "Get found the moment someone searches, on Google and the AI assistants buyers now ask first. Your pages are built to be ranked and quoted, so you can show up in the answer.",
+  },
+];
+---
+
+<BaseLayout
+  title="Services · Proudly Sites"
+  description="Branding, web design, and search & AI visibility for reputation-led service businesses, handled in-house by one person in Raleigh, North Carolina."
+>
+  <section class="section services-hero">
+    <!--
+      THESIS: present the three services as one connected offering from one person; refuse the disconnected "à la carte deliverables" menu.
+      OWN-WORLD: the homepage's Grounded Workshop, inherited whole - Warm Cream ground, Espresso Black close, Playfair headings on Lato text, Honey Gold decorating only, one Burnt Terracotta stacked-shadow CTA.
+      STORY: a founder weighing what they actually need sees three parts of one job, understands one person carries all three, then opens the part that fits or takes the ask.
+      FORM: established-world extension (no concept roll); overview index for the cluster.
+    -->
+    <p class="eyebrow">What I Do</p>
+    <h1>Strategy, Copy, and Design, In-House</h1>
+    <p class="lead">Brand, site design, and how you&rsquo;re found, handled by one person, so the pieces fit and nothing gets handed off to be reinterpreted. Here is how each part works.</p>
+  </section>
+
+  <div class="surface-white">
+    <section class="section services-grid-wrap">
+      <div class="services-grid stagger">
+        {services.map((s) => (
+          <a class="service-card rv" href={s.href}>
+            <span class="service-icon" aria-hidden="true">{s.glyph}</span>
+            <h2>{s.title}</h2>
+            <p>{s.body}</p>
+            <span class="service-more">Learn more &rarr;</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+
+  <section class="closing-cta">
+    <h2>Your Work Deserves a Website That<br />Proves It</h2>
+    <p>Send a message about your business. You&rsquo;ll hear back from me, not a sales team, within a day, with honest advice on whether a new site is even the right move.</p>
+    <a class="primary-button" href="/contact">Get in Touch</a>
+    <small>Live in weeks, not months.</small>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Route-specific composition. Tokens + chrome are global; world inherited from
+     the homepage and the service-detail template. */
+
+  .surface-white { background: var(--white); }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+    margin: 0 0 18px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ---- Hero ---- */
+  .section.services-hero {
+    max-width: 900px;
+    padding-top: clamp(56px, 7vw, 104px);
+    padding-bottom: clamp(40px, 4vw, 68px);
+  }
+  .services-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.6vw, 56px);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin: 0 0 22px;
+    max-width: 18ch;
+  }
+  .services-hero .lead {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--muted);
+    margin: 0;
+    max-width: 40rem;
+  }
+
+  /* ---- Service cards ---- */
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .service-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--cream);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 34px 30px 30px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .service-card:hover { transform: translateY(-2px); border-color: var(--clay); }
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: var(--sand);
+    color: var(--terracotta);
+    border-radius: 9px;
+    font-size: 20px;
+    margin-bottom: 36px;
+  }
+  .service-card h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0 0 14px;
+  }
+  .service-card > p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 24px;
+    flex: 1;
+  }
+  .service-more { font-size: 14px; font-weight: 700; color: var(--terracotta); }
+
+  /* ---- Closing CTA (homepage instance, verbatim) ---- */
+  .closing-cta { min-height: 520px; background: var(--espresso); color: #fff; text-align: center; padding: 125px 24px 115px; }
+  .closing-cta h2 { font: 500 clamp(32px, 3.4vw, 40px)/1.15 "Playfair Display", serif; letter-spacing: -0.035em; margin-bottom: 22px; }
+  .closing-cta p { max-width: 610px; margin: 0 auto 30px; color: rgba(255, 255, 255, 0.72); line-height: 1.6; font-size: 20px; }
+  .closing-cta > small { display: block; color: rgba(255, 255, 255, 0.6); margin-top: 22px; font-size: 14px; }
+
+  /* ---- Motion ---- */
+  @media (prefers-reduced-motion: no-preference) {
+    .services-hero > * { opacity: 0; animation: svc-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .services-hero h1 { animation-delay: 0.06s; }
+    .services-hero .lead { animation-delay: 0.12s; }
+  }
+  @keyframes svc-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  :global(.reveal) .stagger > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .stagger.in > * { opacity: 1; transform: none; }
+  :global(.reveal) .stagger.in > *:nth-child(2) { transition-delay: 0.08s; }
+  :global(.reveal) .stagger.in > *:nth-child(3) { transition-delay: 0.16s; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 800px) {
+    .services-hero .lead { font-size: 16px; }
+    .services-grid { grid-template-columns: 1fr; gap: 14px; }
+    .service-icon { margin-bottom: 24px; }
+    .closing-cta { min-height: 470px; padding: 100px 22px; }
+    .closing-cta p { font-size: 16px; }
+  }
+</style>
+
+<script>
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reduce.matches) {
+    document.documentElement.classList.add("reveal");
+    const els = document.querySelectorAll(".rv, .stagger");
+    const show = (el) => el.classList.add("in");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { show(entry.target); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      els.forEach((el) => io.observe(el));
+      // Safety net: never leave content hidden if the observer can't fire
+      // (background tab, headless renderer, throttled JS). Reveal all after a beat.
+      setTimeout(() => els.forEach(show), 1500);
+    } else {
+      els.forEach(show);
+    }
+  }
+</script>

@@ -1,0 +1,322 @@
+---
+/*
+  Services / Search & AI Visibility (/services/ai-and-search-visibility) - Persuade
+  surface, established-world extension of the homepage's "Grounded Workshop." No new
+  world, no concept roll. This is the NEW service that permanently replaces the
+  retired "Web Development" line (runbook B2). Seeded from the homepage capability
+  card 3 ("Search & AI Visibility") and expanded. It ships with NO client-screenshot
+  proof by design (runbook B4: new service, no live precedent) - an expected gap, not
+  an error. The middle is honest capability explanation; no fabricated results, no
+  metrics (PRODUCT.md: SEO/GEO strategy currently void; don't overstate the evidence).
+  Structure clones the service-detail world: hero, an explanatory story + hairline
+  facets in place of proof rows, the two-card bridge, and the homepage closing CTA.
+  See .impeccable/surfaces/src-pages-services.md for the cluster brief.
+*/
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const facets = [
+  {
+    title: "Built to be ranked",
+    body: "Clean structure, fast load, and pages organized the way people actually search, so Google can understand your work and put it in front of them.",
+  },
+  {
+    title: "Built to be quoted",
+    body: "Clear, well-structured answers to the questions buyers ask, so when someone asks an AI assistant for a recommendation, your site is something it can read and cite.",
+  },
+  {
+    title: "Yours to keep current",
+    body: "Visibility fades when a site goes stale. Yours is easy to update, so it keeps earning attention long after launch, without a developer on call.",
+  },
+];
+
+const siblings = [
+  { n: "01", title: "Branding", href: "/services/branding", teaser: "Identity, voice, and the brand your design expresses." },
+  { n: "02", title: "Web Design", href: "/services/web-design", teaser: "The design that makes the right people stop and stay." },
+];
+---
+
+<BaseLayout
+  title="Search & AI Visibility · Proudly Sites"
+  description="Websites for reputation-led service businesses, built to be found by Google and quoted by the AI assistants buyers now ask first, so you can show up in the answer."
+>
+  <section class="section svc-hero">
+    <!--
+      THESIS: frame search + AI visibility as foundations built into the site, not a bolt-on or a bag of tricks; refuse the rankings-guaranteed / keyword-stuffing register.
+      OWN-WORLD: the homepage's Grounded Workshop, inherited whole - Warm Cream ground, Espresso Black close, Playfair headings on Lato text, Honey Gold decorating only, one Burnt Terracotta stacked-shadow CTA.
+      STORY: a founder who has noticed buyers now ask AI first learns why an ordinary site goes unseen, what "built to be found" actually means, then takes the ask.
+      FIRST VIEWPORT: eyebrow, outcome H1, one-line lead; the primary action waits at the close.
+      FORM: established-world extension; new service with no case proof yet (expected), capability-framed, honest.
+    -->
+    <p class="eyebrow">Search &amp; AI Visibility</p>
+    <h1>Built to Be Found When Someone Searches for You</h1>
+    <p class="lead">Your pages are built to be ranked by Google and quoted by the AI assistants buyers now ask first, so you can show up in the answer, not three clicks past it.</p>
+  </section>
+
+  <div class="surface-white">
+    <section class="section story rv">
+      <p class="eyebrow">Why It Matters Now</p>
+      <h2>The way people find you is changing</h2>
+      <div class="story-body">
+        <p>More and more, the first thing a potential client sees is not your website. It is a search result, or an answer an AI assistant wrote by reading the web on their behalf. If your site is not built to be understood by both, you are invisible at the exact moment someone is deciding who to call.</p>
+        <p>Being found is not about tricks or stuffing pages with keywords. It is about a site that is fast, cleanly structured, and clear about who you are and what you do, so a search engine and an AI can both read it, trust it, and hand you to the person looking.</p>
+        <p class="story-note">This is built into every project from the start, not sold back to you as a bolt-on.</p>
+      </div>
+    </section>
+  </div>
+
+  <section class="section facets">
+    <h2 class="eyebrow rv">What That Means</h2>
+    <ul class="facet-list stagger">
+      {facets.map((f) => (
+        <li class="facet">
+          <h3>{f.title}</h3>
+          <p>{f.body}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section bridge rv">
+    <p class="eyebrow">How It Fits</p>
+    <h2>Visibility only helps if the site earns the click</h2>
+    <p class="bridge-body">Getting found is the first job. The brand and the design are what turn that found visitor into a client once they arrive. You get all three from the same person, so the site that ranks is the same site that looks the part and holds up.</p>
+    <div class="bridge-cards">
+      {siblings.map((s) => (
+        <a class="bridge-card" href={s.href}>
+          <span class="bridge-num">{s.n}</span>
+          <span class="bridge-arrow" aria-hidden="true">&#8599;</span>
+          <h3>{s.title}</h3>
+          <p>{s.teaser}</p>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="closing-cta">
+    <h2>Your Work Deserves a Website That<br />Proves It</h2>
+    <p>Send a message about your business. You&rsquo;ll hear back from me, not a sales team, within a day, with honest advice on whether a new site is even the right move.</p>
+    <a class="primary-button" href="/contact">Get in Touch</a>
+    <small>Live in weeks, not months.</small>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Route-specific composition. Tokens + chrome are global; the world is inherited
+     from /about, the homepage, and the /services/branding template. */
+
+  .surface-white { background: var(--white); }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+    margin: 0 0 18px;
+  }
+  h2.eyebrow { display: flex; }
+  .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ---- Hero ---- */
+  .section.svc-hero {
+    max-width: 900px;
+    padding-top: clamp(56px, 7vw, 104px);
+    padding-bottom: clamp(48px, 5vw, 84px);
+  }
+  .svc-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.6vw, 56px);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin: 0 0 22px;
+    max-width: 16ch;
+  }
+  .svc-hero .lead {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--muted);
+    margin: 0;
+    max-width: 40rem;
+  }
+
+  /* ---- Story (text-forward, honest POV) ---- */
+  .section.story { max-width: 900px; }
+  .story h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 3.6vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0 0 30px;
+    max-width: 20ch;
+  }
+  .story-body { max-width: 37rem; }
+  .story-body p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 22px;
+  }
+  .story-note {
+    font-size: 16px;
+    color: var(--espresso);
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+    margin-top: 30px !important;
+  }
+
+  /* ---- Facets (hairline-divided, no numbered scaffolding) ---- */
+  .section.facets { max-width: 900px; }
+  .section.facets > .eyebrow { display: inline-flex; margin-bottom: 40px; }
+  .facet-list { list-style: none; margin: 0; padding: 0; }
+  .facet {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(20px, 4vw, 56px);
+    padding: 34px 0;
+    border-top: 1px solid var(--line);
+  }
+  .facet:last-child { border-bottom: 1px solid var(--line); }
+  .facet h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .facet p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0;
+    max-width: 46ch;
+  }
+
+  /* ---- Bigger Picture bridge ---- */
+  .section.bridge { max-width: 1000px; }
+  .bridge h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 3.6vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0 0 22px;
+    max-width: 20ch;
+  }
+  .bridge-body {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--muted);
+    margin: 0 0 48px;
+    max-width: 40rem;
+  }
+  .bridge-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+  .bridge-card {
+    position: relative;
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 30px 30px 34px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .bridge-card:hover { transform: translateY(-2px); border-color: var(--clay); }
+  .bridge-num { font-size: 12px; letter-spacing: 0.08em; color: #6d635c; }
+  .bridge-arrow {
+    position: absolute;
+    top: 26px;
+    right: 28px;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--terracotta);
+    font-size: 16px;
+  }
+  .bridge-card h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin: 18px 0 10px;
+  }
+  .bridge-card p { font-size: 16px; line-height: 1.55; color: var(--muted); margin: 0; max-width: 30ch; }
+
+  /* ---- Closing CTA (homepage instance, verbatim) ---- */
+  .closing-cta { min-height: 520px; background: var(--espresso); color: #fff; text-align: center; padding: 125px 24px 115px; }
+  .closing-cta h2 { font: 500 clamp(32px, 3.4vw, 40px)/1.15 "Playfair Display", serif; letter-spacing: -0.035em; margin-bottom: 22px; }
+  .closing-cta p { max-width: 610px; margin: 0 auto 30px; color: rgba(255, 255, 255, 0.72); line-height: 1.6; font-size: 20px; }
+  .closing-cta > small { display: block; color: rgba(255, 255, 255, 0.6); margin-top: 22px; font-size: 14px; }
+
+  /* ---- Motion: hero load fade-up + gated scroll reveal ---- */
+  @media (prefers-reduced-motion: no-preference) {
+    .svc-hero > * { opacity: 0; animation: svc-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .svc-hero h1 { animation-delay: 0.06s; }
+    .svc-hero .lead { animation-delay: 0.12s; }
+  }
+  @keyframes svc-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  :global(.reveal) .rv {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .rv.in { opacity: 1; transform: none; }
+  :global(.reveal) .stagger > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .stagger.in > * { opacity: 1; transform: none; }
+  :global(.reveal) .stagger.in > *:nth-child(2) { transition-delay: 0.08s; }
+  :global(.reveal) .stagger.in > *:nth-child(3) { transition-delay: 0.16s; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 800px) {
+    .svc-hero .lead, .story-body p, .bridge-body { font-size: 16px; }
+    .facet { grid-template-columns: 1fr; gap: 12px; padding: 26px 0; }
+    .bridge-cards { grid-template-columns: 1fr; }
+    .closing-cta { min-height: 470px; padding: 100px 22px; }
+    .closing-cta p { font-size: 16px; }
+  }
+</style>
+
+<script>
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reduce.matches) {
+    document.documentElement.classList.add("reveal");
+    const els = document.querySelectorAll(".rv, .stagger");
+    const show = (el) => el.classList.add("in");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { show(entry.target); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      els.forEach((el) => io.observe(el));
+      // Safety net: never leave content hidden if the observer can't fire
+      // (background tab, headless renderer, throttled JS). Reveal all after a beat.
+      setTimeout(() => els.forEach(show), 1500);
+    } else {
+      els.forEach(show);
+    }
+  }
+</script>
