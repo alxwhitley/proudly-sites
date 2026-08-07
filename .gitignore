@@ -3,6 +3,12 @@ dist/
 # generated types
 .astro/
 
+# raw asset staging (private Internal docs + heavy unused source media).
+# Shippable images are copied into public/images/ and tracked there; the
+# assets/ staging folder itself is intentionally NOT committed. assets.md
+# (the tracked index) documents what lives here.
+assets/
+
 # dependencies
 node_modules/
 
