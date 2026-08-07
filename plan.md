@@ -1,7 +1,7 @@
 ## Now
 
-**Current Priority:** Services (index + Branding, Web Design, Search & AI Visibility) and Work (portfolio index + 4 case studies via a shared `CaseStudy` component) are built and shipped through the Impeccable shape/build/finish flow, on branch `overnight/services-and-work` (committed, NOT merged/pushed); `npm run build` passes (12 pages), detector `[]` on all new files, both clusters independently finish-reviewed.
-**Next Action:** Work the `## Morning Queue` below (drafted copy to approve, placeholder imagery, queued design refinements), then merge/push `overnight/services-and-work`. Still owed from before: the real Web3Forms key for `/contact`.
+**Current Priority:** `/services` reshaped from the AI-generic 3-card grid into a thesis-led editorial index (Playfair thesis over three hairline-ruled service rows; kills the identical-card-grid, eyebrow-per-section, and glyph-chip bans), built and verified on branch `redesign/services-editorial` (off `main`, uncommitted, identity locked); critique baseline 29/40. The three service detail pages still carry the old near-identical template, which is the main remaining "AI-generic" P1.
+**Next Action:** Get Alex's sign-off on the index (including the drafted thesis headline), then propagate the editorial treatment to `/services/{branding,web-design,ai-and-search-visibility}` plus a global typeset/layout cleanup (strip the eyebrows and `01/02` on the detail pages), then `/impeccable polish` and re-run `/impeccable critique`; commit/merge `redesign/services-editorial` once approved. Note: `overnight/services-and-work` is already merged into `main` (prior status wrongly said "not merged"). Morning Queue items (copy approval, placeholder imagery, finish-review decisions, `/contact` Web3Forms key) still stand.
 
 ## Morning Queue
 
@@ -28,6 +28,14 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Friday Aug 7, 2026 · 12:19 AM] — Code
+- **Did:** Diagnosed the Services cluster with `/impeccable critique` (baseline 29/40; named the AI-generic tells: eyebrow-per-section, identical card grid, `01/02` scaffolding, three near-identical template pages, the After Hours placeholder box, the hollow AI-Visibility page), then reshaped and rebuilt `/services` into a thesis-led editorial index (Playfair thesis over three hairline-ruled service rows; no cards, glyphs, eyebrow, or numbering) on new branch `redesign/services-editorial`, identity locked (tokens, Playfair/Lato, terracotta CTA).
+- **Decided:** Structural reshape over surface polish, piloted on the index first before propagating to the three detail pages; kept the dark closing CTA verbatim; drafted thesis headline "One person. Your brand, your site, and how you're found." pending copy sign-off.
+- **Verified:** detector `[]`, `npm run build` passes (12 pages), zero console errors at 1440 and 390, both Impeccable design-hook findings fixed properly (padding-left hover changed to a transform; four off-ramp font sizes snapped back onto the DESIGN.md ramp), critique snapshot persisted to `.impeccable/critique/`.
+- **Blocked:** Redesign uncommitted on `redesign/services-editorial`, pending Alex's visual sign-off before commit/merge; the three detail pages still on the old template.
+
+**Files touched:** `src/pages/services/index.astro` (reshaped to the editorial index); new `.impeccable/critique/2026-08-07T02-38-08Z__src-pages-services-index-astro.md` (critique snapshot); `.impeccable/surfaces/src-pages-services.md` (index-direction update); `plan.md` (this entry and `## Now`). New branch `redesign/services-editorial` off `main`, uncommitted.
 
 ### [Thursday Aug 6, 2026 · 9:17 PM] — Code
 - **Did:** Built the full Services cluster (`/services` + branding, web-design, ai-and-search-visibility) and Work cluster (`/work` + Smith Cash, Legacy, Strictly Clean, After Hours via a shared `CaseStudy` component), each through the Impeccable shape (self-confirmed per the overnight autonomy contract) then build then finish-review flow; wired Header/Footer/homepage `View Project` links to the new routes; retired "Web Development" permanently to "Search & AI Visibility"; kept Vital Watch and Jubala out of Work per C1/C2. Committed per cluster to branch `overnight/services-and-work`.
@@ -60,23 +68,3 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 **Files touched:** `src/pages/index.astro` (finished, then migrated to the shared layout and components); new `src/layouts/BaseLayout.astro`, `src/components/{Header,Footer,Button,Tags}.astro`, `src/styles/global.css`; `.impeccable/design.json` (sidecar reconcile), `.impeccable/home-brief.md` (star-field reconcile); removed `src/pages/{about,contact,services}.astro`, `src/pages/blog/`, `src/pages/works/`, `src/layouts/SiteLayout.astro`, `src/components/ClosingCta.astro`, `src/data/site.ts`, `.impeccable/surfaces/secondary-routes.md`; `plan.md` (this entry and `## Now`).
 
-### [Thursday Aug 6, 2026 · 12:15 PM] — Code
-- **Did:** Ran `/impeccable polish` on `/` (Persuade). Normalized same-role text styles onto the DESIGN.md ramp: leads to 20px (hero, about, process, closing), card and section body to 16px (fixing the 13px process cards and 14px service copy), captions and attribution to 14px, eyebrows to 12px, primary buttons to 16px, nav links to 15px; unified the two 42px section headings to 40px and the project title from 34px to 32px. Changed the nav "Get in Touch" from an outlined ghost to a solid black espresso button with white text. Lifted sub-legible mobile sizes (8px eyebrow to 12, 12px button to 14, 13px hero copy to 16) and set mobile body and lead to a 16px floor. Ran `npm run build` and captured desktop plus mobile screenshots.
-- **Decided:** Snapped leads to the real DESIGN.md `lead` token (20px) instead of an invented 18px, aligning the build to its own type ramp; kept the hero clamp and the mobile-compact heading sizes (39/29/27px) as intentional incumbent exceptions.
-- **Blocked:** The mobile body and lead bump overrides the previously accepted "mobile stays compact" exception; pending Alex's confirmation to keep or revert.
-
-**Files touched:** `src/pages/index.astro` (page-scoped CSS in the `<style is:global>` block); `plan.md` (this entry and `## Now`).
-
-### [Thursday Aug 6, 2026 · 10:30 AM] — Code
-- **Did:** Ran `/impeccable craft` on `/`, rejected three generated composition studies at Alex's direction, and switched to exact-incumbent reproduction. Pulled fresh desktop and phone screenshots plus serialized homepage content from Framer New-build (`ibncrjpdo`), downloaded the real Proudly wordmark, founder portrait, and three featured-work images, and rebuilt the complete homepage in Astro. Added responsive desktop/mobile layouts, semantic content, focus states, reduced-motion behavior, local assets, surface documentation, and final browser captures. Impeccable finish review returned **PASS** after one material correction batch for mobile media framing and desktop rhythm.
-- **Decided:** The current Framer layout is the approved visual source. Current Framer-rendered content is preserved for fidelity, including Vital Watch, the existing CTA labels, numberless pricing language, the stale Search & AI Visibility body, the 3-testimonial-plus-rating grid, and sitemap footer. This does not resolve the upstream content conflicts.
-- **Verified:** `npm run build` passes; desktop and mobile browser captures were compared against the Framer references; the final reviewer accepted the intentional Lato/mobile type exceptions required by the incumbent design.
-
-**Files touched:** `src/pages/index.astro`, `public/images/`, `DESIGN.md`, `.impeccable/`, and `plan.md`.
-
-### [Thursday Aug 6, 2026 · Time TBD] — Code
-- **Did:** Scaffolded this Astro repo (`npm create astro@latest`, minimal template, no Decap/OAuth — no CMS on this build) and committed the initial scaffold. Ported `PRODUCT.md` as-is from `framer/proudly/PRODUCT.md`. Built `DESIGN.md` from `framer/proudly/design.md`'s frontmatter token block plus its 8 canonical sections (Overview through Motion — Motion pulled up from below the Framer-specific comment marker since it's still canonical per Impeccable's spec), dropping the Framer Component Map, node IDs, and Open Gaps section; carried the dark-section-card-surface and pricing-number decisions forward as plain notes in a new "Open Decisions" section instead. Connected to the Framer New-build branch via the Framer agent CLI (`session new`, then `getBranches()` + `.switch()` to reach `ibncrjpdo` — the session defaults to `main`), pulled the live homepage (`augiA20Il`) via `serialize`, cross-checked against a full-page screenshot, and wrote `content-reconciliation.md` documenting every place live content disagrees with `pages/home-copy.md`. Did not resolve any conflict — flagged all of them per instructions.
-- **Decided:** Did not run `/impeccable craft` — explicitly out of scope for this session, a separate approval step.
-- **Blocked:** Nothing blocking repo/doc work. The Astro build itself is blocked on Alex resolving the reconciliation conflicts (see `## Now` Next Action).
-
-**Files touched:** New repo `astro/proudly/` created — `.gitignore`, `astro.config.mjs`, `package.json`, `package-lock.json`, `tsconfig.json`, `public/favicon.ico`, `public/favicon.svg`, `src/pages/index.astro` (scaffold defaults, commit 1); `PRODUCT.md`, `DESIGN.md` (commit 2); `content-reconciliation.md`, this `plan.md` (commit 3, pending). No files under `framer/proudly/` were edited by this repo's work — see that project's own `log.md` for its Code entry on this session.
