@@ -1,0 +1,249 @@
+---
+/*
+  Work index (/work) - Persuade surface, established-world extension of the homepage's
+  "Grounded Workshop." The portfolio is the primary conversion tool (positioning §6),
+  so this is a clean grid of the four case studies, each card linking to its detail
+  page. Canonical case set (runbook C1): Smith Cash, Legacy, Strictly Clean, After
+  Hours. No Vital Watch card (homepage proof strip only), no Jubala anywhere (C2).
+  Shared chrome + tokens from BaseLayout / global.css. See src-pages-work.md.
+*/
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const cases = [
+  {
+    tag: "Family Law · Raleigh",
+    title: "Smith Cash Family Law",
+    line: "A boutique firm that finally looks like the counsel it gives.",
+    href: "/work/smith-cash-family-law",
+    image: "/images/smith-cash.jpeg",
+    imageAlt: "The Smith Cash Family Law website",
+  },
+  {
+    tag: "Kitchen & Bath · Raleigh",
+    title: "Legacy Renovations",
+    line: "Craftsmanship homeowners can see before they call.",
+    href: "/work/legacy-renovations",
+    image: "/images/legacy-renovations.jpeg",
+    imageAlt: "The Legacy Renovations website",
+  },
+  {
+    tag: "Auto Detailing",
+    title: "Strictly Clean Detailing",
+    line: "Quality work, presented like it.",
+    href: "/work/strictly-clean-detailing",
+    image: null,
+  },
+  {
+    tag: "Nonprofit & Church",
+    title: "After Hours Ministry",
+    line: "A ministry site that goes beyond generic.",
+    href: "/work/after-hours-ministry",
+    image: null,
+  },
+];
+---
+
+<BaseLayout
+  title="Work · Proudly Sites"
+  description="Selected websites built for reputation-led service businesses in the Raleigh area, by Alex Whitley of Proudly Sites."
+>
+  <section class="section work-hero">
+    <!--
+      THESIS: let the portfolio carry the conversion (positioning §6); refuse a thin "logos we've worked with" strip.
+      OWN-WORLD: the homepage's Grounded Workshop, inherited whole - Warm Cream ground, Espresso Black close, Playfair headings on Lato text, Honey Gold decorating only, one Burnt Terracotta stacked-shadow CTA.
+      STORY: a referred founder looks at real client work the way their own clients will look at theirs, finds one that rhymes with their situation, then takes the ask.
+      FORM: established-world extension (no concept roll); portfolio index for the cluster.
+    -->
+    <p class="eyebrow">Selected Work</p>
+    <h1>Work That Holds Up to a Referral</h1>
+    <p class="lead">Every project here belongs to a business that wins on reputation. Look at each one the way your clients will look at yours.</p>
+  </section>
+
+  <section class="section work-grid-wrap">
+    <div class="work-grid stagger">
+      {cases.map((c) => (
+        <a class="work-card rv" href={c.href}>
+          <div class="work-visual">
+            {c.image
+              ? <img src={c.image} alt={c.imageAlt} loading="lazy" width="640" height="480" />
+              : <div class="ph-panel" role="img" aria-label={`${c.title} - live-site capture pending`}><span>{c.title}</span><small>Live-site capture pending</small></div>}
+          </div>
+          <p class="work-tag">{c.tag}</p>
+          <h2>{c.title}</h2>
+          <p class="work-line">{c.line}</p>
+          <span class="work-more">View Project &rarr;</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <section class="closing-cta">
+    <h2>Your Work Deserves a Website That<br />Proves It</h2>
+    <p>Send a message about your business. You&rsquo;ll hear back from me, not a sales team, within a day, with honest advice on whether a new site is even the right move.</p>
+    <a class="primary-button" href="/contact">Get in Touch</a>
+    <small>Live in weeks, not months.</small>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Route-specific composition. Tokens + chrome are global. */
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+    margin: 0 0 18px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ---- Hero ---- */
+  .section.work-hero {
+    max-width: 760px;
+    text-align: center;
+    padding-top: clamp(56px, 7vw, 104px);
+    padding-bottom: clamp(24px, 3vw, 44px);
+  }
+  .work-hero .eyebrow { display: inline-flex; }
+  .work-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.6vw, 56px);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin: 0 0 22px;
+  }
+  .work-hero .lead {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--muted);
+    margin: 0 auto;
+    max-width: 34rem;
+  }
+
+  /* ---- Work grid ---- */
+  .section.work-grid-wrap { padding-top: clamp(24px, 3vw, 40px); }
+  .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 3.5vw, 44px); }
+  .work-card { display: block; }
+  .work-visual {
+    background: var(--sand);
+    border-radius: 16px;
+    padding: clamp(18px, 2vw, 28px);
+    margin-bottom: 18px;
+    transition: transform 0.25s ease;
+  }
+  .work-card:hover .work-visual { transform: translateY(-3px); }
+  .work-visual img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .ph-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    aspect-ratio: 4 / 3;
+    background: var(--oat);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-align: center;
+    padding: 24px;
+  }
+  .ph-panel span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 24px;
+    color: var(--espresso);
+  }
+  .ph-panel small {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+  }
+  .work-tag {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+    margin: 0 0 10px;
+  }
+  .work-card h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin: 0 0 8px;
+  }
+  .work-line { font-size: 16px; line-height: 1.55; color: var(--muted); margin: 0 0 14px; max-width: 44ch; }
+  .work-more { font-size: 14px; font-weight: 700; color: var(--terracotta); }
+
+  /* ---- Closing CTA (homepage instance, verbatim) ---- */
+  .closing-cta { min-height: 520px; background: var(--espresso); color: #fff; text-align: center; padding: 125px 24px 115px; }
+  .closing-cta h2 { font: 500 clamp(32px, 3.4vw, 40px)/1.15 "Playfair Display", serif; letter-spacing: -0.035em; margin-bottom: 22px; }
+  .closing-cta p { max-width: 610px; margin: 0 auto 30px; color: rgba(255, 255, 255, 0.72); line-height: 1.6; font-size: 20px; }
+  .closing-cta > small { display: block; color: rgba(255, 255, 255, 0.6); margin-top: 22px; font-size: 14px; }
+
+  /* ---- Motion ---- */
+  @media (prefers-reduced-motion: no-preference) {
+    .work-hero > * { opacity: 0; animation: work-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .work-hero h1 { animation-delay: 0.06s; }
+    .work-hero .lead { animation-delay: 0.12s; }
+  }
+  @keyframes work-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  :global(.reveal) .stagger > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .stagger.in > * { opacity: 1; transform: none; }
+  :global(.reveal) .stagger.in > *:nth-child(2) { transition-delay: 0.06s; }
+  :global(.reveal) .stagger.in > *:nth-child(3) { transition-delay: 0.12s; }
+  :global(.reveal) .stagger.in > *:nth-child(4) { transition-delay: 0.18s; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 800px) {
+    .work-hero .lead { font-size: 16px; }
+    .work-grid { grid-template-columns: 1fr; gap: 26px; }
+    .closing-cta { min-height: 470px; padding: 100px 22px; }
+    .closing-cta p { font-size: 16px; }
+  }
+</style>
+
+<script>
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reduce.matches) {
+    document.documentElement.classList.add("reveal");
+    const els = document.querySelectorAll(".rv, .stagger");
+    const show = (el) => el.classList.add("in");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { show(entry.target); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      els.forEach((el) => io.observe(el));
+      // Safety net: never leave content hidden if the observer can't fire
+      // (background tab, headless renderer, throttled JS). Reveal all after a beat.
+      setTimeout(() => els.forEach(show), 1500);
+    } else {
+      els.forEach(show);
+    }
+  }
+</script>

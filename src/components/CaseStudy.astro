@@ -1,0 +1,342 @@
+---
+/*
+  CaseStudy: the shared long-form layout for every /work/<case> detail page.
+  Established-world extension of the homepage's "Grounded Workshop" - Warm Cream and
+  white narrative bands, an Espresso Black close, Playfair section headings on Lato
+  text, Honey Gold decorating the eyebrows only, one Burnt Terracotta CTA. Structure
+  follows the Framer case-study template: hero (niche + optional live link + H1 +
+  full-bleed image), a Who / What changed summary band, then The Moment / What We
+  Built / What Changed narrative sections, an optional real-quote band, and a dark
+  close with the CTA and a next-project link. All four case pages pass data into this
+  one component so the layout and CSS live in exactly one place.
+
+  Props:
+    niche, location   - the eyebrow ("Family Law", "Raleigh")
+    title             - the case H1 (the transformation line)
+    liveUrl           - optional; renders "Visit the live site" when present
+    heroImage         - optional src; when null a placeholder panel renders instead
+    heroAlt           - alt text for the hero image
+    who, whatChanged  - the two summary-band values
+    moment, built, changed - arrays of paragraph strings
+    builtShot         - optional { image, alt, caption } inline in "What We Built"
+    quote             - optional { text, cite }; omitted entirely when no real quote
+    next              - { label, href } for the next-project link
+*/
+const {
+  niche,
+  location,
+  title,
+  liveUrl,
+  heroImage,
+  heroAlt,
+  who,
+  whatChanged,
+  moment = [],
+  built = [],
+  builtShot,
+  changed = [],
+  quote,
+  next,
+} = Astro.props;
+---
+
+<article class="case">
+  <section class="section case-hero">
+    <div class="case-hero-top">
+      <p class="eyebrow">{location ? `${niche} · ${location}` : niche}</p>
+      {liveUrl && <a class="live-link" href={liveUrl} target="_blank" rel="noopener">Visit the live site &rarr;</a>}
+    </div>
+    <h1>{title}</h1>
+    <div class="case-hero-visual">
+      {heroImage
+        ? <img src={heroImage} alt={heroAlt} width="1200" height="620" />
+        : <div class="ph-panel" role="img" aria-label={`${title} - live-site capture pending`}><span>{location ? `${niche} · ${location}` : niche}</span><small>Live-site capture pending</small></div>}
+    </div>
+  </section>
+
+  <div class="summary">
+    <div class="summary-inner">
+      <div><p class="summary-label">Who</p><p class="summary-value">{who}</p></div>
+      <div><p class="summary-label">What changed</p><p class="summary-value">{whatChanged}</p></div>
+    </div>
+  </div>
+
+  <section class="section narrative rv">
+    <h2 class="eyebrow">The Moment</h2>
+    <div class="narrative-body">{moment.map((p) => <p>{p}</p>)}</div>
+  </section>
+
+  <div class="surface-white">
+    <section class="section narrative rv">
+      <h2 class="eyebrow">What We Built</h2>
+      <div class="narrative-body">
+        {built.map((p) => <p>{p}</p>)}
+        {builtShot && (
+          <figure class="built-shot">
+            <img src={builtShot.image} alt={builtShot.alt} loading="lazy" width="1000" height="640" />
+            <figcaption>{builtShot.caption}</figcaption>
+          </figure>
+        )}
+      </div>
+    </section>
+  </div>
+
+  <section class="section narrative rv">
+    <h2 class="eyebrow">What Changed</h2>
+    <div class="narrative-body">{changed.map((p) => <p>{p}</p>)}</div>
+  </section>
+
+  {quote && (
+    <div class="quote-band">
+      <blockquote>
+        <p class="quote-text">{quote.text}</p>
+        <cite>{quote.cite}</cite>
+      </blockquote>
+    </div>
+  )}
+
+  <section class="close-band">
+    <h2>Facing something similar?</h2>
+    <p>Send a message about your business. You&rsquo;ll hear back from me, not a sales team, within a day.</p>
+    <a class="primary-button" href="/contact">Get in Touch</a>
+    <p class="next-link">Next project: <a href={next.href}>{next.label} &rarr;</a></p>
+  </section>
+</article>
+
+<style>
+  /* Route-specific composition for every case page. Tokens + chrome are global. */
+  .surface-white { background: var(--white); }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+    margin: 0 0 18px;
+  }
+  /* h2.eyebrow keeps the small-label look while restoring a real heading outline
+     (each narrative section is an h2 sibling of the hero h1). */
+  h2.eyebrow { display: flex; }
+  .eyebrow::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ---- Hero ---- */
+  .section.case-hero {
+    max-width: 1100px;
+    padding-top: clamp(48px, 6vw, 92px);
+    padding-bottom: clamp(40px, 4.5vw, 72px);
+  }
+  .case-hero-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .case-hero-top .eyebrow { margin-bottom: 0; }
+  .live-link {
+    font-size: 14px;
+    color: var(--espresso);
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 2px;
+    white-space: nowrap;
+  }
+  .live-link:hover { border-color: var(--terracotta); color: var(--terracotta); }
+  .case-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 4.6vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    margin: 18px 0 40px;
+    max-width: 20ch;
+  }
+  .case-hero-visual img {
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 1px solid var(--line);
+  }
+  .ph-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    aspect-ratio: 2 / 1;
+    background: var(--oat);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    text-align: center;
+    padding: 24px;
+  }
+  .ph-panel span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 24px;
+    color: var(--espresso);
+  }
+  .ph-panel small {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+  }
+
+  /* ---- Summary band ---- */
+  .summary { background: var(--white); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .summary-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: clamp(32px, 4vw, 44px) 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(28px, 5vw, 64px);
+  }
+  .summary-label {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+    margin: 0 0 10px;
+  }
+  .summary-value {
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: -0.02em;
+    color: var(--espresso);
+    margin: 0;
+  }
+
+  /* ---- Narrative sections ---- */
+  .section.narrative { max-width: 760px; }
+  .narrative-body { max-width: 34rem; }
+  .narrative-body p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin: 0 0 22px;
+  }
+  .narrative-body p:last-child { margin-bottom: 0; }
+  .built-shot { margin: 40px 0 22px; }
+  .built-shot img {
+    width: 100%;
+    aspect-ratio: 25 / 16;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+  }
+  .built-shot figcaption {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #6d635c;
+    margin-top: 12px;
+  }
+
+  /* ---- Quote band ---- */
+  .quote-band { background: var(--white); border-top: 1px solid var(--line); }
+  .quote-band blockquote {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: clamp(72px, 9vw, 120px) 40px;
+    text-align: center;
+  }
+  .quote-text {
+    font-family: "Playfair Display", Georgia, serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: clamp(24px, 3vw, 36px);
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--espresso);
+    margin: 0;
+  }
+  .quote-band cite {
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+    color: #6d635c;
+    margin-top: 24px;
+  }
+
+  /* ---- Close band (dark) ---- */
+  .close-band {
+    background: var(--espresso);
+    color: #fff;
+    text-align: center;
+    padding: clamp(88px, 10vw, 125px) 24px clamp(72px, 8vw, 100px);
+  }
+  .close-band h2 {
+    font: 500 clamp(32px, 3.4vw, 40px)/1.15 "Playfair Display", serif;
+    letter-spacing: -0.035em;
+    margin: 0 0 16px;
+  }
+  .close-band > p {
+    max-width: 560px;
+    margin: 0 auto 32px;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.6;
+    font-size: 20px;
+  }
+  .next-link {
+    margin: 44px 0 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+  }
+  .next-link a { color: var(--terracotta); font-weight: 700; }
+
+  /* ---- Motion: hero load fade-up + gated scroll reveal ---- */
+  @media (prefers-reduced-motion: no-preference) {
+    .case-hero > * { opacity: 0; animation: case-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
+    .case-hero h1 { animation-delay: 0.06s; }
+    .case-hero-visual { animation-delay: 0.14s; }
+  }
+  @keyframes case-rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+
+  :global(.reveal) .rv {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .rv.in { opacity: 1; transform: none; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 800px) {
+    .summary-inner { grid-template-columns: 1fr; gap: 24px; }
+    .summary-value { font-size: 16px; }
+    .close-band > p { font-size: 16px; }
+  }
+</style>
+
+<script>
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reduce.matches) {
+    document.documentElement.classList.add("reveal");
+    const els = document.querySelectorAll(".rv, .stagger");
+    const show = (el) => el.classList.add("in");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { show(entry.target); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      els.forEach((el) => io.observe(el));
+      // Safety net: never leave content hidden if the observer can't fire
+      // (background tab, headless renderer, throttled JS). Reveal all after a beat.
+      setTimeout(() => els.forEach(show), 1500);
+    } else {
+      els.forEach(show);
+    }
+  }
+</script>
