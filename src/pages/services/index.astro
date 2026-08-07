@@ -11,25 +11,7 @@
   See .impeccable/surfaces/src-pages-services.md for the cluster brief.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
-// Outcome one-liners reuse each detail page's approved H1 outcome, for consistency.
-const services = [
-  {
-    title: "Branding",
-    href: "/services/branding",
-    outcome: "A brand people trust before you say a word.",
-  },
-  {
-    title: "Web Design",
-    href: "/services/web-design",
-    outcome: "Design that makes the right people stop and stay.",
-  },
-  {
-    title: "Search & AI Visibility",
-    href: "/services/ai-and-search-visibility",
-    outcome: "Built to be found when someone searches for you.",
-  },
-];
+import { services } from "../../data/services";
 ---
 
 <BaseLayout

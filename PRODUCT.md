@@ -38,6 +38,7 @@ Proof runs through five real case studies (Smith Cash Family Law, Jubala Coffee,
 
 - Solo-operator delivery model — no team, no account managers, no handoffs. This is a literal operating fact, not a brand device.
 - Custom Framer builds only. No productized/templated tier ships under the Proudly Sites brand; a lower-priced tier, if it's ever built, would be a separate brand.
+- **Studios (added 2026-08-07, Alex-directed):** a deliberate, sanctioned exception to both the no-productized-tier line above and the no-industry-targeting rule in Brand Commitments. Studios are fixed-structure, industry-specific product lines under the Proudly Sites brand (first: Church Studio, `/studios/church-studio`, $700–$950, live in one to two weeks; more verticals planned). Industry specificity stays out of the core/main message — each studio lives on its own page, reached via the Services nav dropdown and footer, never the homepage message.
 - Pricing: Core $4,000–$8,000 (most clients), Ceiling $10,000+ (complex, multi-location, e-commerce, or integration builds). **[UNDECIDED]** Whether/how to show a price number on the homepage — the number itself is being adjusted by Alex. Do not hardcode a price into new copy or design work until confirmed.
 - **[UNDECIDED]** No booking/scheduling flow exists yet; treat `/contact` as a temporary stand-in, not a finished capability.
 - SEO/GEO strategy is currently void for this site — no strategy has been established yet.
