@@ -2,15 +2,61 @@
 /*
   Site header: wordmark, primary nav, desktop CTA, and the mobile menu.
   Durable chrome shared across every route. Styling lives in
-  src/styles/global.css (.site-header / .nav-cta / .nav-toggle / .mobile-menu);
-  the toggle behavior is wired in BaseLayout's script.
+  src/styles/global.css (.site-header / .nav-cta / .nav-toggle / .mobile-menu /
+  .nav-dropdown / .mobile-submenu); the toggle + accordion behavior is wired
+  in BaseLayout's script.
 */
+import { services } from "../data/services";
+import { studios } from "../data/studios";
+import { caseStudies } from "../data/work";
 ---
 <header class="site-header">
   <a class="wordmark" href="/" aria-label="Proudly Sites home"><img src="/images/proudly-logo.png" alt="Proudly Sites" /></a>
-  <nav aria-label="Primary navigation">
-    <a href="/work">Work</a>
-    <a href="/services">Services</a>
+  <nav aria-label="Primary navigation" class="primary-nav">
+    <div class="nav-item">
+      <a class="nav-trigger" href="/work">Work</a>
+      <div class="nav-dropdown">
+        <ul>
+          {caseStudies.map((c) => (
+            <li>
+              <a href={c.href}>
+                <span class="dd-eyebrow">{c.tag}</span>
+                <span class="dd-title">{c.title}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <a class="dd-seeall" href="/work">See all case studies &rarr;</a>
+      </div>
+    </div>
+    <div class="nav-item">
+      <a class="nav-trigger" href="/services">Services</a>
+      <div class="nav-dropdown">
+        <ul>
+          {services.map((s) => (
+            <li>
+              <a href={s.href}>
+                <span class="dd-title">{s.title}</span>
+                <span class="dd-desc">{s.teaser}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div class="dd-studios">
+          <ul>
+            {studios.map((s) => (
+              <li>
+                <a href={s.href}>
+                  <span class="dd-eyebrow">Studios</span>
+                  <span class="dd-title">{s.title}</span>
+                  <span class="dd-desc">{s.teaser}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
     <a href="/#pricing">Pricing</a>
     <a href="/#blog">Blog</a>
     <a href="/about">About</a>
@@ -21,8 +67,23 @@
     <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
   </button>
   <div class="mobile-menu" id="mobile-menu" hidden>
-    <a href="/work">Work</a>
-    <a href="/services">Services</a>
+    <div class="mobile-nav-item">
+      <a href="/work">Work</a>
+      <button class="mobile-caret" type="button" aria-label="Show Work menu" aria-expanded="false" aria-controls="mobile-sub-work"><span aria-hidden="true">&#8964;</span></button>
+    </div>
+    <div class="mobile-submenu" id="mobile-sub-work" hidden>
+      {caseStudies.map((c) => <a href={c.href}>{c.title}</a>)}
+      <a href="/work">See all case studies &rarr;</a>
+    </div>
+    <div class="mobile-nav-item">
+      <a href="/services">Services</a>
+      <button class="mobile-caret" type="button" aria-label="Show Services menu" aria-expanded="false" aria-controls="mobile-sub-services"><span aria-hidden="true">&#8964;</span></button>
+    </div>
+    <div class="mobile-submenu" id="mobile-sub-services" hidden>
+      {services.map((s) => <a href={s.href}>{s.title}</a>)}
+      <div class="mobile-studio-divider" aria-hidden="true"></div>
+      {studios.map((s) => <a href={s.href}>{s.title}</a>)}
+    </div>
     <a href="/#pricing">Pricing</a>
     <a href="/#blog">Blog</a>
     <a href="/about">About</a>
