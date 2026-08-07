@@ -40,8 +40,8 @@ const proof = [
 
 // The other two services, for the Bigger Picture bridge (one-person differentiator).
 const siblings = [
-  { n: "01", title: "Branding", href: "/services/branding", teaser: "Identity, voice, and the brand your design expresses." },
-  { n: "02", title: "Search & AI Visibility", href: "/services/ai-and-search-visibility", teaser: "Built to be found and quoted when buyers search Google and ask AI." },
+  { title: "Branding", href: "/services/branding", teaser: "Identity, voice, and the brand your design expresses." },
+  { title: "Search & AI Visibility", href: "/services/ai-and-search-visibility", teaser: "Built to be found and quoted when buyers search Google and ask AI." },
 ];
 ---
 
@@ -57,21 +57,20 @@ const siblings = [
       FIRST VIEWPORT: eyebrow, outcome H1, one-line lead; the primary action waits at the close.
       FORM: established-world extension (no concept roll); service-detail template for the cluster.
     -->
-    <p class="eyebrow">Web Design</p>
     <h1>Design That Makes the Right People Stop and Stay</h1>
     <p class="lead">Every page built around your client&rsquo;s problem and how you solve it, so the person who was already told to call you arrives and thinks, yes, this is the one.</p>
   </section>
 
   <div class="surface-white">
     <section class="section proof">
-      <h2 class="eyebrow rv">The Proof</h2>
+      <h2 class="proof-heading rv">Real client work</h2>
       <div class="proof-rows">
         {proof.map((item, i) => (
           <article class:list={["proof-row", "rv", { reverse: i % 2 === 1 }]}>
             <div class="proof-visual">
               {item.image
                 ? <img src={item.image} alt={item.imageAlt} loading="lazy" width="720" height="480" />
-                : <div class="ph-panel" role="img" aria-label={`${item.client} - live-site capture pending`}><span>{item.client}</span><small>Live-site capture pending</small></div>}
+                : <div class="ph-panel" data-placeholder="true" role="img" aria-label={`${item.client} - live-site capture pending`}><span>{item.client}</span><small>Live-site capture pending</small></div>}
             </div>
             <div class="proof-copy">
               <p class="proof-client">{item.client}</p>
@@ -84,13 +83,11 @@ const siblings = [
   </div>
 
   <section class="section bridge rv">
-    <p class="eyebrow">How It Fits</p>
     <h2>Design is the part your clients see, not the whole job</h2>
     <p class="bridge-body">A page that stops the right person only works if the brand underneath it already earned trust and the build behind it holds up on their phone. You get all three from the same person, so the design is never fighting a brand it did not choose or a build it cannot rely on.</p>
     <div class="bridge-cards">
       {siblings.map((s) => (
         <a class="bridge-card" href={s.href}>
-          <span class="bridge-num">{s.n}</span>
           <span class="bridge-arrow" aria-hidden="true">&#8599;</span>
           <h3>{s.title}</h3>
           <p>{s.teaser}</p>
@@ -112,28 +109,6 @@ const siblings = [
      are global; this world is inherited from /about and the homepage. */
 
   .surface-white { background: var(--white); }
-
-  /* ---- Shared eyebrow (world-consistent section tag, gold dot) ---- */
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #6d635c;
-    margin: 0 0 18px;
-  }
-  h2.eyebrow { display: flex; }
-  .eyebrow::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-  }
 
   /* ---- Hero ---- */
   .section.svc-hero {
@@ -161,7 +136,15 @@ const siblings = [
   }
 
   /* ---- Proof rows (alternating image + decision caption) ---- */
-  .section.proof > .eyebrow { display: inline-flex; margin-bottom: 54px; }
+  .proof-heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(26px, 2.8vw, 34px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--espresso);
+    margin: 0 0 48px;
+  }
   .proof-rows { display: flex; flex-direction: column; gap: clamp(48px, 6vw, 88px); }
   .proof-row {
     display: grid;
@@ -253,11 +236,6 @@ const siblings = [
     transition: transform 0.2s ease, border-color 0.2s ease;
   }
   .bridge-card:hover { transform: translateY(-2px); border-color: var(--clay); }
-  .bridge-num {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    color: #6d635c;
-  }
   .bridge-arrow {
     position: absolute;
     top: 26px;

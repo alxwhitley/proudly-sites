@@ -187,6 +187,20 @@ Section vertical padding runs generous — 120–160px desktop top/bottom — de
 ### Named Rules
 **The Unhurried Rule.** Space is added, not trimmed, moving from mockup to build. Generous vertical rhythm is itself part of the premium read.
 
+## Layout Discipline
+
+**Scope:** service and detail-page templates only — /services and its children (/services/branding, /services/web-design, /services/ai-and-search-visibility, and any future page built on the same template family). This does not touch the homepage or its section grammar.
+
+Confirmed against Sweven.design's structural pattern on 2026-08-07 (layout only — not their palette, type, or branding): service pages read AI-generic when claim after claim runs in plain text with nothing for the eye to land on. The fix is structural, not decorative — every claim earns an image.
+
+### Named Rules
+
+**The Paired Claim Rule.** No two text-only sections run back to back on a service/detail template. Every claim block — an eyebrow-free heading, a 2–3 sentence description, one CTA link — shares its fold with a large real screenshot or photo, never stacked above or below it. Successive claim blocks alternate sides down the page: text-left/image-right, then text-right/image-left. If the image doesn't exist yet, the section waits behind a logged placeholder (`data-placeholder="true"`, tracked in REPLACE.md) rather than shipping as bare text.
+
+**The Scan-Then-Prove Rule.** Every service/detail template opens with the hairline-divided value-prop list (label + one-liner, no card boxes, no icons — the site's existing no-card-grid direction) so a reader gets the whole shape in one pass before the claim blocks prove it underneath. The list stays flat and never interleaves with the claim-block sequence.
+
+**The No-Scaffolding Rule.** No numbered "01/02" scaffolding and no per-section eyebrow dot+label on service/detail templates — both read as AI-generic list-making rather than argument. Section headings carry the page on their own.
+
 ## Elevation & Depth
 
 The system is flat by default. Depth appears exactly once, as a deliberate exception: the primary CTA button's hard offset shadow (the stacked black/brown effect). No other surface — card, photo, chip, or nav — carries a shadow. Borders default to Hairline Grey at 1px; the heavier Espresso Black border (1.5px) is reserved for the primary CTA button frame alone. Photos ship borderless, or at most a 1px Hairline Grey edge.

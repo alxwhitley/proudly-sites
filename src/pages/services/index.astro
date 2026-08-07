@@ -12,6 +12,42 @@
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { services } from "../../data/services";
+
+// Claim blocks (Layout Discipline: Paired Claim Rule) - one per service, alternating
+// sides, each paired with a real screenshot where one exists. Descriptions reuse real
+// sentences already approved on each service's own detail page (hero lead + a bridge
+// line) rather than inventing new copy. Search & AI Visibility has no live client
+// precedent yet (PRODUCT.md), so its claim block runs on a logged placeholder -
+// see REPLACE.md.
+const claims = [
+  {
+    title: "Branding",
+    href: "/services/branding",
+    heading: "A brand people trust before you say a word",
+    description: "Color, type, and voice built around how your clients actually decide, so the right person feels they are in good hands the moment they land. The brand you approve is the brand that reaches your clients, because nothing gets handed to another team to reinterpret.",
+    cta: "See the branding work",
+    image: "/images/smith-cash.jpeg",
+    imageAlt: "The Smith Cash Family Law website, brand carried through calm, trustworthy design",
+  },
+  {
+    title: "Web Design",
+    href: "/services/web-design",
+    heading: "Design that makes the right people stop and stay",
+    description: "Every page built around your client’s problem and how you solve it, so the person who was already told to call you arrives and thinks, yes, this is the one. You get design, brand, and build from the same person, so the page that stops people is never fighting a build it can’t rely on.",
+    cta: "See the web design work",
+    image: "/images/legacy-renovations.jpeg",
+    imageAlt: "The Legacy Renovations website, leading with finished work",
+  },
+  {
+    title: "Search & AI Visibility",
+    href: "/services/ai-and-search-visibility",
+    heading: "Built to be found when someone searches for you",
+    description: "Your pages are built to be ranked by Google and quoted by the AI assistants buyers now ask first, so you can show up in the answer, not three clicks past it. It is about a site that is fast, cleanly structured, and clear about who you are, so a search engine and an AI can both read it, trust it, and hand you to the person looking.",
+    cta: "See Search & AI Visibility",
+    image: null,
+    phLabel: "AI Overview citation capture pending",
+  },
+];
 ---
 
 <BaseLayout
@@ -43,6 +79,25 @@ import { services } from "../../data/services";
         </li>
       ))}
     </ul>
+  </section>
+
+  <section class="section claims-wrap">
+    <div class="claims stagger">
+      {claims.map((c, i) => (
+        <article class:list={["claim-row", { reverse: i % 2 === 1 }]}>
+          <div class="claim-visual">
+            {c.image
+              ? <img src={c.image} alt={c.imageAlt} loading="lazy" width="720" height="480" />
+              : <div class="ph-panel" data-placeholder="true" role="img" aria-label={`${c.title} - ${c.phLabel}`}><span>{c.title}</span><small>{c.phLabel}</small></div>}
+          </div>
+          <div class="claim-copy">
+            <h2>{c.heading}</h2>
+            <p>{c.description}</p>
+            <a class="claim-link" href={c.href}>{c.cta} &rarr;</a>
+          </div>
+        </article>
+      ))}
+    </div>
   </section>
 
   <section class="closing-cta">
@@ -140,6 +195,85 @@ import { services } from "../../data/services";
   .svc-row:hover .svc-arrow,
   .svc-row:focus-visible .svc-arrow { transform: translateX(7px); }
 
+  /* ---- Claim blocks (Layout Discipline: Paired Claim + Alternating Fold) ---- */
+  .section.claims-wrap {
+    padding-top: clamp(24px, 3vw, 40px);
+    padding-bottom: clamp(88px, 10vw, 150px);
+  }
+  .claims { display: flex; flex-direction: column; gap: clamp(64px, 8vw, 120px); }
+  .claim-row {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: clamp(32px, 4.5vw, 70px);
+    align-items: center;
+  }
+  .claim-row.reverse .claim-visual { order: 2; }
+  .claim-visual {
+    background: var(--sand);
+    border-radius: 16px;
+    padding: clamp(20px, 2.4vw, 32px);
+  }
+  .claim-visual img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .claim-visual .ph-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    aspect-ratio: 3 / 2;
+    background: var(--oat);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-align: center;
+    padding: 24px;
+  }
+  .claim-visual .ph-panel span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    color: var(--espresso);
+  }
+  .claim-visual .ph-panel small {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+  }
+  .claim-copy h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(26px, 2.8vw, 34px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--espresso);
+    margin: 0 0 18px;
+    max-width: 18ch;
+  }
+  .claim-copy p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 24px;
+    max-width: 46ch;
+  }
+  .claim-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--terracotta);
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+  }
+  .claim-link:hover,
+  .claim-link:focus-visible { border-color: var(--terracotta); }
+
   /* ---- Closing CTA (homepage instance, verbatim) ---- */
   .closing-cta { min-height: 520px; background: var(--espresso); color: #fff; text-align: center; padding: 125px 24px 115px; }
   .closing-cta h2 { font: 500 clamp(32px, 3.4vw, 40px)/1.15 "Playfair Display", serif; letter-spacing: -0.035em; margin-bottom: 22px; }
@@ -169,6 +303,9 @@ import { services } from "../../data/services";
   @media (max-width: 800px) {
     .services-hero .lead { font-size: 16px; }
     .svc-row { gap: 18px; padding-top: 24px; padding-bottom: 24px; }
+    .claim-row { grid-template-columns: 1fr; gap: 22px; }
+    .claim-row.reverse .claim-visual { order: 0; }
+    .claims { gap: 56px; }
     .closing-cta { min-height: 470px; padding: 100px 22px; }
     .closing-cta p { font-size: 16px; }
   }
