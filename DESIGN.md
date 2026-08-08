@@ -141,7 +141,7 @@ The palette reads warm, grounded, and restrained: cream work-surfaces and espres
 - **Burnt Terracotta** (`rgb(204,70,19)`): the only action color in the system — reserved for buttons only (CTAs, primary and secondary buttons) and key highlights. Never shared with any other role, and never used for inline text link or link-hover color. Deepened from the original `rgb(231,85,28)` on 2026-08-06 so white button text clears WCAG AA (~4.7:1, was 3.7:1); still a single burnt-terracotta accent.
 
 ### Secondary
-- **Honey Gold** (`rgb(243,192,69)`): decorative only — the eyebrow tick, review stars, and the dedicated accent surface. Never a button, never a full-bleed field.
+- **Honey Gold** (`rgb(243,192,69)`): decorative only — the eyebrow tick, review stars, and the dedicated accent surface. Never a button. One sanctioned full-bleed exception, added 2026-08-08: a single-testimonial display-scale pull-quote band (`/work`'s quote-band-gold) — a proof moment, not an ambient background, and still a single deliberate gesture rather than a repeatable pattern. Do not extend Honey Gold to other full-bleed fields without an equally deliberate case.
 
 ### Neutral
 - **Pure White** (`rgb(255,255,255)`): pure white surfaces, card-on-neutral backgrounds, heading text on dark sections.
@@ -158,7 +158,7 @@ The palette reads warm, grounded, and restrained: cream work-surfaces and espres
 - **True Black** (`rgb(0,0,0)`) / **Mid Grey** (`rgb(130,130,130)`) / **Charcoal Grey** (`rgb(84,84,84)`): held in the token scale for edge cases; none are part of the primary visual language above.
 
 ### Named Rules
-**The One Voice Rule.** Burnt Terracotta is reserved for buttons only. Inline text links are Espresso Black, with no color change on hover — hover reads as motion (a small rightward translate), never a shift toward terracotta. Honey Gold decorates — eyebrow tick, review stars, the accent surface — but is never a button and never a full-bleed field. No third accent, anywhere.
+**The One Voice Rule.** Burnt Terracotta is reserved for buttons only. Inline text links are Espresso Black, with no color change on hover — hover reads as motion (a small rightward translate), never a shift toward terracotta. Honey Gold decorates — eyebrow tick, review stars, the accent surface — and is never a button; see the Colors section above for its one sanctioned full-bleed exception (the `/work` quote band). No third accent, anywhere.
 
 ## Typography
 
