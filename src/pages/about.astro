@@ -86,24 +86,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <div class="surface-white">
-    <section class="section question rv">
-      <h2 class="question-h2">&ldquo;Is one person really enough?&rdquo;</h2>
-      <div class="question-body">
-        <p>It&rsquo;s a fair question, and I&rsquo;d rather answer it here than have you wonder.</p>
-        <p>Here&rsquo;s what one person means in practice. It means the strategy, copy, design, and build all come from the same brain, so nothing gets diluted between departments. It means when you email, the person who answers is the person who can actually fix the thing. It means your project is never the account a junior got assigned to.</p>
-        <p>What it doesn&rsquo;t mean is small output. Modern tools let one careful person deliver what used to take a team, and the judgment stays in one place the whole way through.</p>
-        <ul class="chips">
-          <li>Multi-location e-commerce</li>
-          <li>Booking systems</li>
-          <li>Full brand systems</li>
-        </ul>
-        <p>If your project genuinely needs a ten-person agency, I&rsquo;ll tell you that on the first call. Most don&rsquo;t.</p>
-        <p class="question-sub">Honest advice on the first call, even if the advice is &ldquo;you don&rsquo;t need me.&rdquo;</p>
-      </div>
-    </section>
-  </div>
-
   <div class="cred">
     <div class="cred-inner">
       <span>Based in Raleigh, NC</span>
@@ -301,49 +283,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     color: var(--muted);
     margin: 0;
     max-width: 46ch;
-  }
-
-  /* ---- The honest question: the single-column minimal beat ---- */
-  .section.question { max-width: 800px; }
-  .question-h2 {
-    font-family: "Playfair Display", Georgia, serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: clamp(24px, 3.6vw, 40px);
-    line-height: 1.22;
-    letter-spacing: -0.02em;
-    margin: 0 0 30px;
-  }
-  .question-body { max-width: 37rem; }
-  .question-body p {
-    font-size: 16px;
-    line-height: 1.75;
-    color: var(--muted);
-    margin: 0 0 22px;
-  }
-  .chips {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 9px;
-    padding: 0;
-    margin: 26px 0;
-  }
-  .chips li {
-    background: var(--cream);
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 8px 16px;
-    font-size: 14px;
-    color: var(--espresso);
-  }
-  .question-sub {
-    margin: 30px 0 0;
-    padding-top: 22px;
-    border-top: 1px solid var(--line);
-    font-size: 14px;
-    line-height: 1.6;
-    color: #6d635c;
   }
 
   /* ---- Trust bar ---- */
