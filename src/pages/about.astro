@@ -117,19 +117,6 @@ const testimonials = [
         <a class="primary-button" href="/contact">Let&rsquo;s Work Together</a>
         <p class="closing-sub">Live in weeks, not months.</p>
       </div>
-      <aside class="alex-card">
-        <img
-          class="alex-card-photo"
-          src="/images/alex-whitley.jpeg"
-          width="64"
-          height="64"
-          loading="lazy"
-          alt=""
-        />
-        <p class="alex-card-name">Alex Whitley</p>
-        <p class="alex-card-role">Founder, Proudly Sites. Every project, start to finish, is mine.</p>
-        <p class="alex-card-anchor">Member, Triangle Christian Chamber of Commerce</p>
-      </aside>
     </section>
   </div>
 </BaseLayout>
@@ -353,16 +340,17 @@ const testimonials = [
   }
   .stars { color: var(--gold); letter-spacing: 2px; }
 
-  /* ---- Closing CTA (dark, two-column) ---- */
+  /* ---- Closing CTA (dark, single centered column) ---- */
   .section.closing {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 64px;
-    align-items: center;
+    text-align: center;
     /* Footer is also espresso; trim the section's own padding so the two dark
        bands don't stack into an oversized void before the footer columns. */
     padding-top: clamp(72px, 8vw, 120px);
     padding-bottom: clamp(52px, 6vw, 92px);
+  }
+  .closing-copy {
+    max-width: 640px;
+    margin: 0 auto;
   }
   .closing-copy h2 {
     font-family: "Playfair Display", Georgia, serif;
@@ -378,46 +366,11 @@ const testimonials = [
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.72);
     margin: 0 0 30px;
-    max-width: 34rem;
   }
   .closing-sub {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     margin: 20px 0 0;
-  }
-  .alex-card {
-    background: var(--dark-card);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 14px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-  .alex-card-photo {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 28%;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-  }
-  .alex-card-name { font-size: 16px; font-weight: 700; color: #fff; margin: 0; }
-  .alex-card-role {
-    font-size: 14px;
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.72);
-    margin: 0;
-  }
-  .alex-card-anchor {
-    width: 100%;
-    font-size: 14px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.6);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    padding-top: 14px;
-    margin: 6px 0 0;
   }
 
   /* ---- Motion: one authored load moment + scroll reveal ---- */
@@ -486,7 +439,6 @@ const testimonials = [
     .principle { grid-template-columns: auto 1fr; gap: 18px; padding: 28px 0; }
     .principle-num { font-size: 24px; }
 
-    .section.closing { grid-template-columns: 1fr; gap: 30px; }
     .closing-copy p { font-size: 16px; }
 
     .review-grid { grid-template-columns: 1fr; gap: 12px; }
