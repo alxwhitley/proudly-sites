@@ -261,7 +261,20 @@ The system is flat by default. Depth appears exactly once, as a deliberate excep
 
 Nothing loops or moves after interaction stops. Hero load fade-up 12px 0.55s staggered. Scroll reveals fade-up once at ~15%. Grid stagger 0.08s. One sanctioned parallax exception applies only to product imagery inside the three case-study proof rows: a restrained vertical offset follows active desktop scrolling, stops immediately when scrolling stops, stays static on mobile, and is fully disabled under `prefers-reduced-motion`.
 
-## Open Decisions
+## Pricing Page
 
-Carried forward from the Framer build as still-open content/design calls, not yet Framer-specific build detail:
-- **Pricing number.** The homepage referenced a placeholder pricing range ("$4,000–$8,000") in two spots (About block, CTA subline) in the Framer build. The pricing tier was moving and the new number was never confirmed. Do not hardcode that old range into the Astro build — treat pricing copy as a flagged placeholder until Alex confirms a number.
+**Scope:** `/pricing` only.
+
+**Resolved 2026-08-08.** Public project band is **$4,000–$8,000** (stated in prose as "most projects land between $4,000 and $8,000," not a floor claim), Ceiling $10,000+. Confirmed — may be hardcoded on `/pricing` and its FAQ schema. The $500–900 internal quick-build tier and per-client project numbers (e.g. Timberlake's $6,400) stay off every public page. Church Studio pricing ($700–$950) stays isolated to its own page.
+
+**Post-launch plans, both published in full:**
+- **Care Plan** — $120/month ($20 hosting via Vercel Pro, $100 updates/maintenance/support). Unlimited text and photo updates, handled for you — not a self-editable panel by default (see Admin Panel note below). No contract, cancel with 30 days' notice, site and domain stay client's on cancellation, rates hold 12 months.
+- **Growth Plan** — $350/month. Everything in Care, plus: monthly search performance reporting, ongoing keyword research, on-page optimization, Google Business Profile management, one new written page per month, AI search visibility monitoring, technical health checks, quarterly strategy call. Same terms as Care. Never outcome-framed — describe work performed, not results delivered.
+
+**Admin panel — offered as an option, not the default.** The done-for-you model ("no dashboard to log into") is the standard Care/Growth posture. A self-editable admin panel remains available as an alternative when a client wants direct access, offered per-client rather than assumed. `/pricing` describes the done-for-you default plainly and may note self-editable access is available on request — never present the admin panel as universal.
+
+### Named Rules
+
+**The Editorial Pricing Layout.** `/pricing` is a sanctioned exception to the Whole-Or-Center Rule's "sparingly" clause: its text sections run center-set at a narrow (~34rem) measure throughout, since the page's content is argumentative prose rather than proof imagery. Page-level exception only — service and case-study templates keep the Paired Claim Rule.
+
+**Plan Presentation.** Care and Growth are never cards. Per Scan-Then-Prove (hairline rows for items too heavy for a card), they run as two hairline-divided columns. Growth is distinguished from Care by surface step only (Warm Cream vs. Sand) — never by border, shadow, or accent color, since Burnt Terracotta is buttons-only and Honey Gold's full-bleed exception is already spent on `/work`.
