@@ -30,8 +30,8 @@ const facets = [
 ];
 
 const siblings = [
-  { n: "01", title: "Branding", href: "/services/branding", teaser: "Identity, voice, and the brand your design expresses." },
-  { n: "02", title: "Web Design", href: "/services/web-design", teaser: "The design that makes the right people stop and stay." },
+  { title: "Branding", href: "/services/branding", teaser: "Identity, voice, and the brand your design expresses." },
+  { title: "Web Design", href: "/services/web-design", teaser: "The design that makes the right people stop and stay." },
 ];
 ---
 
@@ -47,25 +47,12 @@ const siblings = [
       FIRST VIEWPORT: eyebrow, outcome H1, one-line lead; the primary action waits at the close.
       FORM: established-world extension; new service with no case proof yet (expected), capability-framed, honest.
     -->
-    <p class="eyebrow">Search &amp; AI Visibility</p>
     <h1>Built to Be Found When Someone Searches for You</h1>
     <p class="lead">Your pages are built to be ranked by Google and quoted by the AI assistants buyers now ask first, so you can show up in the answer, not three clicks past it.</p>
   </section>
 
-  <div class="surface-white">
-    <section class="section story rv">
-      <p class="eyebrow">Why It Matters Now</p>
-      <h2>The way people find you is changing</h2>
-      <div class="story-body">
-        <p>More and more, the first thing a potential client sees is not your website. It is a search result, or an answer an AI assistant wrote by reading the web on their behalf. If your site is not built to be understood by both, you are invisible at the exact moment someone is deciding who to call.</p>
-        <p>Being found is not about tricks or stuffing pages with keywords. It is about a site that is fast, cleanly structured, and clear about who you are and what you do, so a search engine and an AI can both read it, trust it, and hand you to the person looking.</p>
-        <p class="story-note">This is built into every project from the start, not sold back to you as a bolt-on.</p>
-      </div>
-    </section>
-  </div>
-
   <section class="section facets">
-    <h2 class="eyebrow rv">What That Means</h2>
+    <h2 class="facets-heading rv">What that means</h2>
     <ul class="facet-list stagger">
       {facets.map((f) => (
         <li class="facet">
@@ -76,14 +63,33 @@ const siblings = [
     </ul>
   </section>
 
+  <div class="surface-white">
+    <section class="section story">
+      <div class="story-grid">
+        <div class="story-visual rv">
+          <div class="ph-panel" data-placeholder="true" role="img" aria-label="AI Overview / ChatGPT-style citation of a client site - live capture pending">
+            <span>Cited in an AI answer</span>
+            <small>Live capture pending</small>
+          </div>
+        </div>
+        <div class="story-text rv">
+          <h2>The way people find you is changing</h2>
+          <div class="story-body">
+            <p>More and more, the first thing a potential client sees is not your website. It is a search result, or an answer an AI assistant wrote by reading the web on their behalf. If your site is not built to be understood by both, you are invisible at the exact moment someone is deciding who to call.</p>
+            <p>Being found is not about tricks or stuffing pages with keywords. It is about a site that is fast, cleanly structured, and clear about who you are and what you do, so a search engine and an AI can both read it, trust it, and hand you to the person looking.</p>
+            <p class="story-note">This is built into every project from the start, not sold back to you as a bolt-on.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
   <section class="section bridge rv">
-    <p class="eyebrow">How It Fits</p>
     <h2>Visibility only helps if the site earns the click</h2>
     <p class="bridge-body">Getting found is the first job. The brand and the design are what turn that found visitor into a client once they arrive. You get all three from the same person, so the site that ranks is the same site that looks the part and holds up.</p>
     <div class="bridge-cards">
       {siblings.map((s) => (
         <a class="bridge-card" href={s.href}>
-          <span class="bridge-num">{s.n}</span>
           <span class="bridge-arrow" aria-hidden="true">&#8599;</span>
           <h3>{s.title}</h3>
           <p>{s.teaser}</p>
@@ -105,27 +111,6 @@ const siblings = [
      from /about, the homepage, and the /services/branding template. */
 
   .surface-white { background: var(--white); }
-
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #6d635c;
-    margin: 0 0 18px;
-  }
-  h2.eyebrow { display: flex; }
-  .eyebrow::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-  }
 
   /* ---- Hero ---- */
   .section.svc-hero {
@@ -152,9 +137,43 @@ const siblings = [
     max-width: 40rem;
   }
 
-  /* ---- Story (text-forward, honest POV) ---- */
-  .section.story { max-width: 900px; }
-  .story h2 {
+  /* ---- Story: claim block paired with an image (Layout Discipline: Paired Claim Rule) ---- */
+  .story-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: clamp(32px, 4.5vw, 70px);
+    align-items: center;
+  }
+  .story-visual {
+    background: var(--sand);
+    border-radius: 16px;
+    padding: clamp(20px, 2.4vw, 32px);
+  }
+  .story-visual .ph-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    aspect-ratio: 16 / 10;
+    background: var(--oat);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    text-align: center;
+    padding: 24px;
+  }
+  .story-visual .ph-panel span {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 20px;
+    color: var(--espresso);
+  }
+  .story-visual .ph-panel small {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+  }
+  .story-text h2 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 500;
     font-size: clamp(32px, 3.6vw, 40px);
@@ -178,9 +197,16 @@ const siblings = [
     margin-top: 30px !important;
   }
 
-  /* ---- Facets (hairline-divided, no numbered scaffolding) ---- */
+  /* ---- Facets: the Scan layer (hairline-divided, no numbered scaffolding) ---- */
   .section.facets { max-width: 900px; }
-  .section.facets > .eyebrow { display: inline-flex; margin-bottom: 40px; }
+  .facets-heading {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 3.6vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0 0 40px;
+  }
   .facet-list { list-style: none; margin: 0; padding: 0; }
   .facet {
     display: grid;
@@ -236,7 +262,6 @@ const siblings = [
     transition: transform 0.2s ease, border-color 0.2s ease;
   }
   .bridge-card:hover { transform: translateY(-2px); border-color: var(--clay); }
-  .bridge-num { font-size: 12px; letter-spacing: 0.08em; color: #6d635c; }
   .bridge-arrow {
     position: absolute;
     top: 26px;
@@ -292,6 +317,7 @@ const siblings = [
   /* ---- Responsive ---- */
   @media (max-width: 800px) {
     .svc-hero .lead, .story-body p, .bridge-body { font-size: 16px; }
+    .story-grid { grid-template-columns: 1fr; gap: 22px; }
     .facet { grid-template-columns: 1fr; gap: 12px; padding: 26px 0; }
     .bridge-cards { grid-template-columns: 1fr; }
     .closing-cta { min-height: 470px; padding: 100px 22px; }

@@ -138,7 +138,7 @@ The system is a deliberate maturation past the original mockup's more folksy $4�
 The palette reads warm, grounded, and restrained: cream work-surfaces and espresso-dark sections, with a single decisive accent reserved for action.
 
 ### Primary
-- **Burnt Terracotta** (`rgb(204,70,19)`): the only action color in the system — CTAs, primary buttons, link hover, key highlights. Never shared with any other role. Deepened from the original `rgb(231,85,28)` on 2026-08-06 so white button text clears WCAG AA (~4.7:1, was 3.7:1); still a single burnt-terracotta accent.
+- **Burnt Terracotta** (`rgb(204,70,19)`): the only action color in the system — reserved for buttons only (CTAs, primary and secondary buttons) and key highlights. Never shared with any other role, and never used for inline text link or link-hover color. Deepened from the original `rgb(231,85,28)` on 2026-08-06 so white button text clears WCAG AA (~4.7:1, was 3.7:1); still a single burnt-terracotta accent.
 
 ### Secondary
 - **Honey Gold** (`rgb(243,192,69)`): decorative only — the eyebrow tick, review stars, and the dedicated accent surface. Never a button, never a full-bleed field.
@@ -158,7 +158,7 @@ The palette reads warm, grounded, and restrained: cream work-surfaces and espres
 - **True Black** (`rgb(0,0,0)`) / **Mid Grey** (`rgb(130,130,130)`) / **Charcoal Grey** (`rgb(84,84,84)`): held in the token scale for edge cases; none are part of the primary visual language above.
 
 ### Named Rules
-**The One Voice Rule.** Burnt Terracotta is the only action color in the system. Honey Gold decorates — eyebrow tick, review stars, the accent surface — but is never a button and never a full-bleed field. No third accent, anywhere.
+**The One Voice Rule.** Burnt Terracotta is reserved for buttons only. Inline text links are Espresso Black, with no color change on hover — hover reads as motion (a small rightward translate), never a shift toward terracotta. Honey Gold decorates — eyebrow tick, review stars, the accent surface — but is never a button and never a full-bleed field. No third accent, anywhere.
 
 ## Typography
 
@@ -187,9 +187,29 @@ Section vertical padding runs generous — 120–160px desktop top/bottom — de
 ### Named Rules
 **The Unhurried Rule.** Space is added, not trimmed, moving from mockup to build. Generous vertical rhythm is itself part of the premium read.
 
+**The Whole-Or-Center Rule.** Text-only sections (no supporting image) are used sparingly and only for the single most important claim on a page. When used, they are fully center-aligned. Nothing in this system is aligned slightly left of its container: alignment is either flush to the container edge or centered on it.
+
+**The Full-Bleed Rule.** Hairline dividers and section rules run edge to edge within their container. Nothing stops short of the container edge.
+
+## Layout Discipline
+
+**Scope:** service and detail-page templates only — /services and its children (/services/branding, /services/web-design, /services/ai-and-search-visibility, and any future page built on the same template family). This does not touch the homepage or its section grammar.
+
+Confirmed against Sweven.design's structural pattern on 2026-08-07 (layout only — not their palette, type, or branding): service pages read AI-generic when claim after claim runs in plain text with nothing for the eye to land on. The fix is structural, not decorative — every claim earns an image.
+
+### Named Rules
+
+**The Paired Claim Rule.** No two text-only sections run back to back on a service/detail template. Every claim block — an eyebrow-free heading, a 2–3 sentence description, one CTA link — shares its fold with a large real screenshot or photo, never stacked above or below it. Successive claim blocks alternate sides down the page: text-left/image-right, then text-right/image-left. If the image doesn't exist yet, the section waits behind a logged placeholder (`data-placeholder="true"`, tracked in REPLACE.md) rather than shipping as bare text.
+
+**The Scan-Then-Prove Rule.** Every service/detail template opens with a scan layer that gives the reader the whole shape in one pass before the claim blocks prove it underneath. That layer may be a hairline-divided list or a card grid, chosen by content: cards when the items are short parallel facts (a heading plus one or two lines), hairline rows when the items carry more weight. Cards never carry paragraph-length argument, and no card grid is the primary structure of a page. The scan layer stays flat and never interleaves with the claim-block sequence.
+
+**The No-Scaffolding Rule.** No numbered "01/02" scaffolding and no per-section eyebrow dot+label on service/detail templates — both read as AI-generic list-making rather than argument. Section headings carry the page on their own.
+
 ## Elevation & Depth
 
 The system is flat by default. Depth appears exactly once, as a deliberate exception: the primary CTA button's hard offset shadow (the stacked black/brown effect). No other surface — card, photo, chip, or nav — carries a shadow. Borders default to Hairline Grey at 1px; the heavier Espresso Black border (1.5px) is reserved for the primary CTA button frame alone. Photos ship borderless, or at most a 1px Hairline Grey edge.
+
+**Hover mechanics.** The offset shadow is fixed — it never moves. On hover, the terracotta face itself travels toward the shadow (a press into it), closing the gap between face and shadow. The shadow does not travel away from the face.
 
 ### Named Rules
 **The Single Tool Rule.** The workshop keeps one dramatic gesture — the CTA's stacked shadow and heavy frame — and spends it in exactly one place. Everywhere else stays flat, or hairline-thin.
@@ -201,7 +221,7 @@ The system is flat by default. Depth appears exactly once, as a deliberate excep
 - **Secondary / Nav CTA**: flat, no shadow — the nav CTA and secondary actions.
 
 ### Tags
-- **Section Tag**, paired with the Eyebrow text style: the small uppercase, tracked label opening each section.
+- **Section Tag** — **RETIRED FROM USE sitewide as of 2026-08-07.** Was paired with the Eyebrow text style (the small uppercase, tracked label opening each section); no longer applied as a section-opener anywhere on the site. The Eyebrow type token stays defined in Typography for any future need, but is not currently applied. This leaves Honey Gold (its color) with reduced usage sitewide — do not reassign Honey Gold to a new role to compensate; it remains reserved for review stars and the accent surface.
 
 ### Cards
 - **Testimonial Card**: a three-up row of the real testimonials, Playfair Highlight quotes. Previously a 2×2 that padded three testimonials with a standalone "5.0" rating tile; the redundant tile was removed on 2026-08-06 so only real testimonials show.

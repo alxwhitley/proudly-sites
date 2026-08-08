@@ -9,39 +9,7 @@
   Shared chrome + tokens from BaseLayout / global.css. See src-pages-work.md.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
-const cases = [
-  {
-    tag: "Family Law · Raleigh",
-    title: "Smith Cash Family Law",
-    line: "A boutique firm that finally looks like the counsel it gives.",
-    href: "/work/smith-cash-family-law",
-    image: "/images/smith-cash.jpeg",
-    imageAlt: "The Smith Cash Family Law website",
-  },
-  {
-    tag: "Kitchen & Bath · Raleigh",
-    title: "Legacy Renovations",
-    line: "Craftsmanship homeowners can see before they call.",
-    href: "/work/legacy-renovations",
-    image: "/images/legacy-renovations.jpeg",
-    imageAlt: "The Legacy Renovations website",
-  },
-  {
-    tag: "Auto Detailing",
-    title: "Strictly Clean Detailing",
-    line: "Quality work, presented like it.",
-    href: "/work/strictly-clean-detailing",
-    image: null,
-  },
-  {
-    tag: "Nonprofit & Church",
-    title: "After Hours Ministry",
-    line: "A ministry site that goes beyond generic.",
-    href: "/work/after-hours-ministry",
-    image: null,
-  },
-];
+import { caseStudies as cases } from "../../data/work";
 ---
 
 <BaseLayout
@@ -55,7 +23,6 @@ const cases = [
       STORY: a referred founder looks at real client work the way their own clients will look at theirs, finds one that rhymes with their situation, then takes the ask.
       FORM: established-world extension (no concept roll); portfolio index for the cluster.
     -->
-    <p class="eyebrow">Selected Work</p>
     <h1>Work That Holds Up to a Referral</h1>
     <p class="lead">Every project here belongs to a business that wins on reputation. Look at each one the way your clients will look at yours.</p>
   </section>
@@ -89,25 +56,6 @@ const cases = [
 <style>
   /* Route-specific composition. Tokens + chrome are global. */
 
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    font-size: 12px;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #6d635c;
-    margin: 0 0 18px;
-  }
-  .eyebrow::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-  }
-
   /* ---- Hero ---- */
   .section.work-hero {
     max-width: 760px;
@@ -115,7 +63,6 @@ const cases = [
     padding-top: clamp(56px, 7vw, 104px);
     padding-bottom: clamp(24px, 3vw, 44px);
   }
-  .work-hero .eyebrow { display: inline-flex; }
   .work-hero h1 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 500;
@@ -158,7 +105,7 @@ const cases = [
     align-items: center;
     justify-content: center;
     gap: 8px;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 16 / 10;
     background: var(--oat);
     border: 1px solid var(--line);
     border-radius: 10px;
@@ -192,7 +139,11 @@ const cases = [
     margin: 0 0 8px;
   }
   .work-line { font-size: 16px; line-height: 1.55; color: var(--muted); margin: 0 0 14px; max-width: 44ch; }
-  .work-more { font-size: 14px; font-weight: 700; color: var(--terracotta); }
+  .work-more { display: inline-block; font-size: 14px; font-weight: 700; color: var(--espresso); }
+  @media (prefers-reduced-motion: no-preference) {
+    .work-more { transition: transform 0.25s ease; }
+    .work-card:hover .work-more, .work-card:focus-visible .work-more { transform: translateX(4px); }
+  }
 
   /* ---- Closing CTA (homepage instance, verbatim) ---- */
   .closing-cta { min-height: 520px; background: var(--espresso); color: #fff; text-align: center; padding: 125px 24px 115px; }

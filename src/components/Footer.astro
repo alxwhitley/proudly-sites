@@ -4,12 +4,15 @@
   Durable chrome shared across every route. Styling lives in
   src/styles/global.css (footer / .footer-grid / .footer-bottom).
 */
+import { services } from "../data/services";
+import { studios } from "../data/studios";
+import { caseStudies } from "../data/work";
 ---
 <footer>
   <div class="footer-grid">
     <div class="footer-brand"><a class="footer-logo" href="/"><img src="/images/proudly-logo.png" alt="Proudly Sites" /></a><p>Contact</p><a href="tel:+19196348169">919-634-8169</a><a href="mailto:alex@proudlysites.com">alex@proudlysites.com</a></div>
-    <div><h3>Services</h3><a href="/services/branding">Branding</a><a href="/services/web-design">Web Design</a><a href="/services/ai-and-search-visibility">Search &amp; AI Visibility</a></div>
-    <div><h3>Case Studies</h3><a href="/work/smith-cash-family-law">Smith Cash Family Law</a><a href="/work/legacy-renovations">Legacy Renovations</a><a href="/work/strictly-clean-detailing">Strictly Clean Detailing</a><a href="/work/after-hours-ministry">After Hours Ministry</a></div>
+    <div><h3>Services</h3>{services.map((s) => <a href={s.href}>{s.title}</a>)}{studios.map((s) => <a href={s.href}>{s.title}</a>)}</div>
+    <div><h3>Case Studies</h3>{caseStudies.map((c) => <a href={c.href}>{c.title}</a>)}</div>
     <div><h3>From the Blog</h3><a href="/#blog">Read the Blog →</a></div>
   </div>
   <div class="footer-bottom"><span>© 2026 Proudly Sites. Raleigh, NC.</span></div>

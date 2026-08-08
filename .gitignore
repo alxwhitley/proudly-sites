@@ -9,6 +9,10 @@ dist/
 # (the tracked index) documents what lives here.
 assets/
 
+# private business documents (Articles of Organization, internal notes) —
+# never belongs in this repo, which is public on Vercel Hobby.
+Internal/
+
 # dependencies
 node_modules/
 

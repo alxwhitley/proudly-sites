@@ -28,9 +28,24 @@ Format per entry: `path | used on | status (real/placeholder/missing) | notes`
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/services/branding` + `/services/web-design` proof 3 (After Hours) | placeholder | No local After Hours asset; CMS unreachable. Swap for a real After Hours brand-in-context capture when available. |
 | (none — no proof imagery by design) | `/services/ai-and-search-visibility` | N/A | New service, no live precedent (runbook B4). No screenshot proof — expected gap, not an error. |
 
+## Studios
+
+| Asset | Used on | Status | Notes |
+|---|---|---|---|
+| `public/images/haw-branch-home.jpeg` | `/studios/church-studio` hero | real | Haw Branch Church homepage (in-progress build), worship photo + "There's a seat for you Sunday." headline. |
+| `public/images/haw-branch-sunday.jpeg` | `/studios/church-studio` included section (screenshot rail) | real | Haw Branch Plan Your Visit page, hour-by-hour Sunday walkthrough. |
+| `public/images/haw-branch-answers.jpeg` | `/studios/church-studio` included section (screenshot rail) | real | Haw Branch page answering a first-time guest's honest questions. |
+| `public/images/haw-branch-next.jpeg` | `/studios/church-studio` proof row | real | Haw Branch next-steps section + dark closing footer, First Step invite. Church Studio build still in progress; swap for the launched-site link when live per the copy doc. |
+
 ### Missing live-site captures (queued — no placeholder screenshot substituted, per runbook Section C)
 - Smith Cash, After Hours, Strictly Clean: no live URL on hand -> fresh live-site screenshots skipped, need Alex to supply URLs.
 - Legacy: URL on hand (legacykitchenbathroomrenovations.com) but a real screenshot already existed, so no fresh Playwright capture was run this session.
+
+## About
+
+| Asset | Used on | Status | Notes |
+|---|---|---|---|
+| On-palette placeholder panel (Sand/Oat, "Real photo pending") | `/about` Principles section (photo-split, 2026-08-07 layout reshape) | placeholder | Reshape reverses the page's prior "no placeholder imagery" call with Alex's explicit go-ahead — the section needs a real candid workspace/process photo of Alex, portrait orientation (3:4–4:5), to replace this panel. Not sourced yet; swap before this branch ships. |
 
 ---
 Status key:

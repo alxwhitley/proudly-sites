@@ -190,8 +190,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     color: #6d635c;
   }
   .methods a, .method-value { font-size: 16px; color: var(--espresso); }
-  .methods a { transition: color 0.18s ease; }
-  .methods a:hover { color: var(--terracotta); }
+  .methods a { display: inline-block; }
+  @media (prefers-reduced-motion: no-preference) {
+    .methods a { transition: transform 0.18s ease; }
+    .methods a:hover, .methods a:focus-visible { transform: translateX(4px); }
+  }
 
   .assurance { margin-top: 32px; }
   .assurance h2 {
