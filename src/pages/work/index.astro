@@ -23,7 +23,6 @@ import { caseStudies as cases } from "../../data/work";
       STORY: a referred founder looks at real client work the way their own clients will look at theirs, finds one that rhymes with their situation, then takes the ask.
       FORM: established-world extension (no concept roll); portfolio index for the cluster.
     -->
-    <p class="eyebrow">Selected Work</p>
     <h1>Work That Holds Up to a Referral</h1>
     <p class="lead">Every project here belongs to a business that wins on reputation. Look at each one the way your clients will look at yours.</p>
   </section>
@@ -57,25 +56,6 @@ import { caseStudies as cases } from "../../data/work";
 <style>
   /* Route-specific composition. Tokens + chrome are global. */
 
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    font-size: 12px;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #6d635c;
-    margin: 0 0 18px;
-  }
-  .eyebrow::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-  }
-
   /* ---- Hero ---- */
   .section.work-hero {
     max-width: 760px;
@@ -83,7 +63,6 @@ import { caseStudies as cases } from "../../data/work";
     padding-top: clamp(56px, 7vw, 104px);
     padding-bottom: clamp(24px, 3vw, 44px);
   }
-  .work-hero .eyebrow { display: inline-flex; }
   .work-hero h1 {
     font-family: "Playfair Display", Georgia, serif;
     font-weight: 500;

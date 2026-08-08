@@ -93,7 +93,7 @@ const testimonials = [
   </section>
 
   <section class="work section" id="work">
-    <div class="section-heading"><span class="gold-dot"></span><p>Selected Work</p><h2>Their Craft, Presented Well</h2></div>
+    <div class="section-heading"><h2>Their Craft, Presented Well</h2></div>
     <div class="projects">
       {projects.map((project, index) => (
         <article class:list={["project", { reverse: index % 2 === 1 }]}>
@@ -115,7 +115,6 @@ const testimonials = [
     <div class="about-inner">
       <img class="about-photo" src="/images/alex-whitley.jpeg" alt="Alex Whitley in his Raleigh studio" loading="lazy" />
       <div class="about-copy">
-        <div class="section-heading"><span class="gold-dot"></span><p>Who You’re Working With</p></div>
         <h2>Hi, I’m Alex. Your project never gets handed off.</h2>
         <p class="about-lead">Proudly Sites is a one-person studio in Raleigh. When you work with me, the person on the discovery call is the same person writing your copy, designing your pages, and answering your emails. No account managers, no junior designers, no telephone game.</p>
         <div class="about-points">
@@ -130,7 +129,7 @@ const testimonials = [
   </section>
 
   <section class="services section" id="services">
-    <div class="section-heading centered"><span class="gold-dot"></span><p>What I Do</p><h2>Strategy, Copy, and Design, In-House</h2></div>
+    <div class="section-heading centered"><h2>Strategy, Copy, and Design, In-House</h2></div>
     <div class="service-grid">
       <article><span class="service-icon">◎</span><h3>Branding</h3><p>A brand that earns trust before you say a word. Color, type, and voice built around how your clients actually decide.</p></article>
       <article><span class="service-icon">▣</span><h3>Web Design</h3><p>Design that makes the right people stop and stay. Every section built around your client’s problem and how you solve it, not a template.</p></article>
@@ -148,7 +147,7 @@ const testimonials = [
   </section>
 
   <section class="reviews section">
-    <div class="reviews-head"><div><span class="gold-dot"></span><p>Reviews</p><h2>What Clients Say</h2></div></div>
+    <div class="reviews-head"><div><h2>What Clients Say</h2></div></div>
     <div class="review-grid">
       {testimonials.map(item => <blockquote><span>★★★★★</span><p>{item[0]}</p><cite><b>{item[1]}</b>{item[2]}</cite></blockquote>)}
     </div>
@@ -167,7 +166,7 @@ const testimonials = [
      type, header, footer, buttons, tags, .section container) live in
      src/styles/global.css. Nothing below is promoted to a global template. */
   .hero{min-height:670px;padding:84px 24px 72px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
-  .hero-location,.section-heading>p,.project-label,.process-intro>p,.reviews-head p{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#6d635c;margin-bottom:24px}
+  .hero-location,.project-label,.process-intro>p{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#6d635c;margin-bottom:24px}
   .hero h1{font:500 clamp(48px,5.4vw,78px)/.98 "Playfair Display",serif;letter-spacing:-.04em;max-width:920px;margin-bottom:28px}
   .hero h1 em{color:var(--terracotta);font-weight:500}
   .hero-copy{max-width:650px;color:var(--muted);font-size:20px;line-height:1.6;margin-bottom:32px}
@@ -189,8 +188,6 @@ const testimonials = [
   .proof-clients b{font-size:14px}
   .proof-clients small{font-size:12px;color:#6d635c;margin-top:2px}
   .section-heading{margin-bottom:54px}
-  .section-heading .gold-dot,.reviews-head .gold-dot{display:inline-block;width:6px;height:6px;background:var(--gold);border-radius:50%;margin-right:8px}
-  .section-heading>p{display:inline-block;margin-bottom:18px}
   .section-heading h2,.reviews-head h2{font:400 40px/1.1 "Lato",sans-serif;letter-spacing:-.035em;margin:0}
   .projects{border-top:1px solid var(--line)}
   .project{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:64px 0;border-bottom:1px solid var(--line)}
@@ -205,7 +202,6 @@ const testimonials = [
   .about.section{max-width:none;background:#eeece7;padding-left:max(40px,calc((100vw - 1260px)/2));padding-right:max(40px,calc((100vw - 1260px)/2))}
   .about-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center}
   .about-photo{width:100%;height:550px;object-fit:cover;object-position:center 35%;border-radius:16px}
-  .about-copy .section-heading{margin-bottom:20px}
   .about-copy h2{font:500 40px/1.1 "Playfair Display",serif;letter-spacing:-.04em;margin-bottom:22px}
   .about-lead{color:var(--muted);max-width:62ch;font-size:20px;line-height:1.6}
   .about-points{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
@@ -231,7 +227,6 @@ const testimonials = [
   .process-grid h3{font:500 20px/1.25 "Playfair Display",serif;margin:42px 0 15px}
   .process-grid p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.7);margin-bottom:0}
   .reviews-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:50px}
-  .reviews-head p{display:inline-block;margin-bottom:16px}
   .reviews-head a{font-size:14px;color:var(--terracotta);font-weight:700}
   .review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
   .review-grid blockquote,.rating{margin:0;border:1px solid var(--line);border-radius:12px;background:#fff;min-height:245px;padding:34px}
