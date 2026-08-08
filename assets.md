@@ -18,6 +18,7 @@ Format per entry: `path | used on | status (real/placeholder/missing) | notes`
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/after-hours-ministry` hero | placeholder | No local asset; CMS unreachable. Swap for a real After Hours photo/screenshot when available. |
 | Strictly Clean "Kevin W." quote | `/work/strictly-clean-detailing` quote band | missing | Real quote lives in the unreachable CMS. Quote band OMITTED rather than fabricated. Supply the real quote to add it. |
 | On-palette placeholder panel (Oat, "Capture pending") | `/work` index card (Strictly Clean, After Hours) | placeholder | Same two cases lack a card thumbnail; placeholder panels used. |
+| Three product-feature image slots per case (12 total) | `/work/<slug>` alternating proof rows | placeholder | Neutral labeled placeholders are live. Supply one real product composition for each canonical `features` record under `src/content/case-studies/<slug>/index.md`; store shippable media in the matching `src/assets/case-studies/<slug>/` folder and populate each feature's optional `image` field. |
 
 ## Services
 

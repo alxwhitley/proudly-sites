@@ -8,6 +8,54 @@
 
 **Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then address the dead nav links, mobile accordion, Legacy Renovations image mismatch, and the two open P2 findings.
 
+## Follow-up Backlog
+
+Ordered by production impact. Each item should be handled as its own focused task or a tightly related pass.
+
+### 1. Restore form submissions
+- Replace `YOUR_WEB3FORMS_ACCESS_KEY` in both `/contact` and Church Studio with the confirmed production key.
+- Verify successful submission, failure messaging, spam protection, and receipt at the intended inbox on both forms.
+
+### 2. Repair navigation destinations and mobile behavior
+- Resolve the dead `/#pricing` and `/#blog` links by adding real destinations or removing the promises from header and footer navigation.
+- Fix the mobile submenu hidden-state behavior so Services and Work expand and collapse only when requested.
+- Verify keyboard operation, focus state, Escape/outside-close behavior where applicable, and 390px layout.
+
+### 3. Correct Legacy Renovations proof imagery
+- Replace the tile-repair/lead-capture screenshot used across the case, homepage, and service proof surfaces with imagery that matches the kitchen-and-bath narrative, or revise the narrative only if that screenshot is the actual product truth.
+- Check every consumer of the canonical Legacy image and prevent headline cropping.
+
+### 4. Replace case-study product placeholders
+- Supply and install three real product-image compositions for each of the four cases, matching the three canonical feature records.
+- Preserve the shared alternating structure, stable ratios, descriptive alt text, and restrained parallax behavior.
+- Track exact required captures in `assets.md` until all twelve slots are real.
+
+### 5. Complete missing case-study material
+- Confirm live URLs for Smith Cash, Strictly Clean, and After Hours.
+- Supply the real Kevin W. quote for Strictly Clean.
+- Supply real hero imagery for Strictly Clean and After Hours, then replace their `/work` card and service-proof placeholders.
+
+### 6. Fix muted-label contrast on Oat
+- Replace or contextually deepen `#6d635c` where it renders on Oat so small text reaches WCAG AA 4.5:1 without changing the broader neutral role unnecessarily.
+- Recheck every placeholder caption and small label using the same token.
+
+### 7. Correct mobile contact-card alignment
+- Remove the desktop `align-items: start` effect when the contact grid collapses to one column.
+- Verify the card aligns with the mobile content spine at 390px with no overflow.
+
+### 8. Refresh the Impeccable design-system sidecar
+- Handed off to the separate Codex task **Refresh Proudly Impeccable sidecar**.
+- Diagnose drift first, then refresh `.impeccable/design.json` from the current `DESIGN.md` without redesigning or changing unrelated UI.
+
+### 9. Resolve the live-button hover palette exception
+- Decide whether the pre-existing `#33241b` live-site button hover belongs in the documented tonal ramp or should be replaced by an existing Espresso value.
+- Update `DESIGN.md` only if the value is intentionally retained; do not suppress the detector without that decision.
+
+### 10. Finish the remaining service-page design debt
+- Differentiate Branding and Web Design beyond the shared template and repeated screenshots.
+- Add the missing Scan-Then-Prove opening structure to both pages and remove repeated proof copy.
+- Resolve cropped client-site headlines and the visually light Search & AI Visibility desktop composition in the same service-cluster review.
+
 ## Morning Queue
 
 ### 2026-08-08 (session 2) — `overnight/system-fixes-2` run (branch off `overnight/system-fixes`, committed not merged)
@@ -59,6 +107,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Saturday Aug 8, 2026 · 12:03 PM] — Code
+- **Did:** Consolidated every known out-of-scope production, navigation, case-study content, accessibility, contact-layout, Impeccable drift, palette, and service-page issue into an ordered `plan.md` follow-up backlog with acceptance and verification intent; added the twelve case-feature image slots to `assets.md`; marked the sidecar refresh as handed off to its separate Codex task.
+- **Decided:** Kept implementation work separated by production impact and shared surface rather than combining unrelated fixes into one catch-all pass. Assets remain tracked in `assets.md`; executable work remains canonical in `plan.md`.
+
+**Files touched:** `plan.md`; `assets.md`.
 
 ### [Saturday Aug 8, 2026 · 11:55 AM] — Code
 - **Did:** Reshaped all four case-study detail pages through Impeccable into exactly three project-specific product-proof rows with alternating desktop composition, text-first mobile stacking, honest replaceable image placeholders, and restrained desktop parallax; replaced the retired `moment` / `built` / `changed` content fields with a validated three-feature schema; documented the durable case-study and motion rules in `DESIGN.md`; committed to `main` as `56c4652` and deployed to Vercel production as `dpl_4BRYQfMRvb9bTyqM8koVnn6uHi8A` at `https://proudly-psi.vercel.app`.
