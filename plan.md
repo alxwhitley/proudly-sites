@@ -4,9 +4,9 @@
 
 **Verification done:** The content verifier passes and the production build generates 14 routes. Playwright verified all four case-study routes: Smith Cash has three pointer targets, Legacy has two, After Hours has one, and Strictly Clean has none. Desktop pointer response and reset pass; reduced motion, mobile touch, and scroll produce no transform; all routes have zero console errors and zero horizontal overflow.
 
-**Branch state:** `codex/case-study-pointer-motion` is based on local `main`; the design spec and implementation plan are committed, while the verified implementation is ready for its feature commit. Production remains on deployment `dpl_25vEEqbCEHCVCd1CPLaTuMEgg7uw`. The pre-existing `#33241b` detector finding and stale Impeccable sidecar remain unchanged and unsuppressed.
+**Branch state:** `codex/case-study-pointer-motion` is merged into local `main` and preserved. Production deployment `dpl_BGnkHrzbcba3mp2usCUeX1bAhxje` is READY and aliased to `https://proudly-psi.vercel.app`. The pre-existing `#33241b` detector finding and stale Impeccable sidecar remain unchanged and unsuppressed.
 
-**Next Action:** Merge `codex/case-study-pointer-motion` into local `main` and deploy when approved. Add the service-detail secondary image and its restrained scroll parallax only after the real asset is supplied. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Next Action:** Add the service-detail secondary image and its restrained scroll parallax only after the real asset is supplied. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 ## Follow-up Backlog
 
@@ -110,9 +110,9 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 ## Recent
 
 ### [Saturday Aug 8, 2026 · 4:06 PM] — Code
-- **Did:** Replaced case-study scroll parallax with an approved fine-pointer push-away response on six explicitly classified browser screenshots, kept heroes and every non-browser media type static, and documented future service-page parallax as waiting for a real secondary asset.
+- **Did:** Replaced case-study scroll parallax with an approved fine-pointer push-away response on six explicitly classified browser screenshots, kept heroes and every non-browser media type static, merged the feature into local `main`, and deployed it to Vercel production as `dpl_BGnkHrzbcba3mp2usCUeX1bAhxje`.
 - **Decided:** Piloted Legacy feature two first and expanded only after Alex approved the live local behavior. Used explicit `mediaKind` metadata rather than filename inference; excluded branding art, videos, mobile presentations, placeholders, touch devices, and reduced-motion contexts.
-- **Verified:** Content verification and the 14-route build pass; Playwright confirms target counts of Smith Cash 3, Legacy 2, After Hours 1, Strictly Clean 0, opposite-corner response and neutral reset, static reduced-motion/mobile/scroll behavior, zero console errors, and zero horizontal overflow.
+- **Verified:** Content verification and the 14-route build pass before and after merge; all four production case URLs return HTTP 200; live Playwright confirms target counts of Smith Cash 3, Legacy 2, After Hours 1, Strictly Clean 0, zero console errors, and zero horizontal overflow.
 
 **Files touched:** `DESIGN.md`; `scripts/verify-content-architecture.mjs`; `src/components/CaseStudy.astro`; `src/content.config.ts`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,after-hours-ministry}/index.md`; `docs/superpowers/specs/2026-08-08-case-study-pointer-motion-design.md`; `docs/superpowers/plans/2026-08-08-case-study-pointer-motion.md`; `plan.md`.
 
