@@ -1,0 +1,615 @@
+---
+/*
+  Pricing route (/pricing) — Persuade surface, editorial extension of the homepage's
+  "Grounded Workshop" world. DESIGN.md's Pricing Page section (resolved 2026-08-08)
+  governs this page with two scoped Named Rules: the Editorial Pricing Layout
+  (center-set narrow ~34rem prose throughout, a sanctioned exception to the
+  Whole-Or-Center Rule's "sparingly" clause) and Plan Presentation (Care/Growth
+  render as two hairline-divided columns, never cards, differentiated only by
+  surface step — Warm Cream vs. Sand — never by border, shadow, or accent color).
+  Copy is verbatim from Internal/pricing-page-copy-draft.md (approved). FAQ reuses
+  the site's existing <details>/<summary> disclosure pattern (see Church Studio).
+  The closing inquiry form duplicates /contact's field set and Web3Forms wiring —
+  /contact ships that form as page-inline markup, not an importable component, so
+  this follows the same sitewide precedent Church Studio already established
+  (each page that needs an inquiry form duplicates it with page-appropriate copy)
+  rather than extracting a new shared component.
+*/
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const included = [
+  "All copy written for you, for every page. You review and approve, you don’t write anything.",
+  "Keyword research before anything is designed, so the site is built around what your actual customers are searching for, not guesswork.",
+  "On-page SEO across every page: titles, headings, meta descriptions, image alt text, internal linking.",
+  "The homepage built and approved first, before the rest of the site moves forward.",
+  "Unlimited revision rounds until you’re happy with what’s built.",
+  "Domain transfer handled for you, with your search rankings preserved through the move.",
+  "One person on the work, start to finish. No handoffs to a junior designer or an offshore team.",
+  "Roughly a month from confirmed scope to launch.",
+];
+
+const factors = [
+  { label: "Page count.", body: "A tighter site costs less than a large one built to cover every service and location you offer." },
+  { label: "Starting point.", body: "A rebuild of what you already have costs less than a full restructure built around new research into what people are searching for." },
+  { label: "Forms and backend.", body: "Simple contact and inquiry forms are part of most projects. Booking systems, custom calculators, and anything wired to a live backend add scope." },
+  { label: "Content you already have.", body: "Projects move faster and cost less when usable photography, brand assets, or existing copy exist to build from." },
+  { label: "Migration complexity.", body: "Moving an established site with real search rankings and history takes more care than launching something new." },
+];
+
+const careBullets = [
+  "Hosting, SSL, and platform costs, fully handled",
+  "Unlimited text and photo updates: swap copy, update photos, change rates or dates, add an announcement, whenever you need",
+  "Ongoing maintenance, security updates, and uptime monitoring",
+  "Direct support by email or text, typical turnaround 1 to 2 business days",
+];
+
+const growthBullets = [
+  "Monthly search performance reporting: what people searched to find you, which pages they landed on, what’s moving",
+  "Ongoing keyword research as your services and seasons change",
+  "On-page optimization for new and existing pages",
+  "Google Business Profile management: posts, photos, review monitoring, hours and service updates",
+  "One new written page or article added to your site every month",
+  "Monitoring for how your business shows up when people ask AI assistants what you do",
+  "Regular technical health checks: broken links, page speed, indexing issues, mobile rendering",
+  "A quarterly call to review what’s working and set next quarter’s priorities",
+];
+
+const faqs = [
+  {
+    q: "How much does a website cost from Proudly Sites?",
+    a: "Most projects land between $4,000 and $8,000. Larger or more involved projects, like a full site restructure or a custom booking system, run $10,000 and up. Every project is scoped and priced before you commit, so you’ll know your number going in.",
+  },
+  {
+    q: "Do you charge by the hour?",
+    a: "No. Every project is a flat, agreed price set before work begins. There’s no hourly rate and no per-page rate card for the initial build.",
+  },
+  {
+    q: "What does ongoing maintenance cost?",
+    a: "The Care Plan is $120 a month and covers hosting, security, and unlimited content updates, handled for you. The Growth Plan is $350 a month and adds ongoing SEO work: reporting, keyword research, a new page every month, and Google Business Profile management.",
+  },
+  {
+    q: "Do I need a contract?",
+    a: "No. Care and Growth are both month to month. Cancel any time with 30 days’ notice, and your site and domain stay yours.",
+  },
+  {
+    q: "Will I be able to edit the site myself?",
+    a: "By default, updates are handled for you. You send changes, they get made. If you’d rather have direct access to edit the site yourself, that’s available too. Just let us know and it’s part of your plan.",
+  },
+];
+
+// Service schema: priceRange numbers must stay in lockstep with the FAQ's first
+// answer ("$4,000 and $8,000") — update both together if the band ever changes.
+const pageUrl = new URL("/pricing", Astro.site).toString();
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Custom Website Design & Development",
+  provider: {
+    "@type": "Organization",
+    name: "Proudly Sites",
+    url: Astro.site?.toString() ?? "https://proudlysites.com",
+  },
+  description: "Custom-built, flat-priced websites for reputation-led service businesses, scoped and priced before any work begins.",
+  priceRange: "$4,000-$8,000",
+  url: pageUrl,
+};
+---
+
+<BaseLayout
+  title="Pricing · Proudly Sites"
+  description="What a Proudly Sites project costs: most projects land between $4,000 and $8,000, scoped and priced before you commit. Plus Care and Growth plans for after launch."
+>
+  <script type="application/ld+json" set:html={JSON.stringify(serviceSchema)} />
+
+  <section class="section pricing-hero">
+    <div class="pricing-measure">
+      <h1>What a Proudly Sites project costs</h1>
+      <p class="lead">Every project gets scoped and priced before you commit to anything. No hourly billing, no per-page rate card, no surprise invoice partway through. Here&rsquo;s how the number gets set, and what it includes.</p>
+    </div>
+  </section>
+
+  <section class="section pricing-included">
+    <div class="pricing-measure">
+      <h2>What&rsquo;s always included</h2>
+      <p class="intro">Regardless of where a project lands in the range below, every build includes:</p>
+      <ul>
+        {included.map((item) => <li>{item}</li>)}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section pricing-moves">
+    <div class="pricing-measure">
+      <h2>What moves the number</h2>
+      <p class="intro">Most projects fall between <strong>$4,000 and $8,000</strong>. A handful of things decide where in that range a project lands, and whether it goes higher:</p>
+      <ul>
+        {factors.map((f) => <li><strong>{f.label}</strong> {f.body}</li>)}
+      </ul>
+      <p class="closing-note">Larger, more involved projects, including full restructures, custom booking flows, or extensive multi-audience sites, run <strong>$10,000 and up</strong>. You&rsquo;ll know which range you&rsquo;re in before any work starts.</p>
+    </div>
+  </section>
+
+  <section class="section pricing-plans">
+    <div class="pricing-measure">
+      <h2>After launch: Care and Growth</h2>
+      <p class="intro">Every site needs upkeep after it goes live. Two plans cover that, both month to month, no contract.</p>
+    </div>
+
+    <div class="plans-wrap">
+      <div class="plans-grid">
+        <div class="plan-col plan-care">
+          <h3 class="plan-name">Care Plan</h3>
+          <p class="plan-price">$120<span>/month</span></p>
+          <p class="plan-sub">Everything your site needs to stay online, current, and working.</p>
+          <ul>
+            {careBullets.map((item) => <li>{item}</li>)}
+          </ul>
+          <p class="plan-note">Of the $120, $20 covers hosting itself (the site runs on Vercel, billed and managed for you so you&rsquo;re never invoiced separately). The rest covers the work.</p>
+          <p class="plan-note">Updates are handled for you: you send what you want changed, it gets done. No dashboard to learn or maintain. If you&rsquo;d rather have direct, self-editable access to make changes yourself, that&rsquo;s available too. Just ask, and it gets set up as part of your plan.</p>
+        </div>
+
+        <div class="plan-col plan-growth">
+          <h3 class="plan-name">Growth Plan</h3>
+          <p class="plan-price">$350<span>/month</span></p>
+          <p class="plan-sub">Everything in Care, plus ongoing search visibility work:</p>
+          <ul>
+            {growthBullets.map((item) => <li>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="pricing-measure plans-terms">Both plans: no long-term contract, cancel any time with 30 days&rsquo; notice. If you cancel, your site and domain stay yours. Rates hold for your first 12 months.</p>
+  </section>
+
+  <section class="section pricing-faq">
+    <div class="pricing-measure">
+      <h2>FAQ</h2>
+      <div class="faq-list">
+        {faqs.map((f) => (
+          <details class="faq-item">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-close" id="inquiry">
+    <div class="pricing-measure">
+      <h2>Ready to see where your project lands?</h2>
+      <p class="close-lead">Send a bit about your project below and you&rsquo;ll hear back with next steps, not a form that disappears into a queue.</p>
+    </div>
+
+    <div class="inquiry-card">
+      <form id="pricing-form" action="https://api.web3forms.com/submit" method="POST">
+        <!-- TODO: replace with the real Web3Forms access key (public, safe to commit). -->
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+        <input type="hidden" name="subject" value="New inquiry from proudlysites.com/pricing" />
+        <input type="hidden" name="from_name" value="Proudly Sites website — Pricing page" />
+        <!-- Honeypot: real people leave this untouched; bots trip it. -->
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+        <div class="field">
+          <label for="pf-name">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="pf-name" name="name" type="text" required autocomplete="name" placeholder="Your name" />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="pf-email">Email <span class="req" aria-hidden="true">*</span></label>
+            <input id="pf-email" name="email" type="email" required autocomplete="email" placeholder="you@company.com" />
+          </div>
+          <div class="field">
+            <label for="pf-phone">Phone <span class="optional">optional</span></label>
+            <input id="pf-phone" name="phone" type="tel" autocomplete="tel" placeholder="(919) 000-0000" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="pf-need">What do you need? <span class="req" aria-hidden="true">*</span></label>
+          <select id="pf-need" name="need" required>
+            <option value="" disabled selected>Choose one</option>
+            <option value="A new website">A new website</option>
+            <option value="A redesign of my current site">A redesign of my current site</option>
+            <option value="Not sure yet, let's talk">Not sure yet, let&rsquo;s talk</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="pf-message">Message <span class="req" aria-hidden="true">*</span></label>
+          <textarea id="pf-message" name="message" rows="5" required placeholder="Tell me about your business and what you're looking for."></textarea>
+        </div>
+
+        <p class="form-error" id="pricing-form-error" role="alert" hidden>
+          Something went wrong sending that. Email me directly at
+          <a href="mailto:alex@proudlysites.com">alex@proudlysites.com</a> and I&rsquo;ll get right back to you.
+        </p>
+
+        <button type="submit" class="primary-button form-submit">Send message</button>
+        <p class="form-note">You&rsquo;ll hear back from me personally.</p>
+      </form>
+
+      <div class="form-success" id="pricing-form-success" role="status" tabindex="-1" hidden>
+        <span class="success-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+        </span>
+        <h3>Message sent</h3>
+        <p>Thanks, it&rsquo;s on its way. You&rsquo;ll hear back from me personally.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* Route-specific composition for /pricing. Tokens + chrome are global.
+     Editorial Pricing Layout: every text section runs center-set at a narrow
+     ~34rem measure. Headings and short intro lines are centered; multi-line
+     body copy and lists are left-set within that same centered column, since
+     the rule's own rationale ("argumentative prose") reads poorly fully
+     centered past a line or two. */
+
+  .pricing-measure {
+    max-width: 34rem;
+    margin: 0 auto;
+  }
+
+  .pricing-measure h1,
+  .pricing-measure h2,
+  .pricing-measure > .intro,
+  .pricing-measure > .lead,
+  .pricing-measure > .close-lead {
+    text-align: center;
+  }
+
+  .pricing-measure ul,
+  .pricing-measure > p.closing-note,
+  .pricing-measure > p.plan-note {
+    text-align: left;
+  }
+
+  .pricing-measure strong { color: var(--espresso); font-weight: 700; }
+
+  /* ---- Hero ---- */
+  .section.pricing-hero {
+    padding-top: clamp(64px, 8vw, 130px);
+    padding-bottom: clamp(28px, 3.5vw, 44px);
+  }
+  .pricing-hero h1 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 5vw, 56px);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin: 0 0 22px;
+  }
+  .pricing-hero .lead {
+    font-size: 20px;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* ---- Shared section heading + body rhythm ---- */
+  .section.pricing-included,
+  .section.pricing-moves,
+  .section.pricing-plans,
+  .section.pricing-faq {
+    padding-top: clamp(24px, 3vw, 40px);
+    padding-bottom: clamp(64px, 8vw, 120px);
+  }
+  .pricing-measure h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0 0 18px;
+  }
+  .pricing-measure .intro {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 auto 28px;
+    max-width: 30rem;
+  }
+  .pricing-measure ul {
+    margin: 0 0 8px;
+    padding-left: 1.15em;
+  }
+  .pricing-measure li {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .pricing-moves .closing-note {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--muted);
+    margin: 24px 0 0;
+  }
+
+  /* ---- Plans: Named Rule "Plan Presentation" — hairline columns, never cards ---- */
+  .section.pricing-plans .pricing-measure { margin-bottom: 40px; }
+  .plans-wrap {
+    max-width: 880px;
+    margin: 0 auto;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .plans-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .plan-col { padding: clamp(32px, 4vw, 48px) clamp(28px, 4vw, 46px); }
+  .plan-care { background: var(--cream); }
+  .plan-growth { background: var(--sand); border-left: 1px solid var(--line); }
+  .plan-name {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+  }
+  .plan-price {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--espresso);
+    margin: 0 0 14px;
+  }
+  .plan-price span { font-size: 15px; font-weight: 400; color: var(--muted); }
+  .plan-sub {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+  .plan-col ul { margin: 0 0 20px; padding-left: 1.1em; }
+  .plan-col li { font-size: 15px; line-height: 1.65; color: var(--muted); margin-bottom: 10px; }
+  .plan-note { font-size: 14px; line-height: 1.6; color: var(--muted); margin: 0 0 14px; }
+  .plan-note:last-child { margin-bottom: 0; }
+
+  .plans-terms {
+    margin-top: 40px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  /* ---- FAQ: reuses the site's existing <details>/<summary> disclosure pattern
+     (see Church Studio's split FAQ), single-column within the editorial measure. ---- */
+  .faq-list { border-top: 1px solid var(--line); margin-top: 8px; }
+  .faq-item { border-bottom: 1px solid var(--line); }
+  .faq-item summary {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    padding: 20px 40px 20px 0;
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+    color: var(--espresso);
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: "+";
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: 300;
+    color: #6d635c;
+    transition: transform 0.25s ease;
+  }
+  .faq-item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+  .faq-item p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+    padding: 0 40px 22px 0;
+  }
+
+  /* ---- Closing: dark ask, matching the sitewide trust-heavy dark CTA + form ---- */
+  .pricing-close {
+    background: var(--espresso);
+    color: #fff;
+    text-align: center;
+    padding: clamp(90px, 10vw, 130px) 24px clamp(90px, 10vw, 120px);
+  }
+  .pricing-close h2 {
+    font: 500 clamp(30px, 3.4vw, 40px)/1.15 "Playfair Display", serif;
+    letter-spacing: -0.035em;
+    margin: 0 0 20px;
+    color: #fff;
+  }
+  .pricing-close .close-lead {
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto 44px;
+  }
+
+  .inquiry-card {
+    max-width: 560px;
+    margin: 0 auto;
+    text-align: left;
+    background: var(--dark-card);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 12px;
+    padding: 36px;
+  }
+  .field { margin-bottom: 18px; }
+  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 7px;
+  }
+  .req { color: var(--terracotta); }
+  .optional { font-weight: 400; color: rgba(255, 255, 255, 0.5); font-size: 12px; }
+
+  .field input,
+  .field select,
+  .field textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    padding: 12px 14px;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+  }
+  .field textarea { resize: vertical; min-height: 120px; line-height: 1.5; }
+  .field input::placeholder,
+  .field textarea::placeholder { color: rgba(255, 255, 255, 0.4); }
+  .field select {
+    appearance: none;
+    -webkit-appearance: none;
+    padding-right: 40px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    cursor: pointer;
+  }
+  .field select option { color: #1a0f0a; }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--terracotta) 30%, transparent);
+  }
+
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+
+  .form-error {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin: 0 0 18px;
+  }
+  .form-error a { color: #fff; text-decoration: underline; }
+
+  button.primary-button.form-submit {
+    width: 100%;
+    margin-top: 6px;
+    font-family: inherit;
+    cursor: pointer;
+  }
+  .form-note {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+    text-align: center;
+    margin: 14px 0 0;
+  }
+
+  .form-success { text-align: center; padding: 20px 4px; }
+  .form-success:focus { outline: none; }
+  .success-mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px; height: 56px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    margin-bottom: 18px;
+  }
+  .success-mark svg { width: 26px; height: 26px; }
+  .form-success h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+    margin: 0 0 10px;
+    color: #fff;
+  }
+  .form-success p { font-size: 16px; line-height: 1.6; color: rgba(255, 255, 255, 0.72); margin: 0; max-width: 340px; margin-inline: auto; }
+
+  /* ---- Motion: one authored load moment on the hero, matching /contact ---- */
+  @media (prefers-reduced-motion: no-preference) {
+    .pricing-hero .pricing-measure > * {
+      opacity: 0;
+      animation: pricing-rise 0.55s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+    .pricing-hero h1 { animation-delay: 0.06s; }
+    .pricing-hero .lead { animation-delay: 0.13s; }
+  }
+  @keyframes pricing-rise {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 800px) {
+    .section.pricing-hero { padding-top: 56px; padding-bottom: 20px; }
+    .pricing-hero .lead { font-size: 16px; }
+    .section.pricing-included,
+    .section.pricing-moves,
+    .section.pricing-plans,
+    .section.pricing-faq { padding-top: 20px; padding-bottom: 64px; }
+
+    /* Care/Growth: two hairline columns stack to one, each keeping its own
+       surface step, divided by a horizontal hairline instead of a vertical one. */
+    .plans-grid { grid-template-columns: 1fr; }
+    .plan-growth { border-left: none; border-top: 1px solid var(--line); }
+    .plan-col { padding: 30px 24px; }
+
+    .pricing-close { padding: 72px 20px 80px; }
+    .pricing-close .close-lead { font-size: 16px; }
+    .inquiry-card { padding: 26px 22px; }
+    .field-row { grid-template-columns: 1fr; gap: 0; }
+  }
+</style>
+
+<script>
+  const form = document.getElementById("pricing-form") as HTMLFormElement | null;
+  const success = document.getElementById("pricing-form-success");
+  const errorEl = document.getElementById("pricing-form-error");
+
+  if (form && success && errorEl) {
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
+      const label = btn ? btn.textContent : "";
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      errorEl.hidden = true;
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body: new FormData(form),
+          headers: { Accept: "application/json" },
+        });
+        const data = await res.json();
+        if (res.ok && data.success) {
+          form.hidden = true;
+          success.hidden = false;
+          (success as HTMLElement).focus();
+        } else {
+          throw new Error(data.message || "Request failed");
+        }
+      } catch (err) {
+        errorEl.hidden = false;
+        if (btn) { btn.disabled = false; btn.textContent = label; }
+      }
+    });
+  }
+</script>
