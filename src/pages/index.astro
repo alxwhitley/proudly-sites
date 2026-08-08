@@ -142,7 +142,7 @@ const testimonials = [
 
   <section class="process-section" id="process">
     <div class="section process-inner">
-      <div class="process-intro"><p>Process</p><h2>How It Works</h2><span>No mystery, no months of waiting. A clear four-step path from first message to launch.</span></div>
+      <div class="process-intro"><h2>How It Works</h2><span>No mystery, no months of waiting. A clear four-step path from first message to launch.</span></div>
       <div class="process-grid">
         {process.map((step, index) => <article><b>{index + 1}</b><h3>{step[0]}</h3><p>{step[1]}</p></article>)}
       </div>
@@ -169,7 +169,7 @@ const testimonials = [
      type, header, footer, buttons, tags, .section container) live in
      src/styles/global.css. Nothing below is promoted to a global template. */
   .hero{min-height:670px;padding:84px 24px 72px;display:flex;flex-direction:column;align-items:center;text-align:center;position:relative;overflow:hidden}
-  .hero-location,.project-label,.process-intro>p{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#6d635c;margin-bottom:24px}
+  .hero-location,.project-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#6d635c;margin-bottom:24px}
   .hero h1{font:500 clamp(48px,5.4vw,78px)/.98 "Playfair Display",serif;letter-spacing:-.04em;max-width:920px;margin-bottom:28px}
   .hero h1 em{color:var(--terracotta);font-weight:500}
   .hero-copy{max-width:650px;color:var(--muted);font-size:20px;line-height:1.6;margin-bottom:32px}
@@ -201,8 +201,9 @@ const testimonials = [
   .project-copy>p:not(.project-label){color:var(--muted);max-width:58ch}
   .project-copy blockquote{border-left:1px solid var(--gold);padding-left:14px;margin:23px 0;font:500 16px/1.5 "Playfair Display",serif}
   .project-copy cite{display:block;font:400 12px/1.4 "Lato",sans-serif;margin-top:7px;color:#6d635c}
-  .text-link{font-size:14px;font-weight:700}
+  .text-link{font-size:14px;font-weight:700;display:inline-block}
   .text-link.is-pending{opacity:.5;cursor:default}
+  @media(prefers-reduced-motion:no-preference){.text-link{transition:transform .2s ease}.text-link:hover,.text-link:focus-visible{transform:translateX(4px)}}
   .about.section{max-width:none;background:#eeece7;padding-left:max(40px,calc((100vw - 1260px)/2));padding-right:max(40px,calc((100vw - 1260px)/2))}
   .about-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:.82fr 1.18fr;gap:70px;align-items:center}
   .about-photo{width:100%;height:550px;object-fit:cover;object-position:center 35%;border-radius:16px}
@@ -222,12 +223,11 @@ const testimonials = [
   .service-grid p{color:var(--muted);font-size:16px}
   .process-section{background:var(--espresso);color:#fff}
   .process-inner{max-width:1340px}
-  .process-intro>p{color:#d1b791;margin-bottom:16px}
   .process-intro h2{font:500 40px/1.1 "Playfair Display",serif;letter-spacing:-.035em;margin-bottom:14px}
   .process-intro span{color:rgba(255,255,255,.72);font-size:20px;line-height:1.6}
   .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:55px}
   .process-grid article{background:var(--dark-card);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px 25px 32px;min-height:290px}
-  .process-grid b{color:var(--gold);font-size:14px}
+  .process-grid b{color:var(--gold);font:500 32px/1 "Playfair Display",serif}
   .process-grid h3{font:500 20px/1.25 "Playfair Display",serif;margin:42px 0 15px}
   .process-grid p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.7);margin-bottom:0}
   .reviews-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:50px}

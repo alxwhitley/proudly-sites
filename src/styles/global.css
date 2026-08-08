@@ -47,7 +47,7 @@ h1, h2, h3, p { margin-top: 0; }
 .primary-nav:hover > * { opacity: 0.45; }
 .primary-nav > *:hover, .primary-nav > *:focus-within { opacity: 1; }
 .nav-trigger { display: inline-flex; align-items: center; }
-.nav-trigger::after { content: "⌄"; font-size: 13px; line-height: 1; margin-left: 6px; }
+.nav-trigger::after { content: "⌄"; font-size: 13px; line-height: 1; margin-left: 6px; transform: translateY(-2px); }
 .nav-item { position: relative; }
 .nav-dropdown {
   position: absolute; top: calc(100% + 12px); left: 0;

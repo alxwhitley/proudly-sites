@@ -2,12 +2,11 @@
 /*
   Pricing route (/pricing) — Persuade surface, editorial extension of the homepage's
   "Grounded Workshop" world. DESIGN.md's Pricing Page section (resolved 2026-08-08)
-  governs this page with two scoped Named Rules: the Editorial Pricing Layout
-  (center-set narrow ~34rem prose throughout, a sanctioned exception to the
-  Whole-Or-Center Rule's "sparingly" clause) and Plan Presentation (Care/Growth
-  render as two hairline-divided columns, never cards, differentiated only by
-  surface step — Warm Cream vs. Sand — never by border, shadow, or accent color).
-  Copy is verbatim from Internal/pricing-page-copy-draft.md (approved). FAQ reuses
+  governs this page with three scoped Named Rules: Scannable Fact Grid, Static
+  Price Inversion, and Plan Presentation. The opening content uses wide hairline
+  ledgers, the price callout is the sole dark surface in that sequence, and
+  Care/Growth remain hairline-divided columns differentiated only by surface step.
+  Copy stays aligned with Internal/pricing-page-copy-draft.md (approved). FAQ reuses
   the site's existing <details>/<summary> disclosure pattern (see Church Studio).
   The closing inquiry form duplicates /contact's field set and Web3Forms wiring —
   /contact ships that form as page-inline markup, not an importable component, so
@@ -18,14 +17,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 const included = [
-  "All copy written for you, for every page. You review and approve, you don’t write anything.",
-  "Keyword research before anything is designed, so the site is built around what your actual customers are searching for, not guesswork.",
-  "On-page SEO across every page: titles, headings, meta descriptions, image alt text, internal linking.",
-  "The homepage built and approved first, before the rest of the site moves forward.",
-  "Unlimited revision rounds until you’re happy with what’s built.",
-  "Domain transfer handled for you, with your search rankings preserved through the move.",
-  "One person on the work, start to finish. No handoffs to a junior designer or an offshore team.",
-  "Roughly a month from confirmed scope to launch.",
+  { label: "Copy handled", body: "All copy written for you, for every page. You review and approve, you don’t write anything." },
+  { label: "Search-led structure", body: "Keyword research before anything is designed, so the site is built around what your actual customers are searching for, not guesswork." },
+  { label: "Complete on-page SEO", body: "Titles, headings, meta descriptions, image alt text, and internal linking across every page." },
+  { label: "Homepage first", body: "The homepage is built and approved before the rest of the site moves forward." },
+  { label: "Revisions included", body: "Unlimited revision rounds until you’re happy with what’s built." },
+  { label: "Safe domain move", body: "Domain transfer handled for you, with your search rankings preserved through the move." },
+  { label: "One senior partner", body: "One person on the work, start to finish. No handoffs to a junior designer or an offshore team." },
+  { label: "About one week", body: "Roughly a week from confirmed scope to launch." },
 ];
 
 const factors = [
@@ -109,23 +108,47 @@ const serviceSchema = {
   </section>
 
   <section class="section pricing-included">
-    <div class="pricing-measure">
+    <div class="pricing-section-heading">
       <h2>What&rsquo;s always included</h2>
       <p class="intro">Regardless of where a project lands in the range below, every build includes:</p>
-      <ul>
-        {included.map((item) => <li>{item}</li>)}
-      </ul>
     </div>
+    <ul class="included-grid">
+      {included.map((item) => (
+        <li>
+          <strong>{item.label}</strong>
+          <span>{item.body}</span>
+        </li>
+      ))}
+    </ul>
   </section>
 
   <section class="section pricing-moves">
-    <div class="pricing-measure">
-      <h2>What moves the number</h2>
-      <p class="intro">Most projects fall between <strong>$4,000 and $8,000</strong>. A handful of things decide where in that range a project lands, and whether it goes higher:</p>
-      <ul>
-        {factors.map((f) => <li><strong>{f.label}</strong> {f.body}</li>)}
-      </ul>
-      <p class="closing-note">Larger, more involved projects, including full restructures, custom booking flows, or extensive multi-audience sites, run <strong>$10,000 and up</strong>. You&rsquo;ll know which range you&rsquo;re in before any work starts.</p>
+    <div class="scope-layout">
+      <aside class="price-callout" aria-label="Typical project investment">
+        <p class="price-label">Most projects</p>
+        <p class="price-range">$4,000&ndash;$8,000</p>
+        <p class="price-assurance">Every project is scoped and priced before you commit, so you&rsquo;ll know your number going in.</p>
+        <div class="complex-price">
+          <p class="complex-label">Larger, more involved projects</p>
+          <p class="complex-range">$10,000 and up</p>
+          <p>Full restructures, custom booking flows, or extensive multi-audience sites.</p>
+        </div>
+      </aside>
+
+      <div class="scope-factors">
+        <div class="scope-heading">
+          <h2>What moves the number</h2>
+          <p>A handful of things decide where in the range a project lands, and whether it goes higher:</p>
+        </div>
+        <dl class="factor-list">
+          {factors.map((factor) => (
+            <div class="factor-row">
+              <dt>{factor.label}</dt>
+              <dd>{factor.body}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
     </div>
   </section>
 
@@ -243,12 +266,9 @@ const serviceSchema = {
 </BaseLayout>
 
 <style>
-  /* Route-specific composition for /pricing. Tokens + chrome are global.
-     Editorial Pricing Layout: every text section runs center-set at a narrow
-     ~34rem measure. Headings and short intro lines are centered; multi-line
-     body copy and lists are left-set within that same centered column, since
-     the rule's own rationale ("argumentative prose") reads poorly fully
-     centered past a line or two. */
+  /* Route-specific composition for /pricing. Tokens and chrome are global.
+     Scannable Fact Grid and Static Price Inversion govern the opening sequence;
+     the narrower measure remains for the hero, plans intro, FAQ, and close. */
 
   .pricing-measure {
     max-width: 34rem;
@@ -270,6 +290,30 @@ const serviceSchema = {
   }
 
   .pricing-measure strong { color: var(--espresso); font-weight: 700; }
+
+  .pricing-section-heading {
+    max-width: 38rem;
+    margin: 0 auto 34px;
+    text-align: center;
+  }
+
+  .pricing-section-heading h2,
+  .scope-heading h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(28px, 3.4vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0 0 18px;
+  }
+
+  .pricing-section-heading .intro,
+  .scope-heading p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0;
+  }
 
   /* ---- Hero ---- */
   .section.pricing-hero {
@@ -325,11 +369,109 @@ const serviceSchema = {
     color: var(--muted);
     margin-bottom: 12px;
   }
-  .pricing-moves .closing-note {
+  /* ---- Included: two-column fact ledger, never separate cards ---- */
+  .included-grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .included-grid li {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+    min-height: 132px;
+    margin: 0;
+    padding: 26px clamp(24px, 3vw, 38px);
+  }
+  .included-grid li:nth-child(odd) { border-right: 1px solid var(--line); }
+  .included-grid li:nth-child(-n + 6) { border-bottom: 1px solid var(--line); }
+  .included-grid strong {
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.35;
+    color: var(--espresso);
+  }
+  .included-grid span {
+    font-size: 15px;
+    line-height: 1.6;
     color: var(--muted);
-    margin: 24px 0 0;
+    max-width: 30rem;
+  }
+
+  /* ---- Price and scope: one dark callout beside hairline factor rows ---- */
+  .scope-layout {
+    display: grid;
+    grid-template-columns: minmax(290px, 0.82fr) minmax(430px, 1.35fr);
+    gap: clamp(40px, 6vw, 76px);
+    align-items: start;
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .price-callout {
+    position: static;
+    background: var(--espresso);
+    color: var(--cream);
+    padding: clamp(32px, 4vw, 48px);
+  }
+  .price-label,
+  .complex-label {
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+    color: var(--cream);
+    margin: 0 0 10px;
+  }
+  .price-range {
+    font: 500 clamp(38px, 5vw, 56px)/1 "Playfair Display", Georgia, serif;
+    letter-spacing: -0.035em;
+    color: var(--cream);
+    margin: 0 0 20px;
+  }
+  .price-assurance,
+  .complex-price > p:last-child {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--sand);
+    margin: 0;
+  }
+  .complex-price {
+    margin-top: 30px;
+    padding-top: 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.22);
+  }
+  .complex-range {
+    font: 500 24px/1.2 "Playfair Display", Georgia, serif;
+    letter-spacing: -0.025em;
+    color: var(--cream);
+    margin: 0 0 10px;
+  }
+  .scope-heading { margin-bottom: 24px; }
+  .factor-list {
+    margin: 0;
+    border-top: 1px solid var(--line);
+  }
+  .factor-row {
+    display: grid;
+    grid-template-columns: minmax(125px, 0.42fr) minmax(0, 1fr);
+    gap: 24px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .factor-row dt {
+    font-size: 15px;
+    line-height: 1.45;
+    font-weight: 700;
+    color: var(--espresso);
+  }
+  .factor-row dd {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--muted);
+    margin: 0;
   }
 
   /* ---- Plans: Named Rule "Plan Presentation" — hairline columns, never cards ---- */
@@ -565,6 +707,21 @@ const serviceSchema = {
     .section.pricing-moves,
     .section.pricing-plans,
     .section.pricing-faq { padding-top: 20px; padding-bottom: 64px; }
+
+    .pricing-section-heading { margin-bottom: 26px; }
+    .pricing-section-heading .intro,
+    .scope-heading p { font-size: 16px; }
+    .included-grid { grid-template-columns: 1fr; }
+    .included-grid li {
+      min-height: 0;
+      padding: 22px 4px;
+      border-right: none !important;
+      border-bottom: 1px solid var(--line);
+    }
+    .included-grid li:last-child { border-bottom: none; }
+    .scope-layout { grid-template-columns: 1fr; gap: 38px; }
+    .price-callout { padding: 32px 26px; }
+    .factor-row { grid-template-columns: 1fr; gap: 8px; padding: 20px 0; }
 
     /* Care/Growth: two hairline columns stack to one, each keeping its own
        surface step, divided by a horizontal hairline instead of a vertical one. */

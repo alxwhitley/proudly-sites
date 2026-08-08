@@ -1,12 +1,28 @@
 ## Now
 
-**Current Priority:** The case-study pointer-motion pass is complete on `codex/case-study-pointer-motion`. Six explicitly classified browser screenshots use the approved subtle push-away response; heroes, branding artwork, videos, mobile media, placeholders, and touch/reduced-motion contexts stay static. Case-study scroll parallax is retired. Its future use is reserved for a real secondary image on the service-detail pages once that asset and placement are supplied.
+**Current Priority:** `/pricing` implements the approved scanability polish locally: an eight-item hairline fact ledger, one static Espresso price callout, five hairline scope-factor rows, and one-week delivery language. Separately, six quick visual-polish fixes from the Next Session Punch List landed as direct CSS/markup edits: the homepage "Process" eyebrow and step-number sizing, the homepage "View Project" hover treatment, the `/about` quote centering, the nav dropdown caret alignment, and the case-study "See Live Site" button reposition.
 
-**Verification done:** The content verifier passes and the production build generates 14 routes. Playwright verified all four case-study routes: Smith Cash has three pointer targets, Legacy has two, After Hours has one, and Strictly Clean has none. Desktop pointer response and reset pass; reduced motion, mobile touch, and scroll produce no transform; all routes have zero console errors and zero horizontal overflow.
+**Verification done:** `npm run build` generates 14 routes after both the pricing polish and the punch-list batch. Playwright at 1440px and 390px confirms the pricing layouts specifically (two-column desktop, one-column mobile, static callout, price-first order, one-week copy, zero overflow, zero console errors); the punch-list batch is build-verified only, not yet browser-checked.
 
-**Branch state:** `codex/case-study-pointer-motion` is merged into local `main` and preserved. Production deployment `dpl_BGnkHrzbcba3mp2usCUeX1bAhxje` is READY and aliased to `https://proudly-psi.vercel.app`. The pre-existing `#33241b` detector finding and stale Impeccable sidecar remain unchanged and unsuppressed.
+**Branch state:** Work is uncommitted on local `main`. Existing unrelated untracked case-study media and the separate After Hours plan remain untouched. The pre-existing stale Impeccable sidecar remains unchanged and unsuppressed.
 
-**Next Action:** Add the service-detail secondary image and its restrained scroll parallax only after the real asset is supplied. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Next Action:** Alex reviews the polished `/pricing` page and the six punch-list fixes in the browser; if approved, commit together. The Web3Forms placeholder key remains the highest-priority production blocker. The case-study "See Live Site" button color question (punch list item 3) needs a decision before further action.
+
+## Next Session Punch List
+
+Visual polish batch from 2026-08-08 evening chat review (screenshots against live site). Ordered as raised, not by priority. Distinct from the Follow-up Backlog below.
+
+1. **Case-study close band:** drop the centered "Next project" line under the CTA. Add a two-up row right above the footer hairline instead — previous case study left, next case study right, matching treatment. Pass `prev` alongside the existing `next` in `[slug].astro`'s `getStaticPaths` (same modulo wrap). Still open, a data/layout change, not a quick edit.
+2. **Heading font:** Playfair Display is hard to read at large display sizes when blown up. Revisit for headings. No replacement direction decided yet. Still open.
+3. **Case-study hero "See Live Site" button:** ~~change from grey/muted to solid black.~~ Reposition lower, sitting right above the hero image instead of top-right of the header row. **Reposition done** (`CaseStudy.astro`). **Color still open:** the live-URL state already renders `--espresso` (near-black); the grey/muted look is the intentional `.is-pending` disabled state on the three cases without a live URL yet. Needs a decision, not a mechanical fix, since solidifying it would make a non-working button look clickable.
+4. **`/about` quote band** ("A referral is a moment of trust..."): ~~left-aligned in the tan section, should be centered.~~ **Done** — `.thesis-line` now centers itself and its text in `about.astro`.
+5. **Homepage case-study preview cards:** replace the browser-chrome mockup style (full window frame + shadow) with the same no-background/slight-shadow/tilt product-image treatment used on the case study pages. Reuse the existing per-case images already used on the case pages — no new captures. Still open, a visual redesign, not a quick edit.
+6. **Text link hover consistency:** ~~homepage "View Project →" has no hover effect.~~ **Done for the flagged instance** — `.text-link` now uses the site's translateX(4px) hover/focus pattern in `index.astro`. **Still open:** the broader site-wide audit for other inconsistent link hovers was not performed.
+7. **Homepage "How It Works" eyebrow:** ~~"PROCESS" eyebrow is inconsistent with every other section (none of them have one). Remove it~~ **Done** — removed from `index.astro` along with its dead CSS. **Sweep not done:** the other "eyebrow"-styled elements site-wide (nav dropdown category tags, case-study niche label, hero location) are functional identifiers, not the AI-generic per-section scaffolding DESIGN.md's No-Scaffolding Rule targets, so they were left as-is pending a decision to remove them too.
+8. **"How It Works" step numbers (1-4):** ~~too small.~~ **Done** — resized from 14px sans to 32px Playfair Display in `index.astro`; no other numbered element existed on the site to size-match against.
+9. **Case-study live URLs:** still need real URLs for Smith Cash, Strictly Clean, After Hours — blocked on Alex.
+10. **Non-case-study live sites:** need a lighter listing treatment for live sites that don't get the full case-study treatment. Open question — where it lives (own `/work` section below case studies? separate page?) and what data it needs (name + URL + maybe screenshot, no full narrative). Scope before building.
+11. **Nav dropdown carets** ("Work ⌄", "Services ⌄"): ~~sit visually low, not aligned to the same baseline as the label text.~~ **Done** — `.nav-trigger::after` nudged `translateY(-2px)` in `global.css`.
 
 ## Follow-up Backlog
 
@@ -109,6 +125,22 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 ## Recent
 
+### [Saturday Aug 8, 2026 · Evening] — Code
+- **Did:** Landed six of the eleven Next Session Punch List items as direct CSS/markup edits: removed the homepage "Process" eyebrow and its dead CSS; resized the "How It Works" step numbers from 14px sans to 32px Playfair Display; added the site's established translateX(4px) hover/focus treatment to homepage "View Project →"; centered the `/about` pullquote; nudged the nav dropdown caret to align with the label baseline; repositioned the case-study "See Live Site" button above the hero image.
+- **Decided:** Left the "See Live Site" button color unchanged rather than guessing: its live-URL state already renders near-black `--espresso`, and the grey/muted look is the intentional `.is-pending` disabled state on the three cases without live URLs yet, so darkening it would make a non-functional button look clickable. Scoped the eyebrow removal to the homepage "Process" label only, not a full site sweep, since the other eyebrow-styled elements (nav dropdown category tags, case-study niche label, hero location) are functional identifiers, not the AI-generic scaffolding DESIGN.md's No-Scaffolding Rule targets. Skipped the case-study prev/next two-up band and the homepage card mockup swap (punch list items 1 and 5) as real layout/data changes, not quick edits.
+- **Verified:** `npm run build` generated all 14 routes after every edit.
+- **Blocked:** Not committed; not yet reviewed by Alex in the browser. Punch list items 1, 2, 5, 9, 10 remain open, and item 3's color question needs a decision.
+
+**Files touched:** `src/pages/index.astro`; `src/pages/about.astro`; `src/components/CaseStudy.astro`; `src/styles/global.css`; `plan.md` (`## Now`, `## Next Session Punch List`, this entry).
+
+### [Saturday Aug 8, 2026 · 4:27 PM] — Code
+- **Did:** Polished `/pricing` from two repeated narrow bullet columns into an eight-item two-column fact ledger and a static Espresso price callout beside five hairline scope-factor rows; changed the build timeline from roughly one month to roughly one week; documented the approved structure and implementation plan.
+- **Decided:** Kept the price callout static and made it the only dark surface in the opening pricing sequence. Preserved light Care/Growth and FAQ sections between it and the existing dark closing inquiry. Left all pricing figures, plan terms, FAQ content, form behavior, and navigation unchanged.
+- **Verified:** `npm run build` generated 14 routes; Playwright at 1440px and 390px confirmed desktop and mobile column behavior, 390px document width with no overflow, static price-first callout order, one-week copy, and zero console errors; the single detector pass returned only seven existing type-ramp advisories.
+- **Blocked:** The Web3Forms placeholder key and stale Impeccable sidecar remain open. No commit or deploy was made because unrelated untracked media is present and Alex has not yet approved the rendered polish.
+
+**Files touched:** `DESIGN.md`; ignored canonical draft `Internal/pricing-page-copy-draft.md`; `src/pages/pricing.astro`; `docs/superpowers/specs/2026-08-08-pricing-scanability-polish-design.md`; `docs/superpowers/plans/2026-08-08-pricing-scanability-polish.md`; `plan.md` (`## Now`, this entry).
+
 ### [Saturday Aug 8, 2026 · 4:06 PM] — Code
 - **Did:** Replaced case-study scroll parallax with an approved fine-pointer push-away response on six explicitly classified browser screenshots, kept heroes and every non-browser media type static, merged the feature into local `main`, and deployed it to Vercel production as `dpl_BGnkHrzbcba3mp2usCUeX1bAhxje`.
 - **Decided:** Piloted Legacy feature two first and expanded only after Alex approved the live local behavior. Used explicit `mediaKind` metadata rather than filename inference; excluded branding art, videos, mobile presentations, placeholders, touch devices, and reduced-motion contexts.
@@ -131,38 +163,3 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 - **Blocked:** Web3Forms access key is still `YOUR_WEB3FORMS_ACCESS_KEY` on `/pricing`, `/contact`, and Church Studio alike (Follow-up Backlog item 1). No real key exists anywhere in the project (`.env.local` holds only a Vercel OIDC token). Branch `pricing/build` is not merged, per instruction. No `/impeccable critique` was run, per instruction.
 
 **Files touched:** `DESIGN.md`; `plan.md` (carried-forward pricing resolution, then this entry, `## Now`); new `src/pages/pricing.astro`; `src/components/Header.astro`.
-
-### [Saturday Aug 8, 2026 · Afternoon] — Chat
-- **Did:** Resolved DESIGN.md's stale "Open Decisions" pricing placeholder into a new "Pricing Page" section (public band, Care/Growth plan terms, admin-panel framing); drafted and revised `/pricing` copy per Alex's edits (drafted then cut an e-signature/payment-fee "What's not included" section) at `Internal/pricing-page-copy-draft.md`; wrote a phased terminal build prompt for Alex to run separately.
-- **Decided:** `/pricing` is a scoped exception to the Whole-Or-Center Rule (new Editorial Pricing Layout rule) and Care/Growth render as hairline columns, not cards (new Plan Presentation rule), both now recorded in DESIGN.md. Self-editable admin panel documented as opt-in, not default. Growth Plan priced at $350/month, Care Plan confirmed at $120/month.
-- **Blocked:** The page itself (`src/pages/pricing.astro`) is not yet built — the terminal prompt was handed off this session but not run. The dead `/#pricing` nav link and the Web3Forms placeholder key remain open (Follow-up Backlog items 1 and 2), both scoped into the terminal prompt's Phase 2/3.
-
-**Files touched:** `DESIGN.md`; `Internal/pricing-page-copy-draft.md`; `plan.md` (this entry, `## Now`).
-
-### [Saturday Aug 8, 2026 · 3:13 PM] — Code
-- **Did:** Implemented the approved case-study product media on `codex/after-hours-video-review`: three stitched stills for Smith Cash, a transparent brand mark plus two stitched stills for Legacy Renovations, and After Hours' desktop browser video, stitched still, and separate mobile-behavior video in section 1, section 2, section 3 order. Updated the matching feature copy and the shared renderer for intrinsic transparent media ratios, mobile video presentation, and reduced motion.
-- **Decided:** Left VitalWatch out because it has no matching canonical case record and left Strictly Clean's three placeholders because no approved media was supplied. Preserved the uploaded ProRes alpha masters untouched and created small tracked VP9-alpha delivery derivatives. Left the pre-existing live-button hover finding and stale Impeccable sidecar unchanged and unsuppressed.
-- **Verified:** The content verifier passes and the Astro build generates 13 routes. Playwright at 1440px and 390px confirmed exact media order, zero overflow, zero console errors, in-view video playback, and reduced-motion pause behavior across all three affected routes. No deploy or publish was run.
-
-**Files touched:** `docs/superpowers/plans/2026-08-08-case-study-media-integration.md`; `scripts/verify-content-architecture.mjs`; `src/content.config.ts`; `src/pages/work/[slug].astro`; `src/components/CaseStudy.astro`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,after-hours-ministry}/index.md`; nine approved media delivery assets under matching `src/assets/case-studies/` folders; `assets.md`; `plan.md` (`## Now`, Follow-up Backlog item 4, this entry).
-
-### [Saturday Aug 8, 2026 · 12:03 PM] — Code
-- **Did:** Consolidated every known out-of-scope production, navigation, case-study content, accessibility, contact-layout, Impeccable drift, palette, and service-page issue into an ordered `plan.md` follow-up backlog with acceptance and verification intent; added the twelve case-feature image slots to `assets.md`; marked the sidecar refresh as handed off to its separate Codex task.
-- **Decided:** Kept implementation work separated by production impact and shared surface rather than combining unrelated fixes into one catch-all pass. Assets remain tracked in `assets.md`; executable work remains canonical in `plan.md`.
-
-**Files touched:** `plan.md`; `assets.md`.
-
-### [Saturday Aug 8, 2026 · 11:55 AM] — Code
-- **Did:** Reshaped all four case-study detail pages through Impeccable into exactly three project-specific product-proof rows with alternating desktop composition, text-first mobile stacking, honest replaceable image placeholders, and restrained desktop parallax; replaced the retired `moment` / `built` / `changed` content fields with a validated three-feature schema; documented the durable case-study and motion rules in `DESIGN.md`; committed to `main` as `56c4652` and deployed to Vercel production as `dpl_4BRYQfMRvb9bTyqM8koVnn6uHi8A` at `https://proudly-psi.vercel.app`.
-- **Decided:** Kept the hero, Who / What Changed summary, testimonial, live-site control, closing CTA, and next-project link unchanged. Limited parallax to the case-study product imagery on motion-enabled desktop only, with static mobile and reduced-motion behavior. Preserved missing imagery as explicit neutral placeholders rather than fabricated screenshots.
-- **Verified:** `npm run build` generated 13 routes; Playwright covered four case routes at 1440px and 390px with zero console errors and zero overflow, exactly three features per route, working parallax, and no reduced-motion transform; all four production case URLs returned HTTP 200.
-- **Blocked:** No release blocker. The Web3Forms placeholder key remains the highest-priority production issue. The pre-existing live-button hover color hook finding and stale Impeccable sidecar remain unchanged.
-
-**Files touched:** `DESIGN.md`; `src/components/CaseStudy.astro`; `src/content.config.ts`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,strictly-clean-detailing,after-hours-ministry}/index.md`; `src/pages/work/[slug].astro`; `plan.md`.
-
-### [Saturday Aug 8, 2026 · 11:24 AM] — Code
-- **Did:** Replaced four static case-study route records and the duplicated `src/data/work.ts` index with validated Astro Markdown collections and one dynamic `/work/[slug]` route; moved the two real case images into slug-owned `src/assets` folders; wired the work index, homepage features, header, footer, and service proof pages to the canonical records; added the future blog collection, content inbox rooms, fixed-page copy contracts, route map, naming conventions, content verifier, and AGENTS.md routing table.
-- **Decided:** Used route-owned `src/assets/<content-type>/<slug>/` folders rather than putting images inside `src/content/`, preserving direct slug retrieval while allowing Astro image validation and optimization. Kept missing quotes, URLs, and images as explicit open items rather than fabricating content. Left pre-existing design-hook findings and the stale Impeccable sidecar unchanged because no visual design values changed.
-- **Verified:** `node scripts/verify-content-architecture.mjs` passes for four canonical cases; `npm run build` generates all 13 routes; Playwright confirms the four case URLs and headings, four `/work` cards, zero console errors, and no horizontal overflow on the Legacy case at 390px.
-
-**Files touched:** `.gitignore`; `AGENTS.md`; `CLAUDE.md`; `assets.md`; `structure.md`; `content-inbox/**`; `pages/{README,home-copy,about-copy,contact-copy,services-copy}.md`; `docs/superpowers/plans/2026-08-08-content-architecture.md`; `scripts/verify-content-architecture.mjs`; `src/content.config.ts`; `src/content/**`; `src/assets/case-studies/**`; `src/components/{Header,Footer}.astro`; `src/pages/index.astro`; `src/pages/services/{index,branding,web-design}.astro`; `src/pages/work/{index,[slug]}.astro`; removed `src/data/work.ts`, the four static work routes, and the two duplicate `public/images` case files; `plan.md`.
