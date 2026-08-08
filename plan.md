@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** The completed `/pricing` page and approved Smith Cash, Legacy Renovations, and After Hours case-study media are merged into local `main`. Pricing includes the Editorial Pricing Layout, Care/Growth plan presentation, FAQ, Service schema, closing inquiry form, and corrected header links. Case-study media preserves section 1, section 2, section 3 order; After Hours uses a desktop browser video, stitched still, and separate mobile-behavior video without browser chrome. Strictly Clean remains the only case with three product placeholders.
+**Current Priority:** The case-study pointer-motion pass is complete on `codex/case-study-pointer-motion`. Six explicitly classified browser screenshots use the approved subtle push-away response; heroes, branding artwork, videos, mobile media, placeholders, and touch/reduced-motion contexts stay static. Case-study scroll parallax is retired. Its future use is reserved for a real secondary image on the service-detail pages once that asset and placement are supplied.
 
-**Verification done:** The combined `main` content verifier passes and the production build generates 14 routes. Playwright verified `/pricing` plus the three affected case studies at 1440px and 390px with zero console errors and zero horizontal overflow, then confirmed both After Hours videos play in view. The four production URLs return HTTP 200.
+**Verification done:** The content verifier passes and the production build generates 14 routes. Playwright verified all four case-study routes: Smith Cash has three pointer targets, Legacy has two, After Hours has one, and Strictly Clean has none. Desktop pointer response and reset pass; reduced motion, mobile touch, and scroll produce no transform; all routes have zero console errors and zero horizontal overflow.
 
-**Branch state:** `pricing/build`, `codex/after-hours-video-review`, and `overnight/system-fixes-3` are merged into local `main`. Production deployment `dpl_25vEEqbCEHCVCd1CPLaTuMEgg7uw` is READY and aliased to `https://proudly-psi.vercel.app`. The detached sidecar refresh remains a separate Codex task, and the alternate detached Legacy implementation is superseded by the approved three-case media integration. GitHub push remains blocked because no remote exists and public-repository creation has not been explicitly approved.
+**Branch state:** `codex/case-study-pointer-motion` is based on local `main`; the design spec and implementation plan are committed, while the verified implementation is ready for its feature commit. Production remains on deployment `dpl_25vEEqbCEHCVCd1CPLaTuMEgg7uw`. The pre-existing `#33241b` detector finding and stale Impeccable sidecar remain unchanged and unsuppressed.
 
-**Next Action:** Review `/pricing` and the three updated case studies on production. Explicitly approve creating the public `alxwhitley/proudly` GitHub repository if a push is still wanted. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Next Action:** Merge `codex/case-study-pointer-motion` into local `main` and deploy when approved. Add the service-detail secondary image and its restrained scroll parallax only after the real asset is supplied. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 ## Follow-up Backlog
 
@@ -27,7 +27,7 @@ Ordered by production impact. Each item should be handled as its own focused tas
 
 ### 4. Replace remaining case-study product placeholders
 - Supply and install three real product-image compositions for Strictly Clean, matching its three canonical feature records. Smith Cash, Legacy Renovations, and After Hours are complete on `codex/after-hours-video-review`.
-- Preserve the shared alternating structure, stable ratios, descriptive alt text, and restrained parallax behavior.
+- Preserve the shared alternating structure, stable ratios, descriptive alt text, and browser-only pointer response.
 - Track exact required captures in `assets.md` until all twelve slots are real.
 
 ### 5. Complete missing case-study material
@@ -55,6 +55,7 @@ Ordered by production impact. Each item should be handled as its own focused tas
 - Differentiate Branding and Web Design beyond the shared template and repeated screenshots.
 - Add the missing Scan-Then-Prove opening structure to both pages and remove repeated proof copy.
 - Resolve cropped client-site headlines and the visually light Search & AI Visibility desktop composition in the same service-cluster review.
+- When the real secondary service-page image is supplied, add its dedicated slot and port the retired restrained scroll-parallax behavior there; do not ship empty markup or dormant motion code first.
 
 ## Morning Queue
 
@@ -107,6 +108,13 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Saturday Aug 8, 2026 · 4:06 PM] — Code
+- **Did:** Replaced case-study scroll parallax with an approved fine-pointer push-away response on six explicitly classified browser screenshots, kept heroes and every non-browser media type static, and documented future service-page parallax as waiting for a real secondary asset.
+- **Decided:** Piloted Legacy feature two first and expanded only after Alex approved the live local behavior. Used explicit `mediaKind` metadata rather than filename inference; excluded branding art, videos, mobile presentations, placeholders, touch devices, and reduced-motion contexts.
+- **Verified:** Content verification and the 14-route build pass; Playwright confirms target counts of Smith Cash 3, Legacy 2, After Hours 1, Strictly Clean 0, opposite-corner response and neutral reset, static reduced-motion/mobile/scroll behavior, zero console errors, and zero horizontal overflow.
+
+**Files touched:** `DESIGN.md`; `scripts/verify-content-architecture.mjs`; `src/components/CaseStudy.astro`; `src/content.config.ts`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,after-hours-ministry}/index.md`; `docs/superpowers/specs/2026-08-08-case-study-pointer-motion-design.md`; `docs/superpowers/plans/2026-08-08-case-study-pointer-motion.md`; `plan.md`.
 
 ### [Saturday Aug 8, 2026 · 3:49 PM] — Code
 - **Did:** Merged every named local branch into `main`, reconciled the Pricing and case-media session state, added a narrow Vercel exclusion file for untracked raw review/source media, and deployed the combined 14-route site to Vercel production as `dpl_25vEEqbCEHCVCd1CPLaTuMEgg7uw`, aliased to `https://proudly-psi.vercel.app`.

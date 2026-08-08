@@ -255,11 +255,15 @@ The system is flat by default. Depth appears exactly once, as a deliberate excep
 ### Don't:
 - **Don't** reintroduce the old amber `rgb(250,177,100)` — it no longer maps to any live token.
 - **Don't** add a third accent color, a per-service tint, or the mockup's second gold (`#C49A3C`) — they collapse into the single Honey Gold accent.
-- **Don't** loop or keep anything moving after interaction stops. Parallax is prohibited except for the narrow case-study product-image behavior defined under Motion. All authored motion is fully off under `prefers-reduced-motion`.
+- **Don't** loop or keep anything moving after interaction stops. Case-study scroll parallax is retired. All authored motion is fully off under `prefers-reduced-motion`.
 
 ## Motion
 
-Nothing loops or moves after interaction stops. Hero load fade-up 12px 0.55s staggered. Scroll reveals fade-up once at ~15%. Grid stagger 0.08s. One sanctioned parallax exception applies only to product imagery inside the three case-study proof rows: a restrained vertical offset follows active desktop scrolling, stops immediately when scrolling stops, stays static on mobile, and is fully disabled under `prefers-reduced-motion`.
+Nothing loops or moves after interaction stops. Hero load fade-up 12px 0.55s staggered. Scroll reveals fade-up once at ~15%. Grid stagger 0.08s.
+
+**Case-study browser response.** Inside the three case-study proof rows, only an image explicitly classified as a browser screen may respond to a fine pointer. The image subtly tilts and shifts away from the pointer, then eases to neutral on exit. Heroes, branding and logo art, mobile screens, videos, placeholders, and unclassified images remain static. The behavior is disabled on touch and coarse-pointer devices and under `prefers-reduced-motion`. Rollout begins with one approved pilot image and expands only after visual sign-off.
+
+**Future service-page parallax.** Scroll parallax belongs to a future secondary-image slot on service-detail pages, not to case studies. Do not ship the slot, placeholder markup, or dormant motion code before a real secondary asset and its placement are supplied. When implemented, the image may move vertically by at most 16px during active desktop scrolling, stays static on mobile, and is fully disabled under `prefers-reduced-motion`.
 
 ## Pricing Page
 

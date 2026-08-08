@@ -26,10 +26,12 @@ features:
   - title: Services Organized Around Search
     body: The homepage makes the service area and specialty immediately clear, leads with completed kitchens and bathrooms, and puts a quote request alongside the proof. Homeowners can judge the work and take the next step without hunting for either.
     image: ../../../assets/case-studies/legacy-renovations/section2-browser.png
+    mediaKind: browser
     alt: Legacy Renovations homepage and craftsmanship section in a stitched browser frame
   - title: A Portfolio the Owner Can Maintain
     body: Dedicated service pages answer the questions behind specific renovation searches, from scope and material choices to what a homeowner can expect during the project. The structure creates useful search entry points while guiding each visitor toward a quote.
     image: ../../../assets/case-studies/legacy-renovations/section3-browser.png
+    mediaKind: browser
     alt: Legacy Renovations tub-to-shower service page in a stitched browser frame
 quote:
   text: “The design looks amazing, the site runs smoothly, and everything was completed on time.”

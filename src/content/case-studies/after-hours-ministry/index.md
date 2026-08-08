@@ -22,6 +22,7 @@ features:
   - title: A Clear Way Into the Ministry
     body: The Who We Are page turns a broad ministry statement into a specific story about the gathering, its convictions, and the people it serves. Alternating photography and direct copy help a first-time visitor understand the ministry before deciding to attend.
     image: ../../../assets/case-studies/after-hours-ministry/case-study-section2.png
+    mediaKind: browser
     alt: After Hours Ministry Who We Are page in a stitched browser frame
   - title: Built for Mobile Moments
     body: Mobile interactions retain the site’s personality instead of collapsing into a generic stack. Social proof appears in context and stays easy to read on the device where young adults are most likely to encounter the ministry.

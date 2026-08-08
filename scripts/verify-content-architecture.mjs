@@ -82,6 +82,26 @@ for (const [slug, filenames] of Object.entries(mediaContracts)) {
   }
 }
 
+const pointerMotionContracts = {
+  "legacy-renovations": ["section2-browser.png", "section3-browser.png"],
+  "smith-cash-family-law": ["case-study-section-1.png", "case-study-section2.png", "case-study-section3.png"],
+  "after-hours-ministry": ["case-study-section2.png"],
+};
+
+for (const [slug, filenames] of Object.entries(pointerMotionContracts)) {
+  const content = readFileSync(join(caseRoot, slug, "index.md"), "utf8");
+  const browserKindCount = (content.match(/^\s+mediaKind: browser$/gm) || []).length;
+  if (browserKindCount !== filenames.length) {
+    failures.push(`${slug} requires ${filenames.length} browser mediaKind entries; found ${browserKindCount}`);
+  }
+  for (const filename of filenames) {
+    const escapedFilename = filename.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    if (!new RegExp(`${escapedFilename}[\\s\\S]{0,160}mediaKind: browser`).test(content)) {
+      failures.push(`${slug} must classify ${filename} as browser media`);
+    }
+  }
+}
+
 if (existsSync(caseComponentPath)) {
   const caseComponent = readFileSync(caseComponentPath, "utf8");
   for (const requirement of ["<video", "autoplay", "muted", "loop", "playsinline", "video.pause()", "removeAttribute(\"autoplay\")", "feature-media--mobile"]) {
