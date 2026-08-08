@@ -19,20 +19,21 @@ status: published
 who: A kitchen and bathroom renovation company in the Raleigh area, building its first real brand.
 whatChanged: A site that leads with finished work, so homeowners can see the craftsmanship before they ever pick up the phone.
 features:
-  - title: The Finished Work Comes First
-    body: A simple, ownable mark gives Legacy a recognizable identity without competing with the renovation work. Its warm copper tone and geometric house form carry the craft-focused positioning into every customer touchpoint.
-    image: ../../../assets/case-studies/legacy-renovations/section1-branding.png
-    alt: Legacy Renovations geometric copper brand mark on a transparent background
-  - title: Services Organized Around Search
-    body: The homepage makes the service area and specialty immediately clear, leads with completed kitchens and bathrooms, and puts a quote request alongside the proof. Homeowners can judge the work and take the next step without hunting for either.
-    image: ../../../assets/case-studies/legacy-renovations/section2-browser.png
-    mediaKind: browser
-    alt: Legacy Renovations homepage and craftsmanship section in a stitched browser frame
-  - title: A Portfolio the Owner Can Maintain
-    body: Dedicated service pages answer the questions behind specific renovation searches, from scope and material choices to what a homeowner can expect during the project. The structure creates useful search entry points while guiding each visitor toward a quote.
-    image: ../../../assets/case-studies/legacy-renovations/section3-browser.png
-    mediaKind: browser
-    alt: Legacy Renovations tub-to-shower service page in a stitched browser frame
+  - title: A Brand Built to Look Established
+    body: Legacy needed an identity that felt as considered as the work itself. The house-and-tile mark, warm terracotta palette, and restrained typography gave the company a recognizable brand that feels established without competing with the renovation photography.
+    image: ../../../assets/case-studies/legacy-renovations/legacy-brand-mark.png
+    mediaPresentation: natural
+    alt: Terracotta house-and-tile logo created for Legacy Renovations
+  - title: An Easier First Step for New Clients
+    body: The homepage puts the phone number, trust signals, and quote form directly in the opening experience. New clients can understand the offer and start an inquiry without hunting through the site or committing to a complicated booking process.
+    image: ../../../assets/case-studies/legacy-renovations/legacy-homepage-quote-path.png
+    mediaPresentation: natural
+    alt: Legacy Renovations homepage with prominent phone number and request-a-quote form
+  - title: Services Organized for People and Search
+    body: Clear service navigation helps homeowners quickly find the renovation work that matches their needs. Dedicated pages also give each offering focused, useful content that search engines can understand and potential clients can evaluate before requesting a quote.
+    image: ../../../assets/case-studies/legacy-renovations/legacy-services-navigation.png
+     mediaPresentation: natural
+     alt: Legacy Renovations service page with related-service navigation and detailed tub-to-shower content
 quote:
   text: “The design looks amazing, the site runs smoothly, and everything was completed on time.”
   cite: Tony R., Legacy Renovations

@@ -19,7 +19,8 @@
     heroImage         - optional src; when null a placeholder panel renders instead
     heroAlt           - alt text for the hero image
     who, whatChanged  - the two summary-band values
-    features          - exactly three { title, body, image?, video?, presentation, alt } product features
+    features          - exactly three { title, body, image?, video?, presentation,
+                         mediaPresentation?, alt } product features
     quote             - optional { text, cite }; omitted entirely when no real quote
     next              - { label, href } for the next-project link
 */
@@ -68,7 +69,10 @@ const {
           <p>{feature.body}</p>
         </div>
         <figure
-          class:list={["feature-media", { "feature-media--mobile": feature.presentation === "mobile" }]}
+          class:list={["feature-media", {
+            "feature-media--mobile": feature.presentation === "mobile",
+            "is-natural": feature.mediaPresentation === "natural",
+          }]}
           data-pointer-tilt={feature.image && feature.mediaKind === "browser" ? "" : undefined}
         >
           <div class="feature-media-inner">

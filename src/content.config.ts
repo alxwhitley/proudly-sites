@@ -27,6 +27,7 @@ const caseStudies = defineCollection({
       video: z.string().optional(),
       presentation: z.enum(["standard", "mobile"]).default("standard"),
       mediaKind: z.enum(["browser", "brand", "mobile"]).optional(),
+      mediaPresentation: z.enum(["crop", "natural"]).default("crop"),
       alt: z.string(),
     })).length(3),
     quote: z.object({

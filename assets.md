@@ -10,10 +10,17 @@ Format per entry: `path | used on | status (real/placeholder/missing) | notes`
 
 ## Case studies
 
+### Product-image standard
+
+When Alex supplies two screenshots for a case-study product image, stitch them vertically so they read as one continuous, longer webpage inside a single browser window. Add one browser bar at the top, a slight outer corner radius, and a subtle shadow. The canvas outside the browser must be transparent: no gradient, color field, scene, or device background. Preserve the supplied website UI, imagery, and text pixel-for-pixel through deterministic compositing; do not use image generation to redraw or reinterpret the screenshots. Save each first-pass candidate in `content-inbox/assets/` for visual approval, one product image at a time. Do not move it into the canonical `src/assets/case-studies/<slug>/` folder or wire it into a case study until Alex explicitly approves it.
+
 | Asset | Used on | Status | Notes |
 |---|---|---|---|
 | `src/assets/case-studies/smith-cash-family-law/hero.jpeg` | Smith Cash case, work index, homepage, and service proof | real | Canonical case-owned image. Reused by collection consumers. |
 | `src/assets/case-studies/legacy-renovations/hero.jpeg` | Legacy case, work index, homepage, and service proof | real | Canonical case-owned image; live-site link is recorded in the case Markdown. |
+| `src/assets/case-studies/legacy-renovations/legacy-brand-mark.png` | Legacy feature 1, branding | real | Alpha-cropped copy of the approved Legacy identity mark; source remains intact in the canonical checkout. |
+| `src/assets/case-studies/legacy-renovations/legacy-homepage-quote-path.png` | Legacy feature 2, new-client inquiry path | real | Approved stitched browser composition with transparent background; rendered uncropped. |
+| `src/assets/case-studies/legacy-renovations/legacy-services-navigation.png` | Legacy feature 3, service discovery and search structure | real | Approved stitched browser composition with transparent background; rendered uncropped. |
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/strictly-clean-detailing` hero | placeholder | No local asset; CMS unreachable. CSS panel, not an image file. Swap for a real Strictly Clean photo/screenshot when available. |
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/after-hours-ministry` hero | placeholder | No local asset; CMS unreachable. Swap for a real After Hours photo/screenshot when available. |
 | Strictly Clean "Kevin W." quote | `/work/strictly-clean-detailing` quote band | missing | Real quote lives in the unreachable CMS. Quote band OMITTED rather than fabricated. Supply the real quote to add it. |
