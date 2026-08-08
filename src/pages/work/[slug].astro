@@ -23,6 +23,18 @@ interface Props {
 
 const { entry, next } = Astro.props;
 const item = entry.data;
+const productVideos = import.meta.glob<string>("../../assets/case-studies/**/*.{mp4,webm}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+const productVideoByCase = Object.fromEntries(
+  Object.entries(productVideos).map(([path, url]) => [path.split("/").slice(-2).join("/"), url]),
+);
+const features = item.features.map((feature) => ({
+  ...feature,
+  video: feature.video ? productVideoByCase[`${item.slug}/${feature.video}`] : undefined,
+}));
 ---
 
 <BaseLayout
@@ -38,7 +50,7 @@ const item = entry.data;
     heroAlt={item.heroAlt}
     who={item.who}
     whatChanged={item.whatChanged}
-    features={item.features}
+    features={features}
     quote={item.quote}
     next={{ label: next.data.title, href: `/work/${next.data.slug}` }}
   />

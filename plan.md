@@ -1,10 +1,12 @@
 ## Now
 
-**Current Priority:** `/pricing` is built, verified, and committed on branch `pricing/build` (three commits, not merged): carry forward the approved DESIGN.md/plan.md pricing resolution, build the page, wire the nav. Editorial Pricing Layout and Plan Presentation are both implemented, plus What's Always Included, What Moves the Number, a Care/Growth FAQ, and Service schema JSON-LD with `priceRange` matching the FAQ's first answer. The closing inquiry form duplicates `/contact`'s fields and Web3Forms wiring rather than importing a shared component, since `/contact`'s form is page-inline markup, not a component, matching the same duplicate-per-page precedent Church Studio already set.
+**Current Priority:** The completed `/pricing` page and approved Smith Cash, Legacy Renovations, and After Hours case-study media are merged into local `main`. Pricing includes the Editorial Pricing Layout, Care/Growth plan presentation, FAQ, Service schema, closing inquiry form, and corrected header links. Case-study media preserves section 1, section 2, section 3 order; After Hours uses a desktop browser video, stitched still, and separate mobile-behavior video without browser chrome. Strictly Clean remains the only case with three product placeholders.
 
-**Repo state note:** at session start, an unrelated uncommitted "After Hours product video" work in progress was found sitting on branch `codex/after-hours-video-review` (pointed at the same commit as `main`, not diverged). It was stashed intact, not discarded, before branching for `/pricing`: `stash@{0}` on that branch, message "wip: after-hours-video-review (set aside before /pricing build)". `overnight/system-fixes-3` was confirmed already merged into `main` (visible at `c52d8f9`), so `/pricing` branched cleanly off `main`.
+**Verification done:** Both branches passed their own build and responsive browser suites before merge. The combined `main` result still needs one final production build and browser smoke pass before push and Vercel production deployment.
 
-**Next Action:** Alex reviews `/pricing` directly (branch `pricing/build`, not merged) and decides whether an Impeccable critique pass is warranted before merge. The Web3Forms placeholder key (Follow-up Backlog item 1) is still open; no real key exists anywhere in the project. Separately, `codex/after-hours-video-review`'s stashed work needs picking back up.
+**Branch state:** `pricing/build`, `codex/after-hours-video-review`, and `overnight/system-fixes-3` are merged into local `main`. The detached sidecar refresh remains a separate Codex task, and the alternate detached Legacy implementation is superseded by the approved three-case media integration. Nothing has been pushed or deployed in this combined state yet.
+
+**Next Action:** Verify combined `main`, create/configure the GitHub remote, push `main`, then deploy the linked Vercel project to production. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 ## Follow-up Backlog
 
@@ -23,8 +25,8 @@ Ordered by production impact. Each item should be handled as its own focused tas
 - Replace the tile-repair/lead-capture screenshot used across the case, homepage, and service proof surfaces with imagery that matches the kitchen-and-bath narrative, or revise the narrative only if that screenshot is the actual product truth.
 - Check every consumer of the canonical Legacy image and prevent headline cropping.
 
-### 4. Replace case-study product placeholders
-- Supply and install three real product-image compositions for each of the four cases, matching the three canonical feature records.
+### 4. Replace remaining case-study product placeholders
+- Supply and install three real product-image compositions for Strictly Clean, matching its three canonical feature records. Smith Cash, Legacy Renovations, and After Hours are complete on `codex/after-hours-video-review`.
 - Preserve the shared alternating structure, stable ratios, descriptive alt text, and restrained parallax behavior.
 - Track exact required captures in `assets.md` until all twelve slots are real.
 
@@ -120,6 +122,13 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 - **Blocked:** The page itself (`src/pages/pricing.astro`) is not yet built — the terminal prompt was handed off this session but not run. The dead `/#pricing` nav link and the Web3Forms placeholder key remain open (Follow-up Backlog items 1 and 2), both scoped into the terminal prompt's Phase 2/3.
 
 **Files touched:** `DESIGN.md`; `Internal/pricing-page-copy-draft.md`; `plan.md` (this entry, `## Now`).
+
+### [Saturday Aug 8, 2026 · 3:13 PM] — Code
+- **Did:** Implemented the approved case-study product media on `codex/after-hours-video-review`: three stitched stills for Smith Cash, a transparent brand mark plus two stitched stills for Legacy Renovations, and After Hours' desktop browser video, stitched still, and separate mobile-behavior video in section 1, section 2, section 3 order. Updated the matching feature copy and the shared renderer for intrinsic transparent media ratios, mobile video presentation, and reduced motion.
+- **Decided:** Left VitalWatch out because it has no matching canonical case record and left Strictly Clean's three placeholders because no approved media was supplied. Preserved the uploaded ProRes alpha masters untouched and created small tracked VP9-alpha delivery derivatives. Left the pre-existing live-button hover finding and stale Impeccable sidecar unchanged and unsuppressed.
+- **Verified:** The content verifier passes and the Astro build generates 13 routes. Playwright at 1440px and 390px confirmed exact media order, zero overflow, zero console errors, in-view video playback, and reduced-motion pause behavior across all three affected routes. No deploy or publish was run.
+
+**Files touched:** `docs/superpowers/plans/2026-08-08-case-study-media-integration.md`; `scripts/verify-content-architecture.mjs`; `src/content.config.ts`; `src/pages/work/[slug].astro`; `src/components/CaseStudy.astro`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,after-hours-ministry}/index.md`; nine approved media delivery assets under matching `src/assets/case-studies/` folders; `assets.md`; `plan.md` (`## Now`, Follow-up Backlog item 4, this entry).
 
 ### [Saturday Aug 8, 2026 · 12:03 PM] — Code
 - **Did:** Consolidated every known out-of-scope production, navigation, case-study content, accessibility, contact-layout, Impeccable drift, palette, and service-page issue into an ordered `plan.md` follow-up backlog with acceptance and verification intent; added the twelve case-feature image slots to `assets.md`; marked the sidecar refresh as handed off to its separate Codex task.

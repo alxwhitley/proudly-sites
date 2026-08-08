@@ -18,7 +18,7 @@
     heroImage         - optional src; when null a placeholder panel renders instead
     heroAlt           - alt text for the hero image
     who, whatChanged  - the two summary-band values
-    features          - exactly three { title, body, image?, alt } product features
+    features          - exactly three { title, body, image?, video?, presentation, alt } product features
     quote             - optional { text, cite }; omitted entirely when no real quote
     next              - { label, href } for the next-project link
 */
@@ -66,9 +66,21 @@ const {
           <h2>{feature.title}</h2>
           <p>{feature.body}</p>
         </div>
-        <figure class="feature-media" data-parallax>
+        <figure class:list={["feature-media", { "feature-media--mobile": feature.presentation === "mobile" }]} data-parallax>
           <div class="feature-media-inner">
-            {feature.image
+            {feature.video
+              ? <video
+                  class="feature-video"
+                  data-product-video
+                  src={feature.video}
+                  aria-label={feature.alt}
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  preload="metadata"
+                ></video>
+              : feature.image
               ? <img src={feature.image.src ?? feature.image} alt={feature.alt} loading="lazy" width="760" height="570" />
               : <div class="feature-placeholder" role="img" aria-label={`${feature.alt} - product image pending`}>
                   <span>{feature.title}</span>
@@ -231,26 +243,25 @@ const {
   }
   .feature-media {
     position: relative;
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
     margin: 0;
   }
   .feature-media-inner {
-    position: absolute;
-    inset: -18px 0;
     will-change: transform;
     transform: translate3d(0, var(--parallax-y, 0px), 0);
   }
   .feature-media img,
+  .feature-media video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .feature-media--mobile .feature-media-inner {
+    width: min(58%, 330px);
+    margin-inline: auto;
+  }
   .feature-placeholder {
     width: 100%;
-    height: 100%;
-  }
-  .feature-media img {
-    display: block;
-    object-fit: cover;
-  }
-  .feature-placeholder {
+    aspect-ratio: 4 / 3;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -368,17 +379,23 @@ const {
     .feature-media,
     .feature-row:nth-child(even) .feature-media { order: 2; }
     .feature-copy h2 { margin-bottom: 14px; }
-    .feature-media-inner { inset: 0; transform: none; will-change: auto; }
+    .feature-media-inner { transform: none; will-change: auto; }
     .close-band > p { font-size: 16px; }
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .feature-media-inner { inset: 0; transform: none; will-change: auto; }
+    .feature-media-inner { transform: none; will-change: auto; }
   }
 </style>
 
 <script>
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (reduce.matches) {
+    document.querySelectorAll("video[data-product-video]").forEach((video) => {
+      video.pause();
+      video.removeAttribute("autoplay");
+    });
+  }
   if (!reduce.matches) {
     document.documentElement.classList.add("reveal");
     const els = document.querySelectorAll(".rv, .stagger");

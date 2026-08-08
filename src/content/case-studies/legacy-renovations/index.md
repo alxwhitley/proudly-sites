@@ -20,14 +20,17 @@ who: A kitchen and bathroom renovation company in the Raleigh area, building its
 whatChanged: A site that leads with finished work, so homeowners can see the craftsmanship before they ever pick up the phone.
 features:
   - title: The Finished Work Comes First
-    body: Completed kitchens and bathrooms lead the experience, allowing homeowners to judge the craftsmanship immediately. The brand stays intentionally quiet so the renovation work remains the strongest proof.
-    alt: Legacy Renovations project portfolio product image
+    body: A simple, ownable mark gives Legacy a recognizable identity without competing with the renovation work. Its warm copper tone and geometric house form carry the craft-focused positioning into every customer touchpoint.
+    image: ../../../assets/case-studies/legacy-renovations/section1-branding.png
+    alt: Legacy Renovations geometric copper brand mark on a transparent background
   - title: Services Organized Around Search
-    body: Dedicated service pages reflect how homeowners look for renovation help and establish the search foundations needed to reach them. Each path leads naturally from the relevant work to requesting a quote.
-    alt: Legacy Renovations search-focused service page product image
+    body: The homepage makes the service area and specialty immediately clear, leads with completed kitchens and bathrooms, and puts a quote request alongside the proof. Homeowners can judge the work and take the next step without hunting for either.
+    image: ../../../assets/case-studies/legacy-renovations/section2-browser.png
+    alt: Legacy Renovations homepage and craftsmanship section in a stitched browser frame
   - title: A Portfolio the Owner Can Maintain
-    body: Legacy can add new projects without relying on a developer, keeping the site as current as the work itself. New photographs and project details can become visible proof as soon as a renovation is complete.
-    alt: Legacy Renovations owner-managed portfolio product image
+    body: Dedicated service pages answer the questions behind specific renovation searches, from scope and material choices to what a homeowner can expect during the project. The structure creates useful search entry points while guiding each visitor toward a quote.
+    image: ../../../assets/case-studies/legacy-renovations/section3-browser.png
+    alt: Legacy Renovations tub-to-shower service page in a stitched browser frame
 quote:
   text: “The design looks amazing, the site runs smoothly, and everything was completed on time.”
   cite: Tony R., Legacy Renovations
