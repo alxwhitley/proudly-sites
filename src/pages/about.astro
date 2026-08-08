@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const testimonials = [
+  ["“Alex was so helpful in creating a website for our ministry. For anyone trying to go beyond generic sites, I would highly recommend.”", "Josh F.", "After Hours Ministry"],
+  ["“Working with Alex on our law firm website was a great experience from start to finish. Thoughtful, professional, and highly receptive to feedback.”", "Kelly S.", "Smith Cash Law"],
+  ["“The design looks amazing, the site runs smoothly, and everything was completed on time.”", "Tony R.", "Legacy Renovations"],
+];
 ---
 
 <BaseLayout
@@ -92,6 +98,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       <span class="cred-reviews"><span class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>Rated 5.0 on Google Reviews</span>
       <span>5 years in business</span>
     </div>
+  </div>
+
+  <div class="surface-white">
+    <section class="section testimonials">
+      <div class="testimonials-head rv"><h2>What Clients Say</h2></div>
+      <div class="review-grid">
+        {testimonials.map(item => <blockquote><span>★★★★★</span><p>{item[0]}</p><cite><b>{item[1]}</b>{item[2]}</cite></blockquote>)}
+      </div>
+    </section>
   </div>
 
   <div class="surface-dark">
@@ -285,6 +300,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     max-width: 46ch;
   }
 
+  /* ---- Testimonials: index.astro's review-grid card pattern, reused as-is ---- */
+  .testimonials-head { margin-bottom: 44px; }
+  .testimonials-head h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 3.6vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+  .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .review-grid blockquote {
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    min-height: 245px;
+    padding: 34px;
+  }
+  .review-grid blockquote > span { color: var(--gold); letter-spacing: 0.1em; font-size: 12px; }
+  .review-grid blockquote p {
+    font: 500 20px/1.4 "Playfair Display", serif;
+    margin: 20px 0 27px;
+  }
+  .review-grid cite { font-style: normal; font-size: 12px; color: #6d635c; }
+  .review-grid cite b { display: block; color: var(--espresso); font-size: 14px; }
+
   /* ---- Trust bar ---- */
   .cred {
     background: var(--cream);
@@ -446,6 +488,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
     .section.closing { grid-template-columns: 1fr; gap: 30px; }
     .closing-copy p { font-size: 16px; }
+
+    .review-grid { grid-template-columns: 1fr; gap: 12px; }
+    .review-grid blockquote { min-height: 0; padding: 28px; }
 
     .cred-inner {
       justify-content: flex-start;
