@@ -8,7 +8,15 @@
 */
 import { services } from "../data/services";
 import { studios } from "../data/studios";
-import { caseStudies } from "../data/work";
+import { getCollection } from "astro:content";
+
+const caseStudies = (await getCollection("caseStudies", ({ data }) => data.status === "published"))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(({ data }) => ({
+    title: data.title,
+    href: `/work/${data.slug}`,
+    tag: data.location ? `${data.niche} · ${data.location}` : data.niche,
+  }));
 ---
 <header class="site-header">
   <a class="wordmark" href="/" aria-label="Proudly Sites home"><img src="/images/proudly-logo.png" alt="Proudly Sites" /></a>

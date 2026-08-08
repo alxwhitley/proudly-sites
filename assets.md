@@ -12,8 +12,8 @@ Format per entry: `path | used on | status (real/placeholder/missing) | notes`
 
 | Asset | Used on | Status | Notes |
 |---|---|---|---|
-| `public/images/smith-cash.jpeg` | `/work/smith-cash-family-law` hero | real | Existing approved Smith Cash site screenshot (same asset the homepage uses). |
-| `public/images/legacy-renovations.jpeg` | `/work/legacy-renovations` hero | real | Existing approved Legacy screenshot; live-site link also shown (legacykitchenbathroomrenovations.com). |
+| `src/assets/case-studies/smith-cash-family-law/hero.jpeg` | Smith Cash case, work index, homepage, and service proof | real | Canonical case-owned image. Reused by collection consumers. |
+| `src/assets/case-studies/legacy-renovations/hero.jpeg` | Legacy case, work index, homepage, and service proof | real | Canonical case-owned image; live-site link is recorded in the case Markdown. |
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/strictly-clean-detailing` hero | placeholder | No local asset; CMS unreachable. CSS panel, not an image file. Swap for a real Strictly Clean photo/screenshot when available. |
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/after-hours-ministry` hero | placeholder | No local asset; CMS unreachable. Swap for a real After Hours photo/screenshot when available. |
 | Strictly Clean "Kevin W." quote | `/work/strictly-clean-detailing` quote band | missing | Real quote lives in the unreachable CMS. Quote band OMITTED rather than fabricated. Supply the real quote to add it. |
@@ -23,8 +23,8 @@ Format per entry: `path | used on | status (real/placeholder/missing) | notes`
 
 | Asset | Used on | Status | Notes |
 |---|---|---|---|
-| `public/images/smith-cash.jpeg` | `/services/branding` + `/services/web-design` proof 1 | real | Existing Smith Cash screenshot; satisfies the B4 live-site-proof requirement from an asset on hand. |
-| `public/images/legacy-renovations.jpeg` | `/services/branding` + `/services/web-design` proof 2 | real | Existing Legacy screenshot; satisfies B4 from an asset on hand. |
+| Smith Cash canonical case image | `/services/branding` + `/services/web-design` proof 1 | real | Imported from its route-owned folder under `src/assets/case-studies/`. |
+| Legacy canonical case image | `/services/branding` + `/services/web-design` proof 2 | real | Imported from its route-owned folder under `src/assets/case-studies/`. |
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/services/branding` + `/services/web-design` proof 3 (After Hours) | placeholder | No local After Hours asset; CMS unreachable. Swap for a real After Hours brand-in-context capture when available. |
 | (none — no proof imagery by design) | `/services/ai-and-search-visibility` | N/A | New service, no live precedent (runbook B4). No screenshot proof — expected gap, not an error. |
 

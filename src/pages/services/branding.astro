@@ -11,6 +11,8 @@
   See .impeccable/surfaces/src-pages-services.md for the cluster brief.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import smithCashImage from "../../assets/case-studies/smith-cash-family-law/hero.jpeg";
+import legacyImage from "../../assets/case-studies/legacy-renovations/hero.jpeg";
 
 // Real client proof. Images are real existing assets where available; the After
 // Hours slot has no local asset and the Framer CMS was unreachable this session,
@@ -18,14 +20,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const proof = [
   {
     client: "Smith Cash Family Law",
-    image: "/images/smith-cash.jpeg",
+    image: smithCashImage.src,
     imageAlt: "The Smith Cash Family Law website, warm and calm rather than stuffy",
     caption:
       "They were already known for honest, steady counsel. The brand had to feel that way before a word was read: warm, not stuffy, calm instead of loud.",
   },
   {
     client: "Legacy Renovations",
-    image: "/images/legacy-renovations.jpeg",
+    image: legacyImage.src,
     imageAlt: "A finished Legacy Renovations kitchen, the brand kept quiet so the work leads",
     caption:
       "The work speaks first here, so the brand gets out of its way. Restrained type and a quiet palette let the finished kitchens carry the page.",

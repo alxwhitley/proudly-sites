@@ -1,0 +1,47 @@
+---
+import { getCollection, type CollectionEntry } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import CaseStudy from "../../components/CaseStudy.astro";
+
+export async function getStaticPaths() {
+  const cases = (await getCollection("caseStudies", ({ data }) => data.status === "published"))
+    .sort((a, b) => a.data.order - b.data.order);
+
+  return cases.map((entry, index) => ({
+    params: { slug: entry.data.slug },
+    props: {
+      entry,
+      next: cases[(index + 1) % cases.length],
+    },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<"caseStudies">;
+  next: CollectionEntry<"caseStudies">;
+}
+
+const { entry, next } = Astro.props;
+const item = entry.data;
+---
+
+<BaseLayout
+  title={`${item.title} · Work · Proudly Sites`}
+  description={item.description}
+>
+  <CaseStudy
+    niche={item.niche}
+    location={item.location}
+    title={item.headline}
+    liveUrl={item.liveUrl}
+    heroImage={item.heroImage?.src}
+    heroAlt={item.heroAlt}
+    who={item.who}
+    whatChanged={item.whatChanged}
+    moment={item.moment}
+    built={item.built}
+    changed={item.changed}
+    quote={item.quote}
+    next={{ label: next.data.title, href: `/work/${next.data.slug}` }}
+  />
+</BaseLayout>

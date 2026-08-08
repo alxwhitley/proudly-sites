@@ -7,7 +7,11 @@ dist/
 # Shippable images are copied into public/images/ and tracked there; the
 # assets/ staging folder itself is intentionally NOT committed. assets.md
 # (the tracked index) documents what lives here.
-assets/
+/assets/
+
+# raw content intake may contain private or heavy source media
+content-inbox/assets/*
+!content-inbox/assets/README.md
 
 # private business documents (Articles of Organization, internal notes) —
 # never belongs in this repo, which is public on Vercel Hobby.

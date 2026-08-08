@@ -11,6 +11,8 @@
   See .impeccable/surfaces/src-pages-services.md for the cluster brief.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import smithCashImage from "../../assets/case-studies/smith-cash-family-law/hero.jpeg";
+import legacyImage from "../../assets/case-studies/legacy-renovations/hero.jpeg";
 import { services } from "../../data/services";
 
 // Claim blocks (Layout Discipline: Paired Claim Rule) - one per service, alternating
@@ -26,7 +28,7 @@ const claims = [
     heading: "A brand people trust before you say a word",
     description: "Color, type, and voice built around how your clients actually decide, so the right person feels they are in good hands the moment they land. The brand you approve is the brand that reaches your clients, because nothing gets handed to another team to reinterpret.",
     cta: "See the branding work",
-    image: "/images/smith-cash.jpeg",
+    image: smithCashImage.src,
     imageAlt: "The Smith Cash Family Law website, brand carried through calm, trustworthy design",
   },
   {
@@ -35,7 +37,7 @@ const claims = [
     heading: "Design that makes the right people stop and stay",
     description: "Every page built around your client’s problem and how you solve it, so the person who was already told to call you arrives and thinks, yes, this is the one. You get design, brand, and build from the same person, so the page that stops people is never fighting a build it can’t rely on.",
     cta: "See the web design work",
-    image: "/images/legacy-renovations.jpeg",
+    image: legacyImage.src,
     imageAlt: "The Legacy Renovations website, leading with finished work",
   },
   {
