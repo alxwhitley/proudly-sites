@@ -1,28 +1,53 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-08-06T19:21:06Z",
+  "generatedAt": "2026-08-08T16:01:43Z",
   "title": "Design System: Proudly Sites",
   "extensions": {
     "colorMeta": {
       "burnt-terracotta": { "role": "primary", "displayName": "Burnt Terracotta", "canonical": "rgb(204,70,19)", "tonalRamp": ["#431202", "#6f2007", "#9c300d", "#cc4613", "#db6537", "#eb936f", "#f5c4ad", "#fce8df"] },
       "honey-gold": { "role": "secondary", "displayName": "Honey Gold", "canonical": "rgb(243,192,69)", "tonalRamp": ["#392902", "#604708", "#88670f", "#b18a1c", "#d9ad30", "#f3c045", "#f8d985", "#fdf0c8"] },
+      "pure-white": { "role": "neutral", "displayName": "Pure White", "canonical": "rgb(255,255,255)", "tonalRamp": ["#262626", "#4d4d4d", "#737373", "#999999", "#bfbfbf", "#d9d9d9", "#ededed", "#ffffff"] },
       "warm-cream": { "role": "neutral", "displayName": "Warm Cream", "canonical": "rgb(245,243,239)", "tonalRamp": ["#25221e", "#4a4540", "#706a64", "#98918a", "#beb8b1", "#ddd8d2", "#eeeae5", "#f5f3ef"] },
+      "pale-nav-grey": { "role": "neutral", "displayName": "Pale Nav Grey", "canonical": "rgb(247,247,247)", "tonalRamp": ["#242424", "#494949", "#6e6e6e", "#949494", "#bababa", "#d8d8d8", "#ececec", "#f7f7f7"] },
       "espresso-black": { "role": "neutral", "displayName": "Espresso Black", "canonical": "rgb(26,15,10)", "tonalRamp": ["#1a0f0a", "#3e2b22", "#634a3e", "#896b5d", "#af8f80", "#d0b6a9", "#eadbd4", "#f8efeb"] },
+      "espresso-black-65": { "role": "neutral", "displayName": "Espresso Black / 65%", "canonical": "rgba(26,15,10,0.65)", "tonalRamp": ["rgba(26,15,10,0.95)", "rgba(26,15,10,0.82)", "rgba(26,15,10,0.72)", "rgba(26,15,10,0.65)", "rgba(26,15,10,0.50)", "rgba(26,15,10,0.35)", "rgba(26,15,10,0.20)", "rgba(26,15,10,0.08)"] },
+      "pure-white-65": { "role": "neutral", "displayName": "Pure White / 65%", "canonical": "rgba(255,255,255,0.65)", "tonalRamp": ["rgba(255,255,255,0.08)", "rgba(255,255,255,0.20)", "rgba(255,255,255,0.35)", "rgba(255,255,255,0.50)", "rgba(255,255,255,0.65)", "rgba(255,255,255,0.75)", "rgba(255,255,255,0.88)", "rgba(255,255,255,1)"] },
+      "sand": { "role": "neutral", "displayName": "Sand", "canonical": "rgb(237,232,224)", "tonalRamp": ["#27231e", "#4c463e", "#726a60", "#988f84", "#bdb5aa", "#d8d1c8", "#e8e3dc", "#ede8e0"] },
+      "oat": { "role": "neutral", "displayName": "Oat", "canonical": "rgb(228,221,211)", "tonalRamp": ["#28231d", "#4d463d", "#72695d", "#978d80", "#bbb1a5", "#d3cbbf", "#dfd8ce", "#e4ddd3"] },
+      "clay-beige": { "role": "neutral", "displayName": "Clay Beige", "canonical": "rgb(218,207,196)", "tonalRamp": ["#29231d", "#4f463c", "#74695c", "#998d7f", "#b9ac9f", "#cec1b5", "#d7cabf", "#dacfc4"] },
       "dark-card": { "role": "neutral", "displayName": "Dark Card", "canonical": "rgb(61,36,22)", "tonalRamp": ["#26150c", "#3d2416", "#624332", "#886553", "#ad8a77", "#ceb2a3", "#e8d9d1", "#f7efeb"] },
-      "muted-label": { "role": "neutral", "displayName": "Muted Label", "canonical": "rgb(109,99,92)", "tonalRamp": ["#1c1917", "#38322e", "#544b45", "#6d635c", "#8d817a", "#b0a69f", "#d3ccc6", "#eeeae7"] }
+      "warm-taupe": { "role": "neutral", "displayName": "Warm Taupe", "canonical": "rgb(156,142,135)", "tonalRamp": ["#211d1b", "#403936", "#605650", "#81746d", "#9c8e87", "#bbaea8", "#d9d0cc", "#f2edeb"] },
+      "muted-label": { "role": "neutral", "displayName": "Muted Label", "canonical": "rgb(109,99,92)", "tonalRamp": ["#1c1917", "#38322e", "#544b45", "#6d635c", "#8d817a", "#b0a69f", "#d3ccc6", "#eeeae7"] },
+      "hairline-grey": { "role": "neutral", "displayName": "Hairline Grey", "canonical": "rgb(221,217,213)", "tonalRamp": ["#252322", "#494542", "#6e6965", "#938e89", "#b8b3ae", "#d0ccc8", "#ddd9d5", "#f2f0ee"] },
+      "true-black": { "role": "neutral", "displayName": "True Black", "canonical": "rgb(0,0,0)", "tonalRamp": ["#000000", "#242424", "#494949", "#6e6e6e", "#949494", "#bababa", "#dedede", "#f2f2f2"] },
+      "mid-grey": { "role": "neutral", "displayName": "Mid Grey", "canonical": "rgb(130,130,130)", "tonalRamp": ["#242424", "#414141", "#5f5f5f", "#828282", "#a4a4a4", "#c5c5c5", "#e0e0e0", "#f4f4f4"] },
+      "charcoal-grey": { "role": "neutral", "displayName": "Charcoal Grey", "canonical": "rgb(84,84,84)", "tonalRamp": ["#202020", "#3a3a3a", "#545454", "#757575", "#989898", "#bdbdbd", "#dddddd", "#f2f2f2"] }
     },
     "typographyMeta": {
       "heading-1": { "displayName": "Heading 1", "purpose": "Primary hero statement." },
-      "heading-2": { "displayName": "Heading 2", "purpose": "Major functional section headings." },
+      "heading-2": { "displayName": "Heading 2", "purpose": "Major section heading, using Lato for grid sections and Playfair Display for narrative sections." },
       "heading-3": { "displayName": "Heading 3", "purpose": "Serif project and subsection headings." },
-      "body-s": { "displayName": "Body Small", "purpose": "Default supporting copy." },
-      "eyebrow": { "displayName": "Eyebrow", "purpose": "Tracked uppercase section labels." }
+      "heading-4": { "displayName": "Heading 4", "purpose": "Minor functional headings." },
+      "heading-5": { "displayName": "Heading 5", "purpose": "Small serif headings." },
+      "heading-6": { "displayName": "Heading 6", "purpose": "Centered micro-headings." },
+      "body-m": { "displayName": "Body M", "purpose": "Large body copy at compact line height." },
+      "body-s": { "displayName": "Body S", "purpose": "Default supporting copy." },
+      "lead": { "displayName": "Lead", "purpose": "Hero subheads and case-study introductions." },
+      "body-small": { "displayName": "Body Small", "purpose": "Dense supporting copy and captions." },
+      "button": { "displayName": "Button", "purpose": "Interactive button labels." },
+      "highlight": { "displayName": "Highlight", "purpose": "Display-scale testimonial quotes." },
+      "eyebrow": { "displayName": "Eyebrow", "purpose": "Retained token for future need; retired from current section openers." },
+      "nav-link": { "displayName": "Nav Link", "purpose": "Primary and secondary navigation labels." }
     },
     "shadows": [
-      { "name": "cta-offset", "value": "6px 6px 0 rgb(26,15,10)", "purpose": "Primary CTA buttons only." }
+      { "name": "cta-offset", "value": "6px 6px 0 rgb(26,15,10)", "purpose": "The sole shadow in the system, fixed behind the primary CTA face while the face presses toward it on hover." }
     ],
     "motion": [
-      { "name": "hero-appear", "value": "0.55s cubic-bezier(0.16,1,0.3,1)", "purpose": "One-time 12px hero fade-up; disabled for reduced motion." }
+      { "name": "hero-appear", "value": "12px 0.55s cubic-bezier(0.16,1,0.3,1)", "purpose": "One-time staggered hero fade-up." },
+      { "name": "scroll-reveal", "value": "fade-up once at approximately 15% visibility", "purpose": "One-time section reveal that stops after entering." },
+      { "name": "grid-stagger", "value": "0.08s", "purpose": "Short one-time stagger for grid items." },
+      { "name": "case-proof-parallax", "value": "maximum -16px vertical offset during active desktop scroll", "purpose": "Narrow exception for product imagery in the three case-study proof rows only; static on mobile and disabled under reduced motion." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion: reduce", "purpose": "Disables all authored motion, including the case-study parallax exception." }
     ],
     "breakpoints": [
       { "name": "mobile", "value": "800px" },
@@ -34,71 +59,79 @@
       "name": "Primary Button",
       "kind": "button",
       "refersTo": "button-primary",
-      "description": "Terracotta conversion action with the system's sole hard offset shadow.",
-      "html": "<button class=\"ds-btn-primary\">GET IN TOUCH</button>",
-      "css": ".ds-btn-primary{background:rgb(204,70,19);color:#fff;border:1.5px solid rgb(26,15,10);border-radius:7px;padding:15px 27px;box-shadow:6px 6px 0 rgb(26,15,10);font:400 16px/1.3 Lato,sans-serif;transition:transform .2s ease,box-shadow .2s ease}.ds-btn-primary:hover{transform:translate(3px,3px);box-shadow:3px 3px 0 rgb(26,15,10)}.ds-btn-primary:focus-visible{outline:3px solid rgb(243,192,69);outline-offset:4px}"
+      "description": "Terracotta conversion action with the system's sole hard offset shadow and heavy frame.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#contact\">GET IN TOUCH</a>",
+      "css": ".ds-btn-primary{display:inline-flex;align-items:center;justify-content:center;background:var(--terracotta,#cc4613);color:#fff;border:1.5px solid var(--espresso,#1a0f0a);border-radius:7px;padding:15px 27px;box-shadow:6px 6px 0 var(--espresso,#1a0f0a);font:400 16px/1.3 Lato,sans-serif;text-decoration:none;transition:transform .2s ease}.ds-btn-primary:hover{transform:translate(3px,3px)}.ds-btn-primary:focus-visible{outline:3px solid var(--gold,#f3c045);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-btn-primary{transition:none}}"
     },
     {
-      "name": "Founder Chip",
-      "kind": "chip",
-      "description": "Compact proof of direct founder involvement.",
-      "html": "<span class=\"ds-founder-chip\"><span class=\"ds-founder-avatar\">AW</span><span><strong>You work directly with me.</strong><small>Alex Whitley, Founder</small></span></span>",
-      "css": ".ds-founder-chip{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid #ebe7e2;border-radius:999px;padding:6px 20px 6px 7px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-founder-avatar{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:rgb(237,232,224);font-size:11px}.ds-founder-chip strong,.ds-founder-chip small{display:block}.ds-founder-chip strong{font-size:14px}.ds-founder-chip small{font-size:12px;color:#6d635c;margin-top:1px}"
-    },
-    {
-      "name": "Service Card",
-      "kind": "card",
-      "description": "Flat light service surface with a restrained hairline.",
-      "html": "<article class=\"ds-service-card\"><span class=\"ds-service-icon\">◎</span><h3>Branding</h3><p>A brand that earns trust before you say a word.</p></article>",
-      "css": ".ds-service-card{background:#fff;border:1px solid rgb(221,217,213);border-radius:14px;padding:34px 30px 38px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-service-icon{width:38px;height:38px;display:grid;place-items:center;background:#fff0e9;color:rgb(204,70,19);border-radius:8px;margin-bottom:42px}.ds-service-card h3{font:500 28px/1.2 'Playfair Display',Georgia,serif;letter-spacing:-.035em;margin:0 0 15px}.ds-service-card p{color:rgba(26,15,10,.65);font-size:16px;margin:0}"
-    },
-    {
-      "name": "Process Card",
-      "kind": "card",
-      "description": "Dark inset card for process steps on Espresso Black.",
-      "html": "<article class=\"ds-process-card\"><b>1</b><h3>We Talk, Founder to Founder</h3><p>Tell me about your business and what is not working.</p></article>",
-      "css": ".ds-process-card{background:rgb(61,36,22);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:28px 25px 32px;min-height:290px;color:#fff;font-family:Lato,sans-serif}.ds-process-card b{color:rgb(243,192,69);font-size:14px}.ds-process-card h3{font:500 20px/1.25 'Playfair Display',Georgia,serif;margin:42px 0 15px}.ds-process-card p{font-size:16px;line-height:1.55;color:rgba(255,255,255,.7);margin:0}"
+      "name": "Secondary Button",
+      "kind": "button",
+      "description": "Flat terracotta secondary action with no shadow or heavy frame.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#work\">VIEW WORK</a>",
+      "css": ".ds-btn-secondary{display:inline-flex;align-items:center;justify-content:center;background:var(--terracotta,#cc4613);color:#fff;border:1px solid var(--terracotta,#cc4613);border-radius:7px;padding:14px 24px;font:400 16px/1.3 Lato,sans-serif;text-decoration:none;transition:opacity .2s ease}.ds-btn-secondary:hover{opacity:.88}.ds-btn-secondary:focus-visible{outline:3px solid var(--gold,#f3c045);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-btn-secondary{transition:none}}"
     },
     {
       "name": "Navigation Bar",
       "kind": "nav",
-      "description": "Pale neutral pill framed by the espresso system color.",
-      "html": "<nav class=\"ds-nav\"><strong>Proudly Sites</strong><span><a href=\"#work\">Work</a><a href=\"#services\">Services</a></span><a class=\"ds-nav-cta\" href=\"#contact\">Get in Touch</a></nav>",
-      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:28px;background:rgb(247,247,247);border:1.5px solid rgb(26,15,10);border-radius:11px;padding:14px 20px 14px 28px;color:rgb(26,15,10);font-family:Lato,sans-serif}.ds-nav span{display:flex;gap:24px}.ds-nav a{color:inherit;text-decoration:none;font-size:15px}.ds-nav-cta{background:rgb(26,15,10);color:#fff!important;border:1px solid rgb(26,15,10);border-radius:7px;padding:13px 19px;transition:background .2s ease}.ds-nav-cta:hover{background:#33241b}.ds-nav a:hover{color:rgb(204,70,19)}.ds-nav a:focus-visible{outline:3px solid rgb(243,192,69);outline-offset:4px}"
+      "description": "Pale neutral pill framed by Espresso Black, with motion-only inline-link hovers and a flat dark nav CTA.",
+      "html": "<nav class=\"ds-nav\"><strong>Proudly Sites</strong><span><a href=\"#work\"><i>Work</i></a><a href=\"#services\"><i>Services</i></a></span><a class=\"ds-nav-cta\" href=\"#contact\">Get in Touch</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;justify-content:space-between;gap:28px;background:var(--nav,#f7f7f7);border:1.5px solid var(--espresso,#1a0f0a);border-radius:11px;padding:14px 20px 14px 28px;color:var(--espresso,#1a0f0a);font-family:Lato,sans-serif}.ds-nav span{display:flex;gap:24px}.ds-nav a{color:inherit;text-decoration:none;font-size:15px}.ds-nav i{display:block;font-style:normal;transition:transform .3s cubic-bezier(.16,1,.3,1)}.ds-nav span a:hover i{transform:translateX(6px)}.ds-nav-cta{background:var(--espresso,#1a0f0a);color:#fff!important;border:1px solid var(--espresso,#1a0f0a);border-radius:7px;padding:13px 19px;transition:background .2s ease}.ds-nav-cta:hover{background:#33241b}.ds-nav a:focus-visible{outline:3px solid var(--gold,#f3c045);outline-offset:4px}@media(prefers-reduced-motion:reduce){.ds-nav i,.ds-nav-cta{transition:none}}"
     },
     {
-      "name": "Tag",
-      "kind": "chip",
-      "description": "Flat hairline pill listing a project's scope; never colored, never a button.",
-      "html": "<ul class=\"ds-tags\"><li>17-Page Site</li><li>Trust-First Brand Identity</li><li>High-Intent Legal SEO</li></ul>",
-      "css": ".ds-tags{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none;font-family:Lato,sans-serif}.ds-tags li{background:#f1eee9;border:1px solid #e3ddd7;border-radius:999px;padding:7px 11px;color:#746862;font-size:12px}"
+      "name": "Testimonial Card",
+      "kind": "card",
+      "description": "Flat proof card using the lighter Playfair Highlight style for a real client quote.",
+      "html": "<figure class=\"ds-testimonial\"><blockquote>“Alex made the whole process feel clear and manageable.”</blockquote><figcaption><strong>Client Name</strong><span>Business Name</span></figcaption></figure>",
+      "css": ".ds-testimonial{margin:0;background:#fff;border:1px solid var(--line,#ddd9d5);border-radius:14px;padding:34px 30px;color:var(--espresso,#1a0f0a)}.ds-testimonial blockquote{margin:0 0 32px;font:400 36px/1.3 'Playfair Display',Georgia,serif;letter-spacing:-.03em}.ds-testimonial figcaption{font:400 14px/1.5 Lato,sans-serif}.ds-testimonial strong,.ds-testimonial span{display:block}.ds-testimonial span{color:rgba(26,15,10,.65);margin-top:3px}"
+    },
+    {
+      "name": "Gold Proof Quote Band",
+      "kind": "custom",
+      "description": "The one sanctioned full-bleed Honey Gold field: a single display-scale testimonial proof moment on the work index.",
+      "html": "<section class=\"ds-quote-band\"><blockquote><p>“The finished site finally reflects the quality of our work.”</p><cite><strong>Client Name</strong>Business Name</cite></blockquote></section>",
+      "css": ".ds-quote-band{width:100%;background:var(--gold,#f3c045);color:var(--espresso,#1a0f0a)}.ds-quote-band blockquote{max-width:900px;margin:0 auto;padding:120px 40px;text-align:center}.ds-quote-band p{margin:0 0 30px;font:400 36px/1.3 'Playfair Display',Georgia,serif;letter-spacing:-.03em}.ds-quote-band cite{font:400 14px/1.5 Lato,sans-serif;font-style:normal}.ds-quote-band cite strong{display:block;font-size:16px;margin-bottom:4px}"
+    },
+    {
+      "name": "Case Study Proof Sequence",
+      "kind": "custom",
+      "description": "Exactly three flat, hairline-separated proof rows with alternating desktop composition, text-first mobile stacking, honest capture placeholders, and the sole parallax exception.",
+      "html": "<section class=\"ds-proof-sequence\"><article class=\"ds-proof-row\"><div><h2>Clear service pathways</h2><p>One short project-specific explanation grounded in supplied truth.</p></div><figure data-parallax><span>Product capture pending</span></figure></article><article class=\"ds-proof-row ds-proof-row-reverse\"><div><h2>Trust-first detail</h2><p>One short project-specific explanation grounded in supplied truth.</p></div><figure data-parallax><span>Product capture pending</span></figure></article><article class=\"ds-proof-row\"><div><h2>Focused conversion</h2><p>One short project-specific explanation grounded in supplied truth.</p></div><figure data-parallax><span>Product capture pending</span></figure></article></section>",
+      "css": ".ds-proof-sequence{background:var(--cream,#f5f3ef);color:var(--espresso,#1a0f0a)}.ds-proof-row{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(48px,7vw,110px);align-items:center;padding:100px 0;border-top:1px solid var(--line,#ddd9d5)}.ds-proof-row-reverse>div{order:2}.ds-proof-row h2{margin:0 0 18px;font:500 32px/1.3 'Playfair Display',Georgia,serif;letter-spacing:-.04em}.ds-proof-row p{margin:0;max-width:34rem;font:400 16px/1.6 Lato,sans-serif;color:rgba(26,15,10,.65)}.ds-proof-row figure{margin:0;aspect-ratio:4/3;display:grid;place-items:center;background:var(--oat,#e4ddd3);border:1px solid var(--line,#ddd9d5);transform:translate3d(0,var(--parallax-y,0),0);will-change:transform}.ds-proof-row figure span{font:400 12px/1 Lato,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#6d635c}@media(max-width:800px){.ds-proof-row{grid-template-columns:1fr;gap:32px;padding:72px 0}.ds-proof-row-reverse>div{order:0}.ds-proof-row figure{transform:none!important;will-change:auto}}@media(prefers-reduced-motion:reduce){.ds-proof-row figure{transform:none!important;will-change:auto}}"
     }
   ],
   "narrative": {
     "northStar": "The Grounded Workshop",
-    "overview": "Proudly Sites presents itself as a solo-operator's workshop, not an agency floor: Espresso Black grounds the trust-heavy moments, while Warm Cream carries everything else. Ornament is rationed so visible confidence lands where it is earned: on the ask. Photography carries proof rather than illustration or gradients.",
+    "overview": "Proudly Sites presents itself as a solo-operator's workshop, not an agency floor: Espresso Black grounds the trust-heavy moments (process, footer, the dark CTA), while Warm Cream carries everything else. Ornament is rationed to exactly one tool — Burnt Terracotta and its stacked-shadow CTA button — so the system's one visible gesture of confidence lands exactly where it's earned: on the ask.\n\nThe system is a deliberate maturation past the original mockup's more folksy $4–8k \"familiar and trustworthy\" bar, toward a \"clearly better than what I could get elsewhere\" read — without touching the palette itself. Same tokens, applied with more restraint and more room to breathe. Photography carries the proof (case-study craft, the founder's own face, real site screenshots) rather than illustration or gradients; nothing here stands in for a real client or a real result.\n\nConfirmed rejections: the mockup's untokenized dark brown #2C1810 (consolidated into Espresso Black); the earlier amber rgb(250,177,100) (no longer maps to anything live — do not reintroduce); the mockup's second gold tint #C49A3C and its multi-tint service glyphs (collapsed into the single Honey Gold accent); any second or third accent color anywhere in the system.",
     "keyCharacteristics": [
       "One accent, ruthlessly: Burnt Terracotta acts, Honey Gold only ever decorates.",
       "One dramatic gesture, spent exactly once: the hard offset shadow lives on the primary CTA button alone.",
-      "Warm Cream and Espresso Black carry the system.",
+      "Warm Cream and Espresso Black carry the system; the scale's True Black / Mid Grey / Charcoal Grey sit in reserve, not in the primary language.",
       "Photography-led proof over illustration or CSS placeholders.",
-      "Generous, unhurried section rhythm."
+      "Generous, unhurried section rhythm — 120–160px of desktop vertical padding."
     ],
     "rules": [
-      { "name": "The One Voice Rule", "body": "Burnt Terracotta is the only action color in the system. Honey Gold decorates but is never a button and never a full-bleed field.", "section": "colors" },
+      { "name": "The One Voice Rule", "body": "Burnt Terracotta is reserved for buttons only. Inline text links are Espresso Black, with no color change on hover — hover reads as motion (a small rightward translate), never a shift toward terracotta. Honey Gold decorates — eyebrow tick, review stars, the accent surface — and is never a button; see the Colors section above for its one sanctioned full-bleed exception (the /work quote band). No third accent, anywhere.", "section": "colors" },
       { "name": "The Unhurried Rule", "body": "Space is added, not trimmed, moving from mockup to build. Generous vertical rhythm is itself part of the premium read.", "section": "layout" },
-      { "name": "The Single Tool Rule", "body": "The workshop keeps one dramatic gesture: the CTA's stacked shadow and heavy frame. Everywhere else stays flat or hairline-thin.", "section": "elevation" }
+      { "name": "The Whole-Or-Center Rule", "body": "Text-only sections (no supporting image) are used sparingly and only for the single most important claim on a page. When used, they are fully center-aligned. Nothing in this system is aligned slightly left of its container: alignment is either flush to the container edge or centered on it.", "section": "layout" },
+      { "name": "The Full-Bleed Rule", "body": "Hairline dividers and section rules run edge to edge within their container. Nothing stops short of the container edge.", "section": "layout" },
+      { "name": "The Paired Claim Rule", "body": "No two text-only sections run back to back on a service/detail template. Every claim block — an eyebrow-free heading, a 2–3 sentence description, one CTA link — shares its fold with a large real screenshot or photo, never stacked above or below it. Successive claim blocks alternate sides down the page: text-left/image-right, then text-right/image-left. If the image doesn't exist yet, the section waits behind a logged placeholder (data-placeholder=true, tracked in REPLACE.md) rather than shipping as bare text.", "section": "layout" },
+      { "name": "The Scan-Then-Prove Rule", "body": "Every service/detail template opens with a scan layer that gives the reader the whole shape in one pass before the claim blocks prove it underneath. That layer may be a hairline-divided list or a card grid, chosen by content: cards when the items are short parallel facts (a heading plus one or two lines), hairline rows when the items carry more weight. Cards never carry paragraph-length argument, and no card grid is the primary structure of a page. The scan layer stays flat and never interleaves with the claim-block sequence.", "section": "layout" },
+      { "name": "The No-Scaffolding Rule", "body": "No numbered \"01/02\" scaffolding and no per-section eyebrow dot+label on service/detail templates — both read as AI-generic list-making rather than argument. Section headings carry the page on their own.", "section": "layout" },
+      { "name": "The Three Proofs Rule", "body": "Every case study carries exactly three project-specific build features selected from supplied project truth. Each feature uses one concise Playfair heading, one short paragraph, and one substantial product image. No generic \"The Moment / What We Built / What Changed\" sequence, bullets, eyebrows, numbering, or extra scaffolding.", "section": "layout" },
+      { "name": "The Alternating Product Rule", "body": "The three features alternate text-left/image-right, image-left/text-right, then text-left/image-right on desktop. Mobile stacks the related text before its image for all three features. Hairline rules separate the rows, but the sequence remains flat and card-free.", "section": "layout" },
+      { "name": "The Honest Capture Rule", "body": "Missing product imagery uses a clearly labeled neutral placeholder with a stable image ratio and descriptive alt intent. It must be easy to replace through the case study's canonical content entry and must never imitate a finished screenshot. Real product imagery replaces the placeholder without changing the section structure.", "section": "layout" },
+      { "name": "The Single Tool Rule", "body": "The workshop keeps one dramatic gesture — the CTA's stacked shadow and heavy frame — and spends it in exactly one place. Everywhere else stays flat, or hairline-thin.", "section": "elevation" }
     ],
     "dos": [
       "Do keep Burnt Terracotta as the only action color, everywhere, without exception.",
       "Do reserve the hard offset shadow and the heavy Espresso Black border for the primary CTA button alone.",
-      "Do let real photography carry the proof.",
-      "Do give Heading 1 and Highlight text generous room."
+      "Do let real photography carry the proof — case-study craft photos, the founder's own headshot, real site screenshots — never a gradient or CSS placeholder.",
+      "Do give Heading 1 and Highlight text generous room; don't crowd them against neighboring elements."
     ],
     "donts": [
-      "Don't reintroduce the old amber rgb(250,177,100).",
-      "Don't add a third accent color, a per-service tint, or the mockup's second gold.",
-      "Don't loop, parallax, or keep anything moving after it settles."
+      "Don't reintroduce the old amber rgb(250,177,100) — it no longer maps to anything live.",
+      "Don't add a third accent color, a per-service tint, or the mockup's second gold (#C49A3C) — they collapse into the single Honey Gold accent.",
+      "Don't loop or keep anything moving after interaction stops. Parallax is prohibited except for the narrow case-study product-image behavior defined under Motion. All authored motion is fully off under prefers-reduced-motion."
     ]
   }
 }

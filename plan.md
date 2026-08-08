@@ -47,8 +47,7 @@ Ordered by production impact. Each item should be handled as its own focused tas
 - Supply real hero imagery for Strictly Clean and After Hours, then replace their `/work` card and service-proof placeholders.
 
 ### 5. Refresh the Impeccable design-system sidecar
-- Handed off to the separate Codex task **Refresh Proudly Impeccable sidecar**.
-- Diagnose drift first, then refresh `.impeccable/design.json` from the current `DESIGN.md` without redesigning or changing unrelated UI.
+- **Done** — refreshed `.impeccable/design.json` from the current `DESIGN.md`, preserving the Grounded Workshop system and current named rules without changing production UI.
 
 ### 6. Resolve the live-button hover palette exception
 - Decide whether the pre-existing `#33241b` live-site button hover belongs in the documented tonal ramp or should be replaced by an existing Espresso value.
@@ -111,6 +110,14 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Aug 11, 2026 · 11:42 AM] — Code
+- **Did:** Integrated the completed Impeccable sidecar refresh into `main`, bringing `.impeccable/design.json` in line with the current `DESIGN.md` without changing UI or production behavior.
+- **Decided:** Kept the current `main` plan and added this record explicitly rather than replacing newer project status with the sidecar worktree's older plan snapshot.
+- **Verified:** Sidecar commit records successful JSON parsing, semantic assertions, and an empty Impeccable doctor findings array; the combined site build and production checks follow in this integration session.
+- **Blocked:** The Web3Forms production key remains missing.
+
+**Files touched:** `.impeccable/design.json`; `plan.md` (follow-up item 5, this entry).
 
 ### [Tuesday Aug 11, 2026 · 10:11 AM] — Code
 - **Did:** Rebuilt /pricing as a two-column hero mirroring /contact, with the price ledger above the fold, a three-quote testimonial row, and a slimmed FAQ carrying Care/Growth detail.
