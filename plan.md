@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** Content architecture is implemented on `codex/content-architecture`: four case studies now live in validated Astro Markdown collections, their owned images live under matching slug folders in `src/assets/`, and the existing case URLs, work index, homepage features, header, footer, and service proof surfaces all consume the canonical records. A future blog collection, content inbox, fixed-page copy room, route map, naming rules, and AGENTS.md routing table are in place.
+**Current Priority:** The case-study detail redesign is committed to `main` (`56c4652`) and deployed to Vercel production (`dpl_4BRYQfMRvb9bTyqM8koVnn6uHi8A`). Each case now uses exactly three project-specific product-proof rows derived from canonical content, alternating text and imagery on desktop and stacking text-first on mobile. Neutral labeled placeholders reserve future product imagery, and restrained desktop parallax stops with scrolling and disables under reduced motion. `DESIGN.md` now records the Three Proofs, Alternating Product, Honest Capture, and narrow parallax rules for future case studies.
 
-**Verification done:** `node scripts/verify-content-architecture.mjs` passes for all four case records; `npm run build` generates all 13 existing routes; Playwright confirms all four case URLs return the expected H1, `/work` renders four cards, the browser console is clean, and Legacy has no horizontal overflow at 390px. The empty blog collection emits an expected no-files warning until the first post is added.
+**Verification done:** `npm run build` generated all 13 routes. Playwright covered four case routes at 1440px and 390px with zero console errors and zero horizontal overflow, confirmed exactly three features per case, verified desktop parallax, and confirmed `transform: none` under reduced motion. All four production case URLs return HTTP 200.
 
-**Branch state:** The content architecture is complete on `codex/content-architecture`, not merged or deployed. Existing design-hook findings only shifted line numbers; no visual values were changed or suppressed.
+**Branch state:** `main`, committed and deployed. The pre-existing `#33241b` live-button hover hook finding and stale `.impeccable/design.json` sidecar remain unchanged and unsuppressed.
 
-**Next Action:** Review and merge `codex/content-architecture`. Then the Web3Forms placeholder key remains the highest-priority production blocker, followed by the dead nav links, mobile accordion, Legacy Renovations image mismatch, and the two open P2 findings.
+**Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then address the dead nav links, mobile accordion, Legacy Renovations image mismatch, and the two open P2 findings.
 
 ## Morning Queue
 
@@ -60,6 +60,14 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 ## Recent
 
+### [Saturday Aug 8, 2026 · 11:55 AM] — Code
+- **Did:** Reshaped all four case-study detail pages through Impeccable into exactly three project-specific product-proof rows with alternating desktop composition, text-first mobile stacking, honest replaceable image placeholders, and restrained desktop parallax; replaced the retired `moment` / `built` / `changed` content fields with a validated three-feature schema; documented the durable case-study and motion rules in `DESIGN.md`; committed to `main` as `56c4652` and deployed to Vercel production as `dpl_4BRYQfMRvb9bTyqM8koVnn6uHi8A` at `https://proudly-psi.vercel.app`.
+- **Decided:** Kept the hero, Who / What Changed summary, testimonial, live-site control, closing CTA, and next-project link unchanged. Limited parallax to the case-study product imagery on motion-enabled desktop only, with static mobile and reduced-motion behavior. Preserved missing imagery as explicit neutral placeholders rather than fabricated screenshots.
+- **Verified:** `npm run build` generated 13 routes; Playwright covered four case routes at 1440px and 390px with zero console errors and zero overflow, exactly three features per route, working parallax, and no reduced-motion transform; all four production case URLs returned HTTP 200.
+- **Blocked:** No release blocker. The Web3Forms placeholder key remains the highest-priority production issue. The pre-existing live-button hover color hook finding and stale Impeccable sidecar remain unchanged.
+
+**Files touched:** `DESIGN.md`; `src/components/CaseStudy.astro`; `src/content.config.ts`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,strictly-clean-detailing,after-hours-ministry}/index.md`; `src/pages/work/[slug].astro`; `plan.md`.
+
 ### [Saturday Aug 8, 2026 · 11:24 AM] — Code
 - **Did:** Replaced four static case-study route records and the duplicated `src/data/work.ts` index with validated Astro Markdown collections and one dynamic `/work/[slug]` route; moved the two real case images into slug-owned `src/assets` folders; wired the work index, homepage features, header, footer, and service proof pages to the canonical records; added the future blog collection, content inbox rooms, fixed-page copy contracts, route map, naming conventions, content verifier, and AGENTS.md routing table.
 - **Decided:** Used route-owned `src/assets/<content-type>/<slug>/` folders rather than putting images inside `src/content/`, preserving direct slug retrieval while allowing Astro image validation and optimization. Kept missing quotes, URLs, and images as explicit open items rather than fabricating content. Left pre-existing design-hook findings and the stale Impeccable sidecar unchanged because no visual design values changed.
@@ -106,4 +114,3 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 - **Blocked:** See `## Morning Queue` — drafted copy needs approval, two case heroes + the Kevin W. quote need real assets, queued design refinements (section left-spine, AI-search page weight, hero-asset shadows) need Alex's call; `/contact` still needs the real Web3Forms key.
 
 **Files touched:** new `src/pages/services/{index,branding,web-design,ai-and-search-visibility}.astro`; new `src/components/CaseStudy.astro` and `src/pages/work/{index,smith-cash-family-law,legacy-renovations,strictly-clean-detailing,after-hours-ministry}.astro`; `src/components/{Header,Footer}.astro` and `src/pages/index.astro` (route wiring); new `.impeccable/surfaces/{src-pages-services,src-pages-work}.md`; `assets.md`, `.gitignore`, `plan.md` (this entry, `## Now`, and `## Morning Queue`).
-
