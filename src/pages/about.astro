@@ -1,5 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const testimonials = [
+  ["“Alex was so helpful in creating a website for our ministry. For anyone trying to go beyond generic sites, I would highly recommend.”", "Josh F.", "After Hours Ministry"],
+  ["“Working with Alex on our law firm website was a great experience from start to finish. Thoughtful, professional, and highly receptive to feedback.”", "Kelly S.", "Smith Cash Law"],
+  ["“The design looks amazing, the site runs smoothly, and everything was completed on time.”", "Tony R.", "Legacy Renovations"],
+];
 ---
 
 <BaseLayout
@@ -94,6 +100,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </div>
 
+  <div class="surface-white">
+    <section class="section testimonials">
+      <div class="testimonials-head rv"><h2>What Clients Say</h2></div>
+      <div class="review-grid">
+        {testimonials.map(item => <blockquote><span>★★★★★</span><p>{item[0]}</p><cite><b>{item[1]}</b>{item[2]}</cite></blockquote>)}
+      </div>
+    </section>
+  </div>
+
   <div class="surface-dark">
     <section class="section closing rv">
       <div class="closing-copy">
@@ -102,19 +117,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <a class="primary-button" href="/contact">Let&rsquo;s Work Together</a>
         <p class="closing-sub">Live in weeks, not months.</p>
       </div>
-      <aside class="alex-card">
-        <img
-          class="alex-card-photo"
-          src="/images/alex-whitley.jpeg"
-          width="64"
-          height="64"
-          loading="lazy"
-          alt=""
-        />
-        <p class="alex-card-name">Alex Whitley</p>
-        <p class="alex-card-role">Founder, Proudly Sites. Every project, start to finish, is mine.</p>
-        <p class="alex-card-anchor">Member, Triangle Christian Chamber of Commerce</p>
-      </aside>
     </section>
   </div>
 </BaseLayout>
@@ -285,6 +287,33 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     max-width: 46ch;
   }
 
+  /* ---- Testimonials: index.astro's review-grid card pattern, reused as-is ---- */
+  .testimonials-head { margin-bottom: 44px; }
+  .testimonials-head h2 {
+    font-family: "Playfair Display", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 3.6vw, 40px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+  .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .review-grid blockquote {
+    margin: 0;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: #fff;
+    min-height: 245px;
+    padding: 34px;
+  }
+  .review-grid blockquote > span { color: var(--gold); letter-spacing: 0.1em; font-size: 12px; }
+  .review-grid blockquote p {
+    font: 500 20px/1.4 "Playfair Display", serif;
+    margin: 20px 0 27px;
+  }
+  .review-grid cite { font-style: normal; font-size: 12px; color: #6d635c; }
+  .review-grid cite b { display: block; color: var(--espresso); font-size: 14px; }
+
   /* ---- Trust bar ---- */
   .cred {
     background: var(--cream);
@@ -311,16 +340,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
   .stars { color: var(--gold); letter-spacing: 2px; }
 
-  /* ---- Closing CTA (dark, two-column) ---- */
+  /* ---- Closing CTA (dark, single centered column) ---- */
   .section.closing {
-    display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: 64px;
-    align-items: center;
+    text-align: center;
     /* Footer is also espresso; trim the section's own padding so the two dark
        bands don't stack into an oversized void before the footer columns. */
     padding-top: clamp(72px, 8vw, 120px);
     padding-bottom: clamp(52px, 6vw, 92px);
+  }
+  .closing-copy {
+    max-width: 640px;
+    margin: 0 auto;
   }
   .closing-copy h2 {
     font-family: "Playfair Display", Georgia, serif;
@@ -336,46 +366,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.72);
     margin: 0 0 30px;
-    max-width: 34rem;
   }
   .closing-sub {
     font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
     margin: 20px 0 0;
-  }
-  .alex-card {
-    background: var(--dark-card);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 14px;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 14px;
-  }
-  .alex-card-photo {
-    width: 64px;
-    height: 64px;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center 28%;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-  }
-  .alex-card-name { font-size: 16px; font-weight: 700; color: #fff; margin: 0; }
-  .alex-card-role {
-    font-size: 14px;
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.72);
-    margin: 0;
-  }
-  .alex-card-anchor {
-    width: 100%;
-    font-size: 14px;
-    line-height: 1.5;
-    color: rgba(255, 255, 255, 0.6);
-    border-top: 1px solid rgba(255, 255, 255, 0.12);
-    padding-top: 14px;
-    margin: 6px 0 0;
   }
 
   /* ---- Motion: one authored load moment + scroll reveal ---- */
@@ -444,8 +439,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     .principle { grid-template-columns: auto 1fr; gap: 18px; padding: 28px 0; }
     .principle-num { font-size: 24px; }
 
-    .section.closing { grid-template-columns: 1fr; gap: 30px; }
     .closing-copy p { font-size: 16px; }
+
+    .review-grid { grid-template-columns: 1fr; gap: 12px; }
+    .review-grid blockquote { min-height: 0; padding: 28px; }
 
     .cred-inner {
       justify-content: flex-start;
