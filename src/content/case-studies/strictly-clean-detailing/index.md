@@ -14,14 +14,16 @@ order: 3
 status: published
 who: A car detailing business known for careful, reliable work, grown mostly by word of mouth.
 whatChanged: A site that presents the work as carefully as the detailing itself is done.
-moment:
-  - Detailing is a trust business. Someone is handing over their car and paying for a level of care they cannot fully judge until they see the result. Strictly Clean had built its name on exactly that care, reliable, thorough, quality work, and most of its customers arrived by referral.
-  - The site needed to carry that reputation for the people who had not yet seen the results in person, and make booking the work simple enough that a first-time customer never second-guessed it.
-built:
-  - The site leads with the work and keeps everything else out of the way, so the quality of the detailing is the first thing you take in. The tone stays plain and confident, the same way the business talks about what it does.
-  - Services and booking are laid out simply, so someone can go from curious to booked without friction, and the whole thing is easy to keep current as the offerings change.
-changed:
-  - Strictly Clean now has a site that looks as careful as the work, and a simple path for a new customer to book it, without losing the word-of-mouth trust that got them there.
+features:
+  - title: The Results Lead the Page
+    body: The site puts completed detailing work ahead of sales language, so visitors see the level of care before being asked to book. The presentation stays plain and confident, matching how the business talks about its work.
+    alt: Strictly Clean Detailing results-led product image
+  - title: Services Made Easy to Compare
+    body: Service information is arranged so a first-time customer can quickly understand what is offered and choose the right level of care without unnecessary friction or uncertainty.
+    alt: Strictly Clean Detailing service comparison product image
+  - title: A Direct Path to Booking
+    body: The experience moves cleanly from seeing the work to booking it. Offerings can remain current as the business changes without complicating the path for a customer ready to schedule.
+    alt: Strictly Clean Detailing booking flow product image
 ---
 
 The real Kevin W. quote, live URL, and page imagery remain open items. They have not been fabricated.

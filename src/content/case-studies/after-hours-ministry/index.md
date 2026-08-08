@@ -14,14 +14,16 @@ order: 4
 status: published
 who: A personal-brand ministry that needed a site to feel like the person behind it, not a template.
 whatChanged: A site that carries the ministry’s voice, calm and direct, instead of a generic template.
-moment:
-  - A ministry lives or dies on how personal it feels. People do not connect with an organization; they connect with a person and a message. After Hours needed a site that felt the way the ministry actually sounds, warm, direct, and real, rather than the generic template most small ministries end up with.
-  - The people it wanted to reach could tell the difference in seconds, and a site that felt off-the-shelf would have quietly undercut everything the ministry was trying to say.
-built:
-  - The site was built around the ministry’s own voice, so it reads calm and direct, the same way the ministry does in person. The message comes first, and the design stays out of its way.
-  - Everything is easy to navigate for someone who just wants to find their way in, and simple enough for the ministry to keep current on its own.
-changed:
-  - The ministry now has a home online that feels like it belongs to them, not to a template, and that the people they serve describe as genuinely helpful.
+features:
+  - title: A Voice That Feels Personal
+    body: The site is built around the ministry’s own warm, direct voice rather than generic church language. The message leads, and the visual design supports it without competing for attention.
+    alt: After Hours Ministry voice-led product image
+  - title: A Clear Way Into the Ministry
+    body: Navigation helps visitors find the message or resource they need without first understanding the organization. The structure stays approachable for someone encountering the ministry for the first time.
+    alt: After Hours Ministry navigation product image
+  - title: Simple to Keep Current
+    body: The content system is designed so the ministry can maintain its own online home. Updates can remain timely without turning the site into something complicated or dependent on a developer.
+    alt: After Hours Ministry content management product image
 quote:
   text: “Alex was so helpful in creating a website for our ministry. For anyone trying to go beyond generic sites, I would highly recommend.”
   cite: Josh F., After Hours Ministry

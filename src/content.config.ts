@@ -20,9 +20,12 @@ const caseStudies = defineCollection({
     status: z.enum(["draft", "published"]),
     who: z.string(),
     whatChanged: z.string(),
-    moment: z.array(z.string()),
-    built: z.array(z.string()),
-    changed: z.array(z.string()),
+    features: z.array(z.object({
+      title: z.string(),
+      body: z.string(),
+      image: image().optional(),
+      alt: z.string(),
+    })).length(3),
     quote: z.object({
       text: z.string(),
       cite: z.string(),

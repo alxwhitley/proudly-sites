@@ -18,14 +18,16 @@ order: 1
 status: published
 who: A two-attorney family law firm in Raleigh, known for honest, straightforward counsel.
 whatChanged: A website that makes anxious clients feel that honesty before the first phone call.
-moment:
-  - "Family law clients rarely arrive relaxed. By the time someone is looking for a family attorney, they are usually anxious, and they decide in the first few seconds whether a firm feels safe. Smith Cash had earned a reputation for exactly that kind of safety: honest, steady, straightforward counsel."
-  - A prospective client, often referred by someone who already trusted the firm, would land on a page that looked generic and hesitate at the worst possible moment. The firm had also grown into a range of offerings, and clients needed to move through them without getting lost.
-built:
-  - "The whole site was built to feel the way the firm feels in person: warm, calm, and clear, never loud or stuffy. The brand had to read as trustworthy before a single line was read, so the type stays quiet and the tone stays human."
-  - Across seventeen pages, navigation is organized around how a worried client actually thinks, so someone can find the exact help they need without reading the whole site. Lead intake was built to be simple and reassuring rather than a cold form, the search foundations were set so the right people find the firm in the first place, and the firm can keep all of it current themselves, without a developer on call.
-changed:
-  - "The site now reads the way the firm’s own clients describe them: thoughtful and professional. A referral arrives, sees a firm that looks as careful as the counsel it gives, and picks up the phone already reassured."
+features:
+  - title: Trust Before the First Call
+    body: The visual identity was designed to feel warm, calm, and steady before a visitor reads a word. It gives anxious family-law clients the same sense of thoughtful, straightforward counsel the firm provides in person.
+    alt: Smith Cash Family Law trust-first visual identity product image
+  - title: Seventeen Pages, Clearly Organized
+    body: A broad range of legal services was organized around how a worried client actually searches for help. Visitors can identify the right service and move through the site without having to understand the firm’s internal structure.
+    alt: Smith Cash Family Law service navigation product image
+  - title: A Reassuring Intake Path
+    body: Lead intake was shaped to feel simple and human instead of clinical. Search foundations help high-intent clients find the firm, while the site gives them a clear next step when they arrive.
+    alt: Smith Cash Family Law lead intake product image
 quote:
   text: “Working with Alex on our law firm website was a great experience from start to finish. Thoughtful, professional, and highly receptive to feedback.”
   cite: Kelly S., Smith Cash Law

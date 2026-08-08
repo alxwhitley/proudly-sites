@@ -2,11 +2,11 @@
 /*
   CaseStudy: the shared long-form layout for every /work/<case> detail page.
   Established-world extension of the homepage's "Grounded Workshop" - Warm Cream and
-  white narrative bands, an Espresso Black close, Playfair section headings on Lato
-  text, Honey Gold decorating the eyebrows only, one Burnt Terracotta CTA. Structure
+  white feature bands, an Espresso Black close, Playfair section headings on Lato
+  text, and one Burnt Terracotta CTA. Structure
   follows the Framer case-study template: hero (niche + optional live link + H1 +
-  full-bleed image), a Who / What changed summary band, then The Moment / What We
-  Built / What Changed narrative sections, an optional real-quote band, and a dark
+  full-bleed image), a Who / What changed summary band, then three alternating
+  product-feature sections, an optional real-quote band, and a dark
   close with the CTA and a next-project link. All four case pages pass data into this
   one component so the layout and CSS live in exactly one place.
 
@@ -18,8 +18,7 @@
     heroImage         - optional src; when null a placeholder panel renders instead
     heroAlt           - alt text for the hero image
     who, whatChanged  - the two summary-band values
-    moment, built, changed - arrays of paragraph strings
-    builtShot         - optional { image, alt, caption } inline in "What We Built"
+    features          - exactly three { title, body, image?, alt } product features
     quote             - optional { text, cite }; omitted entirely when no real quote
     next              - { label, href } for the next-project link
 */
@@ -32,10 +31,7 @@ const {
   heroAlt,
   who,
   whatChanged,
-  moment = [],
-  built = [],
-  builtShot,
-  changed = [],
+  features = [],
   quote,
   next,
 } = Astro.props;
@@ -63,30 +59,26 @@ const {
     </div>
   </div>
 
-  <section class="section narrative rv">
-    <h2>The Moment</h2>
-    <div class="narrative-body">{moment.map((p) => <p>{p}</p>)}</div>
-  </section>
-
-  <div class="surface-white">
-    <section class="section narrative rv">
-      <h2>What We Built</h2>
-      <div class="narrative-body">
-        {built.map((p) => <p>{p}</p>)}
-        {builtShot && (
-          <figure class="built-shot">
-            <img src={builtShot.image} alt={builtShot.alt} loading="lazy" width="1000" height="640" />
-            <figcaption>{builtShot.caption}</figcaption>
-          </figure>
-        )}
-      </div>
-    </section>
+  <div class="feature-sequence">
+    {features.map((feature) => (
+      <section class="feature-row">
+        <div class="feature-copy">
+          <h2>{feature.title}</h2>
+          <p>{feature.body}</p>
+        </div>
+        <figure class="feature-media" data-parallax>
+          <div class="feature-media-inner">
+            {feature.image
+              ? <img src={feature.image.src ?? feature.image} alt={feature.alt} loading="lazy" width="760" height="570" />
+              : <div class="feature-placeholder" role="img" aria-label={`${feature.alt} - product image pending`}>
+                  <span>{feature.title}</span>
+                  <small>Product image pending</small>
+                </div>}
+          </div>
+        </figure>
+      </section>
+    ))}
   </div>
-
-  <section class="section narrative rv">
-    <h2>What Changed</h2>
-    <div class="narrative-body">{changed.map((p) => <p>{p}</p>)}</div>
-  </section>
 
   {quote && (
     <div class="quote-band">
@@ -107,8 +99,6 @@ const {
 
 <style>
   /* Route-specific composition for every case page. Tokens + chrome are global. */
-  .surface-white { background: var(--white); }
-
   /* ---- Hero ---- */
   .section.case-hero {
     max-width: 1100px;
@@ -204,36 +194,86 @@ const {
     margin: 0;
   }
 
-  /* ---- Narrative sections ---- */
-  .section.narrative { max-width: 760px; }
-  .section.narrative h2 {
-    font: 500 clamp(26px, 2.8vw, 32px)/1.2 "Playfair Display", serif;
-    letter-spacing: -0.03em;
+  /* ---- Alternating product features ---- */
+  .feature-sequence {
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+  }
+  .feature-row {
+    width: min(1160px, calc(100% - 80px));
+    margin: 0 auto;
+    padding: clamp(58px, 7vw, 92px) 0;
+    display: grid;
+    grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
+    align-items: center;
+    gap: clamp(48px, 7vw, 112px);
+    border-top: 1px solid var(--line);
+  }
+  .feature-row:nth-child(even) {
+    grid-template-columns: minmax(0, 1.28fr) minmax(240px, 0.72fr);
+  }
+  .feature-row:nth-child(even) .feature-media { grid-column: 1; grid-row: 1; }
+  .feature-row:nth-child(even) .feature-copy { grid-column: 2; grid-row: 1; }
+  .feature-copy { max-width: 31rem; }
+  .feature-copy h2 {
+    font: 500 clamp(32px, 3.1vw, 40px)/1.12 "Playfair Display", Georgia, serif;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
     color: var(--espresso);
-    margin: 0 0 20px;
+    margin: 0 0 18px;
   }
-  .narrative-body { max-width: 34rem; }
-  .narrative-body p {
+  .feature-copy p {
+    max-width: 48ch;
     font-size: 16px;
-    line-height: 1.8;
+    line-height: 1.7;
     color: var(--muted);
-    margin: 0 0 22px;
+    margin: 0;
   }
-  .narrative-body p:last-child { margin-bottom: 0; }
-  .built-shot { margin: 40px 0 22px; }
-  .built-shot img {
-    width: 100%;
-    height: auto;
+  .feature-media {
+    position: relative;
+    overflow: hidden;
     aspect-ratio: 4 / 3;
-    object-fit: cover;
-    border-radius: 14px;
-    border: 1px solid var(--line);
+    margin: 0;
   }
-  .built-shot figcaption {
-    font-size: 14px;
-    line-height: 1.6;
+  .feature-media-inner {
+    position: absolute;
+    inset: -18px 0;
+    will-change: transform;
+    transform: translate3d(0, var(--parallax-y, 0px), 0);
+  }
+  .feature-media img,
+  .feature-placeholder {
+    width: 100%;
+    height: 100%;
+  }
+  .feature-media img {
+    display: block;
+    object-fit: cover;
+  }
+  .feature-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    box-sizing: border-box;
+    background: var(--oat);
+    border: 1px solid var(--line);
+    padding: 28px;
+    text-align: center;
+  }
+  .feature-placeholder span {
+    max-width: 18ch;
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: clamp(20px, 2.2vw, 32px);
+    line-height: 1.2;
+    color: var(--espresso);
+  }
+  .feature-placeholder small {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: #6d635c;
-    margin-top: 12px;
   }
 
   /* ---- Quote band ---- */
@@ -311,7 +351,29 @@ const {
   @media (max-width: 800px) {
     .summary-inner { grid-template-columns: 1fr; gap: 24px; }
     .summary-value { font-size: 16px; }
+    .feature-row,
+    .feature-row:nth-child(even) {
+      width: min(100% - 40px, 620px);
+      padding: 56px 0;
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+    .feature-row:nth-child(even) .feature-media,
+    .feature-row:nth-child(even) .feature-copy {
+      grid-column: 1;
+      grid-row: auto;
+    }
+    .feature-copy,
+    .feature-row:nth-child(even) .feature-copy { order: 1; }
+    .feature-media,
+    .feature-row:nth-child(even) .feature-media { order: 2; }
+    .feature-copy h2 { margin-bottom: 14px; }
+    .feature-media-inner { inset: 0; transform: none; will-change: auto; }
     .close-band > p { font-size: 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .feature-media-inner { inset: 0; transform: none; will-change: auto; }
   }
 </style>
 
@@ -334,5 +396,30 @@ const {
     } else {
       els.forEach(show);
     }
+
+    const mediaQuery = window.matchMedia("(min-width: 801px)");
+    const parallaxItems = Array.from(document.querySelectorAll("[data-parallax]"));
+    let parallaxFrame = 0;
+
+    const updateParallax = () => {
+      parallaxFrame = 0;
+      if (!mediaQuery.matches) return;
+      const viewportCenter = window.innerHeight / 2;
+      parallaxItems.forEach((item) => {
+        const rect = item.getBoundingClientRect();
+        if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+        const itemCenter = rect.top + rect.height / 2;
+        const progress = Math.max(-1, Math.min(1, (itemCenter - viewportCenter) / window.innerHeight));
+        item.style.setProperty("--parallax-y", `${progress * -16}px`);
+      });
+    };
+
+    const requestParallax = () => {
+      if (!parallaxFrame) parallaxFrame = requestAnimationFrame(updateParallax);
+    };
+
+    updateParallax();
+    window.addEventListener("scroll", requestParallax, { passive: true });
+    window.addEventListener("resize", requestParallax, { passive: true });
   }
 </script>

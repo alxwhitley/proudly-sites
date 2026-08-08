@@ -205,6 +205,18 @@ Confirmed against Sweven.design's structural pattern on 2026-08-07 (layout only 
 
 **The No-Scaffolding Rule.** No numbered "01/02" scaffolding and no per-section eyebrow dot+label on service/detail templates — both read as AI-generic list-making rather than argument. Section headings carry the page on their own.
 
+## Case Study Proof Sequence
+
+**Scope:** case-study detail pages under `/work/<slug>` only. The hero, Who / What Changed summary, testimonial, closing CTA, live-site control, and next-project link keep their established composition.
+
+### Named Rules
+
+**The Three Proofs Rule.** Every case study carries exactly three project-specific build features selected from supplied project truth. Each feature uses one concise Playfair heading, one short paragraph, and one substantial product image. No generic "The Moment / What We Built / What Changed" sequence, bullets, eyebrows, numbering, or extra scaffolding.
+
+**The Alternating Product Rule.** The three features alternate text-left/image-right, image-left/text-right, then text-left/image-right on desktop. Mobile stacks the related text before its image for all three features. Hairline rules separate the rows, but the sequence remains flat and card-free.
+
+**The Honest Capture Rule.** Missing product imagery uses a clearly labeled neutral placeholder with a stable image ratio and descriptive alt intent. It must be easy to replace through the case study's canonical content entry and must never imitate a finished screenshot. Real product imagery replaces the placeholder without changing the section structure.
+
 ## Elevation & Depth
 
 The system is flat by default. Depth appears exactly once, as a deliberate exception: the primary CTA button's hard offset shadow (the stacked black/brown effect). No other surface — card, photo, chip, or nav — carries a shadow. Borders default to Hairline Grey at 1px; the heavier Espresso Black border (1.5px) is reserved for the primary CTA button frame alone. Photos ship borderless, or at most a 1px Hairline Grey edge.
@@ -243,11 +255,11 @@ The system is flat by default. Depth appears exactly once, as a deliberate excep
 ### Don't:
 - **Don't** reintroduce the old amber `rgb(250,177,100)` — it no longer maps to any live token.
 - **Don't** add a third accent color, a per-service tint, or the mockup's second gold (`#C49A3C`) — they collapse into the single Honey Gold accent.
-- **Don't** loop, parallax, or keep anything moving after it settles — motion is appear/scroll-reveal only, and fully off under `prefers-reduced-motion`.
+- **Don't** loop or keep anything moving after interaction stops. Parallax is prohibited except for the narrow case-study product-image behavior defined under Motion. All authored motion is fully off under `prefers-reduced-motion`.
 
 ## Motion
 
-Nothing loops, parallaxes, or moves after settling. Appear/scroll-reveal only. Hero load fade-up 12px 0.55s staggered. Scroll reveals fade-up once at ~15%. Grid stagger 0.08s. `prefers-reduced-motion`: all off.
+Nothing loops or moves after interaction stops. Hero load fade-up 12px 0.55s staggered. Scroll reveals fade-up once at ~15%. Grid stagger 0.08s. One sanctioned parallax exception applies only to product imagery inside the three case-study proof rows: a restrained vertical offset follows active desktop scrolling, stops immediately when scrolling stops, stays static on mobile, and is fully disabled under `prefers-reduced-motion`.
 
 ## Open Decisions
 
