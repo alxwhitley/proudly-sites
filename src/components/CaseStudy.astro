@@ -61,13 +61,13 @@ const {
   </div>
 
   <section class="section narrative rv">
-    <h2 class="eyebrow">The Moment</h2>
+    <h2>The Moment</h2>
     <div class="narrative-body">{moment.map((p) => <p>{p}</p>)}</div>
   </section>
 
   <div class="surface-white">
     <section class="section narrative rv">
-      <h2 class="eyebrow">What We Built</h2>
+      <h2>What We Built</h2>
       <div class="narrative-body">
         {built.map((p) => <p>{p}</p>)}
         {builtShot && (
@@ -81,7 +81,7 @@ const {
   </div>
 
   <section class="section narrative rv">
-    <h2 class="eyebrow">What Changed</h2>
+    <h2>What Changed</h2>
     <div class="narrative-body">{changed.map((p) => <p>{p}</p>)}</div>
   </section>
 
@@ -105,29 +105,6 @@ const {
 <style>
   /* Route-specific composition for every case page. Tokens + chrome are global. */
   .surface-white { background: var(--white); }
-
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #6d635c;
-    margin: 0 0 18px;
-  }
-  /* h2.eyebrow keeps the small-label look while restoring a real heading outline
-     (each narrative section is an h2 sibling of the hero h1). */
-  h2.eyebrow { display: flex; }
-  .eyebrow::before {
-    content: "";
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--gold);
-  }
 
   /* ---- Hero ---- */
   .section.case-hero {
@@ -222,6 +199,12 @@ const {
 
   /* ---- Narrative sections ---- */
   .section.narrative { max-width: 760px; }
+  .section.narrative h2 {
+    font: 500 clamp(26px, 2.8vw, 32px)/1.2 "Playfair Display", serif;
+    letter-spacing: -0.03em;
+    color: var(--espresso);
+    margin: 0 0 20px;
+  }
   .narrative-body { max-width: 34rem; }
   .narrative-body p {
     font-size: 16px;
