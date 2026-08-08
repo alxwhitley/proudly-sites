@@ -16,14 +16,18 @@ who: A personal-brand ministry that needed a site to feel like the person behind
 whatChanged: A site that carries the ministry’s voice, calm and direct, instead of a generic template.
 features:
   - title: A Voice That Feels Personal
-    body: The site is built around the ministry’s own warm, direct voice rather than generic church language. The message leads, and the visual design supports it without competing for attention.
-    alt: After Hours Ministry voice-led product image
+    body: The homepage leads with the ministry’s real gathering, language, and people rather than generic church imagery. A moving photo rail gives visitors an immediate sense of the room while the message stays warm, direct, and unmistakably After Hours.
+    video: section1-browser.webm
+    alt: After Hours Ministry homepage photo rail moving inside a desktop browser frame
   - title: A Clear Way Into the Ministry
-    body: Navigation helps visitors find the message or resource they need without first understanding the organization. The structure stays approachable for someone encountering the ministry for the first time.
-    alt: After Hours Ministry navigation product image
-  - title: Simple to Keep Current
-    body: The content system is designed so the ministry can maintain its own online home. Updates can remain timely without turning the site into something complicated or dependent on a developer.
-    alt: After Hours Ministry content management product image
+    body: The Who We Are page turns a broad ministry statement into a specific story about the gathering, its convictions, and the people it serves. Alternating photography and direct copy help a first-time visitor understand the ministry before deciding to attend.
+    image: ../../../assets/case-studies/after-hours-ministry/case-study-section2.png
+    alt: After Hours Ministry Who We Are page in a stitched browser frame
+  - title: Built for Mobile Moments
+    body: Mobile interactions retain the site’s personality instead of collapsing into a generic stack. Social proof appears in context and stays easy to read on the device where young adults are most likely to encounter the ministry.
+    video: section3-mobile.webm
+    presentation: mobile
+    alt: After Hours Ministry social proof interaction shown at mobile proportions without browser chrome
 quote:
   text: “Alex was so helpful in creating a website for our ministry. For anyone trying to go beyond generic sites, I would highly recommend.”
   cite: Josh F., After Hours Ministry

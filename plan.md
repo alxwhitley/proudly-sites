@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** The case-study detail redesign is committed to `main` (`56c4652`) and deployed to Vercel production (`dpl_4BRYQfMRvb9bTyqM8koVnn6uHi8A`). Each case now uses exactly three project-specific product-proof rows derived from canonical content, alternating text and imagery on desktop and stacking text-first on mobile. Neutral labeled placeholders reserve future product imagery, and restrained desktop parallax stops with scrolling and disables under reduced motion. `DESIGN.md` now records the Three Proofs, Alternating Product, Honest Capture, and narrow parallax rules for future case studies.
+**Current Priority:** Approved product media is implemented and verified on branch `codex/after-hours-video-review` for Smith Cash, Legacy Renovations, and After Hours Ministry. Each route preserves section 1, section 2, section 3 order; After Hours uses a desktop browser video, stitched still, and separate mobile-behavior video without browser chrome. Strictly Clean remains the only case with three product placeholders.
 
-**Verification done:** `npm run build` generated all 13 routes. Playwright covered four case routes at 1440px and 390px with zero console errors and zero horizontal overflow, confirmed exactly three features per case, verified desktop parallax, and confirmed `transform: none` under reduced motion. All four production case URLs return HTTP 200.
+**Verification done:** `node scripts/verify-content-architecture.mjs` passes and `npm run build` generates all 13 routes. Playwright covered the three affected cases at 1440px and 390px with zero console errors and zero horizontal overflow, confirmed the exact three-item media order, loaded every image and video in view, and confirmed reduced motion leaves videos visible but paused with autoplay removed.
 
-**Branch state:** `main`, committed and deployed. The pre-existing `#33241b` live-button hover hook finding and stale `.impeccable/design.json` sidecar remain unchanged and unsuppressed.
+**Branch state:** `codex/after-hours-video-review`, ready for Alex review after the focused implementation commit. Not deployed or published. The separate `/pricing` work remains isolated on `pricing/build`. The pre-existing `#33241b` live-button hover hook finding and stale `.impeccable/design.json` sidecar remain unchanged and unsuppressed.
 
-**Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then address the dead nav links, mobile accordion, Legacy Renovations image mismatch, and the two open P2 findings.
+**Next Action:** Alex reviews the three local case routes and decides whether to merge the case-media branch. Then supply Strictly Clean's three feature assets. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 ## Follow-up Backlog
 
@@ -25,8 +25,8 @@ Ordered by production impact. Each item should be handled as its own focused tas
 - Replace the tile-repair/lead-capture screenshot used across the case, homepage, and service proof surfaces with imagery that matches the kitchen-and-bath narrative, or revise the narrative only if that screenshot is the actual product truth.
 - Check every consumer of the canonical Legacy image and prevent headline cropping.
 
-### 4. Replace case-study product placeholders
-- Supply and install three real product-image compositions for each of the four cases, matching the three canonical feature records.
+### 4. Replace remaining case-study product placeholders
+- Supply and install three real product-image compositions for Strictly Clean, matching its three canonical feature records. Smith Cash, Legacy Renovations, and After Hours are complete on `codex/after-hours-video-review`.
 - Preserve the shared alternating structure, stable ratios, descriptive alt text, and restrained parallax behavior.
 - Track exact required captures in `assets.md` until all twelve slots are real.
 
@@ -107,6 +107,13 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Saturday Aug 8, 2026 · 3:13 PM] — Code
+- **Did:** Implemented the approved case-study product media on `codex/after-hours-video-review`: three stitched stills for Smith Cash, a transparent brand mark plus two stitched stills for Legacy Renovations, and After Hours' desktop browser video, stitched still, and separate mobile-behavior video in section 1, section 2, section 3 order. Updated the matching feature copy and the shared renderer for intrinsic transparent media ratios, mobile video presentation, and reduced motion.
+- **Decided:** Left VitalWatch out because it has no matching canonical case record and left Strictly Clean's three placeholders because no approved media was supplied. Preserved the uploaded ProRes alpha masters untouched and created small tracked VP9-alpha delivery derivatives. Left the pre-existing live-button hover finding and stale Impeccable sidecar unchanged and unsuppressed.
+- **Verified:** The content verifier passes and the Astro build generates 13 routes. Playwright at 1440px and 390px confirmed exact media order, zero overflow, zero console errors, in-view video playback, and reduced-motion pause behavior across all three affected routes. No deploy or publish was run.
+
+**Files touched:** `docs/superpowers/plans/2026-08-08-case-study-media-integration.md`; `scripts/verify-content-architecture.mjs`; `src/content.config.ts`; `src/pages/work/[slug].astro`; `src/components/CaseStudy.astro`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,after-hours-ministry}/index.md`; nine approved media delivery assets under matching `src/assets/case-studies/` folders; `assets.md`; `plan.md` (`## Now`, Follow-up Backlog item 4, this entry).
 
 ### [Saturday Aug 8, 2026 · 12:03 PM] — Code
 - **Did:** Consolidated every known out-of-scope production, navigation, case-study content, accessibility, contact-layout, Impeccable drift, palette, and service-page issue into an ordered `plan.md` follow-up backlog with acceptance and verification intent; added the twelve case-feature image slots to `assets.md`; marked the sidecar refresh as handed off to its separate Codex task.

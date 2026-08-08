@@ -45,6 +45,55 @@ for (const slug of expectedCases) {
   }
 }
 
+const mediaContracts = {
+  "smith-cash-family-law": [
+    "case-study-section-1.png",
+    "case-study-section2.png",
+    "case-study-section3.png",
+  ],
+  "legacy-renovations": [
+    "section1-branding.png",
+    "section2-browser.png",
+    "section3-browser.png",
+  ],
+  "after-hours-ministry": [
+    "section1-browser.webm",
+    "case-study-section2.png",
+    "section3-mobile.webm",
+  ],
+};
+const caseComponentPath = join(root, "src/components/CaseStudy.astro");
+const routePath = join(root, "src/pages/work/[slug].astro");
+
+for (const [slug, filenames] of Object.entries(mediaContracts)) {
+  const contentPath = join(caseRoot, slug, "index.md");
+  const content = existsSync(contentPath) ? readFileSync(contentPath, "utf8") : "";
+  let previousIndex = -1;
+  for (const filename of filenames) {
+    const assetPath = join(root, "src/assets/case-studies", slug, filename);
+    if (!existsSync(assetPath)) failures.push(`Missing approved case-study media: ${slug}/${filename}`);
+    const referenceIndex = content.indexOf(filename);
+    if (referenceIndex === -1) {
+      failures.push(`${slug}/index.md lacks approved media reference: ${filename}`);
+    } else if (referenceIndex <= previousIndex) {
+      failures.push(`${slug}/index.md media order is not section 1, section 2, section 3`);
+    }
+    previousIndex = referenceIndex;
+  }
+}
+
+if (existsSync(caseComponentPath)) {
+  const caseComponent = readFileSync(caseComponentPath, "utf8");
+  for (const requirement of ["<video", "autoplay", "muted", "loop", "playsinline", "video.pause()", "removeAttribute(\"autoplay\")", "feature-media--mobile"]) {
+    if (!caseComponent.includes(requirement)) failures.push(`CaseStudy.astro lacks video requirement: ${requirement}`);
+  }
+}
+
+if (existsSync(routePath)) {
+  const route = readFileSync(routePath, "utf8");
+  if (!route.includes("import.meta.glob")) failures.push("Dynamic case route lacks route-owned video resolution");
+}
+
 for (const oldRoute of expectedCases) {
   if (existsSync(join(root, `src/pages/work/${oldRoute}.astro`))) {
     failures.push(`Static route still exists: src/pages/work/${oldRoute}.astro`);

@@ -24,6 +24,8 @@ const caseStudies = defineCollection({
       title: z.string(),
       body: z.string(),
       image: image().optional(),
+      video: z.string().optional(),
+      presentation: z.enum(["standard", "mobile"]).default("standard"),
       alt: z.string(),
     })).length(3),
     quote: z.object({
