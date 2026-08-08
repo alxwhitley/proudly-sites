@@ -16,6 +16,10 @@ That file is the Astro lane workflow (Impeccable command spine). This folder is 
 - `PRODUCT.md` / `DESIGN.md` — Impeccable
 - `assets.md` + `assets/` — media index
 - Prefer `structure.md` + `pages/*-copy.md` for any new IA/copy work (Gate S); some copy still lives in routes from the Framer port — write back to `pages/*-copy.md` when edited
+- `src/content/case-studies/<slug>/index.md` — canonical case-study content and metadata
+- `src/content/blog/<slug>/index.md` — canonical blog content and metadata
+- `src/assets/<content-type>/<slug>/` — route-owned shippable media
+- `content-inbox/` — unprocessed material; read its README before promoting anything
 
 ## Open / blocked
 

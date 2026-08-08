@@ -11,6 +11,8 @@
   See .impeccable/surfaces/src-pages-services.md for the cluster brief.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import smithCashImage from "../../assets/case-studies/smith-cash-family-law/hero.jpeg";
+import legacyImage from "../../assets/case-studies/legacy-renovations/hero.jpeg";
 
 // Real client proof. Images are real existing assets where available; the After
 // Hours slot has no local asset and the Framer CMS was unreachable this session,
@@ -18,14 +20,14 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 const proof = [
   {
     client: "Smith Cash Family Law",
-    image: "/images/smith-cash.jpeg",
+    image: smithCashImage.src,
     imageAlt: "The Smith Cash Family Law website, honest and steady in the first seconds",
     caption:
       "Anxious clients decide in seconds whether a firm feels safe. The design makes this firm feel honest and steady before the first phone call.",
   },
   {
     client: "Legacy Renovations",
-    image: "/images/legacy-renovations.jpeg",
+    image: legacyImage.src,
     imageAlt: "The Legacy Renovations site leading with a finished kitchen remodel",
     caption:
       "Homeowners hire the remodeler they trust with their house. The design leads with finished work and makes requesting a quote feel like the obvious next step.",

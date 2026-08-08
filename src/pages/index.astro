@@ -2,20 +2,32 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
 import Tags from "../components/Tags.astro";
+import { getCollection } from "astro:content";
+
+const featuredCases = await getCollection("caseStudies", ({ data }) =>
+  data.status === "published" && data.featured && Boolean(data.homepage)
+);
+const featuredBySlug = new Map(featuredCases.map(({ data }) => [data.slug, data]));
+
+const projectFromCase = (slug: string) => {
+  const item = featuredBySlug.get(slug);
+  if (!item?.homepage || !item.heroImage) throw new Error(`Incomplete featured case study: ${slug}`);
+  return {
+    name: item.title,
+    location: item.location ?? "",
+    title: item.headline,
+    body: item.homepage.body,
+    image: item.heroImage.src,
+    imageAlt: item.heroAlt,
+    tags: item.homepage.tags,
+    quote: item.homepage.quoteExcerpt,
+    author: item.homepage.quoteCite,
+    href: `/work/${item.slug}`,
+  };
+};
 
 const projects = [
-  {
-    name: "Smith Cash Family Law",
-    location: "Raleigh",
-    title: "A boutique firm that finally looks like the counsel it gives",
-    body: "Honest, straightforward advice was already their reputation. I built a site that makes anxious clients feel that before the first phone call.",
-    image: "/images/smith-cash.jpeg",
-    imageAlt: "Smith Cash Family Law website",
-    tags: ["17-Page Site", "Trust-First Brand Identity", "Automated Lead Intake", "High-Intent Legal SEO"],
-    quote: "“Thoughtful, professional, and highly receptive to feedback.”",
-    author: "Kelly S. — Smith Cash Law",
-    href: "/work/smith-cash-family-law",
-  },
+  projectFromCase("smith-cash-family-law"),
   {
     name: "Vital Watch",
     location: "Raleigh",
@@ -26,18 +38,7 @@ const projects = [
     tags: ["Full Brand Launch", "Custom Nav", "Healthcare Partners Portal", "SEO"],
     href: "/work",
   },
-  {
-    name: "Legacy Renovations",
-    location: "Raleigh",
-    title: "Craftsmanship homeowners can see before they call",
-    body: "Homeowners hire the remodeler they trust with their house. This build leads with the finished work and makes requesting a quote feel like the natural next step.",
-    image: "/images/legacy-renovations.jpeg",
-    imageAlt: "Legacy Renovations website",
-    tags: ["First Real Brand", "SEO-Optimized Service Pages", "Before/After Portfolio", "Service-Based Navigation"],
-    quote: "“The design looks amazing, the site runs smoothly, and everything was completed on time.”",
-    author: "Tony R. — Legacy Renovations",
-    href: "/work/legacy-renovations",
-  },
+  projectFromCase("legacy-renovations"),
 ];
 
 const process = [

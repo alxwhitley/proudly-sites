@@ -6,7 +6,11 @@
 */
 import { services } from "../data/services";
 import { studios } from "../data/studios";
-import { caseStudies } from "../data/work";
+import { getCollection } from "astro:content";
+
+const caseStudies = (await getCollection("caseStudies", ({ data }) => data.status === "published"))
+  .sort((a, b) => a.data.order - b.data.order)
+  .map(({ data }) => ({ title: data.title, href: `/work/${data.slug}` }));
 ---
 <footer>
   <div class="footer-grid">

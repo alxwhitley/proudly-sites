@@ -9,7 +9,11 @@
   Shared chrome + tokens from BaseLayout / global.css. See src-pages-work.md.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import { caseStudies as cases } from "../../data/work";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+const cases = (await getCollection("caseStudies", ({ data }) => data.status === "published"))
+  .sort((a, b) => a.data.order - b.data.order);
 ---
 
 <BaseLayout
@@ -29,16 +33,16 @@ import { caseStudies as cases } from "../../data/work";
 
   <section class="section work-grid-wrap">
     <div class="work-grid stagger">
-      {cases.map((c) => (
-        <a class="work-card rv" href={c.href}>
+      {cases.map(({ data: c }) => (
+        <a class="work-card rv" href={`/work/${c.slug}`}>
           <div class="work-visual">
-            {c.image
-              ? <img src={c.image} alt={c.imageAlt} loading="lazy" width="640" height="480" />
+            {c.heroImage
+              ? <Image src={c.heroImage} alt={c.heroAlt} loading="lazy" width={640} height={480} />
               : <div class="ph-panel" role="img" aria-label={`${c.title} - live-site capture pending`}><span>{c.title}</span><small>Live-site capture pending</small></div>}
           </div>
-          <p class="work-tag">{c.tag}</p>
+          <p class="work-tag">{c.location ? `${c.niche} · ${c.location}` : c.niche}</p>
           <h2>{c.title}</h2>
-          <p class="work-line">{c.line}</p>
+          <p class="work-line">{c.summary}</p>
           <span class="work-more">View Project &rarr;</span>
         </a>
       ))}
