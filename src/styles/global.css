@@ -95,7 +95,7 @@ h1, h2, h3, p { margin-top: 0; }
 
 /* ---- Footer ---- */
 footer { background: var(--espresso); color: #fff; padding: 20px max(40px, calc((100vw - 1260px) / 2)) 30px; }
-.footer-grid { display: grid; grid-template-columns: 1.3fr repeat(3, 1fr); gap: 70px; padding: 70px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.footer-grid { display: grid; grid-template-columns: 1.3fr repeat(4, 1fr); gap: 70px; padding: 70px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); }
 .footer-grid > div { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 .footer-logo { margin-bottom: 25px; }
 .footer-grid h3, .footer-grid p { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: rgba(255, 255, 255, 0.5); margin: 0 0 12px; }
