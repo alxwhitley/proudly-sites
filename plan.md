@@ -2,11 +2,11 @@
 
 **Current Priority:** The completed `/pricing` page and approved Smith Cash, Legacy Renovations, and After Hours case-study media are merged into local `main`. Pricing includes the Editorial Pricing Layout, Care/Growth plan presentation, FAQ, Service schema, closing inquiry form, and corrected header links. Case-study media preserves section 1, section 2, section 3 order; After Hours uses a desktop browser video, stitched still, and separate mobile-behavior video without browser chrome. Strictly Clean remains the only case with three product placeholders.
 
-**Verification done:** Both branches passed their own build and responsive browser suites before merge. The combined `main` result still needs one final production build and browser smoke pass before push and Vercel production deployment.
+**Verification done:** The combined `main` content verifier passes and the production build generates 14 routes. Playwright verified `/pricing` plus the three affected case studies at 1440px and 390px with zero console errors and zero horizontal overflow, then confirmed both After Hours videos play in view. The four production URLs return HTTP 200.
 
-**Branch state:** `pricing/build`, `codex/after-hours-video-review`, and `overnight/system-fixes-3` are merged into local `main`. The detached sidecar refresh remains a separate Codex task, and the alternate detached Legacy implementation is superseded by the approved three-case media integration. Nothing has been pushed or deployed in this combined state yet.
+**Branch state:** `pricing/build`, `codex/after-hours-video-review`, and `overnight/system-fixes-3` are merged into local `main`. Production deployment `dpl_25vEEqbCEHCVCd1CPLaTuMEgg7uw` is READY and aliased to `https://proudly-psi.vercel.app`. The detached sidecar refresh remains a separate Codex task, and the alternate detached Legacy implementation is superseded by the approved three-case media integration. GitHub push remains blocked because no remote exists and public-repository creation has not been explicitly approved.
 
-**Next Action:** Verify combined `main`, create/configure the GitHub remote, push `main`, then deploy the linked Vercel project to production. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Next Action:** Review `/pricing` and the three updated case studies on production. Explicitly approve creating the public `alxwhitley/proudly` GitHub repository if a push is still wanted. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 ## Follow-up Backlog
 
@@ -107,6 +107,14 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Saturday Aug 8, 2026 · 3:49 PM] — Code
+- **Did:** Merged every named local branch into `main`, reconciled the Pricing and case-media session state, added a narrow Vercel exclusion file for untracked raw review/source media, and deployed the combined 14-route site to Vercel production as `dpl_25vEEqbCEHCVCd1CPLaTuMEgg7uw`, aliased to `https://proudly-psi.vercel.app`.
+- **Decided:** Did not merge the two detached Codex worktrees as branches: the sidecar refresh remains separately owned, while the alternate Legacy-only implementation is superseded by the approved three-case integration. Stopped the first Vercel upload when it attempted to package 1.7 GB of untracked ProRes/source media; preserved those files locally and excluded only the known untracked sources before redeploying.
+- **Verified:** `git branch --no-merged main` is empty; the content verifier passes; the production build generates 14 routes; Playwright passes for Pricing and the three updated case studies at 1440px and 390px with in-view After Hours playback; all four production URLs return HTTP 200.
+- **Blocked:** GitHub push remains blocked because the repo has no remote and public repository creation requires explicit approval.
+
+**Files touched:** `plan.md` (`## Now`, this entry); new `.vercelignore`.
 
 ### [Saturday Aug 8, 2026 · Evening] — Code
 - **Did:** Built `/pricing` on new branch `pricing/build` (off `main`, three commits: carry forward the approved DESIGN.md/plan.md pricing resolution, build the page, wire nav): hero, What's Always Included, What Moves the Number, Care/Growth hairline plan columns, FAQ accordion, Service schema JSON-LD, and a closing inquiry form. Repointed both instances of Header.astro's dead `/#pricing` link (desktop nav and mobile menu) to `/pricing`.
