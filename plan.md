@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** `/pricing` implements the approved scanability polish locally: an eight-item hairline fact ledger, one static Espresso price callout, five hairline scope-factor rows, and one-week delivery language. Separately, six quick visual-polish fixes from the Next Session Punch List landed as direct CSS/markup edits: the homepage "Process" eyebrow and step-number sizing, the homepage "View Project" hover treatment, the `/about` quote centering, the nav dropdown caret alignment, and the case-study "See Live Site" button reposition.
+**Current Priority:** `/pricing` is ready to redeploy with its price callout changed from Espresso inversion to the site's established Pure White card treatment. The eight-item fact ledger, five scope-factor rows, one-week delivery language, and all other page structures remain unchanged.
 
-**Verification done:** `npm run build` generates 14 routes after both the pricing polish and the punch-list batch. Playwright at 1440px and 390px confirms the pricing layouts specifically (two-column desktop, one-column mobile, static callout, price-first order, one-week copy, zero overflow, zero console errors); the punch-list batch is build-verified only, not yet browser-checked.
+**Verification done:** `npm run build` generates 14 routes. Playwright at 1440px and 390px confirms a white surface, 1px Hairline Grey edge, 16px radius, Espresso type, no shadow, static positioning, one-line desktop range, mobile stacking, and no horizontal overflow. The detector reports only seven pre-existing type-ramp advisories.
 
-**Branch state:** Work is uncommitted on local `main`. Existing unrelated untracked case-study media and the separate After Hours plan remain untouched. The pre-existing stale Impeccable sidecar remains unchanged and unsuppressed.
+**Branch state:** The light-card change and its design documentation are uncommitted on local `main`; `plan.md` also contains the prior deployment closeout. Existing unrelated untracked case-study media remain untouched. The pre-existing stale Impeccable sidecar remains unchanged and unsuppressed.
 
-**Next Action:** Alex reviews the polished `/pricing` page and the six punch-list fixes in the browser; if approved, commit together. The Web3Forms placeholder key remains the highest-priority production blocker. The case-study "See Live Site" button color question (punch list item 3) needs a decision before further action.
+**Next Action:** Commit, push, and deploy the approved light-card change, then verify the production alias. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 ## Next Session Punch List
 
@@ -125,6 +125,22 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 ## Recent
 
+### [Tuesday Aug 11, 2026 · 9:03 AM] — Code
+- **Did:** Replaced `/pricing`'s Espresso price inversion with the site's established Pure White card treatment and kept the `$4,000–$8,000` range together at desktop widths.
+- **Decided:** Matched the supplied service-card reference with a Pure White surface, 1px Hairline Grey edge, 16px radius, generous padding, Espresso type, muted supporting copy, and no shadow or motion. Left the surrounding factor ledger and all pricing content unchanged.
+- **Verified:** `npm run build` generated 14 routes. Playwright at 1440px and 390px confirmed the specified computed styles, static positioning, responsive column behavior, and no horizontal overflow. The manual Impeccable detector reported only seven pre-existing type-ramp advisories; no exception was added.
+- **Blocked:** The Web3Forms placeholder key and stale Impeccable sidecar remain open. The desktop dev check logged one Astro audit fetch error from the development toolbar; mobile logged no console errors.
+
+**Files touched:** `DESIGN.md`; `src/pages/pricing.astro`; `docs/superpowers/specs/2026-08-08-pricing-scanability-polish-design.md`; `docs/superpowers/plans/2026-08-08-pricing-scanability-polish.md`; `plan.md` (`## Now`, this entry).
+
+### [Tuesday Aug 11, 2026 · 8:55 AM] — Code
+- **Did:** Deployed commit `7ca6967` to Vercel production as `dpl_8FjoKSuXu4WzkNAL6J8RK3H7wMEk`, restoring parity between GitHub and the public site for the pricing scanability polish and approved quick visual fixes.
+- **Decided:** Used the prior production deployment `dpl_BGnkHrzbcba3mp2usCUeX1bAhxje` as the rollback point and preserved all unrelated untracked review media through the existing `.vercelignore` exclusions.
+- **Verified:** Local and Vercel builds generated 14 routes; the production alias returns HTTP 200 and its HTML contains the included fact grid, static price callout, factor list, and one-week delivery sentence; Vercel reports the deployment READY.
+- **Blocked:** The Web3Forms access key remains a placeholder, so inquiry submissions are still the highest-priority production blocker.
+
+**Files touched:** `plan.md` (`## Now`, this entry). Production deployment changed external state; no source files changed.
+
 ### [Saturday Aug 8, 2026 · Evening] — Code
 - **Did:** Landed six of the eleven Next Session Punch List items as direct CSS/markup edits: removed the homepage "Process" eyebrow and its dead CSS; resized the "How It Works" step numbers from 14px sans to 32px Playfair Display; added the site's established translateX(4px) hover/focus treatment to homepage "View Project →"; centered the `/about` pullquote; nudged the nav dropdown caret to align with the label baseline; repositioned the case-study "See Live Site" button above the hero image.
 - **Decided:** Left the "See Live Site" button color unchanged rather than guessing: its live-URL state already renders near-black `--espresso`, and the grey/muted look is the intentional `.is-pending` disabled state on the three cases without live URLs yet, so darkening it would make a non-functional button look clickable. Scoped the eyebrow removal to the homepage "Process" label only, not a full site sweep, since the other eyebrow-styled elements (nav dropdown category tags, case-study niche label, hero location) are functional identifiers, not the AI-generic scaffolding DESIGN.md's No-Scaffolding Rule targets. Skipped the case-study prev/next two-up band and the homepage card mockup swap (punch list items 1 and 5) as real layout/data changes, not quick edits.
@@ -147,19 +163,3 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 - **Verified:** Content verification and the 14-route build pass before and after merge; all four production case URLs return HTTP 200; live Playwright confirms target counts of Smith Cash 3, Legacy 2, After Hours 1, Strictly Clean 0, zero console errors, and zero horizontal overflow.
 
 **Files touched:** `DESIGN.md`; `scripts/verify-content-architecture.mjs`; `src/components/CaseStudy.astro`; `src/content.config.ts`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,after-hours-ministry}/index.md`; `docs/superpowers/specs/2026-08-08-case-study-pointer-motion-design.md`; `docs/superpowers/plans/2026-08-08-case-study-pointer-motion.md`; `plan.md`.
-
-### [Saturday Aug 8, 2026 · 3:49 PM] — Code
-- **Did:** Merged every named local branch into `main`, reconciled the Pricing and case-media session state, added a narrow Vercel exclusion file for untracked raw review/source media, and deployed the combined 14-route site to Vercel production as `dpl_25vEEqbCEHCVCd1CPLaTuMEgg7uw`, aliased to `https://proudly-psi.vercel.app`.
-- **Decided:** Did not merge the two detached Codex worktrees as branches: the sidecar refresh remains separately owned, while the alternate Legacy-only implementation is superseded by the approved three-case integration. Stopped the first Vercel upload when it attempted to package 1.7 GB of untracked ProRes/source media; preserved those files locally and excluded only the known untracked sources before redeploying.
-- **Verified:** `git branch --no-merged main` is empty; the content verifier passes; the production build generates 14 routes; Playwright passes for Pricing and the three updated case studies at 1440px and 390px with in-view After Hours playback; all four production URLs return HTTP 200.
-- **Blocked:** GitHub push remains blocked because the repo has no remote and public repository creation requires explicit approval.
-
-**Files touched:** `plan.md` (`## Now`, this entry); new `.vercelignore`.
-
-### [Saturday Aug 8, 2026 · Evening] — Code
-- **Did:** Built `/pricing` on new branch `pricing/build` (off `main`, three commits: carry forward the approved DESIGN.md/plan.md pricing resolution, build the page, wire nav): hero, What's Always Included, What Moves the Number, Care/Growth hairline plan columns, FAQ accordion, Service schema JSON-LD, and a closing inquiry form. Repointed both instances of Header.astro's dead `/#pricing` link (desktop nav and mobile menu) to `/pricing`.
-- **Decided:** Duplicated `/contact`'s inquiry form fields and Web3Forms wiring into `/pricing` rather than extracting a shared component, since `/contact`'s form is page-inline markup, not an importable component, and Church Studio already established the same duplicate-per-page precedent. Interpreted the Editorial Pricing Layout's "center-set" as centered headings and short intros with left-set body copy and lists inside the narrow column, since fully centering multi-line prose reads poorly, flagged for Alex to confirm or correct. Footer.astro was left untouched, it never had a Pricing link to begin with.
-- **Verified:** `npm run build` passed after every phase. Playwright at 1440px and 390px with reduced motion confirmed zero horizontal overflow and zero console errors on `/pricing`, and spot-checked `/`, `/about`, `/work` after the nav change with the same result. Care/Growth columns sit side by side at 1440px and stack cleanly (Care above Growth, horizontal hairline) at 390px, confirmed by computed layout, not just a screenshot glance.
-- **Blocked:** Web3Forms access key is still `YOUR_WEB3FORMS_ACCESS_KEY` on `/pricing`, `/contact`, and Church Studio alike (Follow-up Backlog item 1). No real key exists anywhere in the project (`.env.local` holds only a Vercel OIDC token). Branch `pricing/build` is not merged, per instruction. No `/impeccable critique` was run, per instruction.
-
-**Files touched:** `DESIGN.md`; `plan.md` (carried-forward pricing resolution, then this entry, `## Now`); new `src/pages/pricing.astro`; `src/components/Header.astro`.

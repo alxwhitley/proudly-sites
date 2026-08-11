@@ -2,7 +2,7 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Replace the opening pricing page's repeated narrow bullet columns with a scannable fact ledger and a static dark price-led scope composition.
+**Goal:** Replace the opening pricing page's repeated narrow bullet columns with a scannable fact ledger and a static white price-led scope composition.
 
 **Architecture:** Keep all markup and route-specific styling in `src/pages/pricing.astro`, following the page's existing local-composition pattern. Update `DESIGN.md` and the canonical pricing draft so the implementation and approved design contract remain aligned.
 
@@ -11,8 +11,8 @@
 ## Global Constraints
 
 - Preserve all pricing figures and factual claims except the approved timeline change from one month to one week.
-- Keep all surrounding pricing sections cream and use Espresso only for the static price callout in the restructured area.
-- Do not add cards, numbering, eyebrow labels, shadows, gradients, sticky behavior, dependencies, or animation.
+- Keep all surrounding pricing sections cream and use the established Pure White light-card treatment for the price callout.
+- Do not add numbering, eyebrow labels, shadows, gradients, sticky behavior, dependencies, or animation.
 - Do not change Care and Growth, FAQ, inquiry form behavior, or navigation.
 
 ---
@@ -24,10 +24,10 @@
 - Modify: `Internal/pricing-page-copy-draft.md`
 
 **Interfaces:**
-- Consumes: Approved restructuring and dark-inversion direction.
+- Consumes: Approved restructuring and white-card direction.
 - Produces: Canonical rules and one-week source copy for the route implementation.
 
-- [ ] Add the static Espresso pricing callout rule to the Pricing Page section in `DESIGN.md`.
+- [ ] Add the static Pure White pricing card rule to the Pricing Page section in `DESIGN.md`.
 - [ ] Replace the retired center-set layout note in the pricing draft with the fact-ledger and scope-ledger description.
 - [ ] Change only the build timeline from roughly one month to roughly one week.
 - [ ] Confirm other monthly plan language remains unchanged with `rg -n "month|week" Internal/pricing-page-copy-draft.md`.
@@ -57,10 +57,10 @@
 - Produces: Two-column desktop layouts and one-column mobile layouts.
 
 - [ ] Style the fact ledger as a wide four-row, two-column hairline grid.
-- [ ] Style the scope section as an asymmetrical two-column layout with a static Espresso callout.
+- [ ] Style the scope section as an asymmetrical two-column layout with a static Pure White card.
 - [ ] Style factor entries as compact hairline rows with label left and explanation right.
 - [ ] Add mobile stacking below 800px, preserving price-first and natural list order.
-- [ ] Confirm the price callout uses existing Espresso, Cream, Sand, and line tokens.
+- [ ] Confirm the price card uses existing Pure White, Espresso, muted, and Hairline Grey tokens.
 
 ### Task 4: Verify the complete pricing path
 

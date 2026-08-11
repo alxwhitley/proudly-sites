@@ -3,9 +3,9 @@
   Pricing route (/pricing) — Persuade surface, editorial extension of the homepage's
   "Grounded Workshop" world. DESIGN.md's Pricing Page section (resolved 2026-08-08)
   governs this page with three scoped Named Rules: Scannable Fact Grid, Static
-  Price Inversion, and Plan Presentation. The opening content uses wide hairline
-  ledgers, the price callout is the sole dark surface in that sequence, and
-  Care/Growth remain hairline-divided columns differentiated only by surface step.
+  Price Card, and Plan Presentation. The opening content uses wide hairline
+  ledgers, the price callout follows the site's light-card grammar, and Care/Growth
+  remain hairline-divided columns differentiated only by surface step.
   Copy stays aligned with Internal/pricing-page-copy-draft.md (approved). FAQ reuses
   the site's existing <details>/<summary> disclosure pattern (see Church Studio).
   The closing inquiry form duplicates /contact's field set and Web3Forms wiring —
@@ -267,7 +267,7 @@ const serviceSchema = {
 
 <style>
   /* Route-specific composition for /pricing. Tokens and chrome are global.
-     Scannable Fact Grid and Static Price Inversion govern the opening sequence;
+     Scannable Fact Grid and Static Price Card govern the opening sequence;
      the narrower measure remains for the hero, plans intro, FAQ, and close. */
 
   .pricing-measure {
@@ -402,7 +402,7 @@ const serviceSchema = {
     max-width: 30rem;
   }
 
-  /* ---- Price and scope: one dark callout beside hairline factor rows ---- */
+  /* ---- Price and scope: one light card beside hairline factor rows ---- */
   .scope-layout {
     display: grid;
     grid-template-columns: minmax(290px, 0.82fr) minmax(430px, 1.35fr);
@@ -413,8 +413,10 @@ const serviceSchema = {
   }
   .price-callout {
     position: static;
-    background: var(--espresso);
-    color: var(--cream);
+    background: var(--white);
+    color: var(--espresso);
+    border: 1px solid var(--line);
+    border-radius: 16px;
     padding: clamp(32px, 4vw, 48px);
   }
   .price-label,
@@ -422,31 +424,32 @@ const serviceSchema = {
     font-size: 14px;
     line-height: 1.4;
     font-weight: 700;
-    color: var(--cream);
+    color: var(--espresso);
     margin: 0 0 10px;
   }
   .price-range {
-    font: 500 clamp(38px, 5vw, 56px)/1 "Playfair Display", Georgia, serif;
+    font: 500 clamp(38px, 3.5vw, 48px)/1 "Playfair Display", Georgia, serif;
     letter-spacing: -0.035em;
-    color: var(--cream);
+    color: var(--espresso);
+    white-space: nowrap;
     margin: 0 0 20px;
   }
   .price-assurance,
   .complex-price > p:last-child {
     font-size: 15px;
     line-height: 1.65;
-    color: var(--sand);
+    color: var(--muted);
     margin: 0;
   }
   .complex-price {
     margin-top: 30px;
     padding-top: 26px;
-    border-top: 1px solid rgba(255, 255, 255, 0.22);
+    border-top: 1px solid var(--line);
   }
   .complex-range {
     font: 500 24px/1.2 "Playfair Display", Georgia, serif;
     letter-spacing: -0.025em;
-    color: var(--cream);
+    color: var(--espresso);
     margin: 0 0 10px;
   }
   .scope-heading { margin-bottom: 24px; }
