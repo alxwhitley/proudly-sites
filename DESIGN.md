@@ -22,7 +22,7 @@ colors:
   charcoal-grey: "rgb(84,84,84)"
 typography:
   heading-1:
-    fontFamily: "Playfair Display, Georgia, serif"
+    fontFamily: "Fraunces, Georgia, serif"
     fontWeight: 500
     fontSize: "56px"
     lineHeight: "1.1em"
@@ -34,7 +34,7 @@ typography:
     lineHeight: "1.1em"
     letterSpacing: "-0.03em"
   heading-3:
-    fontFamily: "Playfair Display, Georgia, serif"
+    fontFamily: "Fraunces, Georgia, serif"
     fontWeight: 500
     fontSize: "32px"
     lineHeight: "1.3em"
@@ -46,7 +46,7 @@ typography:
     lineHeight: "1.4em"
     letterSpacing: "-0.04em"
   heading-5:
-    fontFamily: "Playfair Display, Georgia, serif"
+    fontFamily: "Fraunces, Georgia, serif"
     fontWeight: 500
     fontSize: "20px"
     lineHeight: "1.3em"
@@ -88,7 +88,7 @@ typography:
     lineHeight: "1.3em"
     letterSpacing: "-0.03em"
   highlight:
-    fontFamily: "Playfair Display, Georgia, serif"
+    fontFamily: "Fraunces, Georgia, serif"
     fontWeight: 400
     fontSize: "36px"
     lineHeight: "1.3em"
@@ -162,21 +162,21 @@ The palette reads warm, grounded, and restrained: cream work-surfaces and espres
 
 ## Typography
 
-**Display Font:** Playfair Display, weight 500 (Georgia/serif fallback).
+**Display Font:** Fraunces, weight 500 (Georgia/serif fallback).
 **Body Font:** Lato, regular (system-sans fallback).
 
 **Character:** a confident serif carries headings and the testimonial "Highlight" moments; a plain, efficient sans carries everything functional — body, buttons, nav, labels.
 
 ### Hierarchy
-- **Heading 1** (Playfair 500, 56px, 1.1 line-height, -0.03em): the hero H1 — the largest serif moment on the page.
-- **Heading 2** (40px, 1.1, -0.03em): major section headings, rendered in one of two faces by section type — **Lato** for labelled/eyebrow-led grid sections (Featured Work, Reviews), and **Playfair 500** for narrative and closing sections (About, Process, Closing CTA, and the wall-to-wall-narrative /about page). Same size and role, face chosen by whether the section reads as a data grid or as prose.
-- **Heading 3** (Playfair 500, 32px, 1.3, -0.04em): sub-section serif headings.
+- **Heading 1** (Fraunces 500, 56px, 1.1 line-height, -0.03em): the hero H1 — the largest serif moment on the page.
+- **Heading 2** (40px, 1.1, -0.03em): major section headings, rendered in one of two faces by section type — **Lato** for labelled/eyebrow-led grid sections (Featured Work, Reviews), and **Fraunces 500** for narrative and closing sections (About, Process, Closing CTA, and the wall-to-wall-narrative /about page). Same size and role, face chosen by whether the section reads as a data grid or as prose.
+- **Heading 3** (Fraunces 500, 32px, 1.3, -0.04em): sub-section serif headings.
 - **Heading 4** (Lato, 24px, 1.4, -0.04em): minor headings.
-- **Heading 5** (Playfair 500, 20px, 1.3, 0em): small serif headings.
+- **Heading 5** (Fraunces 500, 20px, 1.3, 0em): small serif headings.
 - **Heading 6** (Lato, 16px, 1.4, -0.02em, centered): micro-headings.
 - **Lead** (Lato, 20px, 1.6, -0.02em): hero subhead and case-study intros.
 - **Body M** (Lato, 20px, 1.2, -0.03em) / **Body S** (Lato, 16px, 1.4, -0.03em) / **Body Small** (Lato, 14px, 1.6, -0.02em): body copy at three densities.
-- **Highlight** (Playfair regular, 36px, 1.3, -0.03em): testimonial quotes — the one place the lighter serif appears at display scale.
+- **Highlight** (Fraunces regular, 36px, 1.3, -0.03em): testimonial quotes — the one place the lighter serif appears at display scale.
 - **Eyebrow** (Lato, 12px, 1em, 0.08em, uppercase): section tag labels.
 - **Button** (Lato, 16px, 1.3, -0.03em) / **Nav Link** (Lato, 15px, 1em, -0.01em): interactive label styles.
 
@@ -211,7 +211,7 @@ Confirmed against Sweven.design's structural pattern on 2026-08-07 (layout only 
 
 ### Named Rules
 
-**The Three Proofs Rule.** Every case study carries exactly three project-specific build features selected from supplied project truth. Each feature uses one concise Playfair heading, one short paragraph, and one substantial product image. No generic "The Moment / What We Built / What Changed" sequence, bullets, eyebrows, numbering, or extra scaffolding.
+**The Three Proofs Rule.** Every case study carries exactly three project-specific build features selected from supplied project truth. Each feature uses one concise Fraunces heading, one short paragraph, and one substantial product image. No generic "The Moment / What We Built / What Changed" sequence, bullets, eyebrows, numbering, or extra scaffolding.
 
 **The Alternating Product Rule.** The three features alternate text-left/image-right, image-left/text-right, then text-left/image-right on desktop. Mobile stacks the related text before its image for all three features. Hairline rules separate the rows, but the sequence remains flat and card-free.
 
@@ -236,7 +236,7 @@ The system is flat by default. Depth appears exactly once, as a deliberate excep
 - **Section Tag** — **RETIRED FROM USE sitewide as of 2026-08-07.** Was paired with the Eyebrow text style (the small uppercase, tracked label opening each section); no longer applied as a section-opener anywhere on the site. The Eyebrow type token stays defined in Typography for any future need, but is not currently applied. This leaves Honey Gold (its color) with reduced usage sitewide — do not reassign Honey Gold to a new role to compensate; it remains reserved for review stars and the accent surface.
 
 ### Cards
-- **Testimonial Card**: a three-up row of the real testimonials, Playfair Highlight quotes. Previously a 2×2 that padded three testimonials with a standalone "5.0" rating tile; the redundant tile was removed on 2026-08-06 so only real testimonials show.
+- **Testimonial Card**: a three-up row of the real testimonials, Fraunces Highlight quotes. Previously a 2×2 that padded three testimonials with a standalone "5.0" rating tile; the redundant tile was removed on 2026-08-06 so only real testimonials show.
 - **Service Card**: one glyph treatment only — no per-service color tinting.
 - Card backgrounds step through the Warm Cream → Sand → Oat → Clay Beige scale depending on surface layering.
 - Cards inset into Espresso Black sections use Dark Card with a subtle translucent white hairline.

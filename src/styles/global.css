@@ -63,7 +63,7 @@ h1, h2, h3, p { margin-top: 0; }
 .nav-dropdown a > * { display: block; transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
 .nav-dropdown a:hover > *, .nav-dropdown a:focus-visible > * { transform: translateX(6px); }
 .dd-eyebrow { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: #6d635c; margin-bottom: 2px; }
-.dd-title { font-family: "Playfair Display", Georgia, serif; font-size: 16px; color: var(--espresso); }
+.dd-title { font-family: "Fraunces", Georgia, serif; font-size: 16px; color: var(--espresso); }
 .dd-desc { display: block; font-size: 13px; color: var(--muted); margin-top: 2px; }
 .dd-seeall { display: block; margin-top: 6px; padding: 12px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 700; color: var(--espresso); }
 @media (prefers-reduced-motion: no-preference) {

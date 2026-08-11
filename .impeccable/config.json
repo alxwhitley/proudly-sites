@@ -8,6 +8,12 @@
         "value": "lato",
         "createdAt": "2026-08-06T18:34:58.329Z",
         "reason": "Lato is the brief-committed body font, paired with Playfair Display; accepted in the finish review"
+      },
+      {
+        "rule": "overused-font",
+        "value": "fraunces",
+        "createdAt": "2026-08-11T17:20:02.007Z",
+        "reason": "User explicitly requested Fraunces to replace Playfair Display sitewide (2026-08-11 font swap task)"
       }
     ]
   }
