@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** `/pricing` is ready to redeploy with its price callout changed from Espresso inversion to the site's established Pure White card treatment. The eight-item fact ledger, five scope-factor rows, one-week delivery language, and all other page structures remain unchanged.
+**Current Priority:** The approved basic cleanup batch is complete and committed on local `main`: dead Blog navigation removed, mobile Contact alignment corrected, Oat placeholder-label contrast raised to WCAG AA, and the mobile submenu hidden-state bug repaired.
 
-**Verification done:** `npm run build` generates 14 routes. Playwright at 1440px and 390px confirms a white surface, 1px Hairline Grey edge, 16px radius, Espresso type, no shadow, static positioning, one-line desktop range, mobile stacking, and no horizontal overflow. The detector reports only seven pre-existing type-ramp advisories.
+**Verification done:** Content architecture verification passes and `npm run build` generates 14 routes. Browser checks at 390px and 1440px confirm no Blog links, a four-column desktop footer, full-width mobile Contact card, keyboard-safe Work and Services accordions, established arrow-link motion, 4.90:1 Oat-label contrast, no horizontal overflow, and zero console errors across the tested route matrix.
 
-**Branch state:** The light-card change and its design documentation are uncommitted on local `main`; `plan.md` also contains the prior deployment closeout. Existing unrelated untracked case-study media remain untouched. The pre-existing stale Impeccable sidecar remains unchanged and unsuppressed.
+**Branch state:** Local `main` is eight commits ahead of `origin/main`, including the previously approved light pricing card plus this cleanup's design, plan, four implementation commits, and status closeout. Existing unrelated untracked case-study media remain untouched. The pre-existing stale Impeccable sidecar remains unchanged and unsuppressed.
 
-**Next Action:** Commit, push, and deploy the approved light-card change, then verify the production alias. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Next Action:** Review the combined local changes, then push and deploy when approved. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 ## Next Session Punch List
 
@@ -17,7 +17,7 @@ Visual polish batch from 2026-08-08 evening chat review (screenshots against liv
 3. **Case-study hero "See Live Site" button:** ~~change from grey/muted to solid black.~~ Reposition lower, sitting right above the hero image instead of top-right of the header row. **Reposition done** (`CaseStudy.astro`). **Color still open:** the live-URL state already renders `--espresso` (near-black); the grey/muted look is the intentional `.is-pending` disabled state on the three cases without a live URL yet. Needs a decision, not a mechanical fix, since solidifying it would make a non-working button look clickable.
 4. **`/about` quote band** ("A referral is a moment of trust..."): ~~left-aligned in the tan section, should be centered.~~ **Done** — `.thesis-line` now centers itself and its text in `about.astro`.
 5. **Homepage case-study preview cards:** replace the browser-chrome mockup style (full window frame + shadow) with the same no-background/slight-shadow/tilt product-image treatment used on the case study pages. Reuse the existing per-case images already used on the case pages — no new captures. Still open, a visual redesign, not a quick edit.
-6. **Text link hover consistency:** ~~homepage "View Project →" has no hover effect.~~ **Done for the flagged instance** — `.text-link` now uses the site's translateX(4px) hover/focus pattern in `index.astro`. **Still open:** the broader site-wide audit for other inconsistent link hovers was not performed.
+6. **Text link hover consistency:** ~~homepage "View Project →" has no hover effect.~~ **Done** — `.text-link` uses the site's translateX(4px) hover/focus pattern in `index.astro`; the broader arrow-link audit found every eligible plain text link already using the established reduced-motion-safe treatment.
 7. **Homepage "How It Works" eyebrow:** ~~"PROCESS" eyebrow is inconsistent with every other section (none of them have one). Remove it~~ **Done** — removed from `index.astro` along with its dead CSS. **Sweep not done:** the other "eyebrow"-styled elements site-wide (nav dropdown category tags, case-study niche label, hero location) are functional identifiers, not the AI-generic per-section scaffolding DESIGN.md's No-Scaffolding Rule targets, so they were left as-is pending a decision to remove them too.
 8. **"How It Works" step numbers (1-4):** ~~too small.~~ **Done** — resized from 14px sans to 32px Playfair Display in `index.astro`; no other numbered element existed on the site to size-match against.
 9. **Case-study live URLs:** still need real URLs for Smith Cash, Strictly Clean, After Hours — blocked on Alex.
@@ -32,42 +32,29 @@ Ordered by production impact. Each item should be handled as its own focused tas
 - Replace `YOUR_WEB3FORMS_ACCESS_KEY` in both `/contact` and Church Studio with the confirmed production key.
 - Verify successful submission, failure messaging, spam protection, and receipt at the intended inbox on both forms.
 
-### 2. Repair navigation destinations and mobile behavior
-- Resolve the dead `/#pricing` and `/#blog` links by adding real destinations or removing the promises from header and footer navigation.
-- Fix the mobile submenu hidden-state behavior so Services and Work expand and collapse only when requested.
-- Verify keyboard operation, focus state, Escape/outside-close behavior where applicable, and 390px layout.
-
-### 3. Correct Legacy Renovations proof imagery
+### 2. Correct Legacy Renovations proof imagery
 - Replace the tile-repair/lead-capture screenshot used across the case, homepage, and service proof surfaces with imagery that matches the kitchen-and-bath narrative, or revise the narrative only if that screenshot is the actual product truth.
 - Check every consumer of the canonical Legacy image and prevent headline cropping.
 
-### 4. Replace remaining case-study product placeholders
+### 3. Replace remaining case-study product placeholders
 - Supply and install three real product-image compositions for Strictly Clean, matching its three canonical feature records. Smith Cash, Legacy Renovations, and After Hours are complete on `codex/after-hours-video-review`.
 - Preserve the shared alternating structure, stable ratios, descriptive alt text, and browser-only pointer response.
 - Track exact required captures in `assets.md` until all twelve slots are real.
 
-### 5. Complete missing case-study material
+### 4. Complete missing case-study material
 - Confirm live URLs for Smith Cash, Strictly Clean, and After Hours.
 - Supply the real Kevin W. quote for Strictly Clean.
 - Supply real hero imagery for Strictly Clean and After Hours, then replace their `/work` card and service-proof placeholders.
 
-### 6. Fix muted-label contrast on Oat
-- Replace or contextually deepen `#6d635c` where it renders on Oat so small text reaches WCAG AA 4.5:1 without changing the broader neutral role unnecessarily.
-- Recheck every placeholder caption and small label using the same token.
-
-### 7. Correct mobile contact-card alignment
-- Remove the desktop `align-items: start` effect when the contact grid collapses to one column.
-- Verify the card aligns with the mobile content spine at 390px with no overflow.
-
-### 8. Refresh the Impeccable design-system sidecar
+### 5. Refresh the Impeccable design-system sidecar
 - Handed off to the separate Codex task **Refresh Proudly Impeccable sidecar**.
 - Diagnose drift first, then refresh `.impeccable/design.json` from the current `DESIGN.md` without redesigning or changing unrelated UI.
 
-### 9. Resolve the live-button hover palette exception
+### 6. Resolve the live-button hover palette exception
 - Decide whether the pre-existing `#33241b` live-site button hover belongs in the documented tonal ramp or should be replaced by an existing Espresso value.
 - Update `DESIGN.md` only if the value is intentionally retained; do not suppress the detector without that decision.
 
-### 10. Finish the remaining service-page design debt
+### 7. Finish the remaining service-page design debt
 - Differentiate Branding and Web Design beyond the shared template and repeated screenshots.
 - Add the missing Scan-Then-Prove opening structure to both pages and remove repeated proof copy.
 - Resolve cropped client-site headlines and the visually light Search & AI Visibility desktop composition in the same service-cluster review.
@@ -125,6 +112,14 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 ## Recent
 
+### [Tuesday Aug 11, 2026 · 9:34 AM] — Code
+- **Did:** Removed the unfulfilled Blog links and footer column, restored full-width mobile Contact alignment, raised eight Oat placeholder captions to WCAG AA contrast, and repaired the mobile submenu hidden state so closed links leave the keyboard order.
+- **Decided:** Removed the Blog promise instead of creating placeholder content, kept the contrast change contextual at `#655b54`, and left the separately owned Impeccable sidecar and pre-existing palette findings unchanged and unsuppressed.
+- **Verified:** Content architecture verification and the 14-route build pass. Browser checks at 390px and 1440px confirm four footer columns on desktop, mobile Contact width parity, pointer and keyboard accordion behavior, 4px arrow-link hover and focus motion with reduced-motion fallback, 4.90:1 Oat-label contrast, zero overflow, and zero console errors across five routes.
+- **Blocked:** The Web3Forms production key remains missing. Local `main` is eight commits ahead of `origin/main` after this closeout; push and deployment were not part of this batch.
+
+**Files touched:** `docs/superpowers/specs/2026-08-11-basic-site-cleanup-design.md`; `docs/superpowers/plans/2026-08-11-basic-site-cleanup.md`; `src/components/{Header,Footer,CaseStudy}.astro`; `src/styles/global.css`; `src/pages/{contact,about}.astro`; `src/pages/services/{index,ai-and-search-visibility,branding,web-design}.astro`; `src/pages/work/index.astro`; `plan.md` (`## Now`, `## Next Session Punch List`, `## Follow-up Backlog`, this entry).
+
 ### [Tuesday Aug 11, 2026 · 9:03 AM] — Code
 - **Did:** Replaced `/pricing`'s Espresso price inversion with the site's established Pure White card treatment and kept the `$4,000–$8,000` range together at desktop widths.
 - **Decided:** Matched the supplied service-card reference with a Pure White surface, 1px Hairline Grey edge, 16px radius, generous padding, Espresso type, muted supporting copy, and no shadow or motion. Left the surrounding factor ledger and all pricing content unchanged.
@@ -156,10 +151,3 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 - **Blocked:** The Web3Forms placeholder key and stale Impeccable sidecar remain open. No commit or deploy was made because unrelated untracked media is present and Alex has not yet approved the rendered polish.
 
 **Files touched:** `DESIGN.md`; ignored canonical draft `Internal/pricing-page-copy-draft.md`; `src/pages/pricing.astro`; `docs/superpowers/specs/2026-08-08-pricing-scanability-polish-design.md`; `docs/superpowers/plans/2026-08-08-pricing-scanability-polish.md`; `plan.md` (`## Now`, this entry).
-
-### [Saturday Aug 8, 2026 · 4:06 PM] — Code
-- **Did:** Replaced case-study scroll parallax with an approved fine-pointer push-away response on six explicitly classified browser screenshots, kept heroes and every non-browser media type static, merged the feature into local `main`, and deployed it to Vercel production as `dpl_BGnkHrzbcba3mp2usCUeX1bAhxje`.
-- **Decided:** Piloted Legacy feature two first and expanded only after Alex approved the live local behavior. Used explicit `mediaKind` metadata rather than filename inference; excluded branding art, videos, mobile presentations, placeholders, touch devices, and reduced-motion contexts.
-- **Verified:** Content verification and the 14-route build pass before and after merge; all four production case URLs return HTTP 200; live Playwright confirms target counts of Smith Cash 3, Legacy 2, After Hours 1, Strictly Clean 0, zero console errors, and zero horizontal overflow.
-
-**Files touched:** `DESIGN.md`; `scripts/verify-content-architecture.mjs`; `src/components/CaseStudy.astro`; `src/content.config.ts`; `src/content/case-studies/{smith-cash-family-law,legacy-renovations,after-hours-ministry}/index.md`; `docs/superpowers/specs/2026-08-08-case-study-pointer-motion-design.md`; `docs/superpowers/plans/2026-08-08-case-study-pointer-motion.md`; `plan.md`.
