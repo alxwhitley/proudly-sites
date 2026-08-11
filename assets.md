@@ -24,7 +24,9 @@ When Alex supplies two screenshots for a case-study product image, stitch them v
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/strictly-clean-detailing` hero | placeholder | No local asset; CMS unreachable. CSS panel, not an image file. Swap for a real Strictly Clean photo/screenshot when available. |
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/after-hours-ministry` hero | placeholder | No local asset; CMS unreachable. Swap for a real After Hours photo/screenshot when available. |
 | Strictly Clean "Kevin W." quote | `/work/strictly-clean-detailing` quote band | missing | Real quote lives in the unreachable CMS. Quote band OMITTED rather than fabricated. Supply the real quote to add it. |
-| On-palette placeholder panel (Oat, "Capture pending") | `/work` index card (Strictly Clean, After Hours) | placeholder | Same two cases lack a card thumbnail; placeholder panels used. |
+| `src/assets/case-studies/after-hours-ministry/work-index.jpeg` | `/work` index card (After Hours) | real | Approved 4:3 browser-frame capture supplied by Alex. |
+| `src/assets/case-studies/vital-watch/work-index.jpeg` | `/work` index card (Vital Watch) | real | Approved 4:3 browser-frame capture supplied by Alex; the card links directly to the live site. |
+| On-palette placeholder panel (Oat, "Capture pending") | `/work` index card (Strictly Clean) | placeholder | Card now links directly to the live site; a dedicated thumbnail is still pending. |
 | `src/assets/case-studies/smith-cash-family-law/case-study-section-{1,2,3}.png` | Smith Cash case product-proof rows | real | Three approved stitched browser images, presented in section order with transparent surroundings. |
 | `src/assets/case-studies/legacy-renovations/section1-branding.png` and `section{2,3}-browser.png` | Legacy case product-proof rows | real | Approved transparent brand mark followed by two stitched browser images. |
 | `src/assets/case-studies/after-hours-ministry/section1-browser.webm`, `case-study-section2.png`, and `section3-mobile.webm` | After Hours case product-proof rows | real | Approved desktop browser video, stitched browser still, then mobile-behavior video without browser chrome. The uploaded ProRes alpha masters remain untouched and uncommitted; tracked VP9-alpha derivatives are the browser-deliverable versions. |
@@ -49,7 +51,7 @@ When Alex supplies two screenshots for a case-study product image, stitch them v
 | `public/images/haw-branch-next.jpeg` | `/studios/church-studio` proof row | real | Haw Branch next-steps section + dark closing footer, First Step invite. Church Studio build still in progress; swap for the launched-site link when live per the copy doc. |
 
 ### Missing live-site captures (queued — no placeholder screenshot substituted, per runbook Section C)
-- Smith Cash, After Hours, Strictly Clean: no live URL on hand -> fresh live-site screenshots skipped, need Alex to supply URLs.
+- Strictly Clean's live URL is `https://www.strictlycleandetailing.com/`; its `/work` card links there directly while a dedicated thumbnail remains pending.
 - Legacy: URL on hand (legacykitchenbathroomrenovations.com) but a real screenshot already existed, so no fresh Playwright capture was run this session.
 
 ## About

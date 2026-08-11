@@ -2,18 +2,62 @@
 /*
   Work index (/work) - Persuade surface, established-world extension of the homepage's
   "Grounded Workshop." The portfolio is the primary conversion tool (positioning §6),
-  so this is a clean grid of the four case studies, each card linking to its detail
-  page. Canonical case set (runbook C1): Smith Cash, Legacy, Strictly Clean, After
-  Hours. No Vital Watch card (homepage proof strip only), and the unsigned-contract
-  client is excluded entirely (runbook C2).
+  so this is a clean grid of the four case studies plus the external-only Vital Watch
+  project. Smith Cash, Legacy, and After Hours link to their detail pages; Strictly
+  Clean and Vital Watch link directly to their live sites. The unsigned-contract client
+  remains excluded entirely (runbook C2).
   Shared chrome + tokens from BaseLayout / global.css. See src-pages-work.md.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
+import afterHoursWorkIndex from "../../assets/case-studies/after-hours-ministry/work-index.jpeg";
+import vitalWatchWorkIndex from "../../assets/case-studies/vital-watch/work-index.jpeg";
 
 const cases = (await getCollection("caseStudies", ({ data }) => data.status === "published"))
   .sort((a, b) => a.data.order - b.data.order);
+
+type WorkCard = {
+  title: string;
+  slug: string;
+  niche: string;
+  location?: string;
+  summary: string;
+  image: typeof vitalWatchWorkIndex | undefined;
+  imageAlt: string;
+  href: string;
+  external: boolean;
+};
+
+const workCards: WorkCard[] = cases.map(({ data: c }) => {
+  const isStrictlyClean = c.slug === "strictly-clean-detailing";
+  const isAfterHours = c.slug === "after-hours-ministry";
+
+  return {
+    ...c,
+    image: isAfterHours ? afterHoursWorkIndex : c.heroImage,
+    imageAlt: isAfterHours
+      ? "After Hours Ministry website shown in a desktop browser frame"
+      : c.heroAlt,
+    href: isStrictlyClean
+      ? "https://www.strictlycleandetailing.com/"
+      : `/work/${c.slug}`,
+    external: isStrictlyClean,
+  };
+});
+
+workCards.push({
+  title: "Vital Watch",
+  slug: "vital-watch",
+  summary: "A home nursing service that finally looks like the care it gives.",
+  niche: "Healthcare",
+  location: "Raleigh",
+  services: ["Web design"],
+  image: vitalWatchWorkIndex,
+  imageAlt: "Vital Watch healthcare website shown in a desktop browser frame",
+  href: "https://www.vitalwatch24.com/",
+  external: true,
+});
 ---
 
 <BaseLayout
@@ -33,17 +77,22 @@ const cases = (await getCollection("caseStudies", ({ data }) => data.status === 
 
   <section class="section work-grid-wrap">
     <div class="work-grid stagger">
-      {cases.map(({ data: c }) => (
-        <a class="work-card rv" href={`/work/${c.slug}`}>
+      {workCards.map((c) => (
+        <a
+          class="work-card rv"
+          href={c.href}
+          target={c.external ? "_blank" : undefined}
+          rel={c.external ? "noopener noreferrer" : undefined}
+        >
           <div class="work-visual">
-            {c.heroImage
-              ? <Image src={c.heroImage} alt={c.heroAlt} loading="lazy" width={640} height={480} />
+            {c.image
+              ? <Image src={c.image} alt={c.imageAlt} loading="lazy" width={640} height={480} />
               : <div class="ph-panel" role="img" aria-label={`${c.title} - live-site capture pending`}><span>{c.title}</span><small>Live-site capture pending</small></div>}
           </div>
           <p class="work-tag">{c.location ? `${c.niche} · ${c.location}` : c.niche}</p>
           <h2>{c.title}</h2>
           <p class="work-line">{c.summary}</p>
-          <span class="work-more">View Project &rarr;</span>
+          <span class="work-more">{c.external ? "See Live Site ↗" : "View Project →"}</span>
         </a>
       ))}
     </div>
