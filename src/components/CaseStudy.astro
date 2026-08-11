@@ -112,10 +112,14 @@ const {
   )}
 
   <section class="close-band">
-    <h2>Facing something similar?</h2>
-    <p>Send a message about your business. You&rsquo;ll hear back from me, not a sales team, within a day.</p>
-    <a class="primary-button" href="/contact">Get in Touch</a>
-    <p class="next-link">Next project: <a href={next.href}>{next.label} &rarr;</a></p>
+    <div class="close-content">
+      <h2>Facing something similar?</h2>
+      <p>Send a message about your business. You&rsquo;ll hear back from me, not a sales team, within a day.</p>
+      <a class="primary-button" href="/contact">Get in Touch</a>
+    </div>
+    <div class="close-foot">
+      <p class="next-link">Next project: <a href={next.href}>{next.label} &rarr;</a></p>
+    </div>
   </section>
 </article>
 
@@ -343,24 +347,38 @@ const {
     background: var(--espresso);
     color: #fff;
     text-align: center;
-    padding: clamp(88px, 10vw, 125px) 24px clamp(72px, 8vw, 100px);
+    padding: clamp(88px, 10vw, 125px) 24px 0;
   }
-  .close-band h2 {
-    font: 500 clamp(32px, 3.4vw, 40px)/1.15 "Playfair Display", serif;
+  .close-content {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  .close-content h2 {
+    font: 500 clamp(32px, 3.4vw, 40px)/1.15 "Fraunces", serif;
     letter-spacing: -0.035em;
     margin: 0 0 16px;
   }
-  .close-band > p {
-    max-width: 560px;
-    margin: 0 auto 32px;
+  .close-content > p {
+    margin: 0 0 32px;
     color: rgba(255, 255, 255, 0.72);
     line-height: 1.6;
     font-size: 20px;
   }
+  /* Sits at the bottom of the dark band, right-aligned near the footer's own
+     top hairline (footer and close-band share --espresso, so the seam reads
+     as one continuous dark field). */
+  .close-foot {
+    max-width: 1260px;
+    margin: 40px auto 0;
+    padding: 0 max(40px, calc((100vw - 1260px) / 2)) clamp(28px, 4vw, 40px);
+    display: flex;
+    justify-content: flex-end;
+  }
   .next-link {
-    margin: 44px 0 0;
+    margin: 0;
     font-size: 14px;
     color: rgba(255, 255, 255, 0.5);
+    text-align: right;
   }
   .next-link a { display: inline-block; color: #fff; font-weight: 700; }
   @media (prefers-reduced-motion: no-preference) {
@@ -408,7 +426,10 @@ const {
     .feature-copy h2 { margin-bottom: 14px; }
     .feature-media[data-pointer-tilt] { perspective: none; }
     .feature-media[data-pointer-tilt] .feature-media-inner { transform: none; transition: none; }
-    .close-band > p { font-size: 16px; }
+    .close-content > p { font-size: 16px; }
+    .close-band { padding-left: 24px; padding-right: 24px; }
+    .close-foot { padding: 0 24px clamp(28px, 8vw, 40px); justify-content: center; }
+    .next-link { text-align: center; }
   }
 
   @media (prefers-reduced-motion: reduce) {
