@@ -3,7 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
 import Tags from "../components/Tags.astro";
 import { getCollection } from "astro:content";
-import vitalWatchHero from "../assets/case-studies/vital-watch/section1.png";
+import { Image } from "astro:assets";
+import smithCashHomepage from "../assets/Homepage/case-study-section-1 copy.png";
+import vitalWatchHomepage from "../assets/Homepage/section1 copy.png";
+import legacyRenovationsHomepage from "../assets/Homepage/section2-browser copy.png";
 
 const featuredCases = await getCollection("caseStudies", ({ data }) =>
   data.status === "published" && data.featured && Boolean(data.homepage)
@@ -28,19 +31,19 @@ const projectFromCase = (slug: string) => {
 };
 
 const projects = [
-  projectFromCase("smith-cash-family-law"),
+  { ...projectFromCase("smith-cash-family-law"), image: smithCashHomepage },
   {
     name: "Vital Watch",
     location: "Raleigh",
     title: "A home nursing service that finally looks like the care it gives",
     body: "A Medicare-covered nursing service needed a site that felt clinical and trustworthy, not templated. I built service pages, an FAQ, custom navigation, and a referral system for healthcare partners, all HIPAA-aware from the ground up.",
-    image: vitalWatchHero.src,
-    imageAlt: "Vital Watch healthcare website",
+    image: vitalWatchHomepage,
+    imageAlt: "Vital Watch healthcare website shown as a stitched browser-page composition",
     tags: ["Full Brand Launch", "Custom Nav", "Healthcare Partners Portal", "SEO"],
     href: "/work",
     liveUrl: "https://www.vitalwatch24.com/",
   },
-  projectFromCase("legacy-renovations"),
+  { ...projectFromCase("legacy-renovations"), image: legacyRenovationsHomepage },
 ];
 
 const process = [
@@ -100,7 +103,11 @@ const testimonials = [
     <div class="projects">
       {projects.map((project, index) => (
         <article class:list={["project", { reverse: index % 2 === 1 }]}>
-          <div class="project-visual"><img src={project.image} alt={project.imageAlt} loading="lazy" /></div>
+          <div class="project-visual" data-pointer-tilt>
+            <div class="project-visual-inner">
+              <Image src={project.image} alt={project.imageAlt} loading="lazy" />
+            </div>
+          </div>
           <div class="project-copy">
             <p class="project-label">{project.name} · {project.location}</p>
             <h3>{project.title}</h3>
@@ -199,8 +206,10 @@ const testimonials = [
   .projects{border-top:1px solid var(--line)}
   .project{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;padding:64px 0;border-bottom:1px solid var(--line)}
   .project.reverse .project-visual{order:2}
-  .project-visual{background:var(--sand);border-radius:16px;padding:30px;min-height:390px;display:flex;align-items:center}
-  .project-visual img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px;box-shadow:0 22px 35px rgba(26,15,10,.14)}
+  .project-visual[data-pointer-tilt]{perspective:900px}
+  .project-visual[data-pointer-tilt] .project-visual-inner{transform-style:preserve-3d;transform:translate3d(var(--pointer-x,0px),var(--pointer-y,0px),0) rotateX(var(--pointer-rx,0deg)) rotateY(var(--pointer-ry,0deg));transition:transform 180ms cubic-bezier(.16,1,.3,1)}
+  .project-visual[data-pointer-tilt].is-pointer-active .project-visual-inner{will-change:transform;transition-duration:70ms}
+  .project-visual img{display:block;width:100%;height:auto}
   .project-copy h3{font:500 32px/1.13 "Playfair Display",serif;letter-spacing:-.04em;margin-bottom:18px}
   .project-copy>p:not(.project-label){color:var(--muted);max-width:58ch}
   .project-copy blockquote{border-left:1px solid var(--gold);padding-left:14px;margin:23px 0;font:500 16px/1.5 "Playfair Display",serif}
@@ -266,7 +275,6 @@ const testimonials = [
     .section-heading h2,.reviews-head h2{font-size:29px}
     .project{grid-template-columns:1fr;gap:30px;padding:43px 0}
     .project.reverse .project-visual{order:0}
-    .project-visual{min-height:0;padding:18px;border-radius:12px}
     .project-copy h3{font-size:27px}
     .project-copy>p:not(.project-label){font-size:16px}
     .about.section{padding:70px 20px}
@@ -300,13 +308,61 @@ const testimonials = [
     .proof-strip{min-height:126px;padding-top:30px;padding-bottom:30px}
     .section-heading{margin-bottom:58px}
     .project{gap:76px;padding-top:76px;padding-bottom:76px}
-    .project-visual{min-height:420px;padding:32px}
     .about-photo{height:580px}
     .process-grid article{min-height:310px}
     .review-grid blockquote,.rating{min-height:265px}
   }
 
-  @media(max-width:800px){.proof-strip{min-height:0}.project-visual img{object-fit:contain}}
+  @media(max-width:800px){.proof-strip{min-height:0}.project-visual[data-pointer-tilt]{perspective:none}.project-visual[data-pointer-tilt] .project-visual-inner{transform:none;transition:none}}
+
+  @media(hover:none),(pointer:coarse){.project-visual[data-pointer-tilt]{perspective:none}.project-visual[data-pointer-tilt] .project-visual-inner{transform:none;transition:none}}
+
+  @media(prefers-reduced-motion:reduce){.project-visual[data-pointer-tilt]{perspective:none}.project-visual[data-pointer-tilt] .project-visual-inner{transform:none;transition:none}}
 
   @media(prefers-reduced-motion:no-preference){.hero>p,.hero>h1,.hero-actions,.founder-chip{animation:appear .55s cubic-bezier(.16,1,.3,1) both}.hero>h1{animation-delay:.06s}.hero-copy{animation-delay:.12s}.hero-actions{animation-delay:.18s}.founder-chip{animation-delay:.24s}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}}
 </style>
+
+<script>
+  const reducePointerMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const canTilt = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+  if (!reducePointerMotion.matches && canTilt.matches) {
+    document.querySelectorAll(".project-visual[data-pointer-tilt]").forEach((target) => {
+      let pointerFrame = 0;
+      let pointerX = 0;
+      let pointerY = 0;
+
+      const renderPointerTilt = () => {
+        pointerFrame = 0;
+        target.style.setProperty("--pointer-rx", `${pointerY * 2.5}deg`);
+        target.style.setProperty("--pointer-ry", `${pointerX * -2.5}deg`);
+        target.style.setProperty("--pointer-x", `${pointerX * -3}px`);
+        target.style.setProperty("--pointer-y", `${pointerY * -3}px`);
+      };
+
+      const queuePointerTilt = () => {
+        if (!pointerFrame) pointerFrame = requestAnimationFrame(renderPointerTilt);
+      };
+
+      target.addEventListener("pointermove", (event) => {
+        const rect = target.getBoundingClientRect();
+        pointerX = Math.max(-1, Math.min(1, ((event.clientX - rect.left) / rect.width) * 2 - 1));
+        pointerY = Math.max(-1, Math.min(1, ((event.clientY - rect.top) / rect.height) * 2 - 1));
+        target.classList.add("is-pointer-active");
+        queuePointerTilt();
+      });
+
+      const resetPointerTilt = () => {
+        if (pointerFrame) cancelAnimationFrame(pointerFrame);
+        pointerFrame = 0;
+        pointerX = 0;
+        pointerY = 0;
+        target.classList.remove("is-pointer-active");
+        renderPointerTilt();
+      };
+
+      target.addEventListener("pointerleave", resetPointerTilt);
+      target.addEventListener("pointercancel", resetPointerTilt);
+    });
+  }
+</script>

@@ -263,6 +263,8 @@ Nothing loops or moves after interaction stops. Hero load fade-up 12px 0.55s sta
 
 **Case-study browser response.** Inside the three case-study proof rows, only an image explicitly classified as a browser screen may respond to a fine pointer. The image subtly tilts and shifts away from the pointer, then eases to neutral on exit. Heroes, branding and logo art, mobile screens, videos, placeholders, and unclassified images remain static. The behavior is disabled on touch and coarse-pointer devices and under `prefers-reduced-motion`. Rollout begins with one approved pilot image and expands only after visual sign-off.
 
+**Homepage case-study previews.** The three featured homepage cases use their approved complete stitched-browser compositions at natural aspect ratio. They sit directly in the alternating image-and-copy rows with no surrounding sand panel, forced crop, rounded image treatment, or drop shadow. Because all three are explicitly browser compositions, they reuse the case-study browser response above on fine pointers and remain static on mobile, touch, coarse-pointer, and reduced-motion devices.
+
 **Future service-page parallax.** Scroll parallax belongs to a future secondary-image slot on service-detail pages, not to case studies. Do not ship the slot, placeholder markup, or dormant motion code before a real secondary asset and its placement are supplied. When implemented, the image may move vertically by at most 16px during active desktop scrolling, stays static on mobile, and is fully disabled under `prefers-reduced-motion`.
 
 ## Pricing Page
