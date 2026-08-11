@@ -43,8 +43,8 @@ const {
 
 <article class="case">
   <section class="section case-hero">
-    <h1>{title}</h1>
     <div class="case-hero-top">
+      <h1>{title}</h1>
       {liveUrl
         ? <button type="button" class="live-cta js-live-site" data-live-url={liveUrl}>See Live Site</button>
         : <span class="live-cta is-pending" aria-disabled="true" title="Live site pending">See Live Site</span>}
@@ -129,11 +129,11 @@ const {
   }
   .case-hero-top {
     display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin: 18px 0 40px;
   }
   /* Navbar CTA style, replicated 1:1 (see src/styles/global.css .nav-cta). */
   .live-cta {
@@ -159,8 +159,10 @@ const {
     line-height: 1.08;
     letter-spacing: -0.03em;
     text-wrap: balance;
-    margin: 18px 0 40px;
+    margin: 0;
     max-width: 20ch;
+    flex: 1 1 320px;
+    min-width: 0;
   }
   .case-hero-visual img {
     width: 100%;
@@ -383,6 +385,8 @@ const {
 
   /* ---- Responsive ---- */
   @media (max-width: 800px) {
+    .case-hero-top { flex-direction: column; align-items: flex-start; gap: 16px; margin: 14px 0 32px; }
+    .case-hero h1 { flex-basis: auto; }
     .summary-inner { grid-template-columns: 1fr; gap: 24px; }
     .summary-value { font-size: 16px; }
     .feature-row,
