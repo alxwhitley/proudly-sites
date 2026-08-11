@@ -37,7 +37,7 @@ When Alex supplies two screenshots for a case-study product image, stitch them v
 | Smith Cash canonical case image | `/services/branding` + `/services/web-design` proof 1 | real | Imported from its route-owned folder under `src/assets/case-studies/`. |
 | Legacy canonical case image | `/services/branding` + `/services/web-design` proof 2 | real | Imported from its route-owned folder under `src/assets/case-studies/`. |
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/services/branding` + `/services/web-design` proof 3 (After Hours) | placeholder | No local After Hours asset; CMS unreachable. Swap for a real After Hours brand-in-context capture when available. |
-| (none — no proof imagery by design) | `/services/ai-and-search-visibility` | N/A | New service, no live precedent (runbook B4). No screenshot proof — expected gap, not an error. |
+| `src/assets/services/ai-and-search-visibility/search-console-performance.jpeg` | `/services/ai-and-search-visibility` story section | real | Real Google Search Console performance for a client site (clf-church.com visible in the screenshot). Fills the runbook B4 proof gap. Ships unoptimized (1MB, matching the branding page's own proof images) — a compression pass is still open. |
 
 ## Studios
 

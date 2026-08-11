@@ -13,6 +13,7 @@
   See .impeccable/surfaces/src-pages-services.md for the cluster brief.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import searchConsoleImage from "../../assets/services/ai-and-search-visibility/search-console-performance.jpeg";
 
 const facets = [
   {
@@ -67,10 +68,14 @@ const siblings = [
     <section class="section story">
       <div class="story-grid">
         <div class="story-visual rv">
-          <div class="ph-panel" data-placeholder="true" role="img" aria-label="AI Overview / ChatGPT-style citation of a client site - live capture pending">
-            <span>Cited in an AI answer</span>
-            <small>Live capture pending</small>
-          </div>
+          <img
+            src={searchConsoleImage.src}
+            alt="Google Search Console performance for a client site, showing clicks and impressions climbing over three months"
+            loading="lazy"
+            width={searchConsoleImage.width}
+            height={searchConsoleImage.height}
+          />
+          <p class="story-visual-caption">Real Search Console growth for a client site</p>
         </div>
         <div class="story-text rv">
           <h2>The way people find you is changing</h2>
@@ -144,30 +149,16 @@ const siblings = [
     gap: clamp(32px, 4.5vw, 70px);
     align-items: center;
   }
-  .story-visual {
-    background: var(--sand);
-    border-radius: 16px;
-    padding: clamp(20px, 2.4vw, 32px);
-  }
-  .story-visual .ph-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
+  .story-visual img {
+    display: block;
+    width: 100%;
+    height: auto;
     aspect-ratio: 4 / 3;
-    background: var(--oat);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    text-align: center;
-    padding: 24px;
+    object-fit: cover;
+    border-radius: 16px;
   }
-  .story-visual .ph-panel span {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: 20px;
-    color: var(--espresso);
-  }
-  .story-visual .ph-panel small {
+  .story-visual-caption {
+    margin: 14px 0 0;
     font-size: 12px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
