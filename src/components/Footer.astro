@@ -15,6 +15,7 @@ const caseStudies = (await getCollection("caseStudies", ({ data }) => data.statu
 <footer>
   <div class="footer-grid">
     <div class="footer-brand"><a class="footer-logo" href="/"><img src="/images/proudly-logo.png" alt="Proudly Sites" /></a><p>Contact</p><a href="tel:+19196348169">919-634-8169</a><a href="mailto:alex@proudlysites.com">alex@proudlysites.com</a></div>
+    <div><h3>Site</h3><a href="/">Home</a><a href="/about">About</a><a href="/contact">Contact</a></div>
     <div><h3>Services</h3>{services.map((s) => <a href={s.href}>{s.title}</a>)}</div>
     <div><h3>Studio</h3>{studios.map((s) => <a href={s.href}>{s.title}</a>)}</div>
     <div><h3>Case Studies</h3>{caseStudies.map((c) => <a href={c.href}>{c.title}</a>)}</div>
