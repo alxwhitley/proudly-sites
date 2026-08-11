@@ -11,30 +11,30 @@
   See .impeccable/surfaces/src-pages-services.md for the cluster brief.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import smithCashImage from "../../assets/case-studies/smith-cash-family-law/hero.jpeg";
-import legacyImage from "../../assets/case-studies/legacy-renovations/hero.jpeg";
+import vitalWatchImage from "../../assets/services/branding/vitalwatch-lab-coat-logo-construction-v2.png";
+import smithCashImage from "../../assets/services/branding/smith-cash-logo-palette-thermos.png";
+import afterHoursImage from "../../assets/services/branding/after-hours-tiktok-logo-showcase-v2.png";
 
-// Real client proof. Images are real existing assets where available; the After
-// Hours slot has no local asset and the Framer CMS was unreachable this session,
-// so it uses an on-palette placeholder panel (logged to assets.md + morning queue).
+// Real client proof, using route-owned identity application assets.
 const proof = [
+  {
+    client: "VitalWatch Health Management",
+    image: vitalWatchImage.src,
+    imageAlt: "VitalWatch identity applied to a medical coat beside a geometric logo study",
+    caption:
+      "Healthcare branding has to feel credible before it feels clever. The shield, clinical application, and disciplined blue system make trust visible without making the brand feel cold.",
+  },
   {
     client: "Smith Cash Family Law",
     image: smithCashImage.src,
-    imageAlt: "The Smith Cash Family Law website, warm and calm rather than stuffy",
+    imageAlt: "Smith Cash Family Law logo, color palette, and monogrammed thermos",
     caption:
       "They were already known for honest, steady counsel. The brand had to feel that way before a word was read: warm, not stuffy, calm instead of loud.",
   },
   {
-    client: "Legacy Renovations",
-    image: legacyImage.src,
-    imageAlt: "A finished Legacy Renovations kitchen, the brand kept quiet so the work leads",
-    caption:
-      "The work speaks first here, so the brand gets out of its way. Restrained type and a quiet palette let the finished kitchens carry the page.",
-  },
-  {
     client: "After Hours Ministry",
-    image: null,
+    image: afterHoursImage.src,
+    imageAlt: "After Hours Ministry TikTok presence with an enlarged circular logo detail",
     caption:
       "A personal ministry needed a voice that felt like the person behind it, not a template. The brand reads calm and direct, the same way the ministry does.",
   },
@@ -72,7 +72,7 @@ const siblings = [
             <div class="proof-visual">
               {item.image
                 ? <img src={item.image} alt={item.imageAlt} loading="lazy" width="720" height="480" />
-                : <div class="ph-panel" data-placeholder="true" role="img" aria-label={`${item.client} - live-site capture pending`}><span>{item.client}</span><small>Live-site capture pending</small></div>}
+                : null}
             </div>
             <div class="proof-copy">
               <p class="proof-client">{item.client}</p>
@@ -163,33 +163,9 @@ const siblings = [
   .proof-visual img {
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 3 / 2;
     object-fit: cover;
     border-radius: 10px;
-  }
-  .ph-panel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    aspect-ratio: 4 / 3;
-    background: var(--oat);
-    border: 1px solid var(--line);
-    border-radius: 10px;
-    text-align: center;
-    padding: 24px;
-  }
-  .ph-panel span {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: 20px;
-    color: var(--espresso);
-  }
-  .ph-panel small {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #655b54;
   }
   .proof-client {
     font-size: 12px;
