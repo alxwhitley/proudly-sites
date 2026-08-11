@@ -52,9 +52,9 @@ const mediaContracts = {
     "case-study-section3.png",
   ],
   "legacy-renovations": [
-    "section1-branding.png",
-    "section2-browser.png",
-    "section3-browser.png",
+    "legacy-brand-mark.png",
+    "legacy-homepage-quote-path.png",
+    "legacy-services-navigation.png",
   ],
   "after-hours-ministry": [
     "section1-browser.webm",
@@ -83,9 +83,16 @@ for (const [slug, filenames] of Object.entries(mediaContracts)) {
 }
 
 const pointerMotionContracts = {
-  "legacy-renovations": ["section2-browser.png", "section3-browser.png"],
   "smith-cash-family-law": ["case-study-section-1.png", "case-study-section2.png", "case-study-section3.png"],
   "after-hours-ministry": ["case-study-section2.png"],
+};
+
+const naturalPresentationContracts = {
+  "legacy-renovations": [
+    "legacy-brand-mark.png",
+    "legacy-homepage-quote-path.png",
+    "legacy-services-navigation.png",
+  ],
 };
 
 for (const [slug, filenames] of Object.entries(pointerMotionContracts)) {
@@ -98,6 +105,20 @@ for (const [slug, filenames] of Object.entries(pointerMotionContracts)) {
     const escapedFilename = filename.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     if (!new RegExp(`${escapedFilename}[\\s\\S]{0,160}mediaKind: browser`).test(content)) {
       failures.push(`${slug} must classify ${filename} as browser media`);
+    }
+  }
+}
+
+for (const [slug, filenames] of Object.entries(naturalPresentationContracts)) {
+  const content = readFileSync(join(caseRoot, slug, "index.md"), "utf8");
+  const naturalCount = (content.match(/^\s+mediaPresentation: natural$/gm) || []).length;
+  if (naturalCount !== filenames.length) {
+    failures.push(`${slug} requires ${filenames.length} natural mediaPresentation entries; found ${naturalCount}`);
+  }
+  for (const filename of filenames) {
+    const escapedFilename = filename.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    if (!new RegExp(`${escapedFilename}[\\s\\S]{0,160}mediaPresentation: natural`).test(content)) {
+      failures.push(`${slug} must classify ${filename} as natural media`);
     }
   }
 }

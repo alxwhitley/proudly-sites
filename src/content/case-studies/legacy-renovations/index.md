@@ -32,8 +32,8 @@ features:
   - title: Services Organized for People and Search
     body: Clear service navigation helps homeowners quickly find the renovation work that matches their needs. Dedicated pages also give each offering focused, useful content that search engines can understand and potential clients can evaluate before requesting a quote.
     image: ../../../assets/case-studies/legacy-renovations/legacy-services-navigation.png
-     mediaPresentation: natural
-     alt: Legacy Renovations service page with related-service navigation and detailed tub-to-shower content
+    mediaPresentation: natural
+    alt: Legacy Renovations service page with related-service navigation and detailed tub-to-shower content
 quote:
   text: “The design looks amazing, the site runs smoothly, and everything was completed on time.”
   cite: Tony R., Legacy Renovations
