@@ -97,19 +97,22 @@ const cases = (await getCollection("caseStudies", ({ data }) => data.status === 
   .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 3.5vw, 44px); }
   .work-card { display: block; }
   .work-visual {
-    background: var(--sand);
-    border-radius: 16px;
-    padding: clamp(18px, 2vw, 28px);
     margin-bottom: 18px;
-    transition: transform 0.25s ease;
+    border-radius: 10px;
+    overflow: hidden;
   }
-  .work-card:hover .work-visual { transform: translateY(-3px); }
   .work-visual img {
     width: 100%;
     height: auto;
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    display: block;
     border-radius: 10px;
+    transition: transform 0.35s ease;
+  }
+  .work-card:hover .work-visual img,
+  .work-card:focus-visible .work-visual img {
+    transform: scale(1.04);
   }
   .ph-panel {
     display: flex;
