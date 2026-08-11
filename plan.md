@@ -1,10 +1,10 @@
 ## Now
 
-**Current Priority:** `polish/fraunces-and-case-study-fixes` is merged (fast-forward) into `main`, pushed through `aab20f9`, and live in Vercel production as `dpl_9G9bLukVoXK2qM6yPrRAb5S5JdUo`. This includes tonight's Fraunces font swap, the case-study hero row layout, the repositioned next-project link, and the footer's new Site column, on top of the prior homepage case-study treatment, /pricing rebuild, Legacy proof refresh, and Impeccable sidecar refresh.
+**Current Priority:** `main` is pushed through `26dd406` and live in Vercel production as `dpl_7qpYXwM31Yb6LrMPcoa3Xw3FLseA`. This includes today's Fraunces font swap, the case-study hero row layout, the repositioned next-project link, the footer's new Site column, and the branding page's beige-background removal behind its proof images, on top of the prior homepage case-study treatment, /pricing rebuild, Legacy proof refresh, and Impeccable sidecar refresh.
 
-**Verification done:** `npm run build` — 14 routes, zero errors. Playwright at 1440px/390px against a local dev server confirmed zero console errors and zero overflow across `/`, `/work/legacy-renovations`, `/work/smith-cash-family-law`, and `/work/strictly-clean-detailing` before merge. Post-deploy: production alias returns HTTP 200 and its HTML contains both `Fraunces` and the new `close-foot` class.
+**Verification done:** `npm run build` — 14 routes, zero errors. Playwright at 1440px/390px against a local dev server confirmed zero console errors and zero overflow on `/services/branding` (all three proof rows, scroll-reveal fully triggered) plus the earlier Fraunces/case-study batch across `/`, `/work/legacy-renovations`, `/work/smith-cash-family-law`, and `/work/strictly-clean-detailing`. Post-deploy: production alias returns HTTP 200; `/services/branding`'s HTML no longer contains the old sand-background `.proof-visual` rule.
 
-**Branch state:** `main` is pushed to GitHub at `aab20f9` and matches production. `polish/fraunces-and-case-study-fixes` was local-only, merged, and deleted after the fast-forward. The only remaining untracked files are two intentionally local After Hours source `.mov` files excluded by `.vercelignore`; they are 1.3 GB and 355 MB and are not part of the committed or deployed site.
+**Branch state:** `main` is pushed to GitHub at `26dd406` and matches production; all recent work has landed directly on `main`. The only remaining untracked files are two intentionally local After Hours source `.mov` files excluded by `.vercelignore` (1.3 GB and 355 MB, not part of the committed or deployed site), and an unused `after-hours-tiktok-logo-showcase.png` left over from Alex's branding-showcase commit after it was replaced by the `-v2.png` in use — flagged for Alex to clean up, not touched here.
 
 **Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
 
@@ -110,6 +110,15 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Aug 11, 2026 · Evening] — Code
+
+- **Did:** Removed the sand-colored (`var(--sand)`) background/padding panel behind `/services/branding`'s three proof images (`.proof-visual`), so VitalWatch, Smith Cash, and After Hours Ministry now sit directly on the white surface instead of inside a beige mat. Committed directly to `main` (no branch, per direct request), pushed, and deployed to Vercel production.
+- **Decided:** Dropped the container's `border-radius: 16px` alongside the background/padding since it had no visible effect once the background was removed — the image already carries its own 10px radius. Left `web-design.astro` and `ai-and-search-visibility.astro` untouched even though they share the same `.proof-visual` pattern (cloned from this template), since the request was scoped to the branding page specifically.
+- **Verified:** `npm run build` — 14 routes, zero errors. Playwright at 1440px and 390px on `/services/branding`: zero console errors, zero overflow. First full-page screenshot showed a large blank gap where the second/third proof rows and the bridge section should be — traced to the page's scroll-reveal `IntersectionObserver` not having triggered yet in a fast headless capture, not a real bug; a re-run that scrolled through the page and waited past the script's 1500ms safety-net timeout showed all 3 proof rows and 5/5 `.rv` elements correctly revealed. Post-deploy: production HTTP 200, HTML confirmed clear of the old sand-background rule.
+- **Blocked:** None. Web3Forms placeholder key remains the standing production blocker (unrelated).
+
+**Files touched:** `src/pages/services/branding.astro`; `plan.md` (`## Now`, this entry).
 
 ### [Tuesday Aug 11, 2026 · Afternoon, later] — Code
 
