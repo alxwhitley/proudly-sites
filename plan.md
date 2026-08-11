@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** All completed Codex worktree changes are integrated into `main`, pushed through `d675648`, and live in Vercel production as `dpl_8g6eeAC1zMFxF6jqMf7fuuErkzJ4`. This includes the homepage case-study treatment, /pricing rebuild, Legacy proof refresh, and Impeccable sidecar refresh.
+**Current Priority:** `polish/fraunces-and-case-study-fixes` is merged (fast-forward) into `main`, pushed through `aab20f9`, and live in Vercel production as `dpl_9G9bLukVoXK2qM6yPrRAb5S5JdUo`. This includes tonight's Fraunces font swap, the case-study hero row layout, the repositioned next-project link, and the footer's new Site column, on top of the prior homepage case-study treatment, /pricing rebuild, Legacy proof refresh, and Impeccable sidecar refresh.
 
-**Verification done:** Content architecture verification and the 14-route build pass. Production Playwright checks at 1440px and 390px cover `/`, `/pricing`, and `/work/legacy-renovations` with zero console errors and zero overflow. Legacy renders exactly three natural-ratio proof assets through Astro's emitted WebP pipeline.
+**Verification done:** `npm run build` — 14 routes, zero errors. Playwright at 1440px/390px against a local dev server confirmed zero console errors and zero overflow across `/`, `/work/legacy-renovations`, `/work/smith-cash-family-law`, and `/work/strictly-clean-detailing` before merge. Post-deploy: production alias returns HTTP 200 and its HTML contains both `Fraunces` and the new `close-foot` class.
 
-**Branch state:** `main` is pushed to GitHub and unchanged by tonight's batch. A new branch `polish/fraunces-and-case-study-fixes` (4 commits, not merged) carries the Fraunces font swap and three case-study/footer punch-list fixes — awaiting Fable/Alex review before merge. The only remaining untracked files are two intentionally local After Hours source `.mov` files excluded by `.vercelignore`; they are 1.3 GB and 355 MB and are not part of the committed or deployed site.
+**Branch state:** `main` is pushed to GitHub at `aab20f9` and matches production. `polish/fraunces-and-case-study-fixes` was local-only, merged, and deleted after the fast-forward. The only remaining untracked files are two intentionally local After Hours source `.mov` files excluded by `.vercelignore`; they are 1.3 GB and 355 MB and are not part of the committed or deployed site.
 
-**Next Action:** Review and merge `polish/fraunces-and-case-study-fixes`, then replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
+**Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
 
 ## Next Session Punch List
 
@@ -110,6 +110,15 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Aug 11, 2026 · Afternoon, later] — Code
+
+- **Did:** Merged `polish/fraunces-and-case-study-fixes` into `main` (fast-forward, `077cd60..aab20f9`), pushed to GitHub, and deployed to Vercel production.
+- **Decided:** Used `--ff-only` since `main` hadn't moved since the branch point (no merge commit needed). Deleted the local branch after merge; it was never pushed to origin, so no remote branch to clean up.
+- **Verified:** Production alias `https://proudly-psi.vercel.app` returns HTTP 200; its HTML contains `Fraunces` and the case-study `close-foot` class, confirming the deployed build is the merged one. Vercel reports the deployment (`dpl_9G9bLukVoXK2qM6yPrRAb5S5JdUo`) READY.
+- **Blocked:** None for this batch. Web3Forms placeholder key remains the standing production blocker (unrelated to tonight's work).
+
+**Files touched:** `plan.md` (`## Now`, this entry). No source files changed — this entry covers the merge/push/deploy only.
 
 ### [Tuesday Aug 11, 2026 · Afternoon] — Code
 
