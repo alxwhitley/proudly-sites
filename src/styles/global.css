@@ -107,6 +107,15 @@ footer { background: var(--espresso); color: #fff; padding: 20px max(40px, calc(
 .footer-brand > a:not(.footer-logo) { background: rgba(255, 255, 255, 0.08); padding: 7px 10px; border-radius: 5px; }
 .footer-bottom { display: flex; justify-content: space-between; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 22px; color: rgba(255, 255, 255, 0.35); font-size: 12px; }
 
+/* ---- Live-site preview modal (triggered by any .js-live-site element) ---- */
+.live-site-modal { width: min(1100px, 92vw); height: min(760px, 88vh); padding: 0; border: 1.5px solid var(--espresso); border-radius: 14px; box-shadow: 10px 10px 0 var(--espresso); }
+.live-site-modal::backdrop { background: rgba(26, 15, 10, 0.55); }
+.live-site-modal-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border-radius: 50%; border: 1.5px solid var(--espresso); background: var(--white); color: var(--espresso); font-size: 20px; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 1; }
+.live-site-modal iframe { width: 100%; height: 100%; border: 0; border-radius: 12px; }
+@media (max-width: 640px) {
+  .live-site-modal { width: 96vw; height: 90vh; }
+}
+
 /* ---- Responsive: mobile (<=800px) chrome + container + button ---- */
 @media (max-width: 800px) {
   .site-header { width: calc(100% - 32px); height: 56px; margin-top: 16px; padding: 0 14px 0 17px; }

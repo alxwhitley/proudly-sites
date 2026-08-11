@@ -36,7 +36,36 @@ const { title, description } = Astro.props;
       <slot />
     </main>
     <Footer />
+
+    <dialog id="live-site-modal" class="live-site-modal">
+      <button type="button" class="live-site-modal-close" aria-label="Close preview">×</button>
+      <iframe id="live-site-modal-frame" title="Live site preview" loading="lazy"></iframe>
+    </dialog>
+
     <script>
+      const liveModal = document.getElementById("live-site-modal");
+      const liveFrame = document.getElementById("live-site-modal-frame");
+      const liveModalClose = liveModal && liveModal.querySelector(".live-site-modal-close");
+
+      if (liveModal && liveFrame && liveModalClose) {
+        document.querySelectorAll(".js-live-site").forEach((trigger) => {
+          trigger.addEventListener("click", () => {
+            const url = trigger.dataset.liveUrl;
+            if (!url) return;
+            liveFrame.src = url;
+            liveModal.showModal();
+          });
+        });
+
+        liveModalClose.addEventListener("click", () => liveModal.close());
+        liveModal.addEventListener("click", (event) => {
+          if (event.target === liveModal) liveModal.close();
+        });
+        liveModal.addEventListener("close", () => {
+          liveFrame.src = "about:blank";
+        });
+      }
+
       const toggle = document.querySelector(".nav-toggle");
       const menu = document.getElementById("mobile-menu");
       const carets = document.querySelectorAll(".mobile-caret");

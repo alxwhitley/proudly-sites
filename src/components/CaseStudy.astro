@@ -13,7 +13,8 @@
   Props:
     niche, location   - the eyebrow ("Family Law", "Raleigh")
     title             - the case H1 (the transformation line)
-    liveUrl           - optional; "See Live Site" button links here when present, else renders
+    liveUrl           - optional; when present, "See Live Site" opens it in the shared
+                        live-site preview modal (see BaseLayout.astro); else renders
                         pending (non-interactive) in the same navbar-CTA style
     heroImage         - optional src; when null a placeholder panel renders instead
     heroAlt           - alt text for the hero image
@@ -42,7 +43,7 @@ const {
     <h1>{title}</h1>
     <div class="case-hero-top">
       {liveUrl
-        ? <a class="live-cta" href={liveUrl} target="_blank" rel="noopener">See Live Site</a>
+        ? <button type="button" class="live-cta js-live-site" data-live-url={liveUrl}>See Live Site</button>
         : <span class="live-cta is-pending" aria-disabled="true" title="Live site pending">See Live Site</span>}
     </div>
     <div class="case-hero-visual">
@@ -136,7 +137,9 @@ const {
     border-radius: 7px;
     padding: 13px 19px;
     font-size: 15px;
+    font-family: inherit;
     white-space: nowrap;
+    cursor: pointer;
     transition: background 0.2s ease;
   }
   .live-cta:hover { background: #33241b; }

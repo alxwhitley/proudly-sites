@@ -37,6 +37,7 @@ const projects = [
     imageAlt: "Vital Watch healthcare website",
     tags: ["Full Brand Launch", "Custom Nav", "Healthcare Partners Portal", "SEO"],
     href: "/work",
+    liveUrl: "https://www.vitalwatch24.com/",
   },
   projectFromCase("legacy-renovations"),
 ];
@@ -107,7 +108,9 @@ const testimonials = [
             {project.quote && <blockquote>{project.quote}<cite>{project.author}</cite></blockquote>}
             {project.href.startsWith("/work/")
               ? <a class="text-link" href={project.href}>View Project →</a>
-              : <span class="text-link is-pending" aria-disabled="true" title="Live site pending">See Live Site</span>}
+              : project.liveUrl
+                ? <button type="button" class="text-link js-live-site" data-live-url={project.liveUrl}>See Live Site</button>
+                : <span class="text-link is-pending" aria-disabled="true" title="Live site pending">See Live Site</span>}
           </div>
         </article>
       ))}
@@ -201,7 +204,7 @@ const testimonials = [
   .project-copy>p:not(.project-label){color:var(--muted);max-width:58ch}
   .project-copy blockquote{border-left:1px solid var(--gold);padding-left:14px;margin:23px 0;font:500 16px/1.5 "Playfair Display",serif}
   .project-copy cite{display:block;font:400 12px/1.4 "Lato",sans-serif;margin-top:7px;color:#6d635c}
-  .text-link{font-size:14px;font-weight:700;display:inline-block}
+  .text-link{font-size:14px;font-weight:700;display:inline-block;background:none;border:0;padding:0;font-family:inherit;cursor:pointer;color:inherit}
   .text-link.is-pending{opacity:.5;cursor:default}
   @media(prefers-reduced-motion:no-preference){.text-link{transition:transform .2s ease}.text-link:hover,.text-link:focus-visible{transform:translateX(4px)}}
   .about.section{max-width:none;background:#eeece7;padding-left:max(40px,calc((100vw - 1260px)/2));padding-right:max(40px,calc((100vw - 1260px)/2))}

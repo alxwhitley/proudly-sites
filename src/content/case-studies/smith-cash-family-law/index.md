@@ -13,6 +13,7 @@ services:
   - Search foundations
 heroImage: ../../../assets/case-studies/smith-cash-family-law/hero.jpeg
 heroAlt: The Smith Cash Family Law website, warm and steady rather than stuffy
+liveUrl: https://smithcashlaw.com/
 featured: true
 order: 1
 status: published

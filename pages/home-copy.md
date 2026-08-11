@@ -18,4 +18,4 @@ Turn reputation-led referrals into confidence by showing clear positioning, real
 ## Open items
 
 - Pricing and Blog navigation still target unbuilt homepage anchors.
-- Vital Watch remains homepage proof only and has no case-study route.
+- Vital Watch remains homepage proof only and has no case-study route. Its "See Live Site" link opens the live site (https://www.vitalwatch24.com/) in an in-page modal (iframe) instead of navigating away, so visitors stay on the Proudly site.

@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** The approved light pricing card and basic cleanup batch are deployed to Vercel production. The live site now includes the white pricing callout, dead Blog navigation removal, corrected mobile Contact alignment, WCAG AA Oat labels, and repaired mobile submenu behavior.
+**Current Priority:** /pricing has been rebuilt in Astro with a two-column hero (copy and hairline price ledger left, light form card right), a three-quote testimonial row, and an FAQ carrying the remaining Care/Growth detail. The work is uncommitted on local main for review.
 
-**Verification done:** Content architecture verification passes and local plus Vercel builds generate 14 routes. Vercel deployment `dpl_AZuhVZpj8MKG1nVhyorQ3y4K5ttT` is READY and owns the production alias. The alias returns HTTP 200; deployed HTML confirms Pricing remains a real route, Blog is absent from shared chrome, the four-column footer is live, and the Contact correction is present.
+**Verification done:** `npm run build` generates 14 routes with zero errors. Playwright checks at 1440px and 390px confirm a two-column desktop hero, a single-column mobile layout with the H1 above the form, zero horizontal overflow, and zero console errors. Only one form exists; the form IDs `pricing-form`, `pricing-form-success`, and `pricing-form-error` are unchanged and the submit script binds to them.
 
-**Branch state:** Vercel production is deployed from local commit `fd72685`. GitHub `origin/main` remains behind because the direct push was not authorized. Existing unrelated untracked case-study media remain untouched. The pre-existing stale Impeccable sidecar remains unchanged and unsuppressed.
+**Branch state:** Local main has uncommitted changes in `src/pages/pricing.astro` and `plan.md` (this update). GitHub `origin/main` remains behind production until a direct push is explicitly approved. Existing unrelated untracked case-study media and the auto-generated Impeccable critique file remain untouched.
 
-**Next Action:** Explicitly approve a direct push when GitHub parity is desired. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Next Action:** Review the rebuilt /pricing page, then approve a direct push and Vercel deploy when ready. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 ## Next Session Punch List
 
@@ -111,6 +111,14 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Aug 11, 2026 · 10:11 AM] — Code
+- **Did:** Rebuilt /pricing as a two-column hero mirroring /contact, with the price ledger above the fold, a three-quote testimonial row, and a slimmed FAQ carrying Care/Growth detail.
+- **Decided:** Cut the prior included/moves/plans/close sections and dark form entirely; kept the Service schema, Web3Forms placeholder, and existing form IDs/script binding.
+- **Verified:** `npm run build` 14 routes, zero errors; Playwright at 1440px/390px confirms layout, no overflow, no console errors, single form, and unchanged IDs.
+- **Blocked:** Work left uncommitted on local main for review. Web3Forms production key still missing.
+
+**Files touched:** `src/pages/pricing.astro`; `plan.md` (`## Now`, `## Recent`, this entry).
 
 ### [Tuesday Aug 11, 2026 · 9:38 AM] — Code
 - **Did:** Deployed local commit `fd72685` to Vercel production as `dpl_AZuhVZpj8MKG1nVhyorQ3y4K5ttT`, including the approved light pricing card and completed basic cleanup batch.
