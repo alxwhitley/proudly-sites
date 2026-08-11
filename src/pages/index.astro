@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Button from "../components/Button.astro";
 import Tags from "../components/Tags.astro";
 import { getCollection } from "astro:content";
+import vitalWatchHero from "../assets/case-studies/vital-watch/section1.png";
 
 const featuredCases = await getCollection("caseStudies", ({ data }) =>
   data.status === "published" && data.featured && Boolean(data.homepage)
@@ -33,7 +34,7 @@ const projects = [
     location: "Raleigh",
     title: "A home nursing service that finally looks like the care it gives",
     body: "A Medicare-covered nursing service needed a site that felt clinical and trustworthy, not templated. I built service pages, an FAQ, custom navigation, and a referral system for healthcare partners, all HIPAA-aware from the ground up.",
-    image: "/images/vital-watch.jpeg",
+    image: vitalWatchHero.src,
     imageAlt: "Vital Watch healthcare website",
     tags: ["Full Brand Launch", "Custom Nav", "Healthcare Partners Portal", "SEO"],
     href: "/work",
