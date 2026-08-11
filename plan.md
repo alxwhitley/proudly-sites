@@ -1,10 +1,10 @@
 ## Now
 
-**Current Priority:** `main` is pushed through `26dd406` and live in Vercel production as `dpl_7qpYXwM31Yb6LrMPcoa3Xw3FLseA`. This includes today's Fraunces font swap, the case-study hero row layout, the repositioned next-project link, the footer's new Site column, and the branding page's beige-background removal behind its proof images, on top of the prior homepage case-study treatment, /pricing rebuild, Legacy proof refresh, and Impeccable sidecar refresh.
+**Current Priority:** The `/work` index card refresh is committed locally on `main` at `4038a5a`: After Hours now uses Alex's supplied browser-frame image, VitalWatch has been added as a fifth card with its supplied image and a direct live-site link, and Strictly Clean now links directly to its live site. The Web3Forms placeholder key remains the highest-priority production blocker.
 
-**Verification done:** `npm run build` — 14 routes, zero errors. Playwright at 1440px/390px against a local dev server confirmed zero console errors and zero overflow on `/services/branding` (all three proof rows, scroll-reveal fully triggered) plus the earlier Fraunces/case-study batch across `/`, `/work/legacy-renovations`, `/work/smith-cash-family-law`, and `/work/strictly-clean-detailing`. Post-deploy: production alias returns HTTP 200; `/services/branding`'s HTML no longer contains the old sand-background `.proof-visual` rule.
+**Verification done:** `npm run build` — 14 routes, zero errors; `node --test tests/work-index-cards.test.mjs` — 2/2 passing. Headless Chromium at 1440px/390px confirmed five cards, correct internal/external destinations, safe new-tab attributes, fully loaded After Hours/VitalWatch images, zero console issues, and zero horizontal overflow.
 
-**Branch state:** `main` is pushed to GitHub at `26dd406` and matches production; all recent work has landed directly on `main`. The only remaining untracked files are two intentionally local After Hours source `.mov` files excluded by `.vercelignore` (1.3 GB and 355 MB, not part of the committed or deployed site), and an unused `after-hours-tiktok-logo-showcase.png` left over from Alex's branding-showcase commit after it was replaced by the `-v2.png` in use — flagged for Alex to clean up, not touched here.
+**Branch state:** Local `main` contains three implementation/design commits from this session (`97d2d1f`, `e379ed3`, `4038a5a`) plus this session-close record; none have been pushed or deployed. The only remaining untracked files are the two intentionally local After Hours source `.mov` files and the pre-existing unused `after-hours-tiktok-logo-showcase.png`; none were touched.
 
 **Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
 
@@ -110,6 +110,15 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Aug 11, 2026 · Evening, later] — Code
+
+- **Did:** Refreshed `/work` with Alex's supplied After Hours and VitalWatch browser-frame images, added VitalWatch as a fifth external-only project card, and changed Strictly Clean's card from its unfinished Proudly case-study route to the live Strictly Clean website. Added a focused rendered-output regression test and updated the asset ledger.
+- **Decided:** Kept VitalWatch route-local instead of inventing a content-collection case study that does not exist. Preserved After Hours as an internal case-study link. External cards open in a new tab with `noopener noreferrer` and say “See Live Site ↗”; internal cards retain “View Project →”. Left Strictly Clean's existing Oat placeholder in place because no replacement image was supplied.
+- **Verified:** `npm run build` generated 14 routes with zero errors; `node --test tests/work-index-cards.test.mjs` passed 2/2. Chromium at 1440px and 390px showed five cards, loaded After Hours/VitalWatch images at the intended 4:3 ratio, correct destinations and link attributes, zero console issues, and zero horizontal overflow. The first mobile full-page capture did not scroll, so VitalWatch's lazy image had not entered the viewport; a scrolled recheck loaded it correctly and confirmed the final presentation.
+- **Blocked:** Not pushed or deployed. Web3Forms remains the standing production blocker. The Impeccable hook repeated an existing `30px` quote-size advisory and stale-sidecar notice; this change did not touch that typography or the sidecar, so both remain unsuppressed and out of scope.
+
+**Files touched:** `src/pages/work/index.astro`; `src/assets/case-studies/{after-hours-ministry,vital-watch}/work-index.jpeg`; `tests/work-index-cards.test.mjs`; `assets.md`; `docs/superpowers/{specs,plans}/2026-08-11-work-index-card-images*`; `plan.md` (`## Now`, this entry).
 
 ### [Tuesday Aug 11, 2026 · Evening] — Code
 
