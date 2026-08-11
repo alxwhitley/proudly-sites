@@ -1,10 +1,10 @@
 ## Now
 
-**Current Priority:** The `/work` index card refresh is committed locally on `main` at `4038a5a`: After Hours now uses Alex's supplied browser-frame image, VitalWatch has been added as a fifth card with its supplied image and a direct live-site link, and Strictly Clean now links directly to its live site. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Current Priority:** The `/work` index card refresh is live in Vercel production as `dpl_4F3orooKqt1RRBKe5iTyom4Zo21V`: After Hours uses Alex's supplied browser-frame image, VitalWatch is a fifth card with its supplied image and direct live-site link, and Strictly Clean links directly to its live site. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 **Verification done:** `npm run build` — 14 routes, zero errors; `node --test tests/work-index-cards.test.mjs` — 2/2 passing. Headless Chromium at 1440px/390px confirmed five cards, correct internal/external destinations, safe new-tab attributes, fully loaded After Hours/VitalWatch images, zero console issues, and zero horizontal overflow.
 
-**Branch state:** Local `main` contains three implementation/design commits from this session (`97d2d1f`, `e379ed3`, `4038a5a`) plus this session-close record; none have been pushed or deployed. The only remaining untracked files are the two intentionally local After Hours source `.mov` files and the pre-existing unused `after-hours-tiktok-logo-showcase.png`; none were touched.
+**Branch state:** `main` was pushed through `f2af910` before deployment; this documentation-only production record follows. The only remaining untracked files are the two intentionally local After Hours source `.mov` files and the pre-existing unused `after-hours-tiktok-logo-showcase.png`; none were touched.
 
 **Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
 
@@ -110,6 +110,15 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Aug 11, 2026 · Evening, deployment] — Code
+
+- **Did:** Deployed pushed `main` commit `f2af910` to Vercel production as `dpl_4F3orooKqt1RRBKe5iTyom4Zo21V`, aliased at `https://proudly-psi.vercel.app`.
+- **Decided:** Deployed the already verified and pushed commit without additional source changes. Kept the preceding production deployment available as the rollback point.
+- **Verified:** Pre-deploy `npm run build` generated 14 routes and `node --test tests/work-index-cards.test.mjs` passed 2/2. Vercel reported READY; public `/work` returned HTTP 200 with a Vercel cache hit, and its HTML contains both `https://www.vitalwatch24.com/` and `https://www.strictlycleandetailing.com/`.
+- **Blocked:** Web3Forms remains the standing production blocker.
+
+**Files touched:** `plan.md` (`## Now`, this entry). Production deployment changed external state; no implementation files changed.
 
 ### [Tuesday Aug 11, 2026 · Evening, later] — Code
 
