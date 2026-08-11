@@ -18,7 +18,6 @@ const caseStudies = (await getCollection("caseStudies", ({ data }) => data.statu
     <div><h3>Services</h3>{services.map((s) => <a href={s.href}>{s.title}</a>)}</div>
     <div><h3>Studio</h3>{studios.map((s) => <a href={s.href}>{s.title}</a>)}</div>
     <div><h3>Case Studies</h3>{caseStudies.map((c) => <a href={c.href}>{c.title}</a>)}</div>
-    <div><h3>From the Blog</h3><a href="/#blog">Read the Blog →</a></div>
   </div>
   <div class="footer-bottom"><span>© 2026 Proudly Sites. Raleigh, NC.</span></div>
 </footer>
