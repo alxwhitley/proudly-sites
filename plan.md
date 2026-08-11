@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** /pricing has been rebuilt in Astro with a two-column hero (copy and hairline price ledger left, light form card right), a three-quote testimonial row, and an FAQ carrying the remaining Care/Growth detail. The work is uncommitted on local main for review.
+**Current Priority:** All completed Codex worktree changes are integrated into `main`, pushed through `d675648`, and live in Vercel production as `dpl_8g6eeAC1zMFxF6jqMf7fuuErkzJ4`. This includes the homepage case-study treatment, /pricing rebuild, Legacy proof refresh, and Impeccable sidecar refresh.
 
-**Verification done:** `npm run build` generates 14 routes with zero errors. Playwright checks at 1440px and 390px confirm a two-column desktop hero, a single-column mobile layout with the H1 above the form, zero horizontal overflow, and zero console errors. Only one form exists; the form IDs `pricing-form`, `pricing-form-success`, and `pricing-form-error` are unchanged and the submit script binds to them.
+**Verification done:** Content architecture verification and the 14-route build pass. Production Playwright checks at 1440px and 390px cover `/`, `/pricing`, and `/work/legacy-renovations` with zero console errors and zero overflow. Legacy renders exactly three natural-ratio proof assets through Astro's emitted WebP pipeline.
 
-**Branch state:** Local main has uncommitted changes in `src/pages/pricing.astro` and `plan.md` (this update). GitHub `origin/main` remains behind production until a direct push is explicitly approved. Existing unrelated untracked case-study media and the auto-generated Impeccable critique file remain untouched.
+**Branch state:** `main` is pushed to GitHub. Completed Codex commits from the detached Legacy and sidecar worktrees are integrated. The only remaining untracked files are two intentionally local After Hours source `.mov` files excluded by `.vercelignore`; they are 1.3 GB and 355 MB and are not part of the committed or deployed site.
 
-**Next Action:** Review the rebuilt /pricing page, then approve a direct push and Vercel deploy when ready. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
 
 ## Next Session Punch List
 
@@ -110,6 +110,14 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Aug 11, 2026 · 12:45 PM] — Code
+- **Did:** Integrated the remaining Legacy feature and Impeccable sidecar commits from Codex worktrees into `main`, aligned the content verifier, moved case-study content images onto Astro's image pipeline, pushed through `d675648`, and deployed production as `dpl_8g6eeAC1zMFxF6jqMf7fuuErkzJ4`.
+- **Decided:** Preserved the current browser tilt/video/mobile system while adding Legacy's natural presentation metadata. Kept seven intentionally local source/review media files out of Git, including two `.mov` files over GitHub's normal file limit. Fixed forward after the first integration deployment exposed Astro's raw-asset deduplication edge case for two byte-identical images.
+- **Verified:** Content verifier and 14-route build pass; static-preview and production Playwright at 1440px/390px show zero console errors and overflow on homepage, pricing, and Legacy. All three Legacy assets load at intrinsic ratio from emitted WebP URLs; Vercel reports READY.
+- **Blocked:** The Web3Forms production key remains missing.
+
+**Files touched:** `assets.md`; `.impeccable/design.json`; `docs/superpowers/{plans,specs}/2026-08-08-legacy-case-feature-refresh*`; `src/assets/case-studies/legacy-renovations/*`; `src/components/CaseStudy.astro`; `src/content.config.ts`; `src/content/case-studies/legacy-renovations/index.md`; `scripts/verify-content-architecture.mjs`; `plan.md` (`## Now`, follow-up item 5, this entry).
 
 ### [Tuesday Aug 11, 2026 · 11:42 AM] — Code
 - **Did:** Integrated the completed Impeccable sidecar refresh into `main`, bringing `.impeccable/design.json` in line with the current `DESIGN.md` without changing UI or production behavior.
