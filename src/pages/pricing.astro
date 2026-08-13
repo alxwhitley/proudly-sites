@@ -224,7 +224,7 @@ const serviceSchema = {
                 typeof item === "string" ? (
                   <li>{item}</li>
                 ) : (
-                  <li>
+                  <li class="plan-tier">
                     {item.heading}
                     <ul>
                       {item.items.map((sub) => (
@@ -303,6 +303,7 @@ const serviceSchema = {
     line-height: 1.6;
     color: var(--muted);
     max-width: 36ch;
+    margin-top: 8px;
   }
 
   .pricing-note {
@@ -520,6 +521,16 @@ const serviceSchema = {
   .faq-item li:last-child { margin-bottom: 0; }
   .faq-item ul ul { margin-top: 8px; padding-bottom: 0; }
   .faq-item ul ul li { margin-bottom: 6px; }
+
+  /* Care/Growth are comparable tiers, not two more bullets in the list:
+     separate each with a hairline + generous top space so they read as
+     distinct, parallel groups instead of blending into the surrounding list. */
+  .faq-item li.plan-tier {
+    list-style: none;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+  }
 
   /* ---- Closer ---- */
   .pricing-closer {

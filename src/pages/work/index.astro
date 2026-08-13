@@ -159,6 +159,23 @@ workCards.push({
   .section.work-grid-wrap { padding-top: clamp(24px, 3vw, 40px); }
   .work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 3.5vw, 44px); }
   .work-card { display: block; }
+  /* An odd card count strands the last card alone in a fresh row of an empty-looking
+     2-column grid. Span it and cap its width to the size of a normal column so it
+     reads as a centered final piece, not a broken row. Desktop-only: the mobile
+     single-column grid never produces this gap. */
+  @media (min-width: 801px) {
+    .work-grid > .work-card:nth-child(odd):last-child {
+      grid-column: 1 / -1;
+      justify-self: center;
+      width: 100%;
+      max-width: 50%;
+    }
+    /* .section's generic desktop bottom padding (150px) is a leftover default here,
+       not a tuned choice — it stacks with the quote band's own generous top padding
+       (up to 160px) for a ~300px+ dead gap. Tighten to a page-tuned value so the
+       color-block edge itself carries more of the separation. */
+    .section.work-grid-wrap { padding-bottom: clamp(64px, 7vw, 96px); }
+  }
   .work-visual {
     margin-bottom: 18px;
     border-radius: 10px;

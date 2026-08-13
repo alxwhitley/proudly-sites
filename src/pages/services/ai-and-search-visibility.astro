@@ -188,8 +188,15 @@ const siblings = [
     margin-top: 30px !important;
   }
 
-  /* ---- Facets: the Scan layer (hairline-divided, no numbered scaffolding) ---- */
-  .section.facets { max-width: 900px; }
+  /* ---- Facets: the Scan layer (hairline-divided, no numbered scaffolding) ----
+     Reads as an extension of the hero's claim, not a fresh chapter: tighter
+     top coupling to the hero than the default .section rhythm, with more
+     room below before the white "prove" surface begins. */
+  .section.facets {
+    max-width: 900px;
+    padding-top: clamp(32px, 3.5vw, 56px);
+    padding-bottom: clamp(56px, 6vw, 96px);
+  }
   .facets-heading {
     font-family: "Fraunces", Georgia, serif;
     font-weight: 500;

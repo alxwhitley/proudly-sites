@@ -71,7 +71,7 @@ const siblings = [
           <article class:list={["proof-row", "rv", { reverse: i % 2 === 1 }]}>
             <div class="proof-visual">
               {item.image
-                ? <img src={item.image} alt={item.imageAlt} loading="lazy" width="720" height="480" />
+                ? <img src={item.image} alt={item.imageAlt} loading="lazy" width="720" height="540" />
                 : <div class="ph-panel" data-placeholder="true" role="img" aria-label={`${item.client} - live-site capture pending`}><span>{item.client}</span><small>Live-site capture pending</small></div>}
             </div>
             <div class="proof-copy">

@@ -239,6 +239,11 @@ const {
     grid-template-columns: minmax(240px, 0.72fr) minmax(0, 1.28fr);
     align-items: center;
     gap: clamp(48px, 7vw, 112px);
+  }
+  /* First row's separator is the summary band's own border-bottom (they're
+     adjacent siblings); only later rows need their own top rule, or the two
+     borders stack into a doubled hairline. */
+  .feature-row + .feature-row {
     border-top: 1px solid var(--line);
   }
   .feature-row:nth-child(even) {
@@ -317,7 +322,10 @@ const {
   }
 
   /* ---- Quote band ---- */
-  .quote-band { background: var(--white); border-top: 1px solid var(--line); }
+  /* No border-top here: quote-band always follows .feature-sequence in the
+     DOM, which already carries a border-bottom. Adding a second rule here
+     would stack into a doubled hairline at that seam. */
+  .quote-band { background: var(--white); }
   .quote-band blockquote {
     max-width: 780px;
     margin: 0 auto;

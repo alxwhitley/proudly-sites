@@ -267,6 +267,10 @@ const siblings = [
 
   @media (min-width: 801px) {
     .closing-cta { min-height: 520px; }
+    /* Mirror the column ratio on reversed rows so the image keeps the same
+       compositional weight (1.05fr) on whichever side it lands, instead of
+       ceding it to the copy block as a side effect of the order swap. */
+    .proof-row.reverse { grid-template-columns: 0.95fr 1.05fr; }
   }
 </style>
 

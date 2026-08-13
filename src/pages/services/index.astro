@@ -210,6 +210,12 @@ const claims = [
     gap: clamp(32px, 4.5vw, 70px);
     align-items: center;
   }
+  @media (min-width: 801px) {
+    /* Track width follows content role (image column always the larger 1.05fr),
+       not column position, so the visual/copy split stays equivalent across
+       alternating rows instead of shrinking whichever one lands in column 2. */
+    .claim-row.reverse { grid-template-columns: 0.95fr 1.05fr; }
+  }
   .claim-row.reverse .claim-visual { order: 2; }
   .claim-visual {
     background: var(--sand);
