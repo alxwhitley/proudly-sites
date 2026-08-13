@@ -1,10 +1,10 @@
 ## Now
 
-**Current Priority:** The `/work` index card refresh remains live in Vercel production as `dpl_4F3orooKqt1RRBKe5iTyom4Zo21V`. A project-level fast path now governs bounded Proudly edits to reduce token use and workflow ceremony. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Current Priority:** The completed image/modal batch is live in Vercel production as `dpl_GvwPo3ZHa9GyndtKUn3zauwz8yuJ`. A project-level fast path governs bounded Proudly edits to reduce token use and workflow ceremony. The Web3Forms placeholder key remains the highest-priority production blocker.
 
 **Verification done:** `npm run build` — 14 routes, zero errors; `node --test tests/work-index-cards.test.mjs` — 3/3 passing. Playwright at 1440px/390px confirmed the sharper responsive `/work` imagery, the new Strictly Clean card image, and both external cards opening their correct URLs in the shared preview modal. Headless Chromium also confirmed the unframed Web Design proof images and real After Hours capture.
 
-**Branch state:** `main` is pushed through `295d215`; the fast-path policy and this closeout record are local and not yet pushed. The only remaining untracked files are the two intentionally local After Hours source `.mov` files and the pre-existing unused `after-hours-tiktok-logo-showcase.png`; none were touched.
+**Branch state:** `main` is pushed through implementation commit `d83ee69`; this deployment closeout update is the only new tracked change. The intentionally local After Hours `section2.mov` and pre-existing unused `after-hours-tiktok-logo-showcase.png` remain untracked and were excluded from the commit.
 
 **Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
 
@@ -116,7 +116,9 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 - **Did:** Added responsive 640/960/1280px renditions to `/work` card images so VitalWatch stays sharp on high-density displays; added Alex's Strictly Clean `work-index.jpeg`; routed both external work cards through the homepage's shared live-site preview modal; removed the beige outer frames from `/services/web-design` proof images; replaced its After Hours placeholder with the approved `work-index.jpeg` capture.
 - **Decided:** Reused the existing route-owned After Hours asset instead of duplicating the binary. Preserved real external URLs as no-JavaScript/new-tab fallbacks while intercepting enhanced clicks for the shared modal. Applied responsive output to every `/work` image card so the grid has consistent rendering quality.
 - **Verified:** `git diff --check`; red-green focused coverage followed by `node --test tests/work-index-cards.test.mjs` (3/3); `npm run build` (14 routes); Impeccable detector (one pre-existing off-ramp fluid font endpoint only); Playwright at 1440px and 390px confirmed the Strictly Clean image loads, both modal triggers open, and each iframe receives the correct external URL; headless Chromium full-page checks covered `/work` and `/services/web-design`.
-- **Blocked:** Not committed, pushed, or deployed. The Web3Forms key remains the standing production blocker.
+- **Shipped:** Implementation commit `d83ee69` is pushed to `main` and deployed to Vercel production as `dpl_GvwPo3ZHa9GyndtKUn3zauwz8yuJ`, aliased at `https://proudly-psi.vercel.app`.
+- **Verified in production:** `/work` returned HTTP 200. Playwright at 1440px and 390px confirmed the Strictly Clean image loads from an optimized responsive source, both external-card modals open with their correct URLs, and the console stays clear.
+- **Blocked:** The Web3Forms key remains the standing production blocker.
 
 **Files touched:** `src/pages/work/index.astro`; `src/layouts/BaseLayout.astro`; `src/pages/services/web-design.astro`; `tests/work-index-cards.test.mjs`; `assets.md`; `plan.md`; added `src/assets/case-studies/Strictly-clean/work-index.jpeg`.
 
