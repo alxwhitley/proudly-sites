@@ -86,7 +86,7 @@ const testimonials = [
     </div>
   </section>
 
-  <section class="proof-strip" aria-label="Client proof">
+  <section class="proof-strip rv" aria-label="Client proof">
     <div class="google-proof">
       <b>G</b><span><strong>5.0 Google Reviews</strong><small>★★★★★</small></span>
     </div>
@@ -99,10 +99,10 @@ const testimonials = [
   </section>
 
   <section class="work section" id="work">
-    <div class="section-heading"><h2>Their Craft, Presented Well</h2></div>
+    <div class="section-heading rv"><h2>Their Craft, Presented Well</h2></div>
     <div class="projects">
       {projects.map((project, index) => (
-        <article class:list={["project", { reverse: index % 2 === 1 }]}>
+        <article class:list={["project", "rv", { reverse: index % 2 === 1 }]}>
           <div class="project-visual" data-pointer-tilt>
             <div class="project-visual-inner">
               <Image src={project.image} alt={project.imageAlt} loading="lazy" />
@@ -127,24 +127,24 @@ const testimonials = [
 
   <section class="about section" id="about">
     <div class="about-inner">
-      <img class="about-photo" src="/images/alex-whitley.jpeg" alt="Alex Whitley in his Raleigh studio" loading="lazy" />
+      <img class="about-photo rv" src="/images/alex-whitley.jpeg" alt="Alex Whitley in his Raleigh studio" loading="lazy" />
       <div class="about-copy">
-        <h2>Hi, I’m Alex. Your project never gets handed off.</h2>
-        <p class="about-lead">Proudly Sites is a one-person studio in Raleigh. When you work with me, the person on the discovery call is the same person writing your copy, designing your pages, and answering your emails. No account managers, no junior designers, no telephone game.</p>
-        <div class="about-points">
+        <h2 class="rv">Hi, I’m Alex. Your project never gets handed off.</h2>
+        <p class="about-lead rv">Proudly Sites is a one-person studio in Raleigh. When you work with me, the person on the discovery call is the same person writing your copy, designing your pages, and answering your emails. No account managers, no junior designers, no telephone game.</p>
+        <div class="about-points stagger">
           <div><b>Direct, every step</b><span>One point of contact from first call to launch.</span></div>
           <div><b>Weeks, not months</b><span>A clear process that respects your time.</span></div>
           <div><b>Clear pricing, agreed upfront</b><span>No surprise invoices, ever.</span></div>
           <div><b>Raleigh-based</b><span>Local, reachable, invested in Triangle businesses.</span></div>
         </div>
-        <Button href="/contact" class="about-cta">Get in Touch</Button>
+        <Button href="/contact" class="about-cta rv">Get in Touch</Button>
       </div>
     </div>
   </section>
 
   <section class="services section" id="services">
-    <div class="section-heading centered"><h2>Strategy, Copy, and Design, In-House</h2></div>
-    <div class="service-grid">
+    <div class="section-heading centered rv"><h2>Strategy, Copy, and Design, In-House</h2></div>
+    <div class="service-grid stagger">
       <article><span class="service-icon">◎</span><h3>Branding</h3><p>A brand that earns trust before you say a word. Color, type, and voice built around how your clients actually decide.</p></article>
       <article><span class="service-icon">▣</span><h3>Web Design</h3><p>Design that makes the right people stop and stay. Every section built around your client’s problem and how you solve it, not a template.</p></article>
       <article><span class="service-icon">⌁</span><h3>Search &amp; AI Visibility</h3><p>Get found the moment someone searches, on Google and the AI assistants buyers now ask first. Your pages are built to be ranked and quoted, so you show up in the answer, not three clicks past it.</p></article>
@@ -153,16 +153,16 @@ const testimonials = [
 
   <section class="process-section" id="process">
     <div class="section process-inner">
-      <div class="process-intro"><h2>How It Works</h2><span>No mystery, no months of waiting. A clear four-step path from first message to launch.</span></div>
-      <div class="process-grid">
+      <div class="process-intro rv"><h2>How It Works</h2><span>No mystery, no months of waiting. A clear four-step path from first message to launch.</span></div>
+      <div class="process-grid stagger">
         {process.map((step, index) => <article><b>{index + 1}</b><h3>{step[0]}</h3><p>{step[1]}</p></article>)}
       </div>
     </div>
   </section>
 
   <section class="reviews section">
-    <div class="reviews-head"><div><h2>What Clients Say</h2></div></div>
-    <div class="review-grid">
+    <div class="reviews-head rv"><div><h2>What Clients Say</h2></div></div>
+    <div class="review-grid stagger">
       {testimonials.map(item => <blockquote><span>★★★★★</span><p>{item[0]}</p><cite><b>{item[1]}</b>{item[2]}</cite></blockquote>)}
     </div>
   </section>
@@ -322,6 +322,30 @@ const testimonials = [
   @media(prefers-reduced-motion:no-preference){.hero>p,.hero>h1,.hero-actions,.founder-chip{animation:appear .55s cubic-bezier(.16,1,.3,1) both}.hero>h1{animation-delay:.06s}.hero-copy{animation-delay:.12s}.hero-actions{animation-delay:.18s}.founder-chip{animation-delay:.24s}@keyframes appear{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}}
 </style>
 
+<style>
+  /* ---- Motion: below-fold scroll reveal ----
+     Gated behind the JS-added .reveal class so content stays visible with no
+     JS and under reduced motion (the script skips both). Same contract as
+     the Studios/Services/Work/About cluster - kept in its own scoped <style>
+     block (not the is:global block above) so the :global(.reveal) ancestor
+     trick compiles the same way it does on every other long page. */
+  :global(.reveal) .rv {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .rv.in { opacity: 1; transform: none; }
+  :global(.reveal) .stagger > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .stagger.in > * { opacity: 1; transform: none; }
+  :global(.reveal) .stagger.in > *:nth-child(2) { transition-delay: 0.06s; }
+  :global(.reveal) .stagger.in > *:nth-child(3) { transition-delay: 0.12s; }
+  :global(.reveal) .stagger.in > *:nth-child(4) { transition-delay: 0.18s; }
+</style>
+
 <script>
   const reducePointerMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const canTilt = window.matchMedia("(hover: hover) and (pointer: fine)");
@@ -364,5 +388,26 @@ const testimonials = [
       target.addEventListener("pointerleave", resetPointerTilt);
       target.addEventListener("pointercancel", resetPointerTilt);
     });
+  }
+</script>
+
+<script>
+  // Gated scroll reveal, same contract as the Studios/Services/Work/About cluster.
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reduce.matches) {
+    document.documentElement.classList.add("reveal");
+    const els = document.querySelectorAll(".rv, .stagger");
+    const show = (el) => el.classList.add("in");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { show(entry.target); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      els.forEach((el) => io.observe(el));
+      setTimeout(() => els.forEach(show), 1500);
+    } else {
+      els.forEach(show);
+    }
   }
 </script>

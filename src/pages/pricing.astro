@@ -201,8 +201,8 @@ const serviceSchema = {
   </section>
 
   <section class="section testimonials">
-    <h2>What clients say</h2>
-    <div class="testimonial-grid">
+    <h2 class="rv">What clients say</h2>
+    <div class="testimonial-grid stagger">
       {testimonials.map((t) => (
         <figure class="testimonial">
           <blockquote>"{t.quote}"</blockquote>
@@ -213,8 +213,8 @@ const serviceSchema = {
   </section>
 
   <section class="section pricing-faq">
-    <h2>FAQ</h2>
-    <div class="faq-list">
+    <h2 class="rv">FAQ</h2>
+    <div class="faq-list stagger">
       {faqs.map((f) => (
         <details class="faq-item">
           <summary>{f.q}</summary>
@@ -556,6 +556,26 @@ const serviceSchema = {
     to { opacity: 1; transform: none; }
   }
 
+  /* ---- Motion: scroll reveal for the testimonials + FAQ sections below the fold ---- */
+  :global(.reveal) .rv {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .rv.in { opacity: 1; transform: none; }
+  :global(.reveal) .stagger > * {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  :global(.reveal) .stagger.in > * { opacity: 1; transform: none; }
+  :global(.reveal) .stagger.in > *:nth-child(2) { transition-delay: 0.06s; }
+  :global(.reveal) .stagger.in > *:nth-child(3) { transition-delay: 0.12s; }
+  :global(.reveal) .stagger.in > *:nth-child(4) { transition-delay: 0.18s; }
+  /* FAQ list runs to 8 items; cap the cascade instead of letting it grow another 8 steps. */
+  :global(.reveal) .stagger.in > *:nth-child(5) { transition-delay: 0.24s; }
+  :global(.reveal) .stagger.in > *:nth-child(n+6) { transition-delay: 0.24s; }
+
   /* ---- Responsive ---- */
   @media (max-width: 800px) {
     .section.pricing { padding-top: 64px; padding-bottom: 64px; }
@@ -611,5 +631,25 @@ const serviceSchema = {
         if (btn) { btn.disabled = false; btn.textContent = label; }
       }
     });
+  }
+</script>
+
+<script>
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
+  if (!reduce.matches) {
+    document.documentElement.classList.add("reveal");
+    const els = document.querySelectorAll(".rv, .stagger");
+    const show = (el) => el.classList.add("in");
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) { show(entry.target); io.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -8% 0px" });
+      els.forEach((el) => io.observe(el));
+      setTimeout(() => els.forEach(show), 1500);
+    } else {
+      els.forEach(show);
+    }
   }
 </script>
