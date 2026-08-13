@@ -15,4 +15,8 @@ Make the one-person studio model feel like an advantage by showing direct accoun
 
 ## Open items
 
-- Replace the principles-section photo placeholder with a real candid workspace or process photo of Alex.
+- None.
+
+## Visual notes
+
+- The principles section is a centered row of three simple text cards that stacks on mobile. It deliberately avoids a second founder portrait and repeated product imagery.

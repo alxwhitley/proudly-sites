@@ -18,7 +18,7 @@ const testimonials = [
       OWN-WORLD: the homepage's Grounded Workshop, inherited whole - Warm Cream ground, Espresso Black close, Fraunces editorial headings on Lato text, Honey Gold decorating only, one Burnt Terracotta stacked-shadow CTA.
       STORY: a skeptical, referred founder reads why Proudly exists, how Alex works, and the honest answer to "is one person enough," then takes the ask.
       FIRST VIEWPORT: two columns - H1 "The Person Behind Your Project" plus a short lead left, Alex's real 4:5 headshot right; the primary action waits at the close.
-      FORM: established-world extension (no concept roll). Reshaped 2026-08-07: the old build ran three consecutive single-column text blocks (Story, Principles, Question) with no structural break between them. New grammar - asymmetric split (Story), a standalone full-width thesis band (Oat), a photo-split (Principles, alternating side from the hero), then Question stands alone as the one deliberate minimal beat. Principles photo is an on-palette placeholder pending Alex's real workspace shot - swap before ship, see assets.md.
+      FORM: established-world extension (no concept roll). Reshaped 2026-08-13: asymmetric split (Story), a standalone full-width thesis band (Oat), then three centered principle cards. The principles section is intentionally text-only so the working commitments stay clear and the page does not repeat the product imagery used elsewhere.
       FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md.
     -->
     <div class="hero-copy">
@@ -59,14 +59,7 @@ const testimonials = [
     <div class="principles-head rv">
       <h2>Three things I won&rsquo;t compromise on</h2>
     </div>
-    <div class="principles-grid">
-      <figure class="principles-visual rv">
-        <div class="ph-panel" role="img" aria-label="Alex at work in his studio - real photo pending">
-          <span>Alex, at work</span>
-          <small>Real photo pending</small>
-        </div>
-      </figure>
-      <ol class="principle-list stagger">
+    <ol class="principle-list stagger">
         <li class="principle">
           <span class="principle-num" aria-hidden="true">1</span>
           <div>
@@ -88,8 +81,7 @@ const testimonials = [
             <p>I don&rsquo;t build funnels. I build sites that make the trust you&rsquo;ve already earned visible, so every referral arrives and thinks &ldquo;yes, this is what I was told.&rdquo;</p>
           </div>
         </li>
-      </ol>
-    </div>
+    </ol>
   </section>
 
   <div class="cred">
@@ -208,8 +200,11 @@ const testimonials = [
     max-width: 22ch;
   }
 
-  /* ---- Principles: photo-split (alternates side from hero), numbered list ---- */
-  .principles-head { margin-bottom: 44px; }
+  /* ---- Principles: centered three-card statement ---- */
+  .principles-head {
+    margin: 0 auto 44px;
+    text-align: center;
+  }
   .principles-head h2 {
     font-family: "Fraunces", Georgia, serif;
     font-weight: 500;
@@ -218,59 +213,31 @@ const testimonials = [
     letter-spacing: -0.03em;
     margin: 0;
   }
-  .principles-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: clamp(36px, 5vw, 72px);
-    align-items: start;
-  }
-  .principles-visual {
-    position: sticky;
-    top: 96px;
+  .principle-list {
+    list-style: none;
     margin: 0;
-    background: var(--sand);
-    border-radius: 16px;
-    padding: clamp(18px, 2vw, 26px);
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
   }
-  .ph-panel {
+  .principle {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 10px;
-    aspect-ratio: 4 / 5;
-    background: var(--oat);
+    min-height: 100%;
+    padding: clamp(28px, 3vw, 40px) clamp(22px, 2.5vw, 32px);
     border: 1px solid var(--line);
-    border-radius: 10px;
+    border-radius: 14px;
+    background: var(--white);
     text-align: center;
-    padding: 24px;
   }
-  .ph-panel span {
-    font-family: "Fraunces", Georgia, serif;
-    font-size: 20px;
-    color: var(--espresso);
-  }
-  .ph-panel small {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #655b54;
-  }
-  .principle-list { list-style: none; margin: 0; padding: 0; }
-  .principle {
-    display: grid;
-    grid-template-columns: 64px 1fr;
-    gap: 24px;
-    align-items: start;
-    padding: 32px 0;
-    border-top: 1px solid var(--line);
-  }
-  .principle-list li:last-child { border-bottom: 1px solid var(--line); }
   .principle-num {
     font-family: "Fraunces", Georgia, serif;
     font-size: 32px;
     line-height: 1;
     color: #6d635c;
+    margin-bottom: 22px;
   }
   .principle h3 {
     font-family: "Fraunces", Georgia, serif;
@@ -284,8 +251,8 @@ const testimonials = [
     font-size: 16px;
     line-height: 1.65;
     color: var(--muted);
-    margin: 0;
-    max-width: 46ch;
+    margin: 0 auto;
+    max-width: 34ch;
   }
 
   /* ---- Testimonials: index.astro's review-grid card pattern, reused as-is ---- */
@@ -416,12 +383,9 @@ const testimonials = [
 
   /* ---- Responsive ---- */
   @media (max-width: 900px) {
-    .story-grid,
-    .principles-grid {
-      grid-template-columns: 1fr;
-    }
-    .story-head,
-    .principles-visual { position: static; }
+    .story-grid { grid-template-columns: 1fr; }
+    .story-head { position: static; }
+    .principle-list { grid-template-columns: 1fr; }
   }
   @media (max-width: 800px) {
     .section.about-hero {
@@ -436,9 +400,8 @@ const testimonials = [
     .story-grid { gap: 24px; }
     .thesis-line { max-width: none; }
 
-    .principles-visual { max-width: 280px; margin: 0 auto; }
-    .principle { grid-template-columns: auto 1fr; gap: 18px; padding: 28px 0; }
-    .principle-num { font-size: 24px; }
+    .principle { padding: 30px 24px; }
+    .principle-num { font-size: 24px; margin-bottom: 18px; }
 
     .closing-copy p { font-size: 16px; }
 
