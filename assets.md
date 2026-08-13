@@ -24,9 +24,9 @@ When Alex supplies two screenshots for a case-study product image, stitch them v
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/strictly-clean-detailing` hero | placeholder | No local asset; CMS unreachable. CSS panel, not an image file. Swap for a real Strictly Clean photo/screenshot when available. |
 | On-palette placeholder panel (Oat, "Live-site capture pending") | `/work/after-hours-ministry` hero | placeholder | No local asset; CMS unreachable. Swap for a real After Hours photo/screenshot when available. |
 | Strictly Clean "Kevin W." quote | `/work/strictly-clean-detailing` quote band | missing | Real quote lives in the unreachable CMS. Quote band OMITTED rather than fabricated. Supply the real quote to add it. |
-| `src/assets/case-studies/after-hours-ministry/work-index.jpeg` | `/work` index card (After Hours) | real | Approved 4:3 browser-frame capture supplied by Alex. |
-| `src/assets/case-studies/vital-watch/work-index.jpeg` | `/work` index card (Vital Watch) | real | Approved 4:3 browser-frame capture supplied by Alex; the card links directly to the live site. |
-| On-palette placeholder panel (Oat, "Capture pending") | `/work` index card (Strictly Clean) | placeholder | Card now links directly to the live site; a dedicated thumbnail is still pending. |
+| `src/assets/case-studies/after-hours-ministry/work-index.jpeg` | `/work` index card + `/services/web-design` proof row (After Hours) | real | Approved 4:3 browser-frame capture supplied by Alex. |
+| `src/assets/case-studies/Strictly-clean/work-index.jpeg` | `/work` index card (Strictly Clean) | real | Approved 4:3 browser-frame capture supplied by Alex; the card opens the live site in the shared preview modal. |
+| `src/assets/case-studies/vital-watch/work-index.jpeg` | `/work` index card (Vital Watch) | real | Approved 4:3 browser-frame capture supplied by Alex; served with responsive high-density renditions and linked directly to the live site. |
 | `src/assets/case-studies/smith-cash-family-law/case-study-section-{1,2,3}.png` | Smith Cash case product-proof rows | real | Three approved stitched browser images, presented in section order with transparent surroundings. |
 | `src/assets/case-studies/legacy-renovations/section1-branding.png` and `section{2,3}-browser.png` | Legacy case product-proof rows | real | Approved transparent brand mark followed by two stitched browser images. |
 | `src/assets/case-studies/after-hours-ministry/section1-browser.webm`, `case-study-section2.png`, and `section3-mobile.webm` | After Hours case product-proof rows | real | Approved desktop browser video, stitched browser still, then mobile-behavior video without browser chrome. The uploaded ProRes alpha masters remain untouched and uncommitted; tracked VP9-alpha derivatives are the browser-deliverable versions. |
@@ -38,7 +38,7 @@ When Alex supplies two screenshots for a case-study product image, stitch them v
 |---|---|---|---|
 | Smith Cash canonical case image | `/services/branding` + `/services/web-design` proof 1 | real | Imported from its route-owned folder under `src/assets/case-studies/`. |
 | Legacy canonical case image | `/services/branding` + `/services/web-design` proof 2 | real | Imported from its route-owned folder under `src/assets/case-studies/`. |
-| On-palette placeholder panel (Oat, "Live-site capture pending") | `/services/branding` + `/services/web-design` proof 3 (After Hours) | placeholder | No local After Hours asset; CMS unreachable. Swap for a real After Hours brand-in-context capture when available. |
+| On-palette placeholder panel (Oat, "Live-site capture pending") | `/services/branding` proof 3 (After Hours) | placeholder | No local After Hours brand-in-context asset; CMS unreachable. Swap for a real brand capture when available. |
 | `src/assets/services/ai-and-search-visibility/search-console-performance.jpeg` | `/services/ai-and-search-visibility` story section | real | Real Google Search Console performance for a client site (clf-church.com visible in the screenshot). Fills the runbook B4 proof gap. Ships unoptimized (1MB, matching the branding page's own proof images) — a compression pass is still open. |
 
 ## Studios

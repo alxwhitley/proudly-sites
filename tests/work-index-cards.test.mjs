@@ -6,7 +6,7 @@ const workIndexPath = new URL("../dist/work/index.html", import.meta.url);
 
 test("work index renders five project cards", async () => {
   const html = await readFile(workIndexPath, "utf8");
-  const cards = html.match(/class="work-card rv"/g) ?? [];
+  const cards = html.match(/class="work-card rv(?: js-live-site)?"/g) ?? [];
 
   assert.equal(cards.length, 5);
   assert.match(html, /Vital Watch/);
@@ -19,13 +19,20 @@ test("external-only cards use safe live-site links", async () => {
 
   assert.match(
     html,
-    /href="https:\/\/www\.vitalwatch24\.com\/"[^>]*target="_blank"[^>]*rel="noopener noreferrer"/
+    /class="work-card rv js-live-site"[^>]*href="https:\/\/www\.vitalwatch24\.com\/"[^>]*data-live-url="https:\/\/www\.vitalwatch24\.com\/"/
   );
   assert.match(
     html,
-    /href="https:\/\/www\.strictlycleandetailing\.com\/"[^>]*target="_blank"[^>]*rel="noopener noreferrer"/
+    /class="work-card rv js-live-site"[^>]*href="https:\/\/www\.strictlycleandetailing\.com\/"[^>]*data-live-url="https:\/\/www\.strictlycleandetailing\.com\/"/
   );
   assert.match(html, /href="\/work\/smith-cash-family-law"/);
   assert.match(html, /href="\/work\/legacy-renovations"/);
   assert.match(html, /href="\/work\/after-hours-ministry"/);
+});
+
+test("Strictly Clean card uses its approved work-index image", async () => {
+  const html = await readFile(workIndexPath, "utf8");
+
+  assert.match(html, /Strictly Clean Detailing website shown in a desktop browser frame/);
+  assert.doesNotMatch(html, /Strictly Clean Detailing - live-site capture pending/);
 });

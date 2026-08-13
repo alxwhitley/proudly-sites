@@ -1,10 +1,10 @@
 ## Now
 
-**Current Priority:** The `/work` index card refresh is live in Vercel production as `dpl_4F3orooKqt1RRBKe5iTyom4Zo21V`: After Hours uses Alex's supplied browser-frame image, VitalWatch is a fifth card with its supplied image and direct live-site link, and Strictly Clean links directly to its live site. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Current Priority:** The `/work` index card refresh remains live in Vercel production as `dpl_4F3orooKqt1RRBKe5iTyom4Zo21V`. A project-level fast path now governs bounded Proudly edits to reduce token use and workflow ceremony. The Web3Forms placeholder key remains the highest-priority production blocker.
 
-**Verification done:** `npm run build` — 14 routes, zero errors; `node --test tests/work-index-cards.test.mjs` — 2/2 passing. Headless Chromium at 1440px/390px confirmed five cards, correct internal/external destinations, safe new-tab attributes, fully loaded After Hours/VitalWatch images, zero console issues, and zero horizontal overflow.
+**Verification done:** `npm run build` — 14 routes, zero errors; `node --test tests/work-index-cards.test.mjs` — 3/3 passing. Playwright at 1440px/390px confirmed the sharper responsive `/work` imagery, the new Strictly Clean card image, and both external cards opening their correct URLs in the shared preview modal. Headless Chromium also confirmed the unframed Web Design proof images and real After Hours capture.
 
-**Branch state:** `main` was pushed through `f2af910` before deployment; this documentation-only production record follows. The only remaining untracked files are the two intentionally local After Hours source `.mov` files and the pre-existing unused `after-hours-tiktok-logo-showcase.png`; none were touched.
+**Branch state:** `main` is pushed through `295d215`; the fast-path policy and this closeout record are local and not yet pushed. The only remaining untracked files are the two intentionally local After Hours source `.mov` files and the pre-existing unused `after-hours-tiktok-logo-showcase.png`; none were touched.
 
 **Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
 
@@ -110,6 +110,24 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Thursday Aug 13, 2026 · Morning, fast-path image batch] — Code
+
+- **Did:** Added responsive 640/960/1280px renditions to `/work` card images so VitalWatch stays sharp on high-density displays; added Alex's Strictly Clean `work-index.jpeg`; routed both external work cards through the homepage's shared live-site preview modal; removed the beige outer frames from `/services/web-design` proof images; replaced its After Hours placeholder with the approved `work-index.jpeg` capture.
+- **Decided:** Reused the existing route-owned After Hours asset instead of duplicating the binary. Preserved real external URLs as no-JavaScript/new-tab fallbacks while intercepting enhanced clicks for the shared modal. Applied responsive output to every `/work` image card so the grid has consistent rendering quality.
+- **Verified:** `git diff --check`; red-green focused coverage followed by `node --test tests/work-index-cards.test.mjs` (3/3); `npm run build` (14 routes); Impeccable detector (one pre-existing off-ramp fluid font endpoint only); Playwright at 1440px and 390px confirmed the Strictly Clean image loads, both modal triggers open, and each iframe receives the correct external URL; headless Chromium full-page checks covered `/work` and `/services/web-design`.
+- **Blocked:** Not committed, pushed, or deployed. The Web3Forms key remains the standing production blocker.
+
+**Files touched:** `src/pages/work/index.astro`; `src/layouts/BaseLayout.astro`; `src/pages/services/web-design.astro`; `tests/work-index-cards.test.mjs`; `assets.md`; `plan.md`; added `src/assets/case-studies/Strictly-clean/work-index.jpeg`.
+
+### [Tuesday Aug 11, 2026 · Evening, workflow] — Docs
+
+- **Did:** Added a project-level fast path to `AGENTS.md` for bounded Proudly changes. Eligible copy, image, isolated CSS/layout, link, accessibility, and existing-pattern edits now proceed directly without brainstorming interviews, committed specs/plans, worktrees, manufactured tests, repeated verification, or multiple process commits.
+- **Decided:** Made the fast path the default when one clear outcome fits within three existing source files plus related assets/tests, while retaining the normal workflow for architecture, dependencies, schemas, security, destructive work, broad redesigns, ambiguity, or cross-system changes. Defined `fast path` as an explicit trigger and `ship` as authorization for one consolidated commit/push/deploy/verify/closeout workflow.
+- **Verified:** `git diff --check` and focused diff review. This is an instruction-only change; no site build or browser pass is warranted under the new policy.
+- **Blocked:** None. The Web3Forms key remains the standing production blocker.
+
+**Files touched:** `AGENTS.md`; `plan.md` (`## Now`, this entry).
 
 ### [Tuesday Aug 11, 2026 · Evening, deployment] — Code
 

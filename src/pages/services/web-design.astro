@@ -13,10 +13,9 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import smithCashImage from "../../assets/case-studies/smith-cash-family-law/hero.jpeg";
 import legacyImage from "../../assets/case-studies/legacy-renovations/hero.jpeg";
+import afterHoursImage from "../../assets/case-studies/after-hours-ministry/work-index.jpeg";
 
-// Real client proof. Images are real existing assets where available; the After
-// Hours slot has no local asset and the Framer CMS was unreachable this session,
-// so it uses an on-palette placeholder panel (logged to assets.md + morning queue).
+// Real client proof using approved local case-study captures.
 const proof = [
   {
     client: "Smith Cash Family Law",
@@ -34,7 +33,8 @@ const proof = [
   },
   {
     client: "After Hours Ministry",
-    image: null,
+    image: afterHoursImage.src,
+    imageAlt: "After Hours Ministry website shown in a desktop browser frame",
     caption:
       "A ministry site has to feel personal, not corporate. The design carries the founder’s voice on the page the same way it reads in person.",
   },
@@ -156,9 +156,8 @@ const siblings = [
   }
   .proof-row.reverse .proof-visual { order: 2; }
   .proof-visual {
-    background: var(--sand);
     border-radius: 16px;
-    padding: clamp(20px, 2.4vw, 32px);
+    overflow: hidden;
   }
   .proof-visual img {
     width: 100%;

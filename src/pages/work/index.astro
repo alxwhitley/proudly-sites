@@ -12,6 +12,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import afterHoursWorkIndex from "../../assets/case-studies/after-hours-ministry/work-index.jpeg";
+import strictlyCleanWorkIndex from "../../assets/case-studies/Strictly-clean/work-index.jpeg";
 import vitalWatchWorkIndex from "../../assets/case-studies/vital-watch/work-index.jpeg";
 
 const cases = (await getCollection("caseStudies", ({ data }) => data.status === "published"))
@@ -35,10 +36,16 @@ const workCards: WorkCard[] = cases.map(({ data: c }) => {
 
   return {
     ...c,
-    image: isAfterHours ? afterHoursWorkIndex : c.heroImage,
+    image: isAfterHours
+      ? afterHoursWorkIndex
+      : isStrictlyClean
+        ? strictlyCleanWorkIndex
+        : c.heroImage,
     imageAlt: isAfterHours
       ? "After Hours Ministry website shown in a desktop browser frame"
-      : c.heroAlt,
+      : isStrictlyClean
+        ? "Strictly Clean Detailing website shown in a desktop browser frame"
+        : c.heroAlt,
     href: isStrictlyClean
       ? "https://www.strictlycleandetailing.com/"
       : `/work/${c.slug}`,
@@ -79,14 +86,21 @@ workCards.push({
     <div class="work-grid stagger">
       {workCards.map((c) => (
         <a
-          class="work-card rv"
+          class:list={["work-card", "rv", { "js-live-site": c.external }]}
           href={c.href}
+          data-live-url={c.external ? c.href : undefined}
           target={c.external ? "_blank" : undefined}
           rel={c.external ? "noopener noreferrer" : undefined}
         >
           <div class="work-visual">
             {c.image
-              ? <Image src={c.image} alt={c.imageAlt} loading="lazy" width={640} height={480} />
+              ? <Image
+                  src={c.image}
+                  alt={c.imageAlt}
+                  loading="lazy"
+                  widths={[640, 960, 1280]}
+                  sizes="(max-width: 720px) 100vw, 50vw"
+                />
               : <div class="ph-panel" role="img" aria-label={`${c.title} - live-site capture pending`}><span>{c.title}</span><small>Live-site capture pending</small></div>}
           </div>
           <p class="work-tag">{c.location ? `${c.niche} · ${c.location}` : c.niche}</p>
