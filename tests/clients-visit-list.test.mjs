@@ -50,4 +50,12 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
+
+  assert.match(html, />Sent</);
+  const emailedTrue = stops.filter((stop) => stop.emailed === true);
+  assert.equal(emailedTrue.length, 0);
+  assert.ok(stops.every((stop) => stop.emailed === false));
+  const checkboxes = html.match(/type="checkbox"/g) ?? [];
+  assert.equal(checkboxes.length, stops.length);
+  assert.doesNotMatch(html, /type="checkbox"[^>]*checked/);
 });
