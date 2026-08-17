@@ -118,7 +118,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 ### [Monday Aug 17, 2026 · /clients Instagram column] — Code
 
 - **Did:** Added `instagram` on every stop in `src/data/field-visits.json` and a dense IG column after Website. Filled only handles published on the business site (or official same-name/same-city page). Left blank when none was published.
-- **Verified:** Live-site lookups for all 31 leads; build + clients HTML test pending on this branch.
+- **Verified:** Live-site lookups for all 31 leads. `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed. Playwright at 1440px and 390px: IG column after Website, `@fusioneyecarenc` links, Peck stays blank, `noindex`, no marketing chrome.
 - **Shipped:** Branch `cursor/clients-instagram-7a82`. Not merged.
 
 ### [Monday Aug 17, 2026 · /clients Visit ratings] — Code
