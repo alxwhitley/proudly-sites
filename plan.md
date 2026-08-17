@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** Unlisted `/clients` field-visit list is implemented on `cursor/clients-visit-list-7a82` (PR open). Live production `/clients` was a header/footer stub; the new page reads six 27613 loops from `src/data/field-visits.json`, stays off the marketing nav, and is `noindex`.
+**Current Priority:** `/clients` Instagram column is on `cursor/clients-instagram-7a82` (PR open, do not merge until Alex says so). Every lead now has an `instagram` string; 13 verified published handles are filled, 18 stay blank. Ratings, visit flags, and Sent are unchanged.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Monday Aug 17, 2026 · /clients Instagram column] — Code
+
+- **Did:** Added `instagram` on every stop in `src/data/field-visits.json` and a dense IG column after Website. Filled only handles published on the business site (or official same-name/same-city page). Left blank when none was published.
+- **Verified:** Live-site lookups for all 31 leads; build + clients HTML test pending on this branch.
+- **Shipped:** Branch `cursor/clients-instagram-7a82`. Not merged.
 
 ### [Monday Aug 17, 2026 · /clients Visit ratings] — Code
 

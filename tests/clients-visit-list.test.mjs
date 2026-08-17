@@ -46,12 +46,27 @@ test("clients page renders a dense lead table from the data file", async () => {
       if (stop.industry) {
         assert.ok(html.includes(decode(stop.industry)), `missing industry for ${stop.name}`);
       }
+      assert.equal(typeof stop.instagram, "string", `${stop.name} is missing instagram`);
+      if (stop.instagram) {
+        const handle = stop.instagram.replace(/^@/, "");
+        assert.match(stop.instagram, /^@[A-Za-z0-9._]+$/, `${stop.name} instagram must be @handle`);
+        assert.ok(html.includes(`@${handle}`), `missing IG label for ${stop.name}`);
+        assert.ok(
+          html.includes(`instagram.com/${handle}`),
+          `missing IG link for ${stop.name}`
+        );
+      }
     }
   }
 
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
+
+  assert.match(html, />IG</);
+  const withInstagram = stops.filter((stop) => stop.instagram);
+  assert.ok(withInstagram.length >= 10, "verified published Instagram handles should be present");
+  assert.ok(withInstagram.length < stops.length, "leads without a published handle stay blank");
 
   assert.match(html, />Sent</);
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
