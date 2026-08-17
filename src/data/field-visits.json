@@ -17,7 +17,8 @@
           "typicallyClosed": "Closed Sat, Sun",
           "phone": "919-834-2330",
           "website": "https://hampsonfamilylaw.com/",
-          "note": "Call Friday afternoon - they may already be closed."
+          "note": "Call Friday afternoon - they may already be closed.",
+          "industry": "Law"
         },
         {
           "name": "Fusion Eye Care",
@@ -26,7 +27,8 @@
           "typicallyClosed": "Closed Sat, Sun",
           "phone": "919-977-7480",
           "website": "https://www.fusioneyecare.com/",
-          "note": "Closest medical stop. Shares lobby with Fusion Dental."
+          "note": "Closest medical stop. Shares lobby with Fusion Dental.",
+          "industry": "Eye care"
         },
         {
           "name": "The Peck Law Firm",
@@ -34,7 +36,8 @@
           "hours": "Not published - call first",
           "phone": "919-376-5411",
           "website": "https://pecklawfirm.net/",
-          "note": "Dated owner-named site."
+          "note": "Dated owner-named site.",
+          "industry": "Law"
         },
         {
           "name": "Capital Dermatology of NC",
@@ -43,7 +46,8 @@
           "typicallyClosed": "Closed Mon, Sat, Sun",
           "phone": "919-307-9461",
           "website": "https://capitalderm.com/",
-          "note": "CLOSED MONDAY."
+          "note": "CLOSED MONDAY.",
+          "industry": "Dermatology"
         },
         {
           "name": "Bowman Animal Hospital",
@@ -52,7 +56,8 @@
           "typicallyClosed": "Closed Sun",
           "phone": "919-847-6216",
           "website": "https://bowmananimalhospital.com/",
-          "note": "Saturday morning works."
+          "note": "Saturday morning works.",
+          "industry": "Veterinary"
         }
       ]
     },
@@ -69,7 +74,8 @@
           "hours": "Sunday worship 8am and 10am. Weekday office not published.",
           "phone": "919-787-4528",
           "website": "https://baptistgrovechurch.org/",
-          "note": "0.3 mi. Flag: they use progressive as worship-style language."
+          "note": "0.3 mi. Flag: they use progressive as worship-style language.",
+          "industry": "Church"
         },
         {
           "name": "Newpath Church",
@@ -77,7 +83,8 @@
           "hours": "Sunday Raleigh service 9:15am. Weekday office not published.",
           "phone": "919-307-7803",
           "website": "https://newpathchurch.com/",
-          "note": "0.2 mi."
+          "note": "0.2 mi.",
+          "industry": "Church"
         },
         {
           "name": "Triangle Christian Center",
@@ -86,7 +93,8 @@
           "typicallyClosed": "Closed Sat",
           "phone": "919-846-0470",
           "website": "https://www.trianglechristiancenter.com/",
-          "note": "Wix."
+          "note": "Wix.",
+          "industry": "Church"
         },
         {
           "name": "Campbell Orthodontics",
@@ -94,7 +102,8 @@
           "hours": "Mon-Thu 7:45am-5pm (lunch 12:30-2); Fri 8am-3pm",
           "phone": "919-870-8298",
           "website": "http://www.ericcampbellortho.com/",
-          "note": "TeleVox 2009."
+          "note": "TeleVox 2009.",
+          "industry": "Orthodontics"
         },
         {
           "name": "Leesville Animal Hospital",
@@ -103,7 +112,8 @@
           "typicallyClosed": "Closed Sun",
           "phone": "919-870-7000",
           "website": "https://leesvilleanimalhospital.com/",
-          "note": "Next door to Campbell."
+          "note": "Next door to Campbell.",
+          "industry": "Veterinary"
         },
         {
           "name": "Omar Baloch Law",
@@ -111,7 +121,8 @@
           "phone": "919-834-3535",
           "website": "https://www.balochlaw.com/",
           "note": "Brier Creek extra.",
-          "extra": true
+          "extra": true,
+          "industry": "Law"
         }
       ]
     },
@@ -127,7 +138,8 @@
           "address": "7700 Lead Mine Rd, Raleigh NC 27615",
           "hours": "Not published - call first",
           "phone": "919-845-7880",
-          "website": "https://drmoreaplasticsurgery.com/"
+          "website": "https://drmoreaplasticsurgery.com/",
+          "industry": "Plastic surgery"
         },
         {
           "name": "Levy Law Offices",
@@ -135,7 +147,8 @@
           "hours": "Mon-Thu 9am-6pm; Fri 9am-5pm; Sat 9am-1pm",
           "typicallyClosed": "Closed Sun",
           "phone": "919-846-0125",
-          "website": "https://jnl-law.com/"
+          "website": "https://jnl-law.com/",
+          "industry": "Law"
         },
         {
           "name": "Kindrachuk & Gilchrist",
@@ -151,7 +164,8 @@
           "address": "6620 Six Forks Rd, Raleigh NC 27615",
           "hours": "Sunday worship 10:30am. Weekday office not published.",
           "phone": "919-847-4291",
-          "website": "https://www.northhavenraleigh.org/"
+          "website": "https://www.northhavenraleigh.org/",
+          "industry": "Church"
         },
         {
           "name": "Sisson Law Firm",
@@ -159,7 +173,8 @@
           "hours": "Not published - call first",
           "phone": "919-758-8204",
           "website": "https://www.sissonlawfirm.com/",
-          "email": "kevin@sissonlawfirm.com"
+          "email": "kevin@sissonlawfirm.com",
+          "industry": "Law"
         }
       ]
     },
@@ -175,7 +190,8 @@
           "address": "9121 Anson Way, Ste 200, Raleigh NC 27615",
           "hours": "Appointment only",
           "phone": "919-714-4996",
-          "website": "https://raleighrealestatelaw.com/"
+          "website": "https://raleighrealestatelaw.com/",
+          "industry": "Law"
         },
         {
           "name": "Raleigh Pediatric Dentistry",
@@ -184,7 +200,8 @@
           "typicallyClosed": "Closed Fri, Sat, Sun",
           "phone": "919-845-8212",
           "website": "https://www.raleighpediatricdentistry.com/",
-          "note": "Same building as Judge."
+          "note": "Same building as Judge.",
+          "industry": "Pediatric dentistry"
         },
         {
           "name": "Allergy Asthma & Sinus Center",
@@ -192,13 +209,15 @@
           "hours": "Injection hours Mon 8am-12pm; Wed 1-5pm; Fri 1-5pm",
           "phone": "919-870-6440",
           "website": "https://judgeallergyasthmasinus.com/",
-          "note": "May be closed Tue/Thu."
+          "note": "May be closed Tue/Thu.",
+          "industry": "Allergy"
         },
         {
           "name": "North Raleigh Church of Christ",
           "address": "8701 Falls of Neuse Rd, Raleigh NC 27615",
           "hours": "Sunday 10am; Wed 7pm. No public phone.",
-          "website": "https://www.northraleighchurch.org/"
+          "website": "https://www.northraleighchurch.org/",
+          "industry": "Church"
         },
         {
           "name": "North Ridge Church",
@@ -206,7 +225,8 @@
           "hours": "Office Mon-Thu 9am-3pm; Sunday 10:30am",
           "typicallyClosed": "Closed Fri, Sat",
           "phone": "919-847-1929",
-          "website": "https://northridgecma.org/"
+          "website": "https://northridgecma.org/",
+          "industry": "Church"
         }
       ]
     },
@@ -222,35 +242,40 @@
           "address": "226 W Millbrook Rd, Raleigh NC 27609",
           "hours": "Mon-Thu 9am-5pm; Fri 9am-1pm",
           "phone": "919-803-6778",
-          "website": "https://www.mcneillawfirm.com/"
+          "website": "https://www.mcneillawfirm.com/",
+          "industry": "Law"
         },
         {
           "name": "Julyan Canty Law",
           "address": "4208 Six Forks Rd, Ste 1000, Raleigh NC 27609",
           "hours": "10th floor, call first",
           "phone": "919-355-3114",
-          "website": "https://www.julyancantylaw.com/"
+          "website": "https://www.julyancantylaw.com/",
+          "industry": "Law"
         },
         {
           "name": "The Law Corner",
           "address": "211 E Six Forks Rd, Ste 106, Raleigh NC 27609",
           "hours": "Mon-Fri 9am-5pm",
           "phone": "919-424-8319",
-          "website": "https://www.thelawcorner.com/"
+          "website": "https://www.thelawcorner.com/",
+          "industry": "Law"
         },
         {
           "name": "Hormone Wellness MD",
           "address": "211 E Six Forks Rd, Bldg A Ste 120, Raleigh NC 27609",
           "hours": "Not published - call first",
           "phone": "919-364-3430",
-          "website": "https://hormonewellnessmd.com/"
+          "website": "https://hormonewellnessmd.com/",
+          "industry": "Hormone wellness"
         },
         {
           "name": "Oak City Estate Planning",
           "address": "5660 Six Forks Rd, Ste 202, Raleigh NC 27609",
           "hours": "Address from directories, not their site",
           "phone": "919-975-5359",
-          "website": "https://www.oakcityestateplanning.com/"
+          "website": "https://www.oakcityestateplanning.com/",
+          "industry": "Law"
         }
       ]
     },
@@ -266,7 +291,8 @@
           "address": "2501 Blue Ridge Rd, Ste 300, Raleigh NC 27607",
           "hours": "They also meet at homes",
           "phone": "919-741-6565",
-          "website": "https://www.carolinaestatecounsel.com/"
+          "website": "https://www.carolinaestatecounsel.com/",
+          "industry": "Law"
         },
         {
           "name": "The Morton Law Offices",
@@ -274,26 +300,30 @@
           "hours": "Weekday 9am-5pm",
           "phone": "919-863-4329",
           "website": "https://themortonlawoffices.com/",
-          "note": "GoDaddy."
+          "note": "GoDaddy.",
+          "industry": "Law"
         },
         {
           "name": "Edgerton Immigration Law",
           "address": "3717 National Dr, Ste 217, Raleigh NC 27612",
           "phone": "919-301-0055",
-          "website": "https://www.edgertonimmigration.com/"
+          "website": "https://www.edgertonimmigration.com/",
+          "industry": "Law"
         },
         {
           "name": "W.G. Alexander & Associates",
           "address": "3717 Benson Dr, Raleigh NC 27609",
           "phone": "919-256-7000",
-          "website": "https://wgalaw.com/"
+          "website": "https://wgalaw.com/",
+          "industry": "Law"
         },
         {
           "name": "Triangle Sinus Center",
           "address": "3906 Wake Forest Rd, Raleigh NC 27609",
           "hours": "Mon-Thu 8am-5pm; Fri 8am-12pm",
           "phone": "919-766-8989",
-          "website": "https://www.trianglesinuscenter.com/"
+          "website": "https://www.trianglesinuscenter.com/",
+          "industry": "Sinus"
         }
       ]
     }
