@@ -14,6 +14,7 @@
   an AI tell. See .impeccable/surfaces/src-pages-studios.md.
 */
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import InquiryForm from "../../components/InquiryForm.astro";
 
 // The fixed 8-page structure every Church Studio site ships with.
 const pages = [
@@ -193,14 +194,13 @@ const faqs = [
     <p class="close-lead">Tell me about your church and I&rsquo;ll come back with an exact number and a start date. You&rsquo;ll work with me directly, from the first message through launch.</p>
 
     <div class="inquiry-card">
-      <form id="studio-form" action="https://api.web3forms.com/submit" method="POST">
-        <!-- TODO: replace with the real Web3Forms access key (public, safe to commit). -->
-        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-        <input type="hidden" name="subject" value="New Church Studio inquiry from proudlysites.com" />
-        <input type="hidden" name="from_name" value="Proudly Sites — Church Studio" />
-        <!-- Honeypot: real people leave this untouched; bots trip it. -->
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
-
+      <InquiryForm
+        subject="New Church Studio inquiry from proudlysites.com"
+        fromName="Proudly Sites — Church Studio"
+        submitLabel="Start Your Church Studio Project"
+        theme="dark"
+        headingLevel="h3"
+      >
         <div class="field-row">
           <div class="field">
             <label for="sf-name">Name <span class="req" aria-hidden="true">*</span></label>
@@ -221,23 +221,7 @@ const faqs = [
           <label for="sf-message">Message <span class="req" aria-hidden="true">*</span></label>
           <textarea id="sf-message" name="message" rows="5" required placeholder="Tell me about your church, your current site, and what's prompting the rebuild."></textarea>
         </div>
-
-        <p class="form-error" id="studio-form-error" role="alert" hidden>
-          Something went wrong sending that. Email me directly at
-          <a href="mailto:alex@proudlysites.com">alex@proudlysites.com</a> and I&rsquo;ll get right back to you.
-        </p>
-
-        <button type="submit" class="primary-button form-submit">Start Your Church Studio Project</button>
-        <p class="form-note">You&rsquo;ll hear back from me personally.</p>
-      </form>
-
-      <div class="form-success" id="studio-form-success" role="status" tabindex="-1" hidden>
-        <span class="success-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-        </span>
-        <h3>Message sent</h3>
-        <p>Thanks, it&rsquo;s on its way. You&rsquo;ll hear back from me personally.</p>
-      </div>
+      </InquiryForm>
     </div>
   </section>
 </BaseLayout>
@@ -606,97 +590,6 @@ const faqs = [
     padding: 36px;
   }
 
-  .field { margin-bottom: 18px; }
-  .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .field label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 7px;
-  }
-  .req { color: var(--terracotta); }
-
-  .field input,
-  .field textarea {
-    width: 100%;
-    font-family: inherit;
-    font-size: 16px;
-    color: var(--espresso);
-    background: var(--cream);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    padding: 12px 14px;
-    transition: border-color 0.18s ease, box-shadow 0.18s ease;
-  }
-  .field textarea { resize: vertical; min-height: 120px; line-height: 1.5; }
-  .field input::placeholder,
-  .field textarea::placeholder { color: #6d635c; }
-  .field input:focus,
-  .field textarea:focus {
-    outline: none;
-    border-color: var(--terracotta);
-    box-shadow: 0 0 0 3px color-mix(in srgb, var(--terracotta) 18%, transparent);
-  }
-
-  /* Honeypot stays off-screen for humans. */
-  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-
-  .form-error {
-    font-size: 14px;
-    line-height: 1.5;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 8px;
-    padding: 12px 14px;
-    margin: 0 0 18px;
-  }
-  .form-error a { color: #fff; text-decoration: underline; }
-
-  button.primary-button.form-submit {
-    width: 100%;
-    margin-top: 6px;
-    font-family: inherit;
-    cursor: pointer;
-  }
-  .form-note {
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
-    text-align: center;
-    margin: 14px 0 0;
-  }
-
-  .form-success { text-align: center; padding: 24px 8px; }
-  .form-success:focus { outline: none; }
-  .success-mark {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
-    margin-bottom: 18px;
-  }
-  .success-mark svg { width: 26px; height: 26px; }
-  .form-success h3 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 500;
-    font-size: 24px;
-    letter-spacing: -0.02em;
-    color: #fff;
-    margin: 0 0 10px;
-  }
-  .form-success p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.72);
-    margin: 0 auto;
-    max-width: 340px;
-  }
-
   /* ---- Motion: hero load fade-up; text reveals rise, images settle ---- */
   @media (prefers-reduced-motion: no-preference) {
     .hero-copy > * { opacity: 0; animation: studio-rise 0.6s cubic-bezier(0.16, 1, 0.3, 1) both; }
@@ -764,7 +657,6 @@ const faqs = [
     .pullquote { margin: 28px 0; padding-left: 20px; }
     .close-lead { font-size: 16px; }
     .inquiry-card { padding: 26px 22px; }
-    .field-row { grid-template-columns: 1fr; gap: 0; }
   }
 </style>
 
@@ -788,40 +680,5 @@ const faqs = [
     } else {
       els.forEach(show);
     }
-  }
-
-  // Dedicated Church Studio inquiry form: JS enhances to an inline success state;
-  // native POST to Web3Forms is the no-JS fallback.
-  const form = document.getElementById("studio-form") as HTMLFormElement | null;
-  const success = document.getElementById("studio-form-success");
-  const errorEl = document.getElementById("studio-form-error");
-
-  if (form && success && errorEl) {
-    form.addEventListener("submit", async (event) => {
-      event.preventDefault();
-      const btn = form.querySelector<HTMLButtonElement>('button[type="submit"]');
-      const label = btn ? btn.textContent : "";
-      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
-      errorEl.hidden = true;
-
-      try {
-        const res = await fetch(form.action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: { Accept: "application/json" },
-        });
-        const data = await res.json();
-        if (res.ok && data.success) {
-          form.hidden = true;
-          success.hidden = false;
-          (success as HTMLElement).focus();
-        } else {
-          throw new Error(data.message || "Request failed");
-        }
-      } catch (err) {
-        errorEl.hidden = false;
-        if (btn) { btn.disabled = false; btn.textContent = label; }
-      }
-    });
   }
 </script>

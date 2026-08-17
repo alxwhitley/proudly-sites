@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** The completed image/modal batch is live in Vercel production as `dpl_GvwPo3ZHa9GyndtKUn3zauwz8yuJ`. A project-level fast path governs bounded Proudly edits to reduce token use and workflow ceremony. The Web3Forms placeholder key remains the highest-priority production blocker.
+**Current Priority:** The Web3Forms placeholder-key blocker is fixed in the working tree (not yet committed/deployed). All three inquiry forms (`/contact`, `/pricing`, `/studios/church-studio`) now post with the real production access key via a new shared `src/components/InquiryForm.astro` component.
 
-**Verification done:** `npm run build` — 14 routes, zero errors; `node --test tests/work-index-cards.test.mjs` — 3/3 passing. Playwright at 1440px/390px confirmed the sharper responsive `/work` imagery, the new Strictly Clean card image, and both external cards opening their correct URLs in the shared preview modal. Headless Chromium also confirmed the unframed Web Design proof images and real After Hours capture.
+**Verification done:** `npm run build` — 14 routes, zero errors. Playwright against the static build (network calls to `api.web3forms.com` mocked, so no real test email was sent) confirmed on all three pages: the real access key is present in the submitted payload, the honeypot stays off-screen, the light/dark theme variant renders correctly (dark on Church Studio's Espresso Black card, light on contact/pricing), and the accessible inline success state fires after submit. Full-page screenshots reviewed at desktop.
 
-**Branch state:** `main` is pushed through implementation commit `d83ee69`; this deployment closeout update is the only new tracked change. The intentionally local After Hours `section2.mov` and pre-existing unused `after-hours-tiktok-logo-showcase.png` remain untracked and were excluded from the commit.
+**Branch state:** `main`, uncommitted. Modified: `src/pages/contact.astro`, `src/pages/pricing.astro`, `src/pages/studios/church-studio.astro`. Added: `src/components/InquiryForm.astro`. Also still untracked from a prior session (unrelated to this change): `src/assets/case-studies/after-hours-ministry/section2.mov`, `src/assets/services/branding/after-hours-tiktok-logo-showcase.png`.
 
-**Next Action:** Replace the Web3Forms placeholder key, still the highest-priority production blocker. Then continue the remaining follow-up backlog.
+**Next Action:** Alex to review and commit. Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
 ## Next Session Punch List
 
@@ -29,8 +29,8 @@ Visual polish batch from 2026-08-08 evening chat review (screenshots against liv
 Ordered by production impact. Each item should be handled as its own focused task or a tightly related pass.
 
 ### 1. Restore form submissions
-- Replace `YOUR_WEB3FORMS_ACCESS_KEY` in both `/contact` and Church Studio with the confirmed production key.
-- Verify successful submission, failure messaging, spam protection, and receipt at the intended inbox on both forms.
+- **Done (2026-08-17, uncommitted)** — real Web3Forms access key wired into `/contact`, `/pricing`, and `/studios/church-studio` via a shared `InquiryForm.astro` component. Honeypot, inline success/error states, and no-JS POST fallback preserved from the original per-page implementations.
+- **Still open:** verify actual inbox receipt with a real submission after this lands in production (only mocked-network testing has been done so far, deliberately, to avoid spamming the inbox with test sends pre-review).
 
 ### 2. Correct Legacy Renovations proof imagery
 - Replace the tile-repair/lead-capture screenshot used across the case, homepage, and service proof surfaces with imagery that matches the kitchen-and-bath narrative, or revise the narrative only if that screenshot is the actual product truth.
@@ -110,6 +110,15 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Monday Aug 17, 2026 · Web3Forms activation] — Code
+
+- **Did:** Replaced the `YOUR_WEB3FORMS_ACCESS_KEY` placeholder across `/contact`, `/pricing`, and `/studios/church-studio` with the real production key. Extracted the three near-duplicate form implementations into one shared `src/components/InquiryForm.astro`, which owns the Web3Forms hidden fields, honeypot, submit handler, accessible inline success/error states, and the shared field CSS; each page supplies only its own distinct fields via the component's default slot.
+- **Decided:** Added a `theme` prop (`light` default, `dark` for Church Studio's Espresso Black/Dark Card context) and a `headingLevel` prop (`h2`/`h3`) to preserve the two real visual/semantic differences between the three original forms, rather than forcing them identical. Used `:global()` selectors in the component's scoped styles for the field-level CSS since that markup is authored in the caller's slot content, not the component's own template. Kept per-page `subject`/`from_name` values so inbox messages stay attributable to their source page. Scope was expanded from the user's original ask (pricing + contact) to include Church Studio after confirming with Alex, since it carried the identical placeholder and plan.md already tracked it as part of the same blocker.
+- **Verified:** `npm run build` — 14 routes, zero errors. Playwright against the static build with `api.web3forms.com` network-mocked (intentionally, to avoid sending real test emails before review) confirmed on all three pages: real access key present in the submitted payload, honeypot stays off-screen, correct light/dark theme rendering, and the inline success state fires after submit. Screenshots reviewed at desktop.
+- **Blocked:** None for the code change itself. Real-inbox receipt is still unverified — see Follow-up Backlog #1.
+
+**Files touched:** `src/components/InquiryForm.astro` (new); `src/pages/contact.astro`; `src/pages/pricing.astro`; `src/pages/studios/church-studio.astro`; `plan.md`.
 
 ### [Thursday Aug 13, 2026 · Morning, fast-path image batch] — Code
 
