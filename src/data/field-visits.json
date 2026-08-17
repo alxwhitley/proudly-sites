@@ -19,7 +19,9 @@
           "website": "https://hampsonfamilylaw.com/",
           "note": "Call Friday afternoon - they may already be closed.",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 1,
+          "visit": false
         },
         {
           "name": "Fusion Eye Care",
@@ -30,7 +32,9 @@
           "website": "https://www.fusioneyecare.com/",
           "note": "Closest medical stop. Shares lobby with Fusion Dental.",
           "industry": "Eye care",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "The Peck Law Firm",
@@ -40,7 +44,9 @@
           "website": "https://pecklawfirm.net/",
           "note": "Dated owner-named site.",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 3,
+          "visit": true
         },
         {
           "name": "Capital Dermatology of NC",
@@ -51,7 +57,9 @@
           "website": "https://capitalderm.com/",
           "note": "CLOSED MONDAY.",
           "industry": "Dermatology",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Bowman Animal Hospital",
@@ -62,7 +70,9 @@
           "website": "https://bowmananimalhospital.com/",
           "note": "Saturday morning works.",
           "industry": "Veterinary",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         }
       ]
     },
@@ -81,7 +91,9 @@
           "website": "https://baptistgrovechurch.org/",
           "note": "0.3 mi. Flag: they use progressive as worship-style language.",
           "industry": "Church",
-          "emailed": false
+          "emailed": false,
+          "rating": 1,
+          "visit": false
         },
         {
           "name": "Newpath Church",
@@ -91,7 +103,9 @@
           "website": "https://newpathchurch.com/",
           "note": "0.2 mi.",
           "industry": "Church",
-          "emailed": false
+          "emailed": false,
+          "rating": 1,
+          "visit": false
         },
         {
           "name": "Triangle Christian Center",
@@ -102,7 +116,9 @@
           "website": "https://www.trianglechristiancenter.com/",
           "note": "Wix.",
           "industry": "Church",
-          "emailed": false
+          "emailed": false,
+          "rating": 3,
+          "visit": true
         },
         {
           "name": "Campbell Orthodontics",
@@ -112,7 +128,9 @@
           "website": "http://www.ericcampbellortho.com/",
           "note": "TeleVox 2009.",
           "industry": "Orthodontics",
-          "emailed": false
+          "emailed": false,
+          "rating": 3,
+          "visit": true
         },
         {
           "name": "Leesville Animal Hospital",
@@ -123,7 +141,9 @@
           "website": "https://leesvilleanimalhospital.com/",
           "note": "Next door to Campbell.",
           "industry": "Veterinary",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Omar Baloch Law",
@@ -133,7 +153,9 @@
           "note": "Brier Creek extra.",
           "extra": true,
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         }
       ]
     },
@@ -151,7 +173,9 @@
           "phone": "919-845-7880",
           "website": "https://drmoreaplasticsurgery.com/",
           "industry": "Plastic surgery",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Levy Law Offices",
@@ -161,7 +185,9 @@
           "phone": "919-846-0125",
           "website": "https://jnl-law.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Kindrachuk & Gilchrist",
@@ -171,7 +197,9 @@
           "phone": "919-847-5437",
           "website": "https://www.847kids.com/",
           "note": "CLOSED FRIDAY.",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "North Haven Church",
@@ -180,7 +208,9 @@
           "phone": "919-847-4291",
           "website": "https://www.northhavenraleigh.org/",
           "industry": "Church",
-          "emailed": false
+          "emailed": false,
+          "rating": 1,
+          "visit": false
         },
         {
           "name": "Sisson Law Firm",
@@ -190,7 +220,9 @@
           "website": "https://www.sissonlawfirm.com/",
           "email": "kevin@sissonlawfirm.com",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         }
       ]
     },
@@ -208,7 +240,9 @@
           "phone": "919-714-4996",
           "website": "https://raleighrealestatelaw.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Raleigh Pediatric Dentistry",
@@ -219,7 +253,9 @@
           "website": "https://www.raleighpediatricdentistry.com/",
           "note": "Same building as Judge.",
           "industry": "Pediatric dentistry",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Allergy Asthma & Sinus Center",
@@ -229,7 +265,9 @@
           "website": "https://judgeallergyasthmasinus.com/",
           "note": "May be closed Tue/Thu.",
           "industry": "Allergy",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "North Raleigh Church of Christ",
@@ -237,7 +275,9 @@
           "hours": "Sunday 10am; Wed 7pm. No public phone.",
           "website": "https://www.northraleighchurch.org/",
           "industry": "Church",
-          "emailed": false
+          "emailed": false,
+          "rating": 1,
+          "visit": false
         },
         {
           "name": "North Ridge Church",
@@ -247,7 +287,9 @@
           "phone": "919-847-1929",
           "website": "https://northridgecma.org/",
           "industry": "Church",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         }
       ]
     },
@@ -265,7 +307,9 @@
           "phone": "919-803-6778",
           "website": "https://www.mcneillawfirm.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Julyan Canty Law",
@@ -274,7 +318,9 @@
           "phone": "919-355-3114",
           "website": "https://www.julyancantylaw.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 1,
+          "visit": false
         },
         {
           "name": "The Law Corner",
@@ -283,7 +329,9 @@
           "phone": "919-424-8319",
           "website": "https://www.thelawcorner.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Hormone Wellness MD",
@@ -292,7 +340,9 @@
           "phone": "919-364-3430",
           "website": "https://hormonewellnessmd.com/",
           "industry": "Hormone wellness",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Oak City Estate Planning",
@@ -301,7 +351,9 @@
           "phone": "919-975-5359",
           "website": "https://www.oakcityestateplanning.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 1,
+          "visit": false
         }
       ]
     },
@@ -319,7 +371,9 @@
           "phone": "919-741-6565",
           "website": "https://www.carolinaestatecounsel.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "The Morton Law Offices",
@@ -329,7 +383,9 @@
           "website": "https://themortonlawoffices.com/",
           "note": "GoDaddy.",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 3,
+          "visit": true
         },
         {
           "name": "Edgerton Immigration Law",
@@ -337,7 +393,9 @@
           "phone": "919-301-0055",
           "website": "https://www.edgertonimmigration.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "W.G. Alexander & Associates",
@@ -345,7 +403,9 @@
           "phone": "919-256-7000",
           "website": "https://wgalaw.com/",
           "industry": "Law",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         },
         {
           "name": "Triangle Sinus Center",
@@ -354,7 +414,9 @@
           "phone": "919-766-8989",
           "website": "https://www.trianglesinuscenter.com/",
           "industry": "Sinus",
-          "emailed": false
+          "emailed": false,
+          "rating": 2,
+          "visit": false
         }
       ]
     }

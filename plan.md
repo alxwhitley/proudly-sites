@@ -115,6 +115,11 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 ## Recent
 
+### [Monday Aug 17, 2026 · /clients Visit ratings] — Code
+
+- **Did:** Scored every lead `rating` 1–3 from existing tells only; `visit` is true only at 3. Added General | Visit tabs. Visit list is Peck, Triangle Christian Center, Campbell Orthodontics, Morton (Wix / dated / TeleVox 2009 / GoDaddy).
+- **Verified:** Build + clients HTML test.
+
 ### [Monday Aug 17, 2026 · /clients Sent checkbox] — Code
 
 - **Did:** Added `emailed: false` on every lead in `src/data/field-visits.json` and a read-only Sent checkbox column after Stop. Source of truth is the JSON; no send history invented.

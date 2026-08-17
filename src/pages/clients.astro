@@ -27,6 +27,7 @@ const rows = sets.flatMap((set, setIndex) =>
 );
 
 const rowCount = rows.length;
+const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating === 3).length;
 ---
 
 <BaseLayout
@@ -46,6 +47,10 @@ const rowCount = rows.length;
         Home:
         <a href={homeMaps} target="_blank" rel="noopener noreferrer">{home.address}</a>
       </p>
+      <nav class="sheet-modes" aria-label="List mode">
+        <button type="button" class="is-selected" data-mode="general" aria-pressed="true">General</button>
+        <button type="button" data-mode="visit" aria-pressed="false">Visit · {visitCount}</button>
+      </nav>
       <nav class="sheet-tabs" aria-label="Industry filters">
         <button type="button" class="is-selected" data-filter="all" aria-pressed="true">All leads</button>
         <button type="button" data-filter="church" aria-pressed="false">Churches</button>
@@ -61,6 +66,7 @@ const rowCount = rows.length;
             <th scope="col">Set</th>
             <th scope="col">Stop</th>
             <th scope="col">Sent</th>
+            <th scope="col">Rate</th>
             <th scope="col">Name</th>
             <th scope="col">Industry</th>
             <th scope="col">Address</th>
@@ -76,10 +82,11 @@ const rowCount = rows.length;
             <tr
               data-group={group || undefined}
               data-set={set.id}
+              data-visit={stop.visit === true || stop.rating === 3 ? "true" : "false"}
               class:list={[{ "is-extra": stop.extra, "is-set-start": firstInSet, "is-sent": stop.emailed }]}
             >
               <td class="col-set">
-                <span class="set-num">{setNumber}</span>
+                <a class="set-num" href={set.mapsUrl} target="_blank" rel="noopener noreferrer" title="Open this loop in Maps">{setNumber}</a>
                 {firstInSet && (
                   <a class="loop-maps" href={set.mapsUrl} target="_blank" rel="noopener noreferrer">
                     Open this loop in Maps
@@ -95,6 +102,7 @@ const rowCount = rows.length;
                   aria-label={`Sent: ${stop.name}`}
                 />
               </td>
+              <td class="col-rate">{stop.rating ?? ""}</td>
               <td class="col-name">{stop.name}</td>
               <td class="col-industry">{stop.industry ?? ""}</td>
               <td class="col-address">
@@ -132,19 +140,30 @@ const rowCount = rows.length;
 </BaseLayout>
 
 <script>
+  const modes = document.querySelectorAll<HTMLButtonElement>("[data-mode]");
   const tabs = document.querySelectorAll<HTMLButtonElement>("[data-filter]");
   const rows = document.querySelectorAll<HTMLTableRowElement>("tbody tr");
   const countEl = document.querySelector("[data-row-count]");
+  let mode = "general";
+  let filter = "all";
 
-  const applyFilter = (filter: string) => {
+  const applyFilters = () => {
     let visible = 0;
     rows.forEach((row) => {
       const group = row.dataset.group ?? "";
-      const show = filter === "all" || group === filter;
+      const visit = row.dataset.visit === "true";
+      const showMode = mode === "general" || visit;
+      const showGroup = filter === "all" || group === filter;
+      const show = showMode && showGroup;
       row.hidden = !show;
       if (show) visible += 1;
     });
     if (countEl) countEl.textContent = String(visible);
+    modes.forEach((tab) => {
+      const on = tab.dataset.mode === mode;
+      tab.classList.toggle("is-selected", on);
+      tab.setAttribute("aria-pressed", String(on));
+    });
     tabs.forEach((tab) => {
       const on = tab.dataset.filter === filter;
       tab.classList.toggle("is-selected", on);
@@ -152,8 +171,17 @@ const rowCount = rows.length;
     });
   };
 
+  modes.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      mode = tab.dataset.mode ?? "general";
+      applyFilters();
+    });
+  });
   tabs.forEach((tab) => {
-    tab.addEventListener("click", () => applyFilter(tab.dataset.filter ?? "all"));
+    tab.addEventListener("click", () => {
+      filter = tab.dataset.filter ?? "all";
+      applyFilters();
+    });
   });
 </script>
 
@@ -218,31 +246,51 @@ const rowCount = rows.length;
     text-underline-offset: 2px;
   }
 
+  .sheet-modes,
   .sheet-tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 4px;
   }
+  .sheet-modes {
+    margin-bottom: 6px;
+  }
+  .sheet-modes button,
   .sheet-tabs button {
     appearance: none;
     border: 0;
     background: transparent;
     color: #c4c4c4;
     font: inherit;
-    font-size: 12px;
     line-height: 1;
     padding: 7px 10px;
     border-radius: 999px;
     min-height: 32px;
     cursor: pointer;
   }
+  .sheet-modes button {
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px 14px;
+  }
+  .sheet-tabs button {
+    font-size: 12px;
+  }
+  .sheet-modes button.is-selected,
   .sheet-tabs button.is-selected {
     background: #2a2a2a;
     color: #fff;
   }
+  .sheet-modes button:focus-visible,
   .sheet-tabs button:focus-visible {
     outline: 2px solid #f3c045;
     outline-offset: 2px;
+  }
+  .col-rate {
+    font-variant-numeric: tabular-nums;
+    text-align: center;
+    width: 2.5rem;
+    color: #d0d0d0;
   }
 
   .sheet-scroll {
