@@ -1,6 +1,10 @@
 ## Now
 
-**Current Priority:** The Web3Forms placeholder-key blocker is resolved and live in production. All three inquiry forms (`/contact`, `/pricing`, `/studios/church-studio`) post with the real production access key via a new shared `src/components/InquiryForm.astro` component.
+**Current Priority:** Unlisted `/clients` field-visit list is implemented on `cursor/clients-visit-list-7a82` (PR open). Live production `/clients` was a header/footer stub; the new page reads six 27613 loops from `src/data/field-visits.json`, stays off the marketing nav, and is `noindex`.
+
+**Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
+
+**Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.). Merge the `/clients` PR when Alex is ready to use the list on iPhone.
 
 **Verification done:** `npm run build` — 14 routes, zero errors. Playwright against the static build (network calls to `api.web3forms.com` mocked, so no real test email was sent) confirmed on all three pages: the real access key is present in the submitted payload, the honeypot stays off-screen, the light/dark theme variant renders correctly (dark on Church Studio's Espresso Black card, light on contact/pricing), and the accessible inline success state fires after submit. Post-deploy, production `/contact`, `/pricing`, and `/studios/church-studio` all returned HTTP 200 with the real access key confirmed present in each page's HTML.
 
@@ -110,6 +114,16 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Monday Aug 17, 2026 · /clients field-visit list] — Code
+
+- **Did:** Filled the empty `/clients` stub with a phone-first 27613 visit list. Six sets jump from sticky chips; each stop shows only supplied name, address, hours, typically-closed, phone (`tel:`), website, email, and visit note. Per-set “Open this loop in Maps” uses the provided Google dir URL; tapping an address opens that stop in Maps. Leads live in `src/data/field-visits.json`. Page stays off header/footer nav. `BaseLayout` now accepts `noindex`.
+- **Decided:** Utility page, not a marketing surface — cream/Fraunces/Lato/hairline cards, terracotta only on the Maps action. Extra stop (Omar Baloch Law) is flagged and omitted from the Leesville loop URL. No invented contact facts.
+- **Verified:** `npm run build` (15 routes). `node --test tests/clients-visit-list.test.mjs`. Playwright screenshots at 390px and 1440px.
+- **Shipped:** Branch `cursor/clients-visit-list-7a82`, PR open. Not merged or deployed.
+- **Blocked:** None.
+
+**Files touched:** `src/data/field-visits.json`; `src/data/field-visits.ts`; `src/pages/clients.astro`; `src/layouts/BaseLayout.astro`; `pages/clients-copy.md`; `tests/clients-visit-list.test.mjs`; `plan.md`.
 
 ### [Monday Aug 17, 2026 · Web3Forms activation] — Code
 
