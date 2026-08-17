@@ -1,12 +1,12 @@
 ## Now
 
-**Current Priority:** The Web3Forms placeholder-key blocker is fixed in the working tree (not yet committed/deployed). All three inquiry forms (`/contact`, `/pricing`, `/studios/church-studio`) now post with the real production access key via a new shared `src/components/InquiryForm.astro` component.
+**Current Priority:** The Web3Forms placeholder-key blocker is resolved and live in production. All three inquiry forms (`/contact`, `/pricing`, `/studios/church-studio`) post with the real production access key via a new shared `src/components/InquiryForm.astro` component.
 
-**Verification done:** `npm run build` — 14 routes, zero errors. Playwright against the static build (network calls to `api.web3forms.com` mocked, so no real test email was sent) confirmed on all three pages: the real access key is present in the submitted payload, the honeypot stays off-screen, the light/dark theme variant renders correctly (dark on Church Studio's Espresso Black card, light on contact/pricing), and the accessible inline success state fires after submit. Full-page screenshots reviewed at desktop.
+**Verification done:** `npm run build` — 14 routes, zero errors. Playwright against the static build (network calls to `api.web3forms.com` mocked, so no real test email was sent) confirmed on all three pages: the real access key is present in the submitted payload, the honeypot stays off-screen, the light/dark theme variant renders correctly (dark on Church Studio's Espresso Black card, light on contact/pricing), and the accessible inline success state fires after submit. Post-deploy, production `/contact`, `/pricing`, and `/studios/church-studio` all returned HTTP 200 with the real access key confirmed present in each page's HTML.
 
-**Branch state:** `main`, uncommitted. Modified: `src/pages/contact.astro`, `src/pages/pricing.astro`, `src/pages/studios/church-studio.astro`. Added: `src/components/InquiryForm.astro`. Also still untracked from a prior session (unrelated to this change): `src/assets/case-studies/after-hours-ministry/section2.mov`, `src/assets/services/branding/after-hours-tiktok-logo-showcase.png`.
+**Branch state:** `main` is pushed through implementation commit `755a201` and deployed to Vercel production as `dpl_3KzX1JzGYG4zaKLLnmvQ7ShNXd8f`, aliased at `https://proudly-psi.vercel.app`. The pre-existing untracked `src/assets/case-studies/after-hours-ministry/section2.mov` and `src/assets/services/branding/after-hours-tiktok-logo-showcase.png` remain untracked (unrelated to this change).
 
-**Next Action:** Alex to review and commit. Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
+**Next Action:** Confirm a real end-to-end submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
 ## Next Session Punch List
 
@@ -116,7 +116,9 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 - **Did:** Replaced the `YOUR_WEB3FORMS_ACCESS_KEY` placeholder across `/contact`, `/pricing`, and `/studios/church-studio` with the real production key. Extracted the three near-duplicate form implementations into one shared `src/components/InquiryForm.astro`, which owns the Web3Forms hidden fields, honeypot, submit handler, accessible inline success/error states, and the shared field CSS; each page supplies only its own distinct fields via the component's default slot.
 - **Decided:** Added a `theme` prop (`light` default, `dark` for Church Studio's Espresso Black/Dark Card context) and a `headingLevel` prop (`h2`/`h3`) to preserve the two real visual/semantic differences between the three original forms, rather than forcing them identical. Used `:global()` selectors in the component's scoped styles for the field-level CSS since that markup is authored in the caller's slot content, not the component's own template. Kept per-page `subject`/`from_name` values so inbox messages stay attributable to their source page. Scope was expanded from the user's original ask (pricing + contact) to include Church Studio after confirming with Alex, since it carried the identical placeholder and plan.md already tracked it as part of the same blocker.
 - **Verified:** `npm run build` — 14 routes, zero errors. Playwright against the static build with `api.web3forms.com` network-mocked (intentionally, to avoid sending real test emails before review) confirmed on all three pages: real access key present in the submitted payload, honeypot stays off-screen, correct light/dark theme rendering, and the inline success state fires after submit. Screenshots reviewed at desktop.
-- **Blocked:** None for the code change itself. Real-inbox receipt is still unverified — see Follow-up Backlog #1.
+- **Shipped:** Implementation commit `755a201` pushed to `main` and deployed to Vercel production as `dpl_3KzX1JzGYG4zaKLLnmvQ7ShNXd8f`, aliased at `https://proudly-psi.vercel.app`.
+- **Verified in production:** `/contact`, `/pricing`, and `/studios/church-studio` all returned HTTP 200, each with the real access key confirmed present in its HTML.
+- **Blocked:** None for the code change itself. Real-inbox receipt from an actual submission is still unverified — see Follow-up Backlog #1.
 
 **Files touched:** `src/components/InquiryForm.astro` (new); `src/pages/contact.astro`; `src/pages/pricing.astro`; `src/pages/studios/church-studio.astro`; `plan.md`.
 
