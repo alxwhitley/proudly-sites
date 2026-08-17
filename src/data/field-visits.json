@@ -21,7 +21,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 1,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Fusion Eye Care",
@@ -34,7 +35,8 @@
           "industry": "Eye care",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": "@fusioneyecarenc"
         },
         {
           "name": "The Peck Law Firm",
@@ -46,7 +48,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 3,
-          "visit": true
+          "visit": true,
+          "instagram": ""
         },
         {
           "name": "Capital Dermatology of NC",
@@ -59,7 +62,8 @@
           "industry": "Dermatology",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": "@capitaldermnc"
         },
         {
           "name": "Bowman Animal Hospital",
@@ -72,7 +76,8 @@
           "industry": "Veterinary",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": "@bowmananimalhospital"
         }
       ]
     },
@@ -93,7 +98,8 @@
           "industry": "Church",
           "emailed": false,
           "rating": 1,
-          "visit": false
+          "visit": false,
+          "instagram": "@baptistgrovenc"
         },
         {
           "name": "Newpath Church",
@@ -105,7 +111,8 @@
           "industry": "Church",
           "emailed": false,
           "rating": 1,
-          "visit": false
+          "visit": false,
+          "instagram": "@newpathraleigh"
         },
         {
           "name": "Triangle Christian Center",
@@ -118,7 +125,8 @@
           "industry": "Church",
           "emailed": false,
           "rating": 3,
-          "visit": true
+          "visit": true,
+          "instagram": ""
         },
         {
           "name": "Campbell Orthodontics",
@@ -130,7 +138,8 @@
           "industry": "Orthodontics",
           "emailed": false,
           "rating": 3,
-          "visit": true
+          "visit": true,
+          "instagram": "@ericcampbellortho"
         },
         {
           "name": "Leesville Animal Hospital",
@@ -143,7 +152,8 @@
           "industry": "Veterinary",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Omar Baloch Law",
@@ -155,7 +165,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         }
       ]
     },
@@ -175,7 +186,8 @@
           "industry": "Plastic surgery",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Levy Law Offices",
@@ -187,7 +199,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Kindrachuk & Gilchrist",
@@ -199,7 +212,8 @@
           "note": "CLOSED FRIDAY.",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": "@drkevin_drdon"
         },
         {
           "name": "North Haven Church",
@@ -210,7 +224,8 @@
           "industry": "Church",
           "emailed": false,
           "rating": 1,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Sisson Law Firm",
@@ -222,7 +237,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         }
       ]
     },
@@ -242,7 +258,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Raleigh Pediatric Dentistry",
@@ -255,7 +272,8 @@
           "industry": "Pediatric dentistry",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Allergy Asthma & Sinus Center",
@@ -267,7 +285,8 @@
           "industry": "Allergy",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "North Raleigh Church of Christ",
@@ -277,7 +296,8 @@
           "industry": "Church",
           "emailed": false,
           "rating": 1,
-          "visit": false
+          "visit": false,
+          "instagram": "@nraleighchurch"
         },
         {
           "name": "North Ridge Church",
@@ -289,7 +309,8 @@
           "industry": "Church",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": "@northridgecma"
         }
       ]
     },
@@ -309,7 +330,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Julyan Canty Law",
@@ -320,7 +342,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 1,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "The Law Corner",
@@ -331,7 +354,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": "@thelawcorner"
         },
         {
           "name": "Hormone Wellness MD",
@@ -342,7 +366,8 @@
           "industry": "Hormone wellness",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": "@hormonewellnessmd"
         },
         {
           "name": "Oak City Estate Planning",
@@ -353,7 +378,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 1,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         }
       ]
     },
@@ -373,7 +399,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "The Morton Law Offices",
@@ -385,7 +412,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 3,
-          "visit": true
+          "visit": true,
+          "instagram": "@themortonlawoffices"
         },
         {
           "name": "Edgerton Immigration Law",
@@ -395,7 +423,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "W.G. Alexander & Associates",
@@ -405,7 +434,8 @@
           "industry": "Law",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": ""
         },
         {
           "name": "Triangle Sinus Center",
@@ -416,7 +446,8 @@
           "industry": "Sinus",
           "emailed": false,
           "rating": 2,
-          "visit": false
+          "visit": false,
+          "instagram": "@trianglesinuscenter"
         }
       ]
     }

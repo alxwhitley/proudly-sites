@@ -8,6 +8,8 @@ import {
   fieldVisits,
   industryGroup,
   mapsSearchUrl,
+  instagramHref,
+  instagramLabel,
   telHref,
   websiteLabel,
 } from "../data/field-visits";
@@ -74,6 +76,7 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
             <th scope="col">Closed</th>
             <th scope="col">Phone</th>
             <th scope="col">Website</th>
+            <th scope="col">IG</th>
             <th scope="col">Note</th>
           </tr>
         </thead>
@@ -120,6 +123,11 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
               <td class="col-site">
                 {stop.website && (
                   <a href={stop.website} target="_blank" rel="noopener noreferrer">{websiteLabel(stop.website)}</a>
+                )}
+              </td>
+              <td class="col-ig">
+                {stop.instagram && (
+                  <a href={instagramHref(stop.instagram)} target="_blank" rel="noopener noreferrer">{instagramLabel(stop.instagram)}</a>
                 )}
               </td>
               <td class="col-note">
@@ -394,4 +402,5 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
   .col-closed { min-width: 7rem; }
   .col-phone { min-width: 7.5rem; font-variant-numeric: tabular-nums; }
   .col-site { min-width: 10rem; }
+  .col-ig { min-width: 8rem; }
 </style>

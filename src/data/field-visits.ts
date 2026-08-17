@@ -16,6 +16,7 @@ export type FieldVisitStop = {
   emailed?: boolean;
   rating?: 1 | 2 | 3;
   visit?: boolean;
+  instagram?: string;
 };
 
 export type FieldVisitSet = {
@@ -49,6 +50,30 @@ export function websiteLabel(url: string): string {
   } catch {
     return "Site";
   }
+}
+
+export function instagramHandle(value?: string): string {
+  if (!value) return "";
+  const trimmed = value.trim();
+  if (trimmed.startsWith("@")) return trimmed.slice(1);
+  try {
+    const url = new URL(trimmed);
+    if (!url.hostname.endsWith("instagram.com")) return "";
+    const handle = url.pathname.split("/").filter(Boolean)[0] ?? "";
+    return handle.replace(/^@/, "");
+  } catch {
+    return trimmed.replace(/^@/, "");
+  }
+}
+
+export function instagramHref(value?: string): string {
+  const handle = instagramHandle(value);
+  return handle ? `https://www.instagram.com/${handle}/` : "";
+}
+
+export function instagramLabel(value?: string): string {
+  const handle = instagramHandle(value);
+  return handle ? `@${handle}` : "";
 }
 
 export function industryGroup(industry?: string): FieldVisitIndustryGroup | "" {
