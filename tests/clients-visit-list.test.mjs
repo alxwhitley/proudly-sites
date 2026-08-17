@@ -20,6 +20,8 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /class="lead-table"/);
   assert.doesNotMatch(html, /class="stop-list"/);
   assert.doesNotMatch(html, /class="site-header"/);
+  assert.match(html, /data-mode="general"/);
+  assert.match(html, /data-mode="visit"/);
   assert.match(html, /data-filter="all"/);
   assert.match(html, /data-filter="church"/);
   assert.match(html, /data-filter="healthcare"/);
@@ -58,4 +60,15 @@ test("clients page renders a dense lead table from the data file", async () => {
   const checkboxes = html.match(/type="checkbox"/g) ?? [];
   assert.equal(checkboxes.length, stops.length);
   assert.doesNotMatch(html, /type="checkbox"[^>]*checked/);
+
+  assert.match(html, />Rate</);
+  const visitStops = stops.filter((stop) => stop.visit === true);
+  assert.ok(stops.every((stop) => stop.rating === 1 || stop.rating === 2 || stop.rating === 3));
+  assert.ok(stops.every((stop) => stop.visit === (stop.rating === 3)));
+  assert.ok(visitStops.length >= 4 && visitStops.length <= 12);
+  assert.match(html, new RegExp(`Visit · ${visitStops.length}`));
+  for (const stop of visitStops) {
+    assert.ok(html.includes(`data-visit="true"`));
+    assert.ok(html.includes(decode(stop.name)), `missing visit stop ${stop.name}`);
+  }
 });

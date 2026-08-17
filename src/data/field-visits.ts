@@ -14,6 +14,8 @@ export type FieldVisitStop = {
   extra?: boolean;
   industry?: string;
   emailed?: boolean;
+  rating?: 1 | 2 | 3;
+  visit?: boolean;
 };
 
 export type FieldVisitSet = {
