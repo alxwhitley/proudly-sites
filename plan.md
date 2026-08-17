@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** `/clients` Instagram column is on `cursor/clients-instagram-7a82` (PR open, do not merge until Alex says so). Every lead now has an `instagram` string; 13 verified published handles are filled, 18 stay blank. Ratings, visit flags, and Sent are unchanged.
+**Current Priority:** `/clients` Instagram column is live on production via PR #5 (`bfd664d`). Every lead has an `instagram` string; 13 verified published handles are filled, 18 stay blank. Ratings, visit flags, and Sent are unchanged.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -119,7 +119,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 - **Did:** Added `instagram` on every stop in `src/data/field-visits.json` and a dense IG column after Website. Filled only handles published on the business site (or official same-name/same-city page). Left blank when none was published.
 - **Verified:** Live-site lookups for all 31 leads. `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed. Playwright at 1440px and 390px: IG column after Website, `@fusioneyecarenc` links, Peck stays blank, `noindex`, no marketing chrome.
-- **Shipped:** Branch `cursor/clients-instagram-7a82`. Not merged.
+- **Shipped:** PR #5 merged to `main` (`bfd664d`). Production `https://www.proudlysites.com/clients` shows the IG column (13 published handles).
 
 ### [Monday Aug 17, 2026 · /clients Visit ratings] — Code
 
