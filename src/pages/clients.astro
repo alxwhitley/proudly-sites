@@ -1,6 +1,296 @@
 ---
+/*
+  Unlisted field-visit list (/clients). Phone-first utility for the 27613
+  loops. Leads live in src/data/field-visits.json so later searches can
+  update stops without rewriting this UI. Not linked from marketing nav.
+*/
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { fieldVisits, mapsSearchUrl, telHref } from "../data/field-visits";
+
+const { home, sets } = fieldVisits;
+const homeMaps = mapsSearchUrl(home.address);
 ---
 
-<BaseLayout title="Clients · Proudly Sites" description="Proudly Sites client area.">
+<BaseLayout
+  title="Field visits · Proudly Sites"
+  description="Unlisted 27613 field-visit list for Proudly Sites."
+  noindex
+>
+  <section class="section visits">
+    <header class="visits-head">
+      <h1>27613 field visits</h1>
+      <p class="lead">
+        Home:
+        <a class="addr-link" href={homeMaps} target="_blank" rel="noopener noreferrer">{home.address}</a>
+      </p>
+    </header>
+
+    <nav class="set-jump" aria-label="Visit sets">
+      {sets.map((set, i) => (
+        <a href={`#${set.id}`}>{i + 1}. {set.name}</a>
+      ))}
+    </nav>
+
+    {sets.map((set, i) => (
+      <section class="visit-set" id={set.id}>
+        <header class="set-head">
+          <p class="set-kicker">Set {i + 1} · {set.distance}</p>
+          <h2>{set.name}</h2>
+          {set.note && <p class="set-note">{set.note}</p>}
+          <a class="maps-loop" href={set.mapsUrl} target="_blank" rel="noopener noreferrer">
+            Open this loop in Maps
+          </a>
+        </header>
+
+        <ol class="stop-list">
+          {set.stops.map((stop) => (
+            <li class:list={["stop", { "is-extra": stop.extra }]}>
+              <div class="stop-title">
+                <h3>{stop.name}</h3>
+                {stop.extra && <span class="extra-flag">Extra</span>}
+              </div>
+
+              {stop.address && (
+                <a class="stop-address" href={mapsSearchUrl(stop.address)} target="_blank" rel="noopener noreferrer">
+                  {stop.address}
+                </a>
+              )}
+
+              <dl class="stop-meta">
+                {stop.hours && (
+                  <div>
+                    <dt>Hours</dt>
+                    <dd>{stop.hours}</dd>
+                  </div>
+                )}
+                {stop.typicallyClosed && (
+                  <div>
+                    <dt>Typically closed</dt>
+                    <dd>{stop.typicallyClosed}</dd>
+                  </div>
+                )}
+                {stop.phone && (
+                  <div>
+                    <dt>Phone</dt>
+                    <dd><a href={telHref(stop.phone)}>{stop.phone}</a></dd>
+                  </div>
+                )}
+                {stop.website && (
+                  <div>
+                    <dt>Website</dt>
+                    <dd><a href={stop.website} target="_blank" rel="noopener noreferrer">{stop.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}</a></dd>
+                  </div>
+                )}
+                {stop.email && (
+                  <div>
+                    <dt>Email</dt>
+                    <dd><a href={`mailto:${stop.email}`}>{stop.email}</a></dd>
+                  </div>
+                )}
+                {stop.note && (
+                  <div>
+                    <dt>Visit note</dt>
+                    <dd>{stop.note}</dd>
+                  </div>
+                )}
+              </dl>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+  </section>
 </BaseLayout>
+
+<style>
+  .section.visits {
+    padding-top: 72px;
+    padding-bottom: 96px;
+    max-width: 720px;
+  }
+
+  .visits-head {
+    margin-bottom: 28px;
+  }
+  .visits-head h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(32px, 6vw, 48px);
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin: 0 0 12px;
+  }
+  .visits-head .lead {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0;
+  }
+  .addr-link {
+    color: var(--espresso);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .set-jump {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0 0 36px;
+    position: sticky;
+    top: 12px;
+    z-index: 5;
+    padding: 8px 0;
+    background: color-mix(in srgb, var(--cream) 88%, transparent);
+    backdrop-filter: blur(8px);
+  }
+  .set-jump a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--white);
+    font-size: 13px;
+    line-height: 1.2;
+    color: var(--espresso);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .set-jump a { transition: transform 0.18s ease, background 0.18s ease; }
+    .set-jump a:hover, .set-jump a:focus-visible { transform: translateX(3px); background: var(--sand); }
+  }
+
+  .visit-set + .visit-set {
+    margin-top: 48px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+  }
+  .visit-set {
+    scroll-margin-top: 84px;
+  }
+
+  .set-kicker {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+    margin: 0 0 8px;
+  }
+  .set-head h2 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: clamp(24px, 5vw, 32px);
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin: 0 0 8px;
+  }
+  .set-note {
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin: 0 0 16px;
+  }
+  .maps-loop {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 20px;
+    background: var(--terracotta);
+    color: #fff;
+    border: 1.5px solid var(--espresso);
+    border-radius: 7px;
+    box-shadow: 4px 4px 0 var(--espresso);
+    font-size: 15px;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .maps-loop { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .maps-loop:hover, .maps-loop:focus-visible { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--espresso); }
+  }
+
+  .stop-list {
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+  .stop {
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px 18px;
+  }
+  .stop.is-extra {
+    background: var(--sand);
+  }
+  .stop-title {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+  }
+  .stop-title h3 {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+  .extra-flag {
+    flex-shrink: 0;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+  }
+  .stop-address {
+    display: block;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--espresso);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    padding: 8px 0;
+    min-height: 44px;
+  }
+
+  .stop-meta {
+    margin: 8px 0 0;
+    display: grid;
+    gap: 12px;
+  }
+  .stop-meta div {
+    display: grid;
+    gap: 3px;
+  }
+  .stop-meta dt {
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #6d635c;
+  }
+  .stop-meta dd {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.45;
+    color: var(--espresso);
+  }
+  .stop-meta a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    color: var(--espresso);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  @media (min-width: 801px) {
+    .section.visits { padding-top: 96px; padding-bottom: 120px; }
+    .set-jump { top: 20px; }
+    .visit-set { scroll-margin-top: 96px; }
+  }
+</style>
