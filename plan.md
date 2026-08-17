@@ -115,6 +115,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 ## Recent
 
+### [Monday Aug 17, 2026 · /clients Sent checkbox] — Code
+
+- **Did:** Added `emailed: false` on every lead in `src/data/field-visits.json` and a read-only Sent checkbox column after Stop. Source of truth is the JSON; no send history invented.
+- **Verified:** `npm run build`; clients HTML test (31 unchecked boxes).
+- **Shipped:** Branch `cursor/clients-sent-checkbox-7a82`.
+
 ### [Monday Aug 17, 2026 · /clients field-visit list] — Code
 
 - **Did:** Filled the empty `/clients` stub, then restyled it to a dark dense spreadsheet: one row per lead, industry filter tabs, sticky header, `tel:` and Maps. Leads live in `src/data/field-visits.json` with conservative `industry` labels. Page stays off header/footer nav and is `noindex`. Marketing chrome is omitted on this utility route.
