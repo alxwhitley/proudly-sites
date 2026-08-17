@@ -13,6 +13,7 @@ export type FieldVisitStop = {
   note?: string;
   extra?: boolean;
   industry?: string;
+  emailed?: boolean;
 };
 
 export type FieldVisitSet = {

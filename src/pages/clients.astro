@@ -60,6 +60,7 @@ const rowCount = rows.length;
           <tr>
             <th scope="col">Set</th>
             <th scope="col">Stop</th>
+            <th scope="col">Sent</th>
             <th scope="col">Name</th>
             <th scope="col">Industry</th>
             <th scope="col">Address</th>
@@ -75,7 +76,7 @@ const rowCount = rows.length;
             <tr
               data-group={group || undefined}
               data-set={set.id}
-              class:list={[{ "is-extra": stop.extra, "is-set-start": firstInSet }]}
+              class:list={[{ "is-extra": stop.extra, "is-set-start": firstInSet, "is-sent": stop.emailed }]}
             >
               <td class="col-set">
                 <span class="set-num">{setNumber}</span>
@@ -86,6 +87,14 @@ const rowCount = rows.length;
                 )}
               </td>
               <td class="col-stop">{stopNumber}</td>
+              <td class="col-sent">
+                <input
+                  type="checkbox"
+                  disabled
+                  checked={stop.emailed === true}
+                  aria-label={`Sent: ${stop.name}`}
+                />
+              </td>
               <td class="col-name">{stop.name}</td>
               <td class="col-industry">{stop.industry ?? ""}</td>
               <td class="col-address">
@@ -278,6 +287,21 @@ const rowCount = rows.length;
   }
   .lead-table tbody tr.is-extra td {
     background: #1b1b1b;
+  }
+  .lead-table tbody tr.is-sent td {
+    color: #8d8d8d;
+  }
+  .lead-table tbody tr.is-sent a {
+    color: #9a9a9a;
+  }
+  .col-sent {
+    text-align: center;
+    width: 2.5rem;
+  }
+  .col-sent input {
+    margin: 0;
+    accent-color: #cfcfcf;
+    pointer-events: none;
   }
   .lead-table a {
     color: #e8e8e8;
