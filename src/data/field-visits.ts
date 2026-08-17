@@ -1,5 +1,7 @@
 import data from "./field-visits.json";
 
+export type FieldVisitIndustryGroup = "church" | "healthcare" | "law";
+
 export type FieldVisitStop = {
   name: string;
   address: string;
@@ -10,6 +12,7 @@ export type FieldVisitStop = {
   email?: string;
   note?: string;
   extra?: boolean;
+  industry?: string;
 };
 
 export type FieldVisitSet = {
@@ -35,4 +38,19 @@ export function mapsSearchUrl(address: string): string {
 export function telHref(phone: string): string {
   const digits = phone.replace(/\D/g, "");
   return digits ? `tel:+1${digits}` : "";
+}
+
+export function websiteLabel(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "") || "Site";
+  } catch {
+    return "Site";
+  }
+}
+
+export function industryGroup(industry?: string): FieldVisitIndustryGroup | "" {
+  if (!industry) return "";
+  if (industry === "Church") return "church";
+  if (industry === "Law") return "law";
+  return "healthcare";
 }

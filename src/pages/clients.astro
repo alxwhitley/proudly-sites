@@ -1,296 +1,325 @@
 ---
 /*
-  Unlisted field-visit list (/clients). Phone-first utility for the 27613
-  loops. Leads live in src/data/field-visits.json so later searches can
-  update stops without rewriting this UI. Not linked from marketing nav.
+  Unlisted field-visit spreadsheet (/clients). Dense dark grid for the
+  27613 loops. Leads live in src/data/field-visits.json. Not in marketing nav.
 */
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { fieldVisits, mapsSearchUrl, telHref } from "../data/field-visits";
+import {
+  fieldVisits,
+  industryGroup,
+  mapsSearchUrl,
+  telHref,
+  websiteLabel,
+} from "../data/field-visits";
 
 const { home, sets } = fieldVisits;
 const homeMaps = mapsSearchUrl(home.address);
+
+const rows = sets.flatMap((set, setIndex) =>
+  set.stops.map((stop, stopIndex) => ({
+    set,
+    setNumber: setIndex + 1,
+    stopNumber: stopIndex + 1,
+    firstInSet: stopIndex === 0,
+    group: industryGroup(stop.industry),
+    stop,
+  }))
+);
+
+const rowCount = rows.length;
 ---
 
 <BaseLayout
-  title="Field visits · Proudly Sites"
+  title="27613 field visits · Proudly Sites"
   description="Unlisted 27613 field-visit list for Proudly Sites."
   noindex
+  chrome={false}
+  bodyClass="sheet-page"
 >
-  <section class="section visits">
-    <header class="visits-head">
-      <h1>27613 field visits</h1>
-      <p class="lead">
+  <div class="sheet">
+    <header class="sheet-bar">
+      <div class="sheet-title-row">
+        <h1>27613 field visits</h1>
+        <p class="row-count"><span data-row-count>{rowCount}</span> rows</p>
+      </div>
+      <p class="sheet-home">
         Home:
-        <a class="addr-link" href={homeMaps} target="_blank" rel="noopener noreferrer">{home.address}</a>
+        <a href={homeMaps} target="_blank" rel="noopener noreferrer">{home.address}</a>
       </p>
+      <nav class="sheet-tabs" aria-label="Industry filters">
+        <button type="button" class="is-selected" data-filter="all" aria-pressed="true">All leads</button>
+        <button type="button" data-filter="church" aria-pressed="false">Churches</button>
+        <button type="button" data-filter="healthcare" aria-pressed="false">Healthcare</button>
+        <button type="button" data-filter="law" aria-pressed="false">Law firms</button>
+      </nav>
     </header>
 
-    <nav class="set-jump" aria-label="Visit sets">
-      {sets.map((set, i) => (
-        <a href={`#${set.id}`}>{i + 1}. {set.name}</a>
-      ))}
-    </nav>
-
-    {sets.map((set, i) => (
-      <section class="visit-set" id={set.id}>
-        <header class="set-head">
-          <p class="set-kicker">Set {i + 1} · {set.distance}</p>
-          <h2>{set.name}</h2>
-          {set.note && <p class="set-note">{set.note}</p>}
-          <a class="maps-loop" href={set.mapsUrl} target="_blank" rel="noopener noreferrer">
-            Open this loop in Maps
-          </a>
-        </header>
-
-        <ol class="stop-list">
-          {set.stops.map((stop) => (
-            <li class:list={["stop", { "is-extra": stop.extra }]}>
-              <div class="stop-title">
-                <h3>{stop.name}</h3>
-                {stop.extra && <span class="extra-flag">Extra</span>}
-              </div>
-
-              {stop.address && (
-                <a class="stop-address" href={mapsSearchUrl(stop.address)} target="_blank" rel="noopener noreferrer">
-                  {stop.address}
-                </a>
-              )}
-
-              <dl class="stop-meta">
-                {stop.hours && (
-                  <div>
-                    <dt>Hours</dt>
-                    <dd>{stop.hours}</dd>
-                  </div>
+    <div class="sheet-scroll">
+      <table class="lead-table">
+        <thead>
+          <tr>
+            <th scope="col">Set</th>
+            <th scope="col">Stop</th>
+            <th scope="col">Name</th>
+            <th scope="col">Industry</th>
+            <th scope="col">Address</th>
+            <th scope="col">Hours</th>
+            <th scope="col">Closed</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Website</th>
+            <th scope="col">Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map(({ set, setNumber, stopNumber, firstInSet, group, stop }) => (
+            <tr
+              data-group={group || undefined}
+              data-set={set.id}
+              class:list={[{ "is-extra": stop.extra, "is-set-start": firstInSet }]}
+            >
+              <td class="col-set">
+                <span class="set-num">{setNumber}</span>
+                {firstInSet && (
+                  <a class="loop-maps" href={set.mapsUrl} target="_blank" rel="noopener noreferrer">
+                    Open this loop in Maps
+                  </a>
                 )}
-                {stop.typicallyClosed && (
-                  <div>
-                    <dt>Typically closed</dt>
-                    <dd>{stop.typicallyClosed}</dd>
-                  </div>
+              </td>
+              <td class="col-stop">{stopNumber}</td>
+              <td class="col-name">{stop.name}</td>
+              <td class="col-industry">{stop.industry ?? ""}</td>
+              <td class="col-address">
+                {stop.address && (
+                  <a href={mapsSearchUrl(stop.address)} target="_blank" rel="noopener noreferrer">
+                    {stop.address}
+                  </a>
                 )}
-                {stop.phone && (
-                  <div>
-                    <dt>Phone</dt>
-                    <dd><a href={telHref(stop.phone)}>{stop.phone}</a></dd>
-                  </div>
-                )}
+              </td>
+              <td class="col-hours">{stop.hours ?? ""}</td>
+              <td class="col-closed">{stop.typicallyClosed ?? ""}</td>
+              <td class="col-phone">
+                {stop.phone && <a href={telHref(stop.phone)}>{stop.phone}</a>}
+              </td>
+              <td class="col-site">
                 {stop.website && (
-                  <div>
-                    <dt>Website</dt>
-                    <dd><a href={stop.website} target="_blank" rel="noopener noreferrer">{stop.website.replace(/^https?:\/\//, "").replace(/\/$/, "")}</a></dd>
-                  </div>
+                  <a href={stop.website} target="_blank" rel="noopener noreferrer">{websiteLabel(stop.website)}</a>
                 )}
+              </td>
+              <td class="col-note">
+                {stop.note ?? ""}
                 {stop.email && (
-                  <div>
-                    <dt>Email</dt>
-                    <dd><a href={`mailto:${stop.email}`}>{stop.email}</a></dd>
-                  </div>
+                  <>
+                    {stop.note ? " " : ""}
+                    <a href={`mailto:${stop.email}`}>{stop.email}</a>
+                  </>
                 )}
-                {stop.note && (
-                  <div>
-                    <dt>Visit note</dt>
-                    <dd>{stop.note}</dd>
-                  </div>
-                )}
-              </dl>
-            </li>
+              </td>
+            </tr>
           ))}
-        </ol>
-      </section>
-    ))}
-  </section>
+        </tbody>
+      </table>
+    </div>
+  </div>
 </BaseLayout>
 
-<style>
-  .section.visits {
-    padding-top: 72px;
-    padding-bottom: 96px;
-    max-width: 720px;
-  }
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>("[data-filter]");
+  const rows = document.querySelectorAll<HTMLTableRowElement>("tbody tr");
+  const countEl = document.querySelector("[data-row-count]");
 
-  .visits-head {
-    margin-bottom: 28px;
-  }
-  .visits-head h1 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(32px, 6vw, 48px);
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    margin: 0 0 12px;
-  }
-  .visits-head .lead {
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--muted);
-    margin: 0;
-  }
-  .addr-link {
-    color: var(--espresso);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
+  const applyFilter = (filter: string) => {
+    let visible = 0;
+    rows.forEach((row) => {
+      const group = row.dataset.group ?? "";
+      const show = filter === "all" || group === filter;
+      row.hidden = !show;
+      if (show) visible += 1;
+    });
+    if (countEl) countEl.textContent = String(visible);
+    tabs.forEach((tab) => {
+      const on = tab.dataset.filter === filter;
+      tab.classList.toggle("is-selected", on);
+      tab.setAttribute("aria-pressed", String(on));
+    });
+  };
 
-  .set-jump {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0 0 36px;
-    position: sticky;
-    top: 12px;
-    z-index: 5;
-    padding: 8px 0;
-    background: color-mix(in srgb, var(--cream) 88%, transparent);
-    backdrop-filter: blur(8px);
-  }
-  .set-jump a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 8px 12px;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    background: var(--white);
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => applyFilter(tab.dataset.filter ?? "all"));
+  });
+</script>
+
+<style is:global>
+  body.sheet-page {
+    background: #111;
+    color: #f2f2f2;
+    font-family: "Lato", -apple-system, sans-serif;
     font-size: 13px;
-    line-height: 1.2;
-    color: var(--espresso);
+    line-height: 1.25;
   }
-  @media (prefers-reduced-motion: no-preference) {
-    .set-jump a { transition: transform 0.18s ease, background 0.18s ease; }
-    .set-jump a:hover, .set-jump a:focus-visible { transform: translateX(3px); background: var(--sand); }
+  body.sheet-page main {
+    display: block;
+  }
+</style>
+
+<style>
+  .sheet {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    background: #111;
+    color: #f2f2f2;
   }
 
-  .visit-set + .visit-set {
-    margin-top: 48px;
-    padding-top: 36px;
-    border-top: 1px solid var(--line);
+  .sheet-bar {
+    position: sticky;
+    top: 0;
+    z-index: 6;
+    background: #111;
+    border-bottom: 1px solid #2c2c2c;
+    padding: 10px 12px 8px;
   }
-  .visit-set {
-    scroll-margin-top: 84px;
-  }
-
-  .set-kicker {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #6d635c;
-    margin: 0 0 8px;
-  }
-  .set-head h2 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 500;
-    font-size: clamp(24px, 5vw, 32px);
-    line-height: 1.2;
-    letter-spacing: -0.03em;
-    margin: 0 0 8px;
-  }
-  .set-note {
-    font-size: 16px;
-    line-height: 1.5;
-    color: var(--muted);
-    margin: 0 0 16px;
-  }
-  .maps-loop {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 48px;
-    padding: 12px 20px;
-    background: var(--terracotta);
-    color: #fff;
-    border: 1.5px solid var(--espresso);
-    border-radius: 7px;
-    box-shadow: 4px 4px 0 var(--espresso);
-    font-size: 15px;
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .maps-loop { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-    .maps-loop:hover, .maps-loop:focus-visible { transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--espresso); }
-  }
-
-  .stop-list {
-    list-style: none;
-    margin: 24px 0 0;
-    padding: 0;
-    display: grid;
-    gap: 14px;
-  }
-  .stop {
-    background: var(--white);
-    border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 20px 18px;
-  }
-  .stop.is-extra {
-    background: var(--sand);
-  }
-  .stop-title {
+  .sheet-title-row {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
     gap: 12px;
-    margin-bottom: 8px;
   }
-  .stop-title h3 {
-    font-family: "Fraunces", Georgia, serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.25;
+  .sheet-title-row h1 {
+    font-family: "Lato", -apple-system, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
     letter-spacing: -0.02em;
     margin: 0;
+    color: #fff;
   }
-  .extra-flag {
-    flex-shrink: 0;
-    font-size: 11px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #6d635c;
-  }
-  .stop-address {
-    display: block;
-    font-size: 16px;
-    line-height: 1.45;
-    color: var(--espresso);
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    padding: 8px 0;
-    min-height: 44px;
-  }
-
-  .stop-meta {
-    margin: 8px 0 0;
-    display: grid;
-    gap: 12px;
-  }
-  .stop-meta div {
-    display: grid;
-    gap: 3px;
-  }
-  .stop-meta dt {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: #6d635c;
-  }
-  .stop-meta dd {
+  .row-count {
     margin: 0;
-    font-size: 16px;
-    line-height: 1.45;
-    color: var(--espresso);
+    color: #a3a3a3;
+    font-size: 12px;
+    white-space: nowrap;
   }
-  .stop-meta a {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    color: var(--espresso);
+  .sheet-home {
+    margin: 4px 0 8px;
+    color: #a3a3a3;
+    font-size: 12px;
+  }
+  .sheet-home a {
+    color: #e8e8e8;
     text-decoration: underline;
-    text-underline-offset: 3px;
+    text-underline-offset: 2px;
   }
 
-  @media (min-width: 801px) {
-    .section.visits { padding-top: 96px; padding-bottom: 120px; }
-    .set-jump { top: 20px; }
-    .visit-set { scroll-margin-top: 96px; }
+  .sheet-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
   }
+  .sheet-tabs button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: #c4c4c4;
+    font: inherit;
+    font-size: 12px;
+    line-height: 1;
+    padding: 7px 10px;
+    border-radius: 999px;
+    min-height: 32px;
+    cursor: pointer;
+  }
+  .sheet-tabs button.is-selected {
+    background: #2a2a2a;
+    color: #fff;
+  }
+  .sheet-tabs button:focus-visible {
+    outline: 2px solid #f3c045;
+    outline-offset: 2px;
+  }
+
+  .sheet-scroll {
+    flex: 1;
+    overflow: auto;
+  }
+
+  .lead-table {
+    width: max-content;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+  .lead-table th,
+  .lead-table td {
+    border: 1px solid #2c2c2c;
+    padding: 5px 8px;
+    vertical-align: top;
+    text-align: left;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 1.3;
+  }
+  .lead-table th {
+    position: sticky;
+    top: 0;
+    z-index: 4;
+    background: #1a1a1a;
+    color: #d0d0d0;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.02em;
+  }
+  .lead-table td {
+    background: #111;
+    color: #f2f2f2;
+  }
+  .lead-table tbody tr:nth-child(even) td {
+    background: #161616;
+  }
+  .lead-table tbody tr.is-set-start td {
+    border-top-color: #3a3a3a;
+  }
+  .lead-table tbody tr.is-extra td {
+    background: #1b1b1b;
+  }
+  .lead-table a {
+    color: #e8e8e8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .lead-table a:focus-visible {
+    outline: 2px solid #f3c045;
+    outline-offset: 2px;
+  }
+
+  .col-set {
+    min-width: 7.5rem;
+    max-width: 9.5rem;
+    white-space: normal;
+  }
+  .set-num {
+    display: inline-block;
+    min-width: 1em;
+    color: #cfcfcf;
+  }
+  .loop-maps {
+    display: block;
+    margin-top: 2px;
+    font-size: 11px;
+    color: #d7d7d7;
+  }
+  .col-stop { font-variant-numeric: tabular-nums; }
+  .col-name { font-weight: 700; }
+  .col-hours,
+  .col-note {
+    white-space: normal;
+    min-width: 12rem;
+    max-width: 22rem;
+  }
+  .col-address {
+    white-space: normal;
+    min-width: 14rem;
+    max-width: 20rem;
+  }
+  .col-industry { min-width: 7rem; }
+  .col-closed { min-width: 7rem; }
+  .col-phone { min-width: 7.5rem; font-variant-numeric: tabular-nums; }
+  .col-site { min-width: 10rem; }
 </style>

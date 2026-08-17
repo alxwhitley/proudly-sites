@@ -11,19 +11,26 @@ const decode = (value) =>
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;");
 
-test("clients page renders six visit sets from the data file", async () => {
+test("clients page renders a dense lead table from the data file", async () => {
   const html = await readFile(clientsPath, "utf8");
   const data = JSON.parse(await readFile(dataPath, "utf8"));
+  const stops = data.sets.flatMap((set) => set.stops);
 
   assert.match(html, /name="robots" content="noindex, nofollow"/);
+  assert.match(html, /class="lead-table"/);
+  assert.doesNotMatch(html, /class="stop-list"/);
+  assert.doesNotMatch(html, /class="site-header"/);
+  assert.match(html, /data-filter="all"/);
+  assert.match(html, /data-filter="church"/);
+  assert.match(html, /data-filter="healthcare"/);
+  assert.match(html, /data-filter="law"/);
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
+  assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
+  assert.equal(stops.length, 31);
 
   for (const set of data.sets) {
-    assert.match(html, new RegExp(`id="${set.id}"`));
-    assert.ok(html.includes(decode(set.name)), `missing set ${set.name}`);
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
-
     for (const stop of set.stops) {
       assert.ok(html.includes(decode(stop.name)), `missing stop ${stop.name}`);
       assert.ok(html.includes(decode(stop.address)), `missing address for ${stop.name}`);
@@ -34,6 +41,13 @@ test("clients page renders six visit sets from the data file", async () => {
       if (stop.website) {
         assert.ok(html.includes(stop.website), `missing website for ${stop.name}`);
       }
+      if (stop.industry) {
+        assert.ok(html.includes(decode(stop.industry)), `missing industry for ${stop.name}`);
+      }
     }
   }
+
+  assert.match(html, /Kindrachuk &amp; Gilchrist/);
+  const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
+  assert.equal(kindrachuk?.industry, undefined);
 });

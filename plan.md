@@ -117,11 +117,11 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 ### [Monday Aug 17, 2026 · /clients field-visit list] — Code
 
-- **Did:** Filled the empty `/clients` stub with a phone-first 27613 visit list. Six sets jump from sticky chips; each stop shows only supplied name, address, hours, typically-closed, phone (`tel:`), website, email, and visit note. Per-set “Open this loop in Maps” uses the provided Google dir URL; tapping an address opens that stop in Maps. Leads live in `src/data/field-visits.json`. Page stays off header/footer nav. `BaseLayout` now accepts `noindex`.
-- **Decided:** Utility page, not a marketing surface — cream/Fraunces/Lato/hairline cards, terracotta only on the Maps action. Extra stop (Omar Baloch Law) is flagged and omitted from the Leesville loop URL. No invented contact facts.
-- **Verified:** `npm run build` (15 routes). `node --test tests/clients-visit-list.test.mjs`. Playwright screenshots at 390px and 1440px.
+- **Did:** Filled the empty `/clients` stub, then restyled it to a dark dense spreadsheet: one row per lead, industry filter tabs, sticky header, `tel:` and Maps. Leads live in `src/data/field-visits.json` with conservative `industry` labels. Page stays off header/footer nav and is `noindex`. Marketing chrome is omitted on this utility route.
+- **Decided:** Match the in-chat xlsx viewer, not the marketing card layout. Kindrachuk & Gilchrist has no industry (name does not state one). Extra stop (Omar Baloch Law) stays in the table and is omitted from the Leesville loop URL.
+- **Verified:** `npm run build` (15 routes). `node --test tests/clients-visit-list.test.mjs`. Playwright: 31/6/10/14 rows for All/Churches/Healthcare/Law; screenshots at 390px and 1440px.
 - **Shipped:** Branch `cursor/clients-visit-list-7a82`, PR open. Not merged or deployed.
-- **Blocked:** None.
+- **Blocked:** Vercel deploy still needs a token or MCP auth.
 
 **Files touched:** `src/data/field-visits.json`; `src/data/field-visits.ts`; `src/pages/clients.astro`; `src/layouts/BaseLayout.astro`; `pages/clients-copy.md`; `tests/clients-visit-list.test.mjs`; `plan.md`.
 
