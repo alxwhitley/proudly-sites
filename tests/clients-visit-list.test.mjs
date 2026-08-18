@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 32);
+  assert.equal(stops.length, 33);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -74,6 +74,22 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(midtown.stops.some((stop) => stop.name === "Freedom Church Raleigh"));
   assert.match(html, /Freedom Church Raleigh/);
   assert.match(html, /mailto:info@freedomchurchraleigh.com/);
+
+  const rfo = stops.find((stop) => stop.name === "Raleigh Family Orthodontics");
+  assert.ok(rfo, "Raleigh Family Orthodontics should be present");
+  assert.equal(rfo.extra, undefined);
+  assert.equal(rfo.industry, "Orthodontics");
+  assert.equal(rfo.email, "info@raleighfamilyortho.com");
+  assert.equal(rfo.instagram, "@raleighfamilyortho");
+  assert.equal(rfo.phone, "984-254-0585");
+  assert.equal(rfo.emailed, false);
+  assert.equal(rfo.rating, 2);
+  assert.equal(rfo.visit, false);
+  const leesville = data.sets.find((set) => set.id === "leesville");
+  assert.ok(leesville.stops.some((stop) => stop.name === "Raleigh Family Orthodontics"));
+  assert.ok(leesville.mapsUrl.includes("9201+Leesville+Rd"));
+  assert.match(html, /Raleigh Family Orthodontics/);
+  assert.match(html, /mailto:info@raleighfamilyortho.com/);
 
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");

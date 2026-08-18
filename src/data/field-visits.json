@@ -86,7 +86,7 @@
       "name": "Leesville / Brier Creek",
       "distance": "~10 mi",
       "note": "Sunday works for churches.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9317+Leesville+Rd%2C+Raleigh+NC+27613/9309+Leesville+Rd%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9317+Leesville+Rd%2C+Raleigh+NC+27613/9309+Leesville+Rd%2C+Raleigh+NC+27613/9201+Leesville+Rd%2C+STE+160%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Baptist Grove Church",
@@ -154,6 +154,21 @@
           "rating": 2,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "Raleigh Family Orthodontics",
+          "address": "9201 Leesville Road, STE 160, Raleigh NC 27613",
+          "hours": "Mon-Fri 8:30am-5:00pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "984-254-0585",
+          "website": "https://raleighfamilyortho.com/",
+          "email": "info@raleighfamilyortho.com",
+          "note": "Leftover WEO Media ASP template (copyright 2022–2026). Drs. Han Lee and Hunter Neill. Appointment-only.",
+          "industry": "Orthodontics",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@raleighfamilyortho"
         },
         {
           "name": "Omar Baloch Law",
