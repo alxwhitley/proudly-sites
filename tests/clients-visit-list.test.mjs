@@ -43,6 +43,10 @@ test("clients page renders a dense lead table from the data file", async () => {
       if (stop.website) {
         assert.ok(html.includes(stop.website), `missing website for ${stop.name}`);
       }
+      if (stop.email) {
+        assert.ok(html.includes(`mailto:${stop.email}`), `missing mailto for ${stop.name}`);
+        assert.ok(html.includes(stop.email), `missing email for ${stop.name}`);
+      }
       if (stop.industry) {
         assert.ok(html.includes(decode(stop.industry)), `missing industry for ${stop.name}`);
       }
@@ -99,6 +103,30 @@ test("clients page renders a dense lead table from the data file", async () => {
   const withInstagram = stops.filter((stop) => stop.instagram);
   assert.ok(withInstagram.length >= 10, "verified published Instagram handles should be present");
   assert.ok(withInstagram.length < stops.length, "leads without a published handle stay blank");
+
+  const publishedEmails = {
+    "The Peck Law Firm": "info@pecklawfirm.net",
+    "Triangle Christian Center": "joelwhitfield@trianglecc.org",
+    "Campbell Orthodontics": "Info@ericcampbellortho.com",
+    "Sisson Law Firm": "kevin@sissonlawfirm.com",
+    "Hampson Family Law": "office@hampsonfamilylaw.com",
+    "The Law Corner": "kelly@thelawcorner.com",
+    "Hormone Wellness MD": "info@hormonewellnessmd.com",
+    "Capital Dermatology of NC": "info@capitalderm.com",
+    "Freedom Church Raleigh": "info@freedomchurchraleigh.com",
+    "Raleigh Family Orthodontics": "info@raleighfamilyortho.com",
+  };
+  const withEmail = stops.filter((stop) => stop.email);
+  assert.equal(withEmail.length, 10);
+  for (const [name, email] of Object.entries(publishedEmails)) {
+    const stop = stops.find((item) => item.name === name);
+    assert.equal(stop?.email, email, `${name} email`);
+  }
+  for (const name of ["The Morton Law Offices", "Omar Baloch Law", "Levy Law Offices", "McNeil Law Firm", "Fusion Eye Care"]) {
+    const stop = stops.find((item) => item.name === name);
+    assert.equal(stop?.email, undefined, `${name} must not have an invented email`);
+  }
+  assert.doesNotMatch(JSON.stringify(data), /tckidmin@gmail\.com/);
 
   assert.match(html, />Sent</);
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
