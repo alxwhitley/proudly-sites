@@ -118,7 +118,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 ### [Tuesday Aug 18, 2026 · /clients published emails] — Code
 
 - **Did:** Added verified published `email` on Peck, Triangle Christian Center, Campbell Orthodontics, Hampson, Law Corner, Hormone Wellness MD, and Capital Derm. Kept Sisson. No invented addresses. Emails still render as `mailto:` in Note.
-- **Verified:** Pending build + clients HTML test on this branch.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed. Eight `mailto:` links in `dist/clients`. No `tckidmin@gmail.com`. Ratings/visit/Instagram/Sent unchanged.
 - **Shipped:** Branch `cursor/clients-published-emails-7a82`. Not merged.
 
 ### [Monday Aug 17, 2026 · /clients Instagram column] — Code
