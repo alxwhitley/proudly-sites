@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** Raleigh Family Orthodontics added to Leesville / Brier Creek on `cursor/clients-raleigh-family-ortho-7a82`. Real stop; Maps loop updated. Freedom Church already live via PR #7. PR #6 left unmerged.
+**Current Priority:** Raleigh Family Orthodontics and Freedom Church Raleigh are both live on production (PRs #8 and #7). PR #6 published emails left unmerged.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -119,7 +119,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 - **Did:** Added Raleigh Family Orthodontics as a real Leesville / Brier Creek stop (9201 Leesville Rd, same road as Campbell / Leesville AH). Stored published email, phone, and `@raleighfamilyortho` (linked on their site). Updated that set’s Maps loop. Did not merge PR #6.
 - **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (33 rows; RFO on Leesville loop).
-- **Shipped:** Branch `cursor/clients-raleigh-family-ortho-7a82`.
+- **Shipped:** PR #8 merged to `main`. Production `https://www.proudlysites.com/clients` shows Raleigh Family Orthodontics and Freedom Church Raleigh.
 
 ### [Tuesday Aug 18, 2026 · /clients Freedom Church Raleigh] — Code
 
