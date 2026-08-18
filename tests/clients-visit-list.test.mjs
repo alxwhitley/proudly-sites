@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 31);
+  assert.equal(stops.length, 32);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -58,6 +58,22 @@ test("clients page renders a dense lead table from the data file", async () => {
       }
     }
   }
+
+  const freedom = stops.find((stop) => stop.name === "Freedom Church Raleigh");
+  assert.ok(freedom, "Freedom Church Raleigh should be present");
+  assert.equal(freedom.extra, true);
+  assert.equal(freedom.industry, "Church");
+  assert.equal(freedom.email, "info@freedomchurchraleigh.com");
+  assert.equal(freedom.instagram, "@freedomraleigh");
+  assert.equal(freedom.phone, undefined);
+  assert.equal(freedom.emailed, false);
+  assert.equal(freedom.rating, 2);
+  assert.equal(freedom.visit, false);
+  assert.doesNotMatch(JSON.stringify(freedom), /raleigh@freedomchurch\.cc/);
+  const midtown = data.sets.find((set) => set.id === "midtown-six-forks");
+  assert.ok(midtown.stops.some((stop) => stop.name === "Freedom Church Raleigh"));
+  assert.match(html, /Freedom Church Raleigh/);
+  assert.match(html, /mailto:info@freedomchurchraleigh.com/);
 
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");

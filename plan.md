@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** `/clients` Instagram column is live on production via PR #5 (`bfd664d`). Every lead has an `instagram` string; 13 verified published handles are filled, 18 stay blank. Ratings, visit flags, and Sent are unchanged.
+**Current Priority:** Freedom Church Raleigh added as a Midtown Six Forks extra on `cursor/clients-freedom-church-7a82`. Sunday meet is Millbrook HS (does not fit the weekday loop), so Maps was not recalculated. PR #6 published emails left unmerged.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Aug 18, 2026 · /clients Freedom Church Raleigh] — Code
+
+- **Did:** Added Freedom Church Raleigh as `extra: true` on Midtown Six Forks. Stored published `info@freedomchurchraleigh.com` and verified `@freedomraleigh`. No phone. Did not add `raleigh@freedomchurch.cc`. Did not merge PR #6.
+- **Verified:** Pending build + clients HTML test on this branch.
+- **Shipped:** Branch `cursor/clients-freedom-church-7a82`.
 
 ### [Monday Aug 17, 2026 · /clients Instagram column] — Code
 

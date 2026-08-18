@@ -380,6 +380,21 @@
           "rating": 1,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "Freedom Church Raleigh",
+          "address": "Sunday — Millbrook High School, 2201 Spring Forest Rd, Raleigh NC 27615. Office — 2013 New Hope Church Rd, Raleigh NC 27604",
+          "hours": "Sunday 9am and 10:45am at Millbrook HS. Office Mon-Thu 8am-5pm (New Hope Church Rd)",
+          "typicallyClosed": "Closed Friday (office). No Sunday office hours at the 27604 address.",
+          "website": "https://www.freedomchurchraleigh.com/",
+          "email": "info@freedomchurchraleigh.com",
+          "note": "Wix. Freedom Church (Hereford) plant. Pastors Josh and Rose Snowzell. Public launch 2023; Millbrook HS since 2024 after growth.",
+          "extra": true,
+          "industry": "Church",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@freedomraleigh"
         }
       ]
     },
