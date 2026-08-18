@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** Merging PR #6 published emails onto `main` with Freedom Church Raleigh and Raleigh Family Orthodontics already present. Always merge and make live.
+**Current Priority:** `/clients` is live with published emails plus Freedom Church Raleigh and Raleigh Family Orthodontics (PRs #6, #7, #8). Always merge and make live.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -118,8 +118,8 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 ### [Tuesday Aug 18, 2026 · /clients published emails] — Code
 
 - **Did:** Merged PR #6 onto `main` with Freedom Church and Raleigh Family Orthodontics already present. Ten published emails total. No invented addresses.
-- **Verified:** Pending build + production smoke after merge.
-- **Shipped:** PR #6 merge in progress.
+- **Verified:** Build + clients test (33 rows, 10 published emails). Production `/clients` shows the eight PR #6 emails plus Freedom Church and Raleigh Family Orthodontics.
+- **Shipped:** PR #6 merged to `main`. Production live.
 
 ### [Tuesday Aug 18, 2026 · /clients Raleigh Family Orthodontics] — Code
 
