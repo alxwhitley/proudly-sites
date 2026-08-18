@@ -118,7 +118,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 ### [Tuesday Aug 18, 2026 · /clients Freedom Church Raleigh] — Code
 
 - **Did:** Added Freedom Church Raleigh as `extra: true` on Midtown Six Forks. Stored published `info@freedomchurchraleigh.com` and verified `@freedomraleigh`. No phone. Did not add `raleigh@freedomchurch.cc`. Did not merge PR #6.
-- **Verified:** Pending build + clients HTML test on this branch.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (32 rows; Freedom Church extra on Midtown Six Forks).
 - **Shipped:** Branch `cursor/clients-freedom-church-7a82`.
 
 ### [Monday Aug 17, 2026 · /clients Instagram column] — Code
