@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** Freedom Church Raleigh added as a Midtown Six Forks extra on `cursor/clients-freedom-church-7a82`. Sunday meet is Millbrook HS (does not fit the weekday loop), so Maps was not recalculated. PR #6 published emails left unmerged.
+**Current Priority:** Freedom Church Raleigh is live on production via PR #7. Midtown Six Forks extra; Sunday meet is Millbrook HS so the weekday Maps loop was not recalculated. PR #6 published emails left unmerged.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -119,7 +119,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 - **Did:** Added Freedom Church Raleigh as `extra: true` on Midtown Six Forks. Stored published `info@freedomchurchraleigh.com` and verified `@freedomraleigh`. No phone. Did not add `raleigh@freedomchurch.cc`. Did not merge PR #6.
 - **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (32 rows; Freedom Church extra on Midtown Six Forks).
-- **Shipped:** Branch `cursor/clients-freedom-church-7a82`.
+- **Shipped:** PR #7 merged to `main`. Production `https://www.proudlysites.com/clients` shows Freedom Church Raleigh (`info@freedomchurchraleigh.com`, `@freedomraleigh`).
 
 ### [Monday Aug 17, 2026 · /clients Instagram column] — Code
 
