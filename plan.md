@@ -118,7 +118,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 ### [Tuesday Aug 18, 2026 · /clients Raleigh Family Orthodontics] — Code
 
 - **Did:** Added Raleigh Family Orthodontics as a real Leesville / Brier Creek stop (9201 Leesville Rd, same road as Campbell / Leesville AH). Stored published email, phone, and `@raleighfamilyortho` (linked on their site). Updated that set’s Maps loop. Did not merge PR #6.
-- **Verified:** Pending build + clients HTML test on this branch.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (33 rows; RFO on Leesville loop).
 - **Shipped:** Branch `cursor/clients-raleigh-family-ortho-7a82`.
 
 ### [Tuesday Aug 18, 2026 · /clients Freedom Church Raleigh] — Code
