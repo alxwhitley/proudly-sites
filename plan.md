@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** `/clients` — mark Peck Law first-touch as sent and add five unpublished leads (NRCC, NeuroBloom, North Raleigh Periodontics, Kratt Dedmond, Araneda & Stroud). Always merge and make live.
+**Current Priority:** `/clients` is live with Peck Law marked sent and five new unpublished leads (PR #9). Always merge and make live.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Wednesday Aug 19, 2026 · /clients Peck emailed + five leads] — Code
+
+- **Did:** Set `emailed: true` only on The Peck Law Firm (first-touch 2026-08-19 to info@pecklawfirm.net). Added North Raleigh Christian Church (Leesville, same building as Newpath), NeuroBloom PT and North Raleigh Periodontics (Falls / Raven Ridge), Kratt Dedmond and Araneda & Stroud (Crabtree / midtown). Updated Falls and Crabtree Maps loops; Leesville already included 9225 Leesville Rd. Did not mark anyone else emailed.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (38 rows, 15 published emails, one Sent checkbox). Playwright at 1440px and 390px: Peck checked, new names present, Visit · 6.
+- **Shipped:** PR #9 merged to `main`. Production `https://www.proudlysites.com/clients` is live.
 
 ### [Tuesday Aug 18, 2026 · /clients published emails] — Code
 
