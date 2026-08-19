@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** `/clients` is live with published emails plus Freedom Church Raleigh and Raleigh Family Orthodontics (PRs #6, #7, #8). Always merge and make live.
+**Current Priority:** `/clients` — mark Peck Law first-touch as sent and add five unpublished leads (NRCC, NeuroBloom, North Raleigh Periodontics, Kratt Dedmond, Araneda & Stroud). Always merge and make live.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
