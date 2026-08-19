@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 33);
+  assert.equal(stops.length, 38);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -95,6 +95,53 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /Raleigh Family Orthodontics/);
   assert.match(html, /mailto:info@raleighfamilyortho.com/);
 
+  const nrcc = stops.find((stop) => stop.name === "North Raleigh Christian Church");
+  assert.ok(nrcc, "North Raleigh Christian Church should be present");
+  assert.equal(nrcc.email, "info@northraleigh.church");
+  assert.equal(nrcc.emailed, false);
+  assert.equal(nrcc.rating, 3);
+  assert.equal(nrcc.visit, true);
+  assert.equal(nrcc.instagram, "@northraleighcc");
+  assert.ok(leesville.stops.some((stop) => stop.name === "North Raleigh Christian Church"));
+  assert.ok(leesville.mapsUrl.includes("9225+Leesville+Rd"));
+
+  const falls = data.sets.find((set) => set.id === "falls-raven-ridge");
+  const neurobloom = stops.find((stop) => stop.name === "NeuroBloom Physical Therapy & Wellness");
+  assert.ok(neurobloom, "NeuroBloom Physical Therapy & Wellness should be present");
+  assert.equal(neurobloom.email, "nidhi.seth@neurobloompt.com");
+  assert.equal(neurobloom.emailed, false);
+  assert.equal(neurobloom.visit, false);
+  assert.equal(neurobloom.instagram, "@neurobloompt");
+  assert.ok(falls.mapsUrl.includes("9360+Falls+of+Neuse+Rd"));
+
+  const perio = stops.find((stop) => stop.name === "North Raleigh Periodontics & Implant Center");
+  assert.ok(perio, "North Raleigh Periodontics & Implant Center should be present");
+  assert.equal(perio.email, "contact@northraleighperio.com");
+  assert.equal(perio.emailed, false);
+  assert.equal(perio.instagram, "@doctor_gums");
+  assert.ok(falls.mapsUrl.includes("7805+Fiesta+Way"));
+
+  const crabtree = data.sets.find((set) => set.id === "crabtree-midtown");
+  const kratt = stops.find((stop) => stop.name === "Kratt Dedmond & Associates");
+  assert.ok(kratt, "Kratt Dedmond & Associates should be present");
+  assert.equal(kratt.email, "bkratt@kdanc.com");
+  assert.equal(kratt.emailed, false);
+  assert.equal(kratt.rating, 3);
+  assert.equal(kratt.visit, true);
+  assert.equal(kratt.instagram, "");
+  assert.ok(crabtree.mapsUrl.includes("5623-111+Duraleigh+Rd"));
+
+  const araneda = stops.find((stop) => stop.name === "Araneda & Stroud Immigration Law Group");
+  assert.ok(araneda, "Araneda & Stroud Immigration Law Group should be present");
+  assert.equal(araneda.email, "info@aranedalaw.com");
+  assert.equal(araneda.emailed, false);
+  assert.equal(araneda.visit, false);
+  assert.ok(crabtree.mapsUrl.includes("5400+Glenwood+Ave"));
+
+  const peck = stops.find((stop) => stop.name === "The Peck Law Firm");
+  assert.equal(peck?.emailed, true);
+  assert.equal(peck?.email, "info@pecklawfirm.net");
+
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
@@ -115,9 +162,14 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Capital Dermatology of NC": "info@capitalderm.com",
     "Freedom Church Raleigh": "info@freedomchurchraleigh.com",
     "Raleigh Family Orthodontics": "info@raleighfamilyortho.com",
+    "North Raleigh Christian Church": "info@northraleigh.church",
+    "NeuroBloom Physical Therapy & Wellness": "nidhi.seth@neurobloompt.com",
+    "North Raleigh Periodontics & Implant Center": "contact@northraleighperio.com",
+    "Kratt Dedmond & Associates": "bkratt@kdanc.com",
+    "Araneda & Stroud Immigration Law Group": "info@aranedalaw.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 10);
+  assert.equal(withEmail.length, 15);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -130,11 +182,17 @@ test("clients page renders a dense lead table from the data file", async () => {
 
   assert.match(html, />Sent</);
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
-  assert.equal(emailedTrue.length, 0);
-  assert.ok(stops.every((stop) => stop.emailed === false));
+  assert.equal(emailedTrue.length, 1);
+  assert.equal(emailedTrue[0]?.name, "The Peck Law Firm");
+  assert.ok(
+    stops
+      .filter((stop) => stop.name !== "The Peck Law Firm")
+      .every((stop) => stop.emailed === false)
+  );
   const checkboxes = html.match(/type="checkbox"/g) ?? [];
   assert.equal(checkboxes.length, stops.length);
-  assert.doesNotMatch(html, /type="checkbox"[^>]*checked/);
+  const checkedBoxes = html.match(/type="checkbox"[^>]*checked/g) ?? [];
+  assert.equal(checkedBoxes.length, 1);
 
   assert.match(html, />Rate</);
   const visitStops = stops.filter((stop) => stop.visit === true);

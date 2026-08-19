@@ -48,7 +48,7 @@
           "email": "info@pecklawfirm.net",
           "note": "Dated owner-named site.",
           "industry": "Law",
-          "emailed": false,
+          "emailed": true,
           "rating": 3,
           "visit": true,
           "instagram": ""
@@ -116,6 +116,20 @@
           "rating": 1,
           "visit": false,
           "instagram": "@newpathraleigh"
+        },
+        {
+          "name": "North Raleigh Christian Church",
+          "address": "9225 Leesville Road, Raleigh NC 27613",
+          "hours": "Sunday worship 11:15am. Wednesday students RESET 6:15pm. Weekday office not published.",
+          "phone": "919-912-9127",
+          "website": "https://www.northraleigh.church/",
+          "email": "info@northraleigh.church",
+          "note": "Brizy DIY leftover HOME titles, shares building with Newpath",
+          "industry": "Church",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@northraleighcc"
         },
         {
           "name": "Triangle Christian Center",
@@ -267,7 +281,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -309,6 +323,21 @@
           "instagram": ""
         },
         {
+          "name": "NeuroBloom Physical Therapy & Wellness",
+          "address": "9360 Falls of Neuse Road, Suite 105, Raleigh NC 27615",
+          "hours": "Mon-Fri 9am-5pm; Saturday by appointment",
+          "typicallyClosed": "Sunday. Saturday by appointment only.",
+          "phone": "919-387-7409",
+          "website": "https://neurobloompt.com/",
+          "email": "nidhi.seth@neurobloompt.com",
+          "note": "leftover Pharmaceutical Company/Dnnovate WP",
+          "industry": "Physical therapy",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@neurobloompt"
+        },
+        {
           "name": "North Raleigh Church of Christ",
           "address": "8701 Falls of Neuse Rd, Raleigh NC 27615",
           "hours": "Sunday 10am; Wed 7pm. No public phone.",
@@ -318,6 +347,21 @@
           "rating": 1,
           "visit": false,
           "instagram": "@nraleighchurch"
+        },
+        {
+          "name": "North Raleigh Periodontics & Implant Center",
+          "address": "7805 Fiesta Way, Raleigh NC 27615",
+          "hours": "Mon-Thu 8am-4pm",
+          "typicallyClosed": "Closed Fri, Sat, Sun",
+          "phone": "919-518-8222",
+          "website": "https://www.northraleighperio.com/",
+          "email": "contact@northraleighperio.com",
+          "note": "WP Twenty Twenty DIY, 2/19/2025 weather banner still up",
+          "industry": "Periodontics",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@doctor_gums"
         },
         {
           "name": "North Ridge Church",
@@ -425,8 +469,38 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
+        {
+          "name": "Kratt Dedmond & Associates",
+          "address": "5623-111 Duraleigh Road, Raleigh NC 27612",
+          "hours": "Mon-Fri 8:30am-5:30pm, and by appointment",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-582-6100",
+          "website": "https://www.kdanc.com/",
+          "email": "bkratt@kdanc.com",
+          "note": "Imp Designs leftover, 2 attorneys",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
+        {
+          "name": "Araneda & Stroud Immigration Law Group",
+          "address": "5400 Glenwood Avenue, Suite 200, Raleigh NC 27612",
+          "hours": "Mon-Fri 8:30am-5:30pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-788-9225",
+          "website": "https://www.aranedalaw.com/",
+          "email": "info@aranedalaw.com",
+          "note": "Squarespace leftover lorem, not walk-in",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": ""
+        },
         {
           "name": "Carolina Estate Counsel",
           "address": "2501 Blue Ridge Rd, Ste 300, Raleigh NC 27607",
