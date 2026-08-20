@@ -383,7 +383,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Law Corner and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "McNeil Law Firm",
@@ -446,6 +446,21 @@
           "rating": 1,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "Triangle Functional Medicine",
+          "address": "809 Spring Forest Rd, Ste 800, Raleigh NC 27609",
+          "hours": "Mon-Thu 9am-5pm; Fri 9am-12pm. By appointment only.",
+          "typicallyClosed": "Closed Sat, Sun. Friday afternoon.",
+          "phone": "919-758-2622",
+          "website": "https://www.trianglefunctionalmedicine.com/",
+          "email": "info@trianglefunctionalmedicine.com",
+          "note": "Squarespace. Drs. Carson and Steffany Shearer. Steffany joined Jan 2024. Leftover user@domain.com on site. Appointment-only.",
+          "industry": "Functional medicine",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@trianglefunctionalmedicine"
         },
         {
           "name": "Freedom Church Raleigh",
