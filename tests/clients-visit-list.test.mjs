@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 38);
+  assert.equal(stops.length, 39);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -138,6 +138,24 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(araneda.visit, false);
   assert.ok(crabtree.mapsUrl.includes("5400+Glenwood+Ave"));
 
+  const triangleFm = stops.find((stop) => stop.name === "Triangle Functional Medicine");
+  assert.ok(triangleFm, "Triangle Functional Medicine should be present");
+  assert.equal(triangleFm.extra, undefined);
+  assert.equal(triangleFm.industry, "Functional medicine");
+  assert.equal(triangleFm.email, "info@trianglefunctionalmedicine.com");
+  assert.equal(triangleFm.instagram, "@trianglefunctionalmedicine");
+  assert.equal(triangleFm.phone, "919-758-2622");
+  assert.equal(triangleFm.emailed, false);
+  assert.equal(triangleFm.rating, 2);
+  assert.equal(triangleFm.visit, false);
+  const midtownLoop = data.sets.find((set) => set.id === "midtown-six-forks");
+  assert.ok(midtownLoop.stops.some((stop) => stop.name === "Triangle Functional Medicine"));
+  assert.ok(midtownLoop.mapsUrl.includes("809+Spring+Forest+Rd"));
+  assert.ok(midtownLoop.mapsUrl.includes("226+W+Millbrook+Rd"));
+  assert.ok(midtownLoop.mapsUrl.includes("5660+Six+Forks+Rd"));
+  assert.match(html, /Triangle Functional Medicine/);
+  assert.match(html, /mailto:info@trianglefunctionalmedicine.com/);
+
   const peck = stops.find((stop) => stop.name === "The Peck Law Firm");
   assert.equal(peck?.emailed, true);
   assert.equal(peck?.email, "info@pecklawfirm.net");
@@ -167,9 +185,10 @@ test("clients page renders a dense lead table from the data file", async () => {
     "North Raleigh Periodontics & Implant Center": "contact@northraleighperio.com",
     "Kratt Dedmond & Associates": "bkratt@kdanc.com",
     "Araneda & Stroud Immigration Law Group": "info@aranedalaw.com",
+    "Triangle Functional Medicine": "info@trianglefunctionalmedicine.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 15);
+  assert.equal(withEmail.length, 16);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
