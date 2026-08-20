@@ -155,7 +155,7 @@
           "email": "Info@ericcampbellortho.com",
           "note": "TeleVox 2009.",
           "industry": "Orthodontics",
-          "emailed": false,
+          "emailed": true,
           "rating": 3,
           "visit": true,
           "instagram": "@ericcampbellortho"
