@@ -160,6 +160,10 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(peck?.emailed, true);
   assert.equal(peck?.email, "info@pecklawfirm.net");
 
+  const campbell = stops.find((stop) => stop.name === "Campbell Orthodontics");
+  assert.equal(campbell?.emailed, true);
+  assert.equal(campbell?.email, "Info@ericcampbellortho.com");
+
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
@@ -201,17 +205,17 @@ test("clients page renders a dense lead table from the data file", async () => {
 
   assert.match(html, />Sent</);
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
-  assert.equal(emailedTrue.length, 1);
-  assert.equal(emailedTrue[0]?.name, "The Peck Law Firm");
+  const emailedNames = emailedTrue.map((stop) => stop.name).sort();
+  assert.deepEqual(emailedNames, ["Campbell Orthodontics", "The Peck Law Firm"]);
   assert.ok(
     stops
-      .filter((stop) => stop.name !== "The Peck Law Firm")
+      .filter((stop) => stop.name !== "The Peck Law Firm" && stop.name !== "Campbell Orthodontics")
       .every((stop) => stop.emailed === false)
   );
   const checkboxes = html.match(/type="checkbox"/g) ?? [];
   assert.equal(checkboxes.length, stops.length);
   const checkedBoxes = html.match(/type="checkbox"[^>]*checked/g) ?? [];
-  assert.equal(checkedBoxes.length, 1);
+  assert.equal(checkedBoxes.length, 2);
 
   assert.match(html, />Rate</);
   const visitStops = stops.filter((stop) => stop.visit === true);
