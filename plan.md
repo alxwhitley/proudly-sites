@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** `/clients` is live with Peck Law marked sent and five new unpublished leads (PR #9). Always merge and make live.
+**Current Priority:** `/clients` is live with Triangle Functional Medicine on Midtown Six Forks (PR #10). Always merge and make live.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Thursday Aug 20, 2026 · /clients Triangle Functional Medicine] — Code
+
+- **Did:** Added Triangle Functional Medicine to Midtown Six Forks (Millbrook / Spring Forest) without changing existing leads. Stored published email, phone, hours, and `@trianglefunctionalmedicine`. Added 809 Spring Forest Rd to that set’s Lake Lynn Maps loop; existing stops stayed in the URL.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (39 rows, 16 published emails). Production `https://www.proudlysites.com/clients` returns 200 with the new name, Spring Forest address, phone, IG, and 39-row count; McNeil and Freedom Church still present.
+- **Shipped:** PR #10 merged to `main`. Production `https://www.proudlysites.com/clients` is live.
 
 ### [Wednesday Aug 19, 2026 · /clients Peck emailed + five leads] — Code
 
