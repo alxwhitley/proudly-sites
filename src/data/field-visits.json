@@ -281,7 +281,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -338,6 +338,20 @@
           "instagram": "@neurobloompt"
         },
         {
+          "name": "Amos & Amos, Attorneys at Law",
+          "address": "9204-200 Falls of Neuse Rd, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "phone": "919-900-7747",
+          "website": "https://www.amoslawnc.com/",
+          "email": "general@amoslawnc.com",
+          "note": "Wix DIY. Tuey Amos practicing; Leslie Amos Of Counsel. Blog last dated Apr 2019.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@amoslawnc"
+        },
+        {
           "name": "North Raleigh Church of Christ",
           "address": "8701 Falls of Neuse Rd, Raleigh NC 27615",
           "hours": "Sunday 10am; Wed 7pm. No public phone.",
@@ -375,6 +389,21 @@
           "rating": 2,
           "visit": false,
           "instagram": "@northridgecma"
+        },
+        {
+          "name": "Meliora Wellness",
+          "address": "6837 Falls of Neuse Rd, Raleigh NC 27615",
+          "hours": "By appointment only",
+          "typicallyClosed": "Appointment only. Closed days not published.",
+          "phone": "984-233-0534",
+          "website": "https://meliorawellnessnc.com/",
+          "email": "contact@meliorawellnessnc.com",
+          "note": "GoDaddy Website Builder. Co-founders Dr. Michele Kim, DNP and Melissa Cruz, FNP. Memberships banner; Wake Forest location coming soon. Appointment-only, not walk-in.",
+          "industry": "Concierge wellness",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@meliora_wellness_nc"
         }
       ]
     },
@@ -484,7 +513,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Kratt Dedmond & Associates",
@@ -574,6 +603,21 @@
           "rating": 2,
           "visit": false,
           "instagram": "@trianglesinuscenter"
+        },
+        {
+          "name": "Allen Law Offices",
+          "address": "4030 Wake Forest Rd, Suite 115, Raleigh NC 27609",
+          "hours": "Mon-Fri 9:00am-5:00pm and by appointment",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-838-9529",
+          "website": "http://theallenlawoffices.com/",
+          "email": "dallen@theallenlawoffices.com",
+          "note": "Adobe Muse leftover. Dwight and Brady Allen. First-floor Suite 115, not the Ste 300 virtual suites in the same building.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
         }
       ]
     }
