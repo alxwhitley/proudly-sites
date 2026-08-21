@@ -269,7 +269,7 @@
           "website": "https://www.sissonlawfirm.com/",
           "email": "kevin@sissonlawfirm.com",
           "industry": "Law",
-          "emailed": false,
+          "emailed": true,
           "rating": 2,
           "visit": false,
           "instagram": ""
