@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 39);
+  assert.equal(stops.length, 42);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -113,6 +113,30 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(neurobloom.visit, false);
   assert.equal(neurobloom.instagram, "@neurobloompt");
   assert.ok(falls.mapsUrl.includes("9360+Falls+of+Neuse+Rd"));
+  assert.ok(falls.mapsUrl.includes("9204-200+Falls+of+Neuse+Rd"));
+  assert.ok(falls.mapsUrl.includes("6837+Falls+of+Neuse+Rd"));
+
+  const amos = stops.find((stop) => stop.name === "Amos & Amos, Attorneys at Law");
+  assert.ok(amos, "Amos & Amos, Attorneys at Law should be present");
+  assert.equal(amos.industry, "Law");
+  assert.equal(amos.email, "general@amoslawnc.com");
+  assert.equal(amos.instagram, "@amoslawnc");
+  assert.equal(amos.phone, "919-900-7747");
+  assert.equal(amos.emailed, false);
+  assert.equal(amos.rating, 2);
+  assert.equal(amos.visit, false);
+  assert.ok(falls.stops.some((stop) => stop.name === "Amos & Amos, Attorneys at Law"));
+
+  const meliora = stops.find((stop) => stop.name === "Meliora Wellness");
+  assert.ok(meliora, "Meliora Wellness should be present");
+  assert.equal(meliora.industry, "Concierge wellness");
+  assert.equal(meliora.email, "contact@meliorawellnessnc.com");
+  assert.equal(meliora.instagram, "@meliora_wellness_nc");
+  assert.equal(meliora.phone, "984-233-0534");
+  assert.equal(meliora.emailed, false);
+  assert.equal(meliora.rating, 2);
+  assert.equal(meliora.visit, false);
+  assert.ok(falls.stops.some((stop) => stop.name === "Meliora Wellness"));
 
   const perio = stops.find((stop) => stop.name === "North Raleigh Periodontics & Implant Center");
   assert.ok(perio, "North Raleigh Periodontics & Implant Center should be present");
@@ -137,6 +161,18 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(araneda.emailed, false);
   assert.equal(araneda.visit, false);
   assert.ok(crabtree.mapsUrl.includes("5400+Glenwood+Ave"));
+  assert.ok(crabtree.mapsUrl.includes("4030+Wake+Forest+Rd"));
+
+  const allen = stops.find((stop) => stop.name === "Allen Law Offices");
+  assert.ok(allen, "Allen Law Offices should be present");
+  assert.equal(allen.industry, "Law");
+  assert.equal(allen.email, "dallen@theallenlawoffices.com");
+  assert.equal(allen.instagram, "");
+  assert.equal(allen.phone, "919-838-9529");
+  assert.equal(allen.emailed, false);
+  assert.equal(allen.rating, 3);
+  assert.equal(allen.visit, true);
+  assert.ok(crabtree.stops.some((stop) => stop.name === "Allen Law Offices"));
 
   const triangleFm = stops.find((stop) => stop.name === "Triangle Functional Medicine");
   assert.ok(triangleFm, "Triangle Functional Medicine should be present");
@@ -190,9 +226,12 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Kratt Dedmond & Associates": "bkratt@kdanc.com",
     "Araneda & Stroud Immigration Law Group": "info@aranedalaw.com",
     "Triangle Functional Medicine": "info@trianglefunctionalmedicine.com",
+    "Meliora Wellness": "contact@meliorawellnessnc.com",
+    "Amos & Amos, Attorneys at Law": "general@amoslawnc.com",
+    "Allen Law Offices": "dallen@theallenlawoffices.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 16);
+  assert.equal(withEmail.length, 19);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
