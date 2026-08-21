@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** `/clients` is live with Triangle Functional Medicine on Midtown Six Forks (PR #10). Always merge and make live.
+**Current Priority:** `/clients` is live with Meliora Wellness, Amos & Amos, and Allen Law Offices (PR #12). Always merge and make live.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Friday Aug 21, 2026 · /clients Meliora, Amos & Amos, Allen Law] — Code
+
+- **Did:** Added Meliora Wellness and Amos & Amos, Attorneys at Law to Falls / Raven Ridge (Amos after NeuroBloom at 9204 Falls of Neuse; Meliora after North Ridge Church at 6837, continuing south). Added Allen Law Offices to Crabtree / midtown next to Triangle Sinus (4030 Wake Forest Rd, Suite 115). Stored published emails, phones, hours, and IG handles as given (`@meliora_wellness_nc`, `@amoslawnc`; Allen IG blank). Rebuilt both Lake Lynn Maps loops. Did not change existing names or emailed flags (Peck and Campbell stay sent).
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (42 rows, 19 published emails). Production `https://www.proudlysites.com/clients` returns 200 with 42 rows and the three new names, addresses, phones, and IG; NeuroBloom, North Ridge Church, and Triangle Sinus still present.
+- **Shipped:** PR #12 merged to `main`. Production `https://www.proudlysites.com/clients` is live.
 
 ### [Thursday Aug 20, 2026 · /clients Triangle Functional Medicine] — Code
 
