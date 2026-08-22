@@ -501,7 +501,7 @@
           "note": "Wix. Freedom Church (Hereford) plant. Pastors Josh and Rose Snowzell. Public launch 2023; Millbrook HS since 2024 after growth.",
           "extra": true,
           "industry": "Church",
-          "emailed": false,
+          "emailed": true,
           "rating": 2,
           "visit": false,
           "instagram": "@freedomraleigh"
