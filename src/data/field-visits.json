@@ -141,7 +141,7 @@
           "email": "joelwhitfield@trianglecc.org",
           "note": "Wix.",
           "industry": "Church",
-          "emailed": false,
+          "emailed": true,
           "rating": 3,
           "visit": true,
           "instagram": ""
