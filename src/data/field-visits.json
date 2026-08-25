@@ -412,7 +412,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Law Corner and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "McNeil Law Firm",
@@ -425,6 +425,21 @@
           "rating": 2,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "Vasilko & Pedersen",
+          "address": "276 W Millbrook Rd, Raleigh NC 27609",
+          "hours": "Mon-Tue 9am-5pm; Wed by appointment; Thu 9am-5pm; Fri 9am-3pm",
+          "typicallyClosed": "Closed Sat, Sun. Wednesday appointment-only. Friday after 3pm. Court holidays.",
+          "phone": "919-503-6680",
+          "website": "https://vplawnc.com/",
+          "email": "info@vplawnc.com",
+          "note": "GoDaddy Website Builder. Leftover Life Path Legal Partners homepage title. Shawna Vasilko, Chris Pedersen, Miranda Dues. Formed 2024.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@vplawnc"
         },
         {
           "name": "Julyan Canty Law",
