@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 42);
+  assert.equal(stops.length, 43);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -70,7 +70,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(freedom.email, "info@freedomchurchraleigh.com");
   assert.equal(freedom.instagram, "@freedomraleigh");
   assert.equal(freedom.phone, undefined);
-  assert.equal(freedom.emailed, false);
+  assert.equal(freedom.emailed, true);
   assert.equal(freedom.rating, 2);
   assert.equal(freedom.visit, false);
   assert.doesNotMatch(JSON.stringify(freedom), /raleigh@freedomchurch\.cc/);
@@ -188,7 +188,23 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(midtownLoop.stops.some((stop) => stop.name === "Triangle Functional Medicine"));
   assert.ok(midtownLoop.mapsUrl.includes("809+Spring+Forest+Rd"));
   assert.ok(midtownLoop.mapsUrl.includes("226+W+Millbrook+Rd"));
+  assert.ok(midtownLoop.mapsUrl.includes("276+W+Millbrook+Rd"));
   assert.ok(midtownLoop.mapsUrl.includes("5660+Six+Forks+Rd"));
+  const vasilko = stops.find((stop) => stop.name === "Vasilko & Pedersen");
+  assert.ok(vasilko, "Vasilko & Pedersen should be present");
+  assert.equal(vasilko.industry, "Law");
+  assert.equal(vasilko.email, "info@vplawnc.com");
+  assert.equal(vasilko.instagram, "@vplawnc");
+  assert.equal(vasilko.phone, "919-503-6680");
+  assert.equal(vasilko.emailed, false);
+  assert.equal(vasilko.rating, 3);
+  assert.equal(vasilko.visit, true);
+  assert.ok(midtownLoop.stops.some((stop) => stop.name === "Vasilko & Pedersen"));
+  const millbrookNames = midtownLoop.stops.map((stop) => stop.name);
+  assert.equal(
+    millbrookNames.indexOf("Vasilko & Pedersen"),
+    millbrookNames.indexOf("McNeil Law Firm") + 1
+  );
   assert.match(html, /Triangle Functional Medicine/);
   assert.match(html, /mailto:info@trianglefunctionalmedicine.com/);
 
@@ -234,9 +250,10 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Meliora Wellness": "contact@meliorawellnessnc.com",
     "Amos & Amos, Attorneys at Law": "general@amoslawnc.com",
     "Allen Law Offices": "dallen@theallenlawoffices.com",
+    "Vasilko & Pedersen": "info@vplawnc.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 19);
+  assert.equal(withEmail.length, 20);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -250,16 +267,22 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, />Sent</);
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
   const emailedNames = emailedTrue.map((stop) => stop.name).sort();
-  assert.deepEqual(emailedNames, ["Campbell Orthodontics", "Sisson Law Firm", "The Peck Law Firm"]);
+  assert.deepEqual(emailedNames, [
+    "Campbell Orthodontics",
+    "Freedom Church Raleigh",
+    "Sisson Law Firm",
+    "The Peck Law Firm",
+    "Triangle Christian Center",
+  ]);
   assert.ok(
     stops
-      .filter((stop) => stop.name !== "The Peck Law Firm" && stop.name !== "Campbell Orthodontics" && stop.name !== "Sisson Law Firm")
+      .filter((stop) => !emailedNames.includes(stop.name))
       .every((stop) => stop.emailed === false)
   );
   const checkboxes = html.match(/type="checkbox"/g) ?? [];
   assert.equal(checkboxes.length, stops.length);
   const checkedBoxes = html.match(/type="checkbox"[^>]*checked/g) ?? [];
-  assert.equal(checkedBoxes.length, 3);
+  assert.equal(checkedBoxes.length, emailedTrue.length);
 
   assert.match(html, />Rate</);
   const visitStops = stops.filter((stop) => stop.visit === true);
