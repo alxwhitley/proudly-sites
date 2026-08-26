@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 43);
+  assert.equal(stops.length, 46);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -115,6 +115,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(falls.mapsUrl.includes("9360+Falls+of+Neuse+Rd"));
   assert.ok(falls.mapsUrl.includes("9204-200+Falls+of+Neuse+Rd"));
   assert.ok(falls.mapsUrl.includes("6837+Falls+of+Neuse+Rd"));
+  assert.ok(falls.mapsUrl.includes("6325+Falls+of+Neuse+Rd"));
 
   const amos = stops.find((stop) => stop.name === "Amos & Amos, Attorneys at Law");
   assert.ok(amos, "Amos & Amos, Attorneys at Law should be present");
@@ -137,6 +138,22 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(meliora.rating, 2);
   assert.equal(meliora.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "Meliora Wellness"));
+
+  const betham = stops.find((stop) => stop.name === "Betham Law, PLLC");
+  assert.ok(betham, "Betham Law, PLLC should be present");
+  assert.equal(betham.industry, "Law");
+  assert.equal(betham.email, "brittany@bethamlaw.com");
+  assert.equal(betham.instagram, "");
+  assert.equal(betham.phone, "919-604-3678");
+  assert.equal(betham.emailed, false);
+  assert.equal(betham.rating, 2);
+  assert.equal(betham.visit, false);
+  assert.ok(falls.stops.some((stop) => stop.name === "Betham Law, PLLC"));
+  const fallsNames = falls.stops.map((stop) => stop.name);
+  assert.equal(
+    fallsNames.indexOf("Betham Law, PLLC"),
+    fallsNames.indexOf("Meliora Wellness") + 1
+  );
 
   const perio = stops.find((stop) => stop.name === "North Raleigh Periodontics & Implant Center");
   assert.ok(perio, "North Raleigh Periodontics & Implant Center should be present");
@@ -174,6 +191,23 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(allen.visit, true);
   assert.ok(crabtree.stops.some((stop) => stop.name === "Allen Law Offices"));
 
+  const barrett = stops.find((stop) => stop.name === "Barrett Law Offices, PLLC");
+  assert.ok(barrett, "Barrett Law Offices, PLLC should be present");
+  assert.equal(barrett.industry, "Law");
+  assert.equal(barrett.email, "wbarrett@barrettlawoffices.com");
+  assert.equal(barrett.instagram, "");
+  assert.equal(barrett.phone, "919-999-2799");
+  assert.equal(barrett.emailed, false);
+  assert.equal(barrett.rating, 2);
+  assert.equal(barrett.visit, false);
+  assert.ok(crabtree.stops.some((stop) => stop.name === "Barrett Law Offices, PLLC"));
+  assert.ok(crabtree.mapsUrl.includes("5+West+Hargett+Street"));
+  const crabtreeNames = crabtree.stops.map((stop) => stop.name);
+  assert.equal(
+    crabtreeNames.indexOf("Barrett Law Offices, PLLC"),
+    crabtreeNames.indexOf("Allen Law Offices") + 1
+  );
+
   const triangleFm = stops.find((stop) => stop.name === "Triangle Functional Medicine");
   assert.ok(triangleFm, "Triangle Functional Medicine should be present");
   assert.equal(triangleFm.extra, undefined);
@@ -207,6 +241,24 @@ test("clients page renders a dense lead table from the data file", async () => {
   );
   assert.match(html, /Triangle Functional Medicine/);
   assert.match(html, /mailto:info@trianglefunctionalmedicine.com/);
+
+  const creedmoor = data.sets.find((set) => set.id === "creedmoor");
+  const revive = stops.find((stop) => stop.name === "Revive Physiotherapy and Wellness");
+  assert.ok(revive, "Revive Physiotherapy and Wellness should be present");
+  assert.equal(revive.industry, "Physical therapy");
+  assert.equal(revive.email, "info@reviveptandwellnessnc.com");
+  assert.equal(revive.instagram, "@revive.physiotherapy.wellness");
+  assert.equal(revive.phone, "919-670-1310");
+  assert.equal(revive.emailed, false);
+  assert.equal(revive.rating, 2);
+  assert.equal(revive.visit, false);
+  assert.ok(creedmoor.stops.some((stop) => stop.name === "Revive Physiotherapy and Wellness"));
+  assert.ok(creedmoor.mapsUrl.includes("7201+Creedmoor+Rd"));
+  const creedmoorNames = creedmoor.stops.map((stop) => stop.name);
+  assert.equal(
+    creedmoorNames.indexOf("Revive Physiotherapy and Wellness"),
+    creedmoorNames.indexOf("Capital Dermatology of NC") + 1
+  );
 
   const peck = stops.find((stop) => stop.name === "The Peck Law Firm");
   assert.equal(peck?.emailed, true);
@@ -251,9 +303,12 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Amos & Amos, Attorneys at Law": "general@amoslawnc.com",
     "Allen Law Offices": "dallen@theallenlawoffices.com",
     "Vasilko & Pedersen": "info@vplawnc.com",
+    "Revive Physiotherapy and Wellness": "info@reviveptandwellnessnc.com",
+    "Betham Law, PLLC": "brittany@bethamlaw.com",
+    "Barrett Law Offices, PLLC": "wbarrett@barrettlawoffices.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 20);
+  assert.equal(withEmail.length, 23);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);

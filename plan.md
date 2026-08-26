@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** `/clients` is live with Meliora Wellness, Amos & Amos, and Allen Law Offices (PR #12). Always merge and make live.
+**Current Priority:** `/clients` is live with Revive Physiotherapy, Betham Law, and Barrett Law Offices (PR #17). Always merge and make live.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Wednesday Aug 26, 2026 · /clients Revive, Betham, Barrett] — Code
+
+- **Did:** Added Revive Physiotherapy and Wellness to Creedmoor (7201 Creedmoor, next to Capital Derm). Added Betham Law, PLLC to Falls / Raven Ridge (6325 Falls of Neuse mailing suite, after Meliora). Added Barrett Law Offices, PLLC to Crabtree / midtown (5 West Hargett Suite 910, downtown high-floor, after Allen). `emailed` stays false. Did not add Paws At Play. Existing names unchanged. Rebuilt the three Maps loops.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (46 rows, 23 published emails). Built `/clients` HTML includes the three names, mailto/tel values, and Revive IG.
+- **Shipped:** PR #17 merged to `main`. Production `https://www.proudlysites.com/clients` is live.
 
 ### [Friday Aug 21, 2026 · /clients Meliora, Amos & Amos, Allen Law] — Code
 

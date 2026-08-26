@@ -8,7 +8,7 @@
       "name": "Creedmoor",
       "distance": "~9 mi",
       "note": "Skip Monday (Capital Derm closed).",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/6400+Creedmoor+Rd+%23103%2C+Raleigh+NC+27613/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/8308+Creedmoor+Rd%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/6400+Creedmoor+Rd+%23103%2C+Raleigh+NC+27613/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/7201+Creedmoor+Rd%2C+Ste+110%2C+Raleigh+NC+27613/8308+Creedmoor+Rd%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Hampson Family Law",
@@ -67,6 +67,21 @@
           "rating": 2,
           "visit": false,
           "instagram": "@capitaldermnc"
+        },
+        {
+          "name": "Revive Physiotherapy and Wellness",
+          "address": "7201 Creedmoor Rd, Ste 110, Raleigh NC 27613",
+          "hours": "Mon-Fri 7:00am-5:00pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-670-1310",
+          "website": "https://www.reviveptandwellnessnc.com/",
+          "email": "info@reviveptandwellnessnc.com",
+          "note": "Wix leftover: Why Naturopathy heading, mailto info@mysite.com. Founder Kelly Oschwald, DPT. Appointment-only private rooms.",
+          "industry": "Physical therapy",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@revive.physiotherapy.wellness"
         },
         {
           "name": "Bowman Animal Hospital",
@@ -281,7 +296,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -404,6 +419,21 @@
           "rating": 2,
           "visit": false,
           "instagram": "@meliora_wellness_nc"
+        },
+        {
+          "name": "Betham Law, PLLC",
+          "address": "6325 Falls of Neuse Rd, Suite 35-378, Raleigh NC 27615",
+          "hours": "Not published - mailing address",
+          "typicallyClosed": "",
+          "phone": "919-604-3678",
+          "website": "https://www.bethamlaw.com/",
+          "email": "brittany@bethamlaw.com",
+          "note": "Squarespace DIY. Solo Brittany Betham, family/estate/residential RE. Suite 35-378 is a mailing/mailbox address, not a walk-in. Thin template.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": ""
         }
       ]
     },
@@ -528,7 +558,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Kratt Dedmond & Associates",
@@ -632,6 +662,21 @@
           "emailed": false,
           "rating": 3,
           "visit": true,
+          "instagram": ""
+        },
+        {
+          "name": "Barrett Law Offices, PLLC",
+          "address": "5 West Hargett Street, Suite 910, Raleigh NC 27601",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-999-2799",
+          "website": "https://barrettlawoffices.com/",
+          "email": "wbarrett@barrettlawoffices.com",
+          "note": "WordPress, ©2020, TriMark Digital footer (old, not a recent agency lock-in). William Barrett + Josh Krasner. Employment/labor. High-floor Suite 910 downtown.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
           "instagram": ""
         }
       ]
