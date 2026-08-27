@@ -296,7 +296,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -434,6 +434,21 @@
           "rating": 2,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "The Mueller Law Firm, P.A.",
+          "address": "7000 Harps Mill Rd #203, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-676-5770",
+          "website": "https://www.muellerfamilylaw.com/",
+          "email": "MLF@muellerfamilylaw.com",
+          "note": "Wix DIY. ©2022. Solo Len C. Mueller (family law). Team still lists Madison Davis as Law Clerk, J.D. Candidate 2023. Empty blog. Email on contact page. 2nd-floor office condo; Suite 203 listed for sale mid-2026.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": ""
         }
       ]
     },
@@ -442,7 +457,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Law Corner and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "McNeil Law Firm",
@@ -522,6 +537,21 @@
           "instagram": ""
         },
         {
+          "name": "Doctor Direct",
+          "address": "5838 Six Forks Road, Suite 200, Raleigh NC 27609",
+          "hours": "Mon-Thu 8am-4pm; Fri virtual 9am-noon",
+          "typicallyClosed": "Closed Sat, Sun. Friday in-office closed (virtual only).",
+          "phone": "919-277-9866",
+          "website": "https://doctordirectmd.com/",
+          "email": "info@doctordirectmd.com",
+          "note": "DPCSpot leftover. Drs. Amy Walsh and Soon Kwark. Direct primary care, membership. Opened 2015. Suite 200, appointment/membership.",
+          "industry": "Direct primary care",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@doctordirectmd"
+        },
+        {
           "name": "Triangle Functional Medicine",
           "address": "809 Spring Forest Rd, Ste 800, Raleigh NC 27609",
           "hours": "Mon-Thu 9am-5pm; Fri 9am-12pm. By appointment only.",
@@ -550,6 +580,21 @@
           "rating": 2,
           "visit": false,
           "instagram": "@freedomraleigh"
+        },
+        {
+          "name": "Jenny Doyle, Esq. Immigration Counsel, LLC",
+          "address": "4016 Barrett Drive, Suite 103, Raleigh NC 27609",
+          "hours": "Mon-Fri 9am-5pm by appointment; Sat by appointment",
+          "typicallyClosed": "Closed Sun and federal holidays",
+          "phone": "919-307-4408",
+          "website": "https://www.immigrationdoyle.com/",
+          "email": "doyleimmigration@gmail.com",
+          "note": "Google Sites DIY. Solo Jenny Doyle (federal immigration; licensed in Nebraska). Published move: three doors north to 4016 Barrett Ste 103. Email and hours on her own site. Wilmington/Charlotte by appointment only.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": ""
         }
       ]
     },
