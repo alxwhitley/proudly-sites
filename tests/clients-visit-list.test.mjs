@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 46);
+  assert.equal(stops.length, 49);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -155,6 +155,22 @@ test("clients page renders a dense lead table from the data file", async () => {
     fallsNames.indexOf("Meliora Wellness") + 1
   );
 
+  const mueller = stops.find((stop) => stop.name === "The Mueller Law Firm, P.A.");
+  assert.ok(mueller, "The Mueller Law Firm, P.A. should be present");
+  assert.equal(mueller.industry, "Law");
+  assert.equal(mueller.email, "MLF@muellerfamilylaw.com");
+  assert.equal(mueller.instagram, "");
+  assert.equal(mueller.phone, "919-676-5770");
+  assert.equal(mueller.emailed, false);
+  assert.equal(mueller.rating, 2);
+  assert.equal(mueller.visit, false);
+  assert.ok(falls.stops.some((stop) => stop.name === "The Mueller Law Firm, P.A."));
+  assert.ok(falls.mapsUrl.includes("7000+Harps+Mill+Rd"));
+  assert.equal(
+    fallsNames.indexOf("The Mueller Law Firm, P.A."),
+    fallsNames.indexOf("Betham Law, PLLC") + 1
+  );
+
   const perio = stops.find((stop) => stop.name === "North Raleigh Periodontics & Implant Center");
   assert.ok(perio, "North Raleigh Periodontics & Implant Center should be present");
   assert.equal(perio.email, "contact@northraleighperio.com");
@@ -207,6 +223,36 @@ test("clients page renders a dense lead table from the data file", async () => {
     crabtreeNames.indexOf("Barrett Law Offices, PLLC"),
     crabtreeNames.indexOf("Allen Law Offices") + 1
   );
+
+  const doctorDirect = stops.find((stop) => stop.name === "Doctor Direct");
+  assert.ok(doctorDirect, "Doctor Direct should be present");
+  assert.equal(doctorDirect.industry, "Direct primary care");
+  assert.equal(doctorDirect.email, "info@doctordirectmd.com");
+  assert.equal(doctorDirect.instagram, "@doctordirectmd");
+  assert.equal(doctorDirect.phone, "919-277-9866");
+  assert.equal(doctorDirect.emailed, false);
+  assert.equal(doctorDirect.rating, 2);
+  assert.equal(doctorDirect.visit, false);
+  assert.ok(midtown.stops.some((stop) => stop.name === "Doctor Direct"));
+  assert.ok(midtown.mapsUrl.includes("5838+Six+Forks+Road"));
+  const midtownNames = midtown.stops.map((stop) => stop.name);
+  assert.equal(
+    midtownNames.indexOf("Doctor Direct"),
+    midtownNames.indexOf("Oak City Estate Planning") + 1
+  );
+
+  const jennyDoyle = stops.find((stop) => stop.name === "Jenny Doyle, Esq. Immigration Counsel, LLC");
+  assert.ok(jennyDoyle, "Jenny Doyle, Esq. Immigration Counsel, LLC should be present");
+  assert.equal(jennyDoyle.industry, "Law");
+  assert.equal(jennyDoyle.email, "doyleimmigration@gmail.com");
+  assert.equal(jennyDoyle.instagram, "");
+  assert.equal(jennyDoyle.phone, "919-307-4408");
+  assert.equal(jennyDoyle.emailed, false);
+  assert.equal(jennyDoyle.rating, 2);
+  assert.equal(jennyDoyle.visit, false);
+  assert.ok(midtown.stops.some((stop) => stop.name === "Jenny Doyle, Esq. Immigration Counsel, LLC"));
+  assert.ok(midtown.mapsUrl.includes("4016+Barrett+Drive"));
+  assert.equal(midtownNames.at(-1), "Jenny Doyle, Esq. Immigration Counsel, LLC");
 
   const triangleFm = stops.find((stop) => stop.name === "Triangle Functional Medicine");
   assert.ok(triangleFm, "Triangle Functional Medicine should be present");
@@ -306,9 +352,12 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Revive Physiotherapy and Wellness": "info@reviveptandwellnessnc.com",
     "Betham Law, PLLC": "brittany@bethamlaw.com",
     "Barrett Law Offices, PLLC": "wbarrett@barrettlawoffices.com",
+    "The Mueller Law Firm, P.A.": "MLF@muellerfamilylaw.com",
+    "Jenny Doyle, Esq. Immigration Counsel, LLC": "doyleimmigration@gmail.com",
+    "Doctor Direct": "info@doctordirectmd.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 23);
+  assert.equal(withEmail.length, 26);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);

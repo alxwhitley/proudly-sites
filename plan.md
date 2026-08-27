@@ -1,10 +1,10 @@
 ## Now
 
-**Current Priority:** `/clients` is live with Revive Physiotherapy, Betham Law, and Barrett Law Offices (PR #17). Always merge and make live.
+**Current Priority:** `/clients` is live with Mueller Law, Jenny Doyle, and Doctor Direct (PR #18). Always merge and make live.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
-**Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.). Merge the `/clients` PR when Alex is ready to use the list on iPhone.
+**Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
 **Verification done:** `npm run build` — 14 routes, zero errors. Playwright against the static build (network calls to `api.web3forms.com` mocked, so no real test email was sent) confirmed on all three pages: the real access key is present in the submitted payload, the honeypot stays off-screen, the light/dark theme variant renders correctly (dark on Church Studio's Espresso Black card, light on contact/pricing), and the accessible inline success state fires after submit. Post-deploy, production `/contact`, `/pricing`, and `/studios/church-studio` all returned HTTP 200 with the real access key confirmed present in each page's HTML.
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Thursday Aug 27, 2026 · /clients Mueller, Jenny Doyle, Doctor Direct] — Code
+
+- **Did:** Added The Mueller Law Firm, P.A. to Falls / Raven Ridge (after Betham). Added Jenny Doyle Immigration Counsel and Doctor Direct to Midtown Six Forks (Doctor Direct after Oak City on Six Forks; Jenny Doyle at end of the set). `emailed` stays false. Existing names unchanged. Rebuilt both Maps loops.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (49 rows, 26 published emails). Built `/clients` HTML includes the three names, mailto/tel values, `data-visit="false"`, and Visit · 8. Production `https://www.proudlysites.com/clients` returns 200 with the three names, phones, and updated loop URLs.
+- **Shipped:** PR #18 merged to `main`. Production `https://www.proudlysites.com/clients` is live.
 
 ### [Wednesday Aug 26, 2026 · /clients Revive, Betham, Barrett] — Code
 
