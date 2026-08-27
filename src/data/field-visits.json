@@ -457,7 +457,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Law Corner and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "McNeil Law Firm",
@@ -535,6 +535,21 @@
           "rating": 1,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "Doctor Direct",
+          "address": "5838 Six Forks Road, Suite 200, Raleigh NC 27609",
+          "hours": "Mon-Thu 8am-4pm; Fri virtual 9am-noon",
+          "typicallyClosed": "Closed Sat, Sun. Friday in-office closed (virtual only).",
+          "phone": "919-277-9866",
+          "website": "https://doctordirectmd.com/",
+          "email": "info@doctordirectmd.com",
+          "note": "DPCSpot leftover. Drs. Amy Walsh and Soon Kwark. Direct primary care, membership. Opened 2015. Suite 200, appointment/membership.",
+          "industry": "Direct primary care",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@doctordirectmd"
         },
         {
           "name": "Triangle Functional Medicine",
