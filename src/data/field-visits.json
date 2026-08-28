@@ -347,7 +347,7 @@
           "email": "nidhi.seth@neurobloompt.com",
           "note": "leftover Pharmaceutical Company/Dnnovate WP",
           "industry": "Physical therapy",
-          "emailed": false,
+          "emailed": true,
           "rating": 2,
           "visit": false,
           "instagram": "@neurobloompt"
