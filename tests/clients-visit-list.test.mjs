@@ -174,7 +174,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   const perio = stops.find((stop) => stop.name === "North Raleigh Periodontics & Implant Center");
   assert.ok(perio, "North Raleigh Periodontics & Implant Center should be present");
   assert.equal(perio.email, "contact@northraleighperio.com");
-  assert.equal(perio.emailed, false);
+  assert.equal(perio.emailed, true);
   assert.equal(perio.instagram, "@doctor_gums");
   assert.ok(falls.mapsUrl.includes("7805+Fiesta+Way"));
 
@@ -463,6 +463,7 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Campbell Orthodontics",
     "Freedom Church Raleigh",
     "NeuroBloom Physical Therapy & Wellness",
+    "North Raleigh Periodontics & Implant Center",
     "Sisson Law Firm",
     "The Peck Law Firm",
     "Triangle Christian Center",

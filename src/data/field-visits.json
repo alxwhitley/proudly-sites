@@ -445,7 +445,7 @@
           "email": "contact@northraleighperio.com",
           "note": "WP Twenty Twenty DIY, 2/19/2025 weather banner still up",
           "industry": "Periodontics",
-          "emailed": false,
+          "emailed": true,
           "rating": 2,
           "visit": false,
           "instagram": "@doctor_gums"
