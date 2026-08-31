@@ -8,7 +8,7 @@
       "name": "Creedmoor",
       "distance": "~9 mi",
       "note": "Skip Monday (Capital Derm closed).",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/6400+Creedmoor+Rd+%23103%2C+Raleigh+NC+27613/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/7201+Creedmoor+Rd%2C+Ste+110%2C+Raleigh+NC+27613/8308+Creedmoor+Rd%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/6400+Creedmoor+Rd+%23103%2C+Raleigh+NC+27613/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/7201+Creedmoor+Rd%2C+Ste+110%2C+Raleigh+NC+27613/8015+Creedmoor+Rd+%23201%2C+Raleigh+NC+27613/8308+Creedmoor+Rd%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Hampson Family Law",
@@ -84,6 +84,21 @@
           "instagram": "@revive.physiotherapy.wellness"
         },
         {
+          "name": "FIRST IN SIGHT",
+          "address": "8015 Creedmoor Rd #201, Raleigh NC 27613",
+          "hours": "Mon-Fri 10:00am-6:00pm; every other Sat 10:00am-2:00pm (call first)",
+          "typicallyClosed": "Closed Sun. Saturday every other — call first.",
+          "phone": "919-845-5555",
+          "website": "https://firstinsighteyes.net/",
+          "email": "firstinsight@bellsouth.net",
+          "note": "iMatrix leftover (Copyright MH Sub I, LLC dba iMatrix). Broken contact form (No form settings found). Bellsouth inbox + iMatrix admin login in footer. Dr. Timothy Sult since 1988.",
+          "industry": "Optometry",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
+        {
           "name": "Bowman Animal Hospital",
           "address": "8308 Creedmoor Rd, Raleigh NC 27613",
           "hours": "Mon-Fri 8am-6pm; Sat 8am-2pm",
@@ -104,7 +119,7 @@
       "name": "Leesville / Brier Creek",
       "distance": "~10 mi",
       "note": "Sunday works for churches.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9317+Leesville+Rd%2C+Raleigh+NC+27613/9309+Leesville+Rd%2C+Raleigh+NC+27613/9201+Leesville+Rd%2C+STE+160%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/9317+Leesville+Rd%2C+Raleigh+NC+27613/9309+Leesville+Rd%2C+Raleigh+NC+27613/9201+Leesville+Rd%2C+STE+160%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Baptist Grove Church",
@@ -157,6 +172,21 @@
           "note": "Wix.",
           "industry": "Church",
           "emailed": true,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
+        {
+          "name": "Brier Creek Vision Care",
+          "address": "9650 Brier Creek Parkway, Suite 107, Raleigh NC 27617",
+          "hours": "Mon-Fri 7:45am-5:00pm, closed 11:45am-12:45pm for lunch",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-361-2299",
+          "website": "https://www.briercreekvision.com/",
+          "email": "info@briercreekvision.com",
+          "note": "iMatrix leftover (MH Sub I, LLC dba iMatrix). Founder/owner Dr. Susan L. Durham. Homepage testimonials frozen Jan-Mar 2019. Brier Creek shopping-center walk-in.",
+          "industry": "Optometry",
+          "emailed": false,
           "rating": 3,
           "visit": true,
           "instagram": ""
@@ -224,7 +254,7 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Plastic Surgical Center of North Raleigh",
@@ -249,6 +279,34 @@
           "emailed": false,
           "rating": 2,
           "visit": false,
+          "instagram": ""
+        },
+        {
+          "name": "The Law Offices of Jeffrey G. Marsocci, PLLC",
+          "address": "8406 Six Forks Road, Suite 102, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "phone": "919-844-7993",
+          "website": "https://livingtrustlawfirm.com/",
+          "email": "jeff@livingtrustlawfirm.com",
+          "note": "Outdated WordPress (2015 assets, old Slider Revolution). Copyright 2024. Homepage typos Marscocci / Estate Planing. Estate/living trusts/special-needs. 2nd office Arden NC. Street-level Six Forks office park.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@the_plain_english_attorney"
+        },
+        {
+          "name": "Lowry Law Offices",
+          "address": "8358 Six Forks Rd, Suite 104, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "phone": "919-518-0783",
+          "website": "https://lowrylawoffices.com/",
+          "email": "gray@lowrylawoffices.com",
+          "note": "WordPress Twenty Twenty-Five default theme. Stock-ish images May 2025 (typo realeastat.webp). Managing partner Steve Lowry; associate Jamie Blue (Campbell Law 2022). Also lawson@ / Cindy@ / Lindsay@lowrylawoffices.com. Six Forks Office Center walk-in.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
           "instagram": ""
         },
         {
@@ -549,6 +607,20 @@
           "emailed": false,
           "rating": 1,
           "visit": false,
+          "instagram": ""
+        },
+        {
+          "name": "The Roper Law Firm, P.A.",
+          "address": "5660 Six Forks Road, Suite 104, Raleigh NC 27609",
+          "hours": "Not published - call first",
+          "phone": "919-847-1228",
+          "website": "https://www.roperlaw.net/",
+          "email": "wayne@roperlaw.net",
+          "note": "Self-hosted custom HTML on Plesk. Live Coronavirus Safety Procedures and P.A. at Law leftover copy. Copyright 2024. Wayne Roper + John Garrett III (Campbell Law 2021). Also packages@roperlaw.net. 2-story Class B office, surface parking.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
           "instagram": ""
         },
         {

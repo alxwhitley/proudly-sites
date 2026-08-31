@@ -115,6 +115,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 ## Recent
 
+### [Monday Aug 31, 2026 · /clients five prospect stops] — Code
+
+- **Did:** Added The Roper Law Firm, P.A. (`midtown-six-forks`, same building as Oak City; maps loop already had 5660 Six Forks), Lowry Law Offices and The Law Offices of Jeffrey G. Marsocci, PLLC (`six-forks-lead-mine`; 8358 and 8406 Six Forks inserted in the loop), FIRST IN SIGHT (`creedmoor`; 8015 Creedmoor Rd in the loop), and Brier Creek Vision Care (`leesville`; 9650 Brier Creek Parkway near Triangle Christian Center). `emailed` is false on all five. Existing stops unchanged. No duplicates.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (57 rows, 34 published emails, Visit · 14). Built `/clients` HTML includes all five names, mailto/tel values, and the updated loop URLs.
+- **Shipped:** PR #21 open on `cursor/field-visit-prospect-stops-0f69`. Not merged. Not deployed.
+
 ### [Thursday Aug 27, 2026 · /clients Mueller, Jenny Doyle, Doctor Direct] — Code
 
 - **Did:** Added The Mueller Law Firm, P.A. to Falls / Raven Ridge (after Betham). Added Jenny Doyle Immigration Counsel and Doctor Direct to Midtown Six Forks (Doctor Direct after Oak City on Six Forks; Jenny Doyle at end of the set). `emailed` stays false. Existing names unchanged. Rebuilt both Maps loops.
