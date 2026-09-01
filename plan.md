@@ -1,6 +1,6 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: North Raleigh Periodontics marked emailed (PR #22). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: five new leads (PR #23) — Six Forks Animal Hospital, Reflex Physical Therapy, Matta, Mantilla, Grace Baptist. Always merge and make live.
 
 **Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 1, 2026 · /clients five new leads] — Code
+
+- **Did:** Added Six Forks Animal Hospital (`six-forks-lead-mine`, after Kindrachuk), Reflex Physical Therapy (`leesville`, after Brier Creek Vision), The Matta Law Firm, PLLC (`midtown-six-forks`, after Hormone Wellness / same 211 E Six Forks building), Mantilla Immigration Law Office (`midtown-six-forks`, after Doctor Direct near Oak City/Roper), and Grace Baptist Church (new `neuse-east` Sunday loop). `emailed` is false. Existing stops unchanged. Rebuilt maps loops for the four touched sets.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (62 rows, 39 published emails, Visit · 19, 7 sets). Production `https://www.proudlysites.com/clients` returns 200 with all five names.
+- **Shipped:** PR #23 merged to `main`. Production live.
 
 ### [Monday Aug 31, 2026 · /clients North Raleigh Periodontics emailed] — Code
 
