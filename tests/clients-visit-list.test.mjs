@@ -28,8 +28,8 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /data-filter="law"/);
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
-  assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 57);
+  assert.equal(data.sets.length, 7);
+  assert.equal(stops.length, 62);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -402,6 +402,93 @@ test("clients page renders a dense lead table from the data file", async () => {
     leesvilleNames.indexOf("Triangle Christian Center") + 1
   );
 
+  const sixForksAH = stops.find((stop) => stop.name === "Six Forks Animal Hospital");
+  assert.ok(sixForksAH, "Six Forks Animal Hospital should be present");
+  assert.equal(sixForksAH.industry, "Veterinary");
+  assert.equal(sixForksAH.email, "6forks@bellsouth.net");
+  assert.equal(sixForksAH.instagram, "");
+  assert.equal(sixForksAH.phone, "919-847-5854");
+  assert.equal(sixForksAH.emailed, false);
+  assert.equal(sixForksAH.rating, 3);
+  assert.equal(sixForksAH.visit, true);
+  assert.equal(typeof sixForksAH.typicallyClosed, "string");
+  assert.ok(sixForks.stops.some((stop) => stop.name === "Six Forks Animal Hospital"));
+  assert.ok(sixForks.mapsUrl.includes("7130+Six+Forks+Rd"));
+  assert.equal(
+    sixForksNames.indexOf("Six Forks Animal Hospital"),
+    sixForksNames.indexOf("Kindrachuk & Gilchrist") + 1
+  );
+
+  const reflex = stops.find((stop) => stop.name === "Reflex Physical Therapy");
+  assert.ok(reflex, "Reflex Physical Therapy should be present");
+  assert.equal(reflex.industry, "Physical therapy");
+  assert.equal(reflex.email, "info@reflexphysicaltherapy.com");
+  assert.equal(reflex.instagram, "");
+  assert.equal(reflex.phone, "919-341-7543");
+  assert.equal(reflex.emailed, false);
+  assert.equal(reflex.rating, 3);
+  assert.equal(reflex.visit, true);
+  assert.equal(typeof reflex.typicallyClosed, "string");
+  assert.ok(leesville.stops.some((stop) => stop.name === "Reflex Physical Therapy"));
+  assert.ok(leesville.mapsUrl.includes("7901+ACC+Blvd"));
+  assert.equal(
+    leesvilleNames.indexOf("Reflex Physical Therapy"),
+    leesvilleNames.indexOf("Brier Creek Vision Care") + 1
+  );
+
+  const mantilla = stops.find((stop) => stop.name === "Mantilla Immigration Law Office");
+  assert.ok(mantilla, "Mantilla Immigration Law Office should be present");
+  assert.equal(mantilla.industry, "Law");
+  assert.equal(mantilla.email, "attorney@mantillaimmigration.com");
+  assert.equal(mantilla.instagram, "@mantillaimmigration");
+  assert.equal(mantilla.phone, "919-977-4002");
+  assert.equal(mantilla.emailed, false);
+  assert.equal(mantilla.rating, 3);
+  assert.equal(mantilla.visit, true);
+  assert.equal(typeof mantilla.typicallyClosed, "string");
+  assert.ok(midtown.stops.some((stop) => stop.name === "Mantilla Immigration Law Office"));
+  assert.ok(midtown.mapsUrl.includes("6060+Six+Forks+Rd"));
+  assert.equal(
+    midtownNames.indexOf("Mantilla Immigration Law Office"),
+    midtownNames.indexOf("Doctor Direct") + 1
+  );
+
+  const matta = stops.find((stop) => stop.name === "The Matta Law Firm, PLLC");
+  assert.ok(matta, "The Matta Law Firm, PLLC should be present");
+  assert.equal(matta.industry, "Law");
+  assert.equal(matta.email, "info@mattalawfirm.com");
+  assert.equal(matta.instagram, "");
+  assert.equal(matta.phone, "919-703-0470");
+  assert.equal(matta.emailed, false);
+  assert.equal(matta.rating, 3);
+  assert.equal(matta.visit, true);
+  assert.ok(midtown.stops.some((stop) => stop.name === "The Matta Law Firm, PLLC"));
+  assert.ok(midtown.mapsUrl.includes("211+E.+Six+Forks+Rd."));
+  assert.equal(
+    midtownNames.indexOf("The Matta Law Firm, PLLC"),
+    midtownNames.indexOf("Hormone Wellness MD") + 1
+  );
+
+  const neuseEast = data.sets.find((set) => set.id === "neuse-east");
+  assert.ok(neuseEast, "neuse-east set should exist");
+  assert.equal(neuseEast.name, "Neuse / east");
+  assert.equal(neuseEast.distance, "~20 mi");
+  const grace = stops.find((stop) => stop.name === "Grace Baptist Church");
+  assert.ok(grace, "Grace Baptist Church should be present");
+  assert.equal(grace.industry, "Church");
+  assert.equal(grace.email, "grace.baptist.raleigh@gmail.com");
+  assert.equal(grace.instagram, "");
+  assert.equal(grace.phone, "919-217-4487");
+  assert.equal(grace.emailed, false);
+  assert.equal(grace.rating, 3);
+  assert.equal(grace.visit, true);
+  assert.equal(typeof grace.typicallyClosed, "string");
+  assert.equal(grace.extra, undefined);
+  assert.ok(neuseEast.stops.some((stop) => stop.name === "Grace Baptist Church"));
+  assert.ok(neuseEast.mapsUrl.includes("3305+Old+Milburnie+Rd"));
+  assert.match(html, /Grace Baptist Church/);
+  assert.match(html, /mailto:grace.baptist.raleigh@gmail.com/);
+
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
@@ -443,9 +530,14 @@ test("clients page renders a dense lead table from the data file", async () => {
     "The Law Offices of Jeffrey G. Marsocci, PLLC": "jeff@livingtrustlawfirm.com",
     "FIRST IN SIGHT": "firstinsight@bellsouth.net",
     "Brier Creek Vision Care": "info@briercreekvision.com",
+    "Six Forks Animal Hospital": "6forks@bellsouth.net",
+    "Reflex Physical Therapy": "info@reflexphysicaltherapy.com",
+    "Mantilla Immigration Law Office": "attorney@mantillaimmigration.com",
+    "The Matta Law Firm, PLLC": "info@mattalawfirm.com",
+    "Grace Baptist Church": "grace.baptist.raleigh@gmail.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 34);
+  assert.equal(withEmail.length, 39);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
