@@ -91,7 +91,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(rfo.visit, false);
   const leesville = data.sets.find((set) => set.id === "leesville");
   assert.ok(leesville.stops.some((stop) => stop.name === "Raleigh Family Orthodontics"));
-  assert.ok(leesville.mapsUrl.includes("9201+Leesville+Rd"));
+  assert.ok(leesville.mapsUrl.includes("9201+Leesville+Road"));
   assert.match(html, /Raleigh Family Orthodontics/);
   assert.match(html, /mailto:info@raleighfamilyortho.com/);
 
