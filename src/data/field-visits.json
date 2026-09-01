@@ -449,7 +449,7 @@
           "email": "general@amoslawnc.com",
           "note": "Wix DIY. Tuey Amos practicing; Leslie Amos Of Counsel. Blog last dated Apr 2019.",
           "industry": "Law",
-          "emailed": false,
+          "emailed": true,
           "rating": 2,
           "visit": false,
           "instagram": "@amoslawnc"
