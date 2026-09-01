@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: five new leads (PR #23) — Six Forks Animal Hospital, Reflex Physical Therapy, Matta, Mantilla, Grace Baptist. Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Amos & Amos, Attorneys at Law marked emailed (PR #24, merged). Always merge and make live.
 
-**Verification done:** `npm run build` — 15 routes, zero errors. Node test against `dist/clients/index.html` confirmed six sets, provided tel/Maps/website values, and robots noindex. Playwright screenshots at 390px and 1440px show jump chips, per-set Maps CTAs, and stop cards; blanks (no phone on North Raleigh Church of Christ, no hours on Edgerton / W.G. Alexander) stay blank.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of `296c82b`, HTTP 200, `x-vercel-cache: MISS`) shows Amos & Amos with `class="is-sent"` and a checked `Sent: Amos & Amos, Attorneys at Law` checkbox. Neighboring stops unchanged (NeuroBloom still sent; North Raleigh Church of Christ still unsent). Diff was one `emailed` flip in `src/data/field-visits.json`.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
