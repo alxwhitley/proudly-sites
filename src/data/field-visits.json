@@ -119,7 +119,7 @@
       "name": "Leesville / Brier Creek",
       "distance": "~10 mi",
       "note": "Sunday works for churches.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/9317+Leesville+Rd%2C+Raleigh+NC+27613/9309+Leesville+Rd%2C+Raleigh+NC+27613/9201+Leesville+Rd%2C+STE+160%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Road%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/7901+ACC+Blvd%2C+Suite+101%2C+Raleigh+NC+27617/9317+Leesville+Rd%2C+Raleigh+NC+27613/9309+Leesville+Rd%2C+Raleigh+NC+27613/9201+Leesville+Road%2C+STE+160%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Baptist Grove Church",
@@ -192,6 +192,21 @@
           "instagram": ""
         },
         {
+          "name": "Reflex Physical Therapy",
+          "address": "7901 ACC Blvd, Suite 101, Raleigh NC 27617",
+          "hours": "Mon-Thu 7:30am-4:00pm; Fri 7:30am-12:00pm",
+          "typicallyClosed": "Closed Sat, Sun. Closed last Friday of each month.",
+          "phone": "919-341-7543",
+          "website": "https://reflexphysicaltherapy.com/",
+          "email": "info@reflexphysicaltherapy.com",
+          "note": "Founder Chaitali Patel, PT, DPT, OCS, GCS. About page leftover theme junk: Best Digital Agency copy, Lorem ipsum, name@domain.com placeholders. Suite 101 ACC Blvd near Brier Creek.",
+          "industry": "Physical therapy",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
+        {
           "name": "Campbell Orthodontics",
           "address": "9317 Leesville Rd, Raleigh NC 27613",
           "hours": "Mon-Thu 7:45am-5pm (lunch 12:30-2); Fri 8am-3pm",
@@ -254,7 +269,7 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Plastic Surgical Center of North Raleigh",
@@ -321,6 +336,21 @@
           "rating": 2,
           "visit": false,
           "instagram": "@drkevin_drdon"
+        },
+        {
+          "name": "Six Forks Animal Hospital",
+          "address": "7130 Six Forks Rd, Raleigh NC 27615",
+          "hours": "Mon-Fri 7:15am-6:00pm; Sat 8:00am-12:00pm; Sun boarding pickup only 10-11am and 5-6pm",
+          "typicallyClosed": "Sunday clinic closed (boarding pickup only)",
+          "phone": "919-847-5854",
+          "website": "https://sixforksanimalhospital.com/",
+          "email": "6forks@bellsouth.net",
+          "note": "Independent PLLC (Dr. Jackie H. Price). Classic TeleVox/Offline Marketing leftover vet template + Bellsouth email. Founded 1967 on Six Forks. Street clinic with boarding/grooming.",
+          "industry": "Veterinary",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
         },
         {
           "name": "North Haven Church",
@@ -530,7 +560,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Law Corner and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E.+Six+Forks+Rd.%2C+Suite+122%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/5660+Six+Forks+Road%2C+Suite+104%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/6060+Six+Forks+Rd%2C+Suite+B%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "McNeil Law Firm",
@@ -598,6 +628,20 @@
           "instagram": "@hormonewellnessmd"
         },
         {
+          "name": "The Matta Law Firm, PLLC",
+          "address": "211 E. Six Forks Rd., Suite 122, Raleigh NC 27609",
+          "hours": "Not published - call first",
+          "phone": "919-703-0470",
+          "website": "https://www.mattalawfirm.com/",
+          "email": "info@mattalawfirm.com",
+          "note": "Attorneys Jorge E. Matta and H. Esteban Diaz (2). Immigration, criminal, family. WordPress Total theme; footer Copyright 2017. Suite 122 walk-in. Hours not published on firm site.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
+        {
           "name": "Oak City Estate Planning",
           "address": "5660 Six Forks Rd, Ste 202, Raleigh NC 27609",
           "hours": "Address from directories, not their site",
@@ -637,6 +681,21 @@
           "rating": 2,
           "visit": false,
           "instagram": "@doctordirectmd"
+        },
+        {
+          "name": "Mantilla Immigration Law Office",
+          "address": "6060 Six Forks Rd, Suite B, Raleigh NC 27609",
+          "hours": "Mon-Thu 8:00am-5:30pm; Fri 8:00am-5:00pm; Sat by appointment",
+          "typicallyClosed": "Closed Sun",
+          "phone": "919-977-4002",
+          "website": "https://www.mantillaimmigration.com/",
+          "email": "attorney@mantillaimmigration.com",
+          "note": "Solo Pedro Mantilla; federal immigration. DIY Bluehost/wb4wp WordPress builder. Suite B strip walk-in. Instagram published on site.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@mantillaimmigration"
         },
         {
           "name": "Triangle Functional Medicine",
@@ -839,6 +898,30 @@
           "emailed": false,
           "rating": 2,
           "visit": false,
+          "instagram": ""
+        }
+      ]
+    },
+    {
+      "id": "neuse-east",
+      "name": "Neuse / east",
+      "distance": "~20 mi",
+      "note": "Sunday for Grace Baptist.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/3305+Old+Milburnie+Rd%2C+Raleigh+NC+27604/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "Grace Baptist Church",
+          "address": "3305 Old Milburnie Rd, Raleigh NC 27604",
+          "hours": "Sunday School 9:30am; Sunday Worship 10:30am",
+          "typicallyClosed": "Weekday office not published",
+          "phone": "919-217-4487",
+          "website": "https://www.gracebchurch.net/",
+          "email": "grace.baptist.raleigh@gmail.com",
+          "note": "Independent Baptist. Google Sites DIY (Report abuse). Old Jan 2022 sermon links still on home next to newer 2025 content. Also publishes pastor email doctorseeler@gmail.com (Rev. Dr. William Seeler). Attendance unpublished; clears via DIY + neglected + email + timing.",
+          "industry": "Church",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
           "instagram": ""
         }
       ]
