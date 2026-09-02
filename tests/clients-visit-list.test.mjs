@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 7);
-  assert.equal(stops.length, 62);
+  assert.equal(stops.length, 67);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -123,7 +123,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(amos.email, "general@amoslawnc.com");
   assert.equal(amos.instagram, "@amoslawnc");
   assert.equal(amos.phone, "919-900-7747");
-  assert.equal(amos.emailed, false);
+  assert.equal(amos.emailed, true);
   assert.equal(amos.rating, 2);
   assert.equal(amos.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "Amos & Amos, Attorneys at Law"));
@@ -257,7 +257,8 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(jennyDoyle.visit, false);
   assert.ok(midtown.stops.some((stop) => stop.name === "Jenny Doyle, Esq. Immigration Counsel, LLC"));
   assert.ok(midtown.mapsUrl.includes("4016+Barrett+Drive"));
-  assert.equal(midtownNames.at(-1), "Faithful Paws Mobile Veterinary Services");
+  assert.ok(midtown.stops.some((stop) => stop.name === "Faithful Paws Mobile Veterinary Services"));
+  assert.equal(midtownNames.at(-1), "The King's Chapel");
 
   const triangleFm = stops.find((stop) => stop.name === "Triangle Functional Medicine");
   assert.ok(triangleFm, "Triangle Functional Medicine should be present");
@@ -489,6 +490,80 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /Grace Baptist Church/);
   assert.match(html, /mailto:grace.baptist.raleigh@gmail.com/);
 
+  const kingsChapel = stops.find((stop) => stop.name === "The King's Chapel");
+  assert.ok(kingsChapel, "The King's Chapel should be present");
+  assert.equal(kingsChapel.industry, "Church");
+  assert.equal(kingsChapel.email, "info@thekingschapel.com");
+  assert.equal(kingsChapel.instagram, "@thekingschapelnc");
+  assert.equal(kingsChapel.phone, "919-573-5454");
+  assert.equal(kingsChapel.emailed, false);
+  assert.equal(kingsChapel.rating, 3);
+  assert.equal(kingsChapel.visit, true);
+  assert.ok(midtown.stops.some((stop) => stop.name === "The King's Chapel"));
+  assert.ok(midtown.mapsUrl.includes("400+Newton+Rd"));
+  assert.match(html, /The King(?:'|&#39;)s Chapel/);
+  assert.match(html, /mailto:info@thekingschapel.com/);
+
+  const lifehouse = stops.find((stop) => stop.name === "LifeHouse Church");
+  assert.ok(lifehouse, "LifeHouse Church should be present");
+  assert.equal(lifehouse.industry, "Church");
+  assert.equal(lifehouse.email, "info@mylifehousechurch.com");
+  assert.equal(lifehouse.instagram, "@mylifehousechurchnc");
+  assert.equal(lifehouse.phone, "919-432-5839");
+  assert.equal(lifehouse.emailed, false);
+  assert.equal(lifehouse.rating, 3);
+  assert.equal(lifehouse.visit, true);
+  assert.ok(falls.stops.some((stop) => stop.name === "LifeHouse Church"));
+  assert.ok(falls.mapsUrl.includes("11001+Raven+Ridge+Rd"));
+  assert.equal(fallsNames.at(-1), "LifeHouse Church");
+
+  const brierPeds = stops.find((stop) => stop.name === "Brier Creek Pediatric Dentistry");
+  assert.ok(brierPeds, "Brier Creek Pediatric Dentistry should be present");
+  assert.equal(brierPeds.industry, "Pediatric dentistry");
+  assert.equal(brierPeds.email, "info@briercreekpediatricdentistry.com");
+  assert.equal(brierPeds.instagram, "");
+  assert.equal(brierPeds.phone, "919-806-0200");
+  assert.equal(brierPeds.emailed, false);
+  assert.equal(brierPeds.rating, 3);
+  assert.equal(brierPeds.visit, true);
+  assert.equal(typeof brierPeds.typicallyClosed, "string");
+  assert.ok(leesville.stops.some((stop) => stop.name === "Brier Creek Pediatric Dentistry"));
+  assert.ok(leesville.mapsUrl.includes("10411+Moncreiffe+Rd"));
+  assert.equal(leesvilleNames.at(-1), "Brier Creek Pediatric Dentistry");
+
+  const raleighOptometry = stops.find((stop) => stop.name === "Raleigh Optometry");
+  assert.ok(raleighOptometry, "Raleigh Optometry should be present");
+  assert.equal(raleighOptometry.industry, "Optometry");
+  assert.equal(raleighOptometry.email, "raleighoptometry@gmail.com");
+  assert.equal(raleighOptometry.instagram, "@raleighoptometry");
+  assert.equal(raleighOptometry.phone, "919-781-2116");
+  assert.equal(raleighOptometry.emailed, false);
+  assert.equal(raleighOptometry.rating, 3);
+  assert.equal(raleighOptometry.visit, true);
+  assert.equal(typeof raleighOptometry.typicallyClosed, "string");
+  assert.ok(crabtree.stops.some((stop) => stop.name === "Raleigh Optometry"));
+  assert.ok(crabtree.mapsUrl.includes("2501+Atrium+Dr"));
+
+  const ludwig = stops.find((stop) => stop.name === "Law Office of Constance M. Ludwig");
+  assert.ok(ludwig, "Law Office of Constance M. Ludwig should be present");
+  assert.equal(ludwig.industry, "Law");
+  assert.equal(ludwig.email, "constanceludwiglaw@gmail.com");
+  assert.equal(ludwig.instagram, "");
+  assert.equal(ludwig.phone, "919-390-6468");
+  assert.equal(ludwig.emailed, false);
+  assert.equal(ludwig.rating, 3);
+  assert.equal(ludwig.visit, true);
+  assert.ok(crabtree.stops.some((stop) => stop.name === "Law Office of Constance M. Ludwig"));
+  assert.ok(crabtree.mapsUrl.includes("4801+Glenwood+Avenue"));
+  assert.equal(
+    crabtreeNames.indexOf("Raleigh Optometry"),
+    crabtreeNames.indexOf("Barrett Law Offices, PLLC") + 1
+  );
+  assert.equal(
+    crabtreeNames.indexOf("Law Office of Constance M. Ludwig"),
+    crabtreeNames.indexOf("Raleigh Optometry") + 1
+  );
+
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
@@ -535,9 +610,14 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Mantilla Immigration Law Office": "attorney@mantillaimmigration.com",
     "The Matta Law Firm, PLLC": "info@mattalawfirm.com",
     "Grace Baptist Church": "grace.baptist.raleigh@gmail.com",
+    "The King's Chapel": "info@thekingschapel.com",
+    "LifeHouse Church": "info@mylifehousechurch.com",
+    "Brier Creek Pediatric Dentistry": "info@briercreekpediatricdentistry.com",
+    "Raleigh Optometry": "raleighoptometry@gmail.com",
+    "Law Office of Constance M. Ludwig": "constanceludwiglaw@gmail.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 39);
+  assert.equal(withEmail.length, 44);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -552,6 +632,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
   const emailedNames = emailedTrue.map((stop) => stop.name).sort();
   assert.deepEqual(emailedNames, [
+    "Amos & Amos, Attorneys at Law",
     "Campbell Orthodontics",
     "Freedom Church Raleigh",
     "NeuroBloom Physical Therapy & Wellness",
@@ -574,7 +655,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   const visitStops = stops.filter((stop) => stop.visit === true);
   assert.ok(stops.every((stop) => stop.rating === 1 || stop.rating === 2 || stop.rating === 3));
   assert.ok(stops.every((stop) => stop.visit === (stop.rating === 3)));
-  assert.ok(visitStops.length >= 4 && visitStops.length <= 20);
+  assert.ok(visitStops.length >= 4 && visitStops.length <= 30);
   assert.match(html, new RegExp(`Visit · ${visitStops.length}`));
   for (const stop of visitStops) {
     assert.ok(html.includes(`data-visit="true"`));
