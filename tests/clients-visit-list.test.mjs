@@ -134,7 +134,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(meliora.email, "contact@meliorawellnessnc.com");
   assert.equal(meliora.instagram, "@meliora_wellness_nc");
   assert.equal(meliora.phone, "984-233-0534");
-  assert.equal(meliora.emailed, false);
+  assert.equal(meliora.emailed, true);
   assert.equal(meliora.rating, 2);
   assert.equal(meliora.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "Meliora Wellness"));
@@ -635,6 +635,7 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Amos & Amos, Attorneys at Law",
     "Campbell Orthodontics",
     "Freedom Church Raleigh",
+    "Meliora Wellness",
     "NeuroBloom Physical Therapy & Wellness",
     "North Raleigh Periodontics & Implant Center",
     "Sisson Law Firm",
