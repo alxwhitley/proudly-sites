@@ -518,7 +518,7 @@
           "email": "contact@meliorawellnessnc.com",
           "note": "GoDaddy Website Builder. Co-founders Dr. Michele Kim, DNP and Melissa Cruz, FNP. Memberships banner; Wake Forest location coming soon. Appointment-only, not walk-in.",
           "industry": "Concierge wellness",
-          "emailed": false,
+          "emailed": true,
           "rating": 2,
           "visit": false,
           "instagram": "@meliora_wellness_nc"
