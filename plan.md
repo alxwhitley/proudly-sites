@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Amos & Amos, Attorneys at Law marked emailed (PR #24, merged). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: five new prospect stops on main (PR #25, merged). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of `296c82b`, HTTP 200, `x-vercel-cache: MISS`) shows Amos & Amos with `class="is-sent"` and a checked `Sent: Amos & Amos, Attorneys at Law` checkbox. Neighboring stops unchanged (NeuroBloom still sent; North Raleigh Church of Christ still unsent). Diff was one `emailed` flip in `src/data/field-visits.json`.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `f357f2c`, HTTP 200, `x-vercel-cache: HIT`) shows 67 rows including The King's Chapel (`midtown-six-forks`), LifeHouse Church (`falls-raven-ridge`), Brier Creek Pediatric Dentistry (`leesville`), Raleigh Optometry and Law Office of Constance M. Ludwig (`crabtree-midtown`). All five are unsent. Existing emailed rows unchanged (Amos & Amos and NeuroBloom still `is-sent`). `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed; browser pass at 1440/390 confirmed Visit · 24 includes the five new rating-3 stops.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
