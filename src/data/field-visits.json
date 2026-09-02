@@ -119,7 +119,7 @@
       "name": "Leesville / Brier Creek",
       "distance": "~10 mi",
       "note": "Sunday works for churches.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Road%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/7901+ACC+Blvd%2C+Suite+101%2C+Raleigh+NC+27617/9317+Leesville+Rd%2C+Raleigh+NC+27613/9309+Leesville+Rd%2C+Raleigh+NC+27613/9201+Leesville+Road%2C+STE+160%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Road%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/7901+ACC+Blvd%2C+Suite+101%2C+Raleigh+NC+27617/9317+Leesville+Rd%2C+Raleigh+NC+27613/9309+Leesville+Rd%2C+Raleigh+NC+27613/9201+Leesville+Road%2C+STE+160%2C+Raleigh+NC+27613/10411+Moncreiffe+Rd%2C+Suite+105B%2C+Raleigh+NC+27617/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Baptist Grove Church",
@@ -261,6 +261,21 @@
           "rating": 2,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "Brier Creek Pediatric Dentistry",
+          "address": "10411 Moncreiffe Rd, Suite 105B, Raleigh NC 27617",
+          "hours": "Mon-Thu 8:00am-4:30pm",
+          "typicallyClosed": "Closed Fri, Sat, Sun",
+          "phone": "919-806-0200",
+          "website": "https://bcpediatricdentistry.com/",
+          "email": "info@briercreekpediatricdentistry.com",
+          "note": "Wix DIY. Founder Dr. Christi M. Davis, DDS. Homepage 'Now accepting new patients'. Thin sparse Wix vs polished local peds competitors.",
+          "industry": "Pediatric dentistry",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
         }
       ]
     },
@@ -384,7 +399,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/8331+Bandford+Way%2C+Suite+105%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/8331+Bandford+Way%2C+Suite+105%2C+Raleigh+NC+27615/11001+Raven+Ridge+Rd%2C+Raleigh+NC+27614/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -552,6 +567,20 @@
           "rating": 3,
           "visit": true,
           "instagram": "@championorthonc"
+        },
+        {
+          "name": "LifeHouse Church",
+          "address": "11001 Raven Ridge Rd, Raleigh NC 27614",
+          "hours": "Sunday worship 10:00am. Weekday office not published.",
+          "phone": "919-432-5839",
+          "website": "https://mylifehousechurch.com/",
+          "email": "info@mylifehousechurch.com",
+          "note": "Church.co template with live 'This is an alert about alerts' placeholder junk. Attendance unpublished; DIY + neglected + email + timing tell clears bar.",
+          "industry": "Church",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@mylifehousechurchnc"
         }
       ]
     },
@@ -560,7 +589,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Law Corner and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E.+Six+Forks+Rd.%2C+Suite+122%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/5660+Six+Forks+Road%2C+Suite+104%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/6060+Six+Forks+Rd%2C+Suite+B%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E.+Six+Forks+Rd.%2C+Suite+122%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/5660+Six+Forks+Road%2C+Suite+104%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/6060+Six+Forks+Rd%2C+Suite+B%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/400+Newton+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "McNeil Law Firm",
@@ -771,6 +800,20 @@
           "rating": 2,
           "visit": false,
           "instagram": "@faithfulpawsvet"
+        },
+        {
+          "name": "The King's Chapel",
+          "address": "400 Newton Rd, Raleigh NC 27615",
+          "hours": "Sunday Life Groups 9am; Worship 10:30am. Wednesday Family Night resumes Sep 16. Weekday office not published.",
+          "phone": "919-573-5454",
+          "website": "https://www.thekingschapel.com/",
+          "email": "info@thekingschapel.com",
+          "note": "Squarespace DIY (+ Church Center). May 2025 Christ Baptist / Capital Community merge; contact page still shows July–Aug transitional schedule. Old christbaptist.org leftover broken.",
+          "industry": "Church",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@thekingschapelnc"
         }
       ]
     },
@@ -779,7 +822,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/2501+Atrium+Dr%2C+Suite+150%2C+Raleigh+NC+27607/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Kratt Dedmond & Associates",
@@ -898,6 +941,35 @@
           "emailed": false,
           "rating": 2,
           "visit": false,
+          "instagram": ""
+        },
+        {
+          "name": "Raleigh Optometry",
+          "address": "2501 Atrium Dr, Suite 150, Raleigh NC 27607",
+          "hours": "Mon/Tue/Thu 9am-12pm & 2pm-5pm; Wed by appointment",
+          "typicallyClosed": "Closed Fri, Sat, Sun",
+          "phone": "919-781-2116",
+          "website": "https://www.raleighoptometry.com/",
+          "email": "raleighoptometry@gmail.com",
+          "note": "WordPress leftover template: /our-office/ still shows ASID interior-designer copy and patrick@andrewgreerdesign.com. Frozen 2018–2020 Google reviews. Founder Dr. Donathan Hudgins, single office.",
+          "industry": "Optometry",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@raleighoptometry"
+        },
+        {
+          "name": "Law Office of Constance M. Ludwig",
+          "address": "4801 Glenwood Avenue, Suite 200, Raleigh NC 27612",
+          "hours": "Not published - call first",
+          "phone": "919-390-6468",
+          "website": "https://www.constanceludwiglaw.com/",
+          "email": "constanceludwiglaw@gmail.com",
+          "note": "Weebly DIY. Footer copyright 2013–2015. Sparse leftover Weebly family-law solo. Named attorney + Glenwood suite walk-in.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
           "instagram": ""
         }
       ]
