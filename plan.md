@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: five new prospect stops on main (PR #25, merged). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Meliora Wellness first-touch marked sent (PR #26, merged). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `f357f2c`, HTTP 200, `x-vercel-cache: HIT`) shows 67 rows including The King's Chapel (`midtown-six-forks`), LifeHouse Church (`falls-raven-ridge`), Brier Creek Pediatric Dentistry (`leesville`), Raleigh Optometry and Law Office of Constance M. Ludwig (`crabtree-midtown`). All five are unsent. Existing emailed rows unchanged (Amos & Amos and NeuroBloom still `is-sent`). `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed; browser pass at 1440/390 confirmed Visit · 24 includes the five new rating-3 stops.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `7ec891b`, HTTP 200, `x-vercel-cache: MISS`) has `checked` on `aria-label="Sent: Meliora Wellness"`. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed. Other emailed rows unchanged.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Wednesday Sep 2, 2026 · /clients Meliora Wellness emailed] — Code
+
+- **Did:** Set `emailed: true` only on Meliora Wellness (`contact@meliorawellnessnc.com`). No other fields or stops changed. Visit-list test now expects Meliora in the sent set.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed. Built and production `/clients` HTML have `checked` on `aria-label="Sent: Meliora Wellness"`. Browser pass at 1440 and 390 on production confirmed Meliora Sent is checked; Amos & Amos and NeuroBloom still checked.
+- **Shipped:** PR #26 merged to `main` (`7ec891b`). Production `https://www.proudlysites.com/clients` returns 200 with that Sent checkbox checked.
 
 ### [Tuesday Sep 1, 2026 · /clients five new leads] — Code
 
