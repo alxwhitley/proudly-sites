@@ -589,7 +589,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Law Corner and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E.+Six+Forks+Rd.%2C+Suite+122%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/5660+Six+Forks+Road%2C+Suite+104%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/6060+Six+Forks+Rd%2C+Suite+B%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/400+Newton+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/226+W+Millbrook+Rd%2C+Raleigh+NC+27609/276+W+Millbrook+Rd%2C+Raleigh+NC+27609/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Ste+106%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E.+Six+Forks+Rd.%2C+Suite+122%2C+Raleigh+NC+27609/5660+Six+Forks+Rd%2C+Ste+202%2C+Raleigh+NC+27609/5660+Six+Forks+Road%2C+Suite+104%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/6060+Six+Forks+Rd%2C+Suite+B%2C+Raleigh+NC+27609/809+Spring+Forest+Rd%2C+Ste+800%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4700+Homewood+Court%2C+Suite+320%2C+Raleigh+NC+27609/400+Newton+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "McNeil Law Firm",
@@ -769,6 +769,20 @@
           "emailed": false,
           "rating": 2,
           "visit": false,
+          "instagram": ""
+        },
+        {
+          "name": "Nichols, Choi & Lee, PLLC",
+          "address": "4700 Homewood Court, Suite 320, Raleigh NC 27609",
+          "hours": "Not published - call first",
+          "phone": "919-341-2636",
+          "website": "https://info48912.wixsite.com/nichols-choi-lee",
+          "email": "info@ncl-law.com",
+          "note": "Three-attorney boutique employment/administrative/licensing/nonprofit corporate. Free Wix subdomain with visible Wix builder branding and mismatched attorney email buttons (Catherine Lee button shows jack@ncl-law.com, etc.); ncl-law.com currently errors. Street office suite and published phone. info@ncl-law.com.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
           "instagram": ""
         },
         {

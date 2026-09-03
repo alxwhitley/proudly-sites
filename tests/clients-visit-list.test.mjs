@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 7);
-  assert.equal(stops.length, 67);
+  assert.equal(stops.length, 68);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -259,6 +259,25 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(midtown.mapsUrl.includes("4016+Barrett+Drive"));
   assert.ok(midtown.stops.some((stop) => stop.name === "Faithful Paws Mobile Veterinary Services"));
   assert.equal(midtownNames.at(-1), "The King's Chapel");
+
+  const nichols = stops.find((stop) => stop.name === "Nichols, Choi & Lee, PLLC");
+  assert.ok(nichols, "Nichols, Choi & Lee, PLLC should be present");
+  assert.equal(nichols.industry, "Law");
+  assert.equal(nichols.email, "info@ncl-law.com");
+  assert.equal(nichols.instagram, "");
+  assert.equal(nichols.phone, "919-341-2636");
+  assert.equal(nichols.website, "https://info48912.wixsite.com/nichols-choi-lee");
+  assert.equal(nichols.address, "4700 Homewood Court, Suite 320, Raleigh NC 27609");
+  assert.equal(nichols.hours, "Not published - call first");
+  assert.equal(nichols.emailed, false);
+  assert.equal(nichols.rating, 3);
+  assert.equal(nichols.visit, true);
+  assert.ok(midtown.stops.some((stop) => stop.name === "Nichols, Choi & Lee, PLLC"));
+  assert.ok(midtown.mapsUrl.includes("4700+Homewood+Court"));
+  assert.equal(
+    midtownNames.indexOf("Nichols, Choi & Lee, PLLC"),
+    midtownNames.indexOf("Jenny Doyle, Esq. Immigration Counsel, LLC") + 1
+  );
 
   const triangleFm = stops.find((stop) => stop.name === "Triangle Functional Medicine");
   assert.ok(triangleFm, "Triangle Functional Medicine should be present");
@@ -615,9 +634,10 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Brier Creek Pediatric Dentistry": "info@briercreekpediatricdentistry.com",
     "Raleigh Optometry": "raleighoptometry@gmail.com",
     "Law Office of Constance M. Ludwig": "constanceludwiglaw@gmail.com",
+    "Nichols, Choi & Lee, PLLC": "info@ncl-law.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 44);
+  assert.equal(withEmail.length, 45);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
