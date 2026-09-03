@@ -937,7 +937,7 @@
           "email": "dallen@theallenlawoffices.com",
           "note": "Adobe Muse leftover. Dwight and Brady Allen. First-floor Suite 115, not the Ste 300 virtual suites in the same building.",
           "industry": "Law",
-          "emailed": false,
+          "emailed": true,
           "rating": 3,
           "visit": true,
           "instagram": ""
