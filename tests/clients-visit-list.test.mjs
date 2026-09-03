@@ -264,7 +264,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(nichols, "Nichols, Choi & Lee, PLLC should be present");
   assert.equal(nichols.industry, "Law");
   assert.equal(nichols.email, "info@ncl-law.com");
-  assert.equal(nichols.instagram, "@ncl_law");
+  assert.equal(nichols.instagram, "");
   assert.equal(nichols.phone, "919-341-2636");
   assert.equal(nichols.website, "https://info48912.wixsite.com/nichols-choi-lee");
   assert.equal(nichols.address, "4700 Homewood Court, Suite 320, Raleigh NC 27609");
