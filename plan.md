@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Meliora Wellness first-touch marked sent (PR #26, merged). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Nichols, Choi & Lee, PLLC added to Midtown Six Forks (PR #27, merged). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `7ec891b`, HTTP 200, `x-vercel-cache: MISS`) has `checked` on `aria-label="Sent: Meliora Wellness"`. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed. Other emailed rows unchanged.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `3b234a8`, HTTP 200, `x-vercel-cache: MISS`) includes Nichols, Choi & Lee, PLLC at 4700 Homewood Court, Suite 320, `data-visit="true"`, rating 3, Sent unchecked, IG blank. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (68 rows). Playwright on production at 1440px and 390px confirmed the row on Visit · 25.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Thursday Sep 3, 2026 · /clients Nichols, Choi & Lee] — Code
+
+- **Did:** Added Nichols, Choi & Lee, PLLC to Midtown Six Forks after Jenny Doyle (nearest 27609 street-office stop). Official-site address 4700 Homewood Court, Suite 320 (directory Suite 220 ignored). Website is the live Wix subdomain; `ncl-law.com` currently 500s. Published `info@ncl-law.com` and `919-341-2636`. Instagram left blank (`@ncl_law` was only the LinkedIn slug). `emailed: false`, `rating: 3`, `visit: true`. Hours `Not published - call first`. Homewood Court added to that Maps loop. No other stops changed.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (68 rows). Production `https://www.proudlysites.com/clients` returns 200 with the name, Suite 320, phone, Wix URL, Visit · 25, and blank IG. Playwright at 1440px and 390px confirmed the Visit-tab row.
+- **Shipped:** PR #27 merged to `main` (`3b234a8`). Production live.
 
 ### [Wednesday Sep 2, 2026 · /clients Meliora Wellness emailed] — Code
 
