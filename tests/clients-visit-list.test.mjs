@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 7);
-  assert.equal(stops.length, 68);
+  assert.equal(stops.length, 69);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -202,7 +202,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(allen.email, "dallen@theallenlawoffices.com");
   assert.equal(allen.instagram, "");
   assert.equal(allen.phone, "919-838-9529");
-  assert.equal(allen.emailed, false);
+  assert.equal(allen.emailed, true);
   assert.equal(allen.rating, 3);
   assert.equal(allen.visit, true);
   assert.ok(crabtree.stops.some((stop) => stop.name === "Allen Law Offices"));
@@ -583,6 +583,31 @@ test("clients page renders a dense lead table from the data file", async () => {
     crabtreeNames.indexOf("Raleigh Optometry") + 1
   );
 
+  const donnaCohen = stops.find((stop) => stop.name === "Donna R. Cohen Attorney at Law, PLLC");
+  assert.ok(donnaCohen, "Donna R. Cohen Attorney at Law, PLLC should be present");
+  assert.equal(donnaCohen.industry, "Law");
+  assert.equal(donnaCohen.email, "donna@donnacohenlaw.com");
+  assert.equal(donnaCohen.instagram, "");
+  assert.equal(donnaCohen.phone, "919-783-9900");
+  assert.equal(donnaCohen.website, "http://www.donnacohenlaw.com/");
+  assert.equal(donnaCohen.address, "2840 Plaza Place, Suite 315, Raleigh NC 27612");
+  assert.equal(donnaCohen.hours, "By appointment; hours not published");
+  assert.equal(donnaCohen.typicallyClosed, "Weekend hours not published");
+  assert.equal(donnaCohen.emailed, false);
+  assert.equal(donnaCohen.rating, 3);
+  assert.equal(donnaCohen.visit, true);
+  assert.ok(crabtree.stops.some((stop) => stop.name === "Donna R. Cohen Attorney at Law, PLLC"));
+  assert.ok(crabtree.mapsUrl.includes("2840+Plaza+Place"));
+  assert.equal(
+    crabtreeNames.indexOf("Donna R. Cohen Attorney at Law, PLLC"),
+    crabtreeNames.indexOf("Law Office of Constance M. Ludwig") + 1
+  );
+  assert.equal(crabtreeNames.at(-1), "Donna R. Cohen Attorney at Law, PLLC");
+  assert.equal(
+    stops.find((stop) => stop.name === "David C. Franklin, Attorney at Law"),
+    undefined
+  );
+
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
@@ -635,9 +660,10 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Raleigh Optometry": "raleighoptometry@gmail.com",
     "Law Office of Constance M. Ludwig": "constanceludwiglaw@gmail.com",
     "Nichols, Choi & Lee, PLLC": "info@ncl-law.com",
+    "Donna R. Cohen Attorney at Law, PLLC": "donna@donnacohenlaw.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 45);
+  assert.equal(withEmail.length, 46);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -652,6 +678,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
   const emailedNames = emailedTrue.map((stop) => stop.name).sort();
   assert.deepEqual(emailedNames, [
+    "Allen Law Offices",
     "Amos & Amos, Attorneys at Law",
     "Campbell Orthodontics",
     "Freedom Church Raleigh",

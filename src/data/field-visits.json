@@ -836,7 +836,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/2501+Atrium+Dr%2C+Suite+150%2C+Raleigh+NC+27607/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/2501+Atrium+Dr%2C+Suite+150%2C+Raleigh+NC+27607/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Kratt Dedmond & Associates",
@@ -980,6 +980,21 @@
           "website": "https://www.constanceludwiglaw.com/",
           "email": "constanceludwiglaw@gmail.com",
           "note": "Weebly DIY. Footer copyright 2013–2015. Sparse leftover Weebly family-law solo. Named attorney + Glenwood suite walk-in.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
+        {
+          "name": "Donna R. Cohen Attorney at Law, PLLC",
+          "address": "2840 Plaza Place, Suite 315, Raleigh NC 27612",
+          "hours": "By appointment; hours not published",
+          "typicallyClosed": "Weekend hours not published",
+          "phone": "919-783-9900",
+          "website": "http://www.donnacohenlaw.com/",
+          "email": "donna@donnacohenlaw.com",
+          "note": "Solo estate/business/real estate/civil litigation. Ancient WordPress 3.2.1 on Elegant Themes Chameleon; footer still says Designed by Elegant WordPress Themes | Powered by WordPress; logo alt Chameleon Logo; media uploads from 2012. Named email + phone. Instagram not published on site.",
           "industry": "Law",
           "emailed": false,
           "rating": 3,
