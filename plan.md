@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Donna R. Cohen Attorney at Law, PLLC added to Crabtree / midtown (PR #29, merged). Always merge and make live. David C. Franklin was not added (NC Legal Marketing footer = named vertical-agency exclude).
+**Current Priority:** `/clients` is live. Latest: Kratt Dedmond & Associates marked emailed/sent (PR #30, merged `7021526`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `75e84a4`, HTTP 200, `x-vercel-cache: MISS` then `HIT`) includes Donna R. Cohen Attorney at Law, PLLC at 2840 Plaza Place, Suite 315, Set 6 Stop 12, rating 3, Sent unchecked, IG blank, `donnacohenlaw.com`, `919-783-9900`. Franklin is absent. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (69 rows, Visit · 26). Browser pass on production at 1440px and 390px confirmed the Visit-tab row.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `702152669fd7b1f840cbdec09ba5c30cd1f2fdda`, HTTP 200, `x-vercel-cache: MISS`) shows Kratt Dedmond & Associates with Sent checked (`<input type="checkbox" disabled checked aria-label="Sent: Kratt Dedmond & Associates">`). Diff vs previous main `15d05bb` changed only that stop’s `emailed` field (`false` → `true`); no other fields or stops. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
