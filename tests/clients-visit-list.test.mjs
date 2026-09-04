@@ -182,7 +182,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   const kratt = stops.find((stop) => stop.name === "Kratt Dedmond & Associates");
   assert.ok(kratt, "Kratt Dedmond & Associates should be present");
   assert.equal(kratt.email, "bkratt@kdanc.com");
-  assert.equal(kratt.emailed, false);
+  assert.equal(kratt.emailed, true);
   assert.equal(kratt.rating, 3);
   assert.equal(kratt.visit, true);
   assert.equal(kratt.instagram, "");
@@ -682,6 +682,7 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Amos & Amos, Attorneys at Law",
     "Campbell Orthodontics",
     "Freedom Church Raleigh",
+    "Kratt Dedmond & Associates",
     "Meliora Wellness",
     "NeuroBloom Physical Therapy & Wellness",
     "North Raleigh Periodontics & Implant Center",

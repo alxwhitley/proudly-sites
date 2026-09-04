@@ -848,7 +848,7 @@
           "email": "bkratt@kdanc.com",
           "note": "Imp Designs leftover, 2 attorneys",
           "industry": "Law",
-          "emailed": false,
+          "emailed": true,
           "rating": 3,
           "visit": true,
           "instagram": ""
