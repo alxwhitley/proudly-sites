@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Nichols, Choi & Lee, PLLC added to Midtown Six Forks (PR #27, merged). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Donna R. Cohen Attorney at Law, PLLC added to Crabtree / midtown (PR #29, merged). Always merge and make live. David C. Franklin was not added (NC Legal Marketing footer = named vertical-agency exclude).
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `3b234a8`, HTTP 200, `x-vercel-cache: MISS`) includes Nichols, Choi & Lee, PLLC at 4700 Homewood Court, Suite 320, `data-visit="true"`, rating 3, Sent unchecked, IG blank. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (68 rows). Playwright on production at 1440px and 390px confirmed the row on Visit · 25.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production deploy of merge `75e84a4`, HTTP 200, `x-vercel-cache: MISS` then `HIT`) includes Donna R. Cohen Attorney at Law, PLLC at 2840 Plaza Place, Suite 315, Set 6 Stop 12, rating 3, Sent unchecked, IG blank, `donnacohenlaw.com`, `919-783-9900`. Franklin is absent. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (69 rows, Visit · 26). Browser pass on production at 1440px and 390px confirmed the Visit-tab row.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Friday Sep 4, 2026 · /clients Donna R. Cohen] — Code
+
+- **Did:** Added Donna R. Cohen Attorney at Law, PLLC to Crabtree / midtown after Ludwig. Official-site address 2840 Plaza Place, Suite 315. Named email `donna@donnacohenlaw.com` and `919-783-9900`. Instagram blank. `emailed: false`, `rating: 3`, `visit: true`. Hours by appointment / weekend hours not published. Plaza Place added to that Maps loop. David C. Franklin skipped (NC Legal Marketing footer). No other stops changed. Visit-list test now also expects Allen Law Offices as emailed, matching already-merged PR #28 data.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (69 rows, Visit · 26). Production `https://www.proudlysites.com/clients` returns 200 with the name, Suite 315, phone, site, Visit · 26, blank IG, Sent unchecked. Browser pass at 1440px and 390px confirmed the Visit-tab row. Franklin find is 0 results.
+- **Shipped:** PR #29 merged to `main` (`75e84a4`). Production live.
 
 ### [Thursday Sep 3, 2026 · /clients Nichols, Choi & Lee] — Code
 
