@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: five new leads on PR #32 (`cursor/field-visits-five-leads-4761`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: five new leads (PR #32, merged `4326642`). Always merge and make live.
 
-**Verification done:** `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (74 rows, 51 published emails, Visit · 31). The Spence Law Firm was rejected (recent Zoek rebuild) and is not in the file. Existing names unchanged.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows Advanced Healthcare Solutions, Hilton Silvers & McClanahan PLLC, Layton & Carraway, P.A., EYES on North Ridge, and Jennifer Chun Immigration Law. Visit · 31. Spence is absent. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (74 rows, 51 published emails). Existing names unchanged.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -118,8 +118,8 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 ### [Monday Sep 7, 2026 · /clients five North Raleigh leads] — Code
 
 - **Did:** Added Advanced Healthcare Solutions, Hilton Silvers & McClanahan PLLC, and Layton & Carraway, P.A. to `six-forks-lead-mine`; EYES on North Ridge to `falls-raven-ridge`; Jennifer Chun Immigration Law to `crabtree-midtown`. `emailed` is false. The Spence Law Firm was rejected (recent Zoek Marketing Wix-partner rebuild). Existing stops unchanged. Rebuilt Maps loops for the three touched sets from 4133 Lake Lynn Dr.
-- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (74 rows, Visit · 31).
-- **Shipped:** PR #32. Merge/production confirmation follows.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (74 rows, Visit · 31). Browser pass at 1440px and 390px on local preview confirmed all five Visit rows with Sent unchecked. Production `https://www.proudlysites.com/clients` returns 200 with all five names and Visit · 31.
+- **Shipped:** PR #32 merged to `main` (`4326642`). Production live.
 
 ### [Friday Sep 4, 2026 · /clients Donna R. Cohen] — Code
 
