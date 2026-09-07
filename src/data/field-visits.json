@@ -284,7 +284,7 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/8351+Standonshire+Way%2C+Suite+105%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Plastic Surgical Center of North Raleigh",
@@ -296,6 +296,21 @@
           "emailed": false,
           "rating": 2,
           "visit": false,
+          "instagram": ""
+        },
+        {
+          "name": "Layton & Carraway, P.A.",
+          "address": "8524 Six Forks Road, Suite 201, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-846-4964",
+          "website": "https://laytoncarraway.com/",
+          "email": "Tom@LaytonCarraway.com",
+          "note": "Founded 1998 by Thomas E. Layton and Ernest R. Carraway, Jr. (both CPAs). Ancient static HTML DIY. Estate/RE closings/wills/tax/elder/business. Also Ernest@LaytonCarraway.com and Katie@LaytonCarraway.com. Suite 201 walk-in. No Instagram published.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
           "instagram": ""
         },
         {
@@ -340,6 +355,21 @@
           "instagram": ""
         },
         {
+          "name": "Advanced Healthcare Solutions",
+          "address": "8351 Standonshire Way, Suite 105, Raleigh NC 27615",
+          "hours": "Mon-Fri 9:00am-5:30pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-899-2772",
+          "website": "https://advancedhealthcaresolutions.org/",
+          "email": "info@advancedhealthcaresolutions.org",
+          "note": "WordPress/Divi leftover. About page still has live Lorem Ipsum dummy blocks. Dr. Carter (chiropractor/acupuncturist). Fertility + functional/holistic therapies. Suite 105 walk-in. Instagram not published. Footer copyright text messy (2025/2026).",
+          "industry": "Functional medicine / fertility",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
+        {
           "name": "Kindrachuk & Gilchrist",
           "address": "7800 Six Forks Rd, Ste 100, Raleigh NC 27615",
           "hours": "Mon-Thu 8am-5pm",
@@ -351,6 +381,21 @@
           "rating": 2,
           "visit": false,
           "instagram": "@drkevin_drdon"
+        },
+        {
+          "name": "Hilton Silvers & McClanahan PLLC",
+          "address": "7320 Six Forks Road, Suite 100, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-848-6164",
+          "website": "https://hsmlawyers.com/",
+          "email": "David@HSMlawyers.com",
+          "note": "Boutique 3-attorney RE/business/estate firm. WordPress/Divi ©2021 stale after firm rename. Footer may say WPPODS web design. Named partner emails on contact (also Scott@ / Doug@). Suite 100 street-level Six Forks. No Instagram published. No PI practice.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
         },
         {
           "name": "Six Forks Animal Hospital",
@@ -399,7 +444,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/8331+Bandford+Way%2C+Suite+105%2C+Raleigh+NC+27615/11001+Raven+Ridge+Rd%2C+Raleigh+NC+27614/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/6136+Falls+of+Neuse+Rd%2C+Raleigh+NC+27609/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/8331+Bandford+Way%2C+Suite+105%2C+Raleigh+NC+27615/11001+Raven+Ridge+Rd%2C+Raleigh+NC+27614/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -537,6 +582,21 @@
           "rating": 2,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "EYES on North Ridge",
+          "address": "6136 Falls of Neuse Rd, Raleigh NC 27609",
+          "hours": "Tue-Fri 9:00am-5:00pm (Friday schedule changing to 8am-3pm — check Google Maps)",
+          "typicallyClosed": "Closed Sat, Sun, Mon",
+          "phone": "984-206-6890",
+          "website": "https://www.eyesonnorthridge.com/",
+          "email": "info@eyesonnorthridge.com",
+          "note": "Squarespace DIY. Founder Dr. Sandra V. Mokris, OD, FAAO (independently owned, opened ~2022). Nav leftovers: Pricing 404; Meet the Doctor lives at /meetthedoctor. North Ridge shopping-center walk-in. Instagram published on site.",
+          "industry": "Optometry",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@eyesonnorthridge"
         },
         {
           "name": "The Mueller Law Firm, P.A.",
@@ -836,8 +896,23 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/2501+Atrium+Dr%2C+Suite+150%2C+Raleigh+NC+27607/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/2501+Atrium+Dr%2C+Suite+150%2C+Raleigh+NC+27607/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
+        {
+          "name": "Jennifer Chun Immigration Law",
+          "address": "9104 Glenwood Avenue, Raleigh NC 27617",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-783-8999",
+          "website": "https://www.visa-immigration.com/",
+          "email": "lawchun@gmail.com",
+          "note": "Solo immigration. Weebly DIY (Proudly powered by Weebly). Dated template. Email published on contact-us.html. Street address + phone. No Instagram published.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
         {
           "name": "Kratt Dedmond & Associates",
           "address": "5623-111 Duraleigh Road, Raleigh NC 27612",
