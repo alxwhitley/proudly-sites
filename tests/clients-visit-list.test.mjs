@@ -661,6 +661,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(layton.phone, "919-846-4964");
   assert.equal(layton.address, "8524 Six Forks Road, Suite 201, Raleigh NC 27615");
   assert.equal(layton.hours, "Not published - call first");
+  assert.equal(layton.typicallyClosed, "Closed Sat, Sun");
   assert.equal(layton.emailed, false);
   assert.equal(layton.rating, 3);
   assert.equal(layton.visit, true);
