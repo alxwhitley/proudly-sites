@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Lesnik Family Law plus the prior four leads (PR #36, merged `c248a77`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: North Raleigh Christian Church marked Sent (PR #38, merged `12fa96c`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: HIT`) shows Lesnik Family Law, P.C. (172 Mine Lake Court) with Natural Healthcare & Diagnostics, Linda M. Stolfo, O.D. (EYEdeals Optometry), Vision Dermatology, and Integrated Physical Therapy. Visit · 35. Spence is absent. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (79 rows, 56 published emails). Existing names unchanged.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows North Raleigh Christian Church with a checked Sent checkbox (`info@northraleigh.church`, leesville set). No other stops changed. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (79 rows, 56 published emails, 12 emailed). Visit · 35.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 8, 2026 · /clients North Raleigh Christian Church emailed] — Code
+
+- **Did:** Set `emailed: true` only for North Raleigh Christian Church in the leesville set after the first-touch outreach send from alex@proudlysites.com (Gmail message id `1a081be77645ea80`). No other stops or fields changed.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed. Production `https://www.proudlysites.com/clients` returns 200 with `aria-label="Sent: North Raleigh Christian Church"` checked.
+- **Shipped:** PR #38 merged to `main` (`12fa96c`). Production live.
 
 ### [Monday Sep 7, 2026 · /clients five North Raleigh leads] — Code
 
