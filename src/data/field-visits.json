@@ -8,7 +8,7 @@
       "name": "Creedmoor",
       "distance": "~9 mi",
       "note": "Skip Monday (Capital Derm closed).",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/6400+Creedmoor+Rd+%23103%2C+Raleigh+NC+27613/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/7201+Creedmoor+Rd%2C+Ste+110%2C+Raleigh+NC+27613/8015+Creedmoor+Rd+%23201%2C+Raleigh+NC+27613/8308+Creedmoor+Rd%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/6400+Creedmoor+Rd+%23103%2C+Raleigh+NC+27613/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/188+Wind+Chime+Ct%2C+Suite+204%2C+Raleigh+NC+27615/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/7201+Creedmoor+Rd%2C+Ste+110%2C+Raleigh+NC+27613/8015+Creedmoor+Rd+%23201%2C+Raleigh+NC+27613/8308+Creedmoor+Rd%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Hampson Family Law",
@@ -49,6 +49,21 @@
           "note": "Dated owner-named site.",
           "industry": "Law",
           "emailed": true,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
+        },
+        {
+          "name": "Natural Healthcare & Diagnostics",
+          "address": "188 Wind Chime Ct, Suite 204, Raleigh NC 27615",
+          "hours": "Mon/Wed/Fri 9:00am-5:00pm",
+          "typicallyClosed": "Closed Tue, Thu, Sat, Sun",
+          "phone": "919-781-0177",
+          "website": "https://drcarrick.com/",
+          "email": "karen@drcarrick.com",
+          "note": "WordPress/Divi. Footer copyright still 2021. Solo founder Dr. Karen Carrick (opened 1996). Named email on stale Divi site. Suite 204 Wind Chime office park (same corridor as Peck Law). Instagram not published.",
+          "industry": "Functional medicine",
+          "emailed": false,
           "rating": 3,
           "visit": true,
           "instagram": ""
@@ -284,7 +299,7 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/8351+Standonshire+Way%2C+Suite+105%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/8351+Standonshire+Way%2C+Suite+105%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/6512+Six+Forks+Road%2C+Suite+601A%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Plastic Surgical Center of North Raleigh",
@@ -436,6 +451,20 @@
           "rating": 2,
           "visit": false,
           "instagram": ""
+        },
+        {
+          "name": "Integrated Physical Therapy",
+          "address": "6512 Six Forks Road, Suite 601A, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "phone": "919-306-0222",
+          "website": "https://www.integratedpt.co/",
+          "email": "joshua.cooke.ipt@gmail.com",
+          "note": "Duda/cdn-website DIY. Founder Josh Cooke. Named Gmail on thin builder site. Suite 601A high-floor — not Visit. Instagram @integratedpt published on site.",
+          "industry": "Physical therapy",
+          "emailed": false,
+          "rating": 2,
+          "visit": false,
+          "instagram": "@integratedpt"
         }
       ]
     },
@@ -444,7 +473,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/6136+Falls+of+Neuse+Rd%2C+Raleigh+NC+27609/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/8331+Bandford+Way%2C+Suite+105%2C+Raleigh+NC+27615/11001+Raven+Ridge+Rd%2C+Raleigh+NC+27614/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Ste+200%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+111%2C+Raleigh+NC+27614/9360+Falls+of+Neuse+Rd%2C+Ste+105%2C+Raleigh+NC+27615/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7805+Fiesta+Way%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6837+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/6325+Falls+of+Neuse+Rd%2C+Suite+35-378%2C+Raleigh+NC+27615/6136+Falls+of+Neuse+Rd%2C+Raleigh+NC+27609/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/8331+Bandford+Way%2C+Suite+105%2C+Raleigh+NC+27615/8331+Bandford+Way+001%2C+Raleigh+NC+27615/11001+Raven+Ridge+Rd%2C+Raleigh+NC+27614/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -627,6 +656,21 @@
           "rating": 3,
           "visit": true,
           "instagram": "@championorthonc"
+        },
+        {
+          "name": "Linda M. Stolfo, O.D. (EYEdeals Optometry)",
+          "address": "8331 Bandford Way 001, Raleigh NC 27615",
+          "hours": "Mon-Thu 9:00am-5:00pm; Fri 9:00am-1:00pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-676-1300",
+          "website": "https://www.eyemaxoptometry.net/",
+          "email": "drstolfo@gmail.com",
+          "note": "Wix DIY (site titles Linda M. Stolfo, O.D. / EYEdeals). Named Gmail on thin Wix. Same Bandford Way complex as Champion Ortho. Instagram not published.",
+          "industry": "Optometry",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": ""
         },
         {
           "name": "LifeHouse Church",
@@ -896,7 +940,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/2501+Atrium+Dr%2C+Suite+150%2C+Raleigh+NC+27607/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/5623-111+Duraleigh+Rd%2C+Raleigh+NC+27612/5400+Glenwood+Ave%2C+Ste+200%2C+Raleigh+NC+27612/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3840+Ed+Dr%2C+Ste+102%2C+Raleigh+NC+27612/3811+Ed+Drive+%23110%2C+Raleigh+NC+27612/3717+National+Dr%2C+Ste+217%2C+Raleigh+NC+27612/3717+Benson+Dr%2C+Raleigh+NC+27609/3906+Wake+Forest+Rd%2C+Raleigh+NC+27609/4030+Wake+Forest+Rd%2C+Ste+115%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/2501+Atrium+Dr%2C+Suite+150%2C+Raleigh+NC+27607/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Jennifer Chun Immigration Law",
@@ -967,6 +1011,21 @@
           "rating": 3,
           "visit": true,
           "instagram": "@themortonlawoffices"
+        },
+        {
+          "name": "Vision Dermatology",
+          "address": "3811 Ed Drive #110, Raleigh NC 27612",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-390-0200",
+          "website": "https://www.visiondermatology.com/",
+          "email": "info@visiondermatology.com",
+          "note": "Wix DIY. ©2022. Homepage still shows old 3200 Blue Ridge Rd and Raleigh Skin Surgery Center leftovers after move to Ed Drive. Founder Dr. Brianna De Souza. Instagram @medspavision published on site.",
+          "industry": "Dermatology",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
+          "instagram": "@medspavision"
         },
         {
           "name": "Edgerton Immigration Law",

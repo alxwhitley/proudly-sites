@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 7);
-  assert.equal(stops.length, 74);
+  assert.equal(stops.length, 78);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -706,6 +706,90 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(crabtree.mapsUrl.includes("9104+Glenwood+Avenue"));
   assert.equal(crabtreeNames[0], "Jennifer Chun Immigration Law");
 
+  const naturalHealthcare = stops.find((stop) => stop.name === "Natural Healthcare & Diagnostics");
+  assert.ok(naturalHealthcare, "Natural Healthcare & Diagnostics should be present");
+  assert.equal(naturalHealthcare.industry, "Functional medicine");
+  assert.equal(naturalHealthcare.email, "karen@drcarrick.com");
+  assert.equal(naturalHealthcare.instagram, "");
+  assert.equal(naturalHealthcare.phone, "919-781-0177");
+  assert.equal(naturalHealthcare.address, "188 Wind Chime Ct, Suite 204, Raleigh NC 27615");
+  assert.equal(naturalHealthcare.hours, "Mon/Wed/Fri 9:00am-5:00pm");
+  assert.equal(naturalHealthcare.typicallyClosed, "Closed Tue, Thu, Sat, Sun");
+  assert.equal(naturalHealthcare.website, "https://drcarrick.com/");
+  assert.equal(naturalHealthcare.emailed, false);
+  assert.equal(naturalHealthcare.rating, 3);
+  assert.equal(naturalHealthcare.visit, true);
+  assert.ok(creedmoor.stops.some((stop) => stop.name === "Natural Healthcare & Diagnostics"));
+  assert.ok(creedmoor.mapsUrl.includes("188+Wind+Chime+Ct"));
+  assert.equal(
+    creedmoorNames.indexOf("Natural Healthcare & Diagnostics"),
+    creedmoorNames.indexOf("The Peck Law Firm") + 1
+  );
+
+  const stolfo = stops.find((stop) => stop.name === "Linda M. Stolfo, O.D. (EYEdeals Optometry)");
+  assert.ok(stolfo, "Linda M. Stolfo, O.D. (EYEdeals Optometry) should be present");
+  assert.equal(stolfo.industry, "Optometry");
+  assert.equal(stolfo.email, "drstolfo@gmail.com");
+  assert.equal(stolfo.instagram, "");
+  assert.equal(stolfo.phone, "919-676-1300");
+  assert.equal(stolfo.address, "8331 Bandford Way 001, Raleigh NC 27615");
+  assert.equal(stolfo.hours, "Mon-Thu 9:00am-5:00pm; Fri 9:00am-1:00pm");
+  assert.equal(stolfo.typicallyClosed, "Closed Sat, Sun");
+  assert.equal(stolfo.website, "https://www.eyemaxoptometry.net/");
+  assert.equal(stolfo.emailed, false);
+  assert.equal(stolfo.rating, 3);
+  assert.equal(stolfo.visit, true);
+  assert.ok(falls.stops.some((stop) => stop.name === "Linda M. Stolfo, O.D. (EYEdeals Optometry)"));
+  assert.ok(falls.mapsUrl.includes("8331+Bandford+Way+001"));
+  assert.equal(
+    fallsNames.indexOf("Linda M. Stolfo, O.D. (EYEdeals Optometry)"),
+    fallsNames.indexOf("Champion Orthodontics") + 1
+  );
+  assert.equal(
+    fallsNames.indexOf("LifeHouse Church"),
+    fallsNames.indexOf("Linda M. Stolfo, O.D. (EYEdeals Optometry)") + 1
+  );
+  assert.equal(fallsNames.at(-1), "LifeHouse Church");
+
+  const visionDerm = stops.find((stop) => stop.name === "Vision Dermatology");
+  assert.ok(visionDerm, "Vision Dermatology should be present");
+  assert.equal(visionDerm.industry, "Dermatology");
+  assert.equal(visionDerm.email, "info@visiondermatology.com");
+  assert.equal(visionDerm.instagram, "@medspavision");
+  assert.equal(visionDerm.phone, "919-390-0200");
+  assert.equal(visionDerm.address, "3811 Ed Drive #110, Raleigh NC 27612");
+  assert.equal(visionDerm.hours, "Not published - call first");
+  assert.equal(visionDerm.typicallyClosed, "");
+  assert.equal(visionDerm.website, "https://www.visiondermatology.com/");
+  assert.equal(visionDerm.emailed, false);
+  assert.equal(visionDerm.rating, 3);
+  assert.equal(visionDerm.visit, true);
+  assert.ok(crabtree.stops.some((stop) => stop.name === "Vision Dermatology"));
+  assert.ok(crabtree.mapsUrl.includes("3811+Ed+Drive"));
+  assert.equal(
+    crabtreeNames.indexOf("Vision Dermatology"),
+    crabtreeNames.indexOf("The Morton Law Offices") + 1
+  );
+
+  const integratedPt = stops.find((stop) => stop.name === "Integrated Physical Therapy");
+  assert.ok(integratedPt, "Integrated Physical Therapy should be present");
+  assert.equal(integratedPt.industry, "Physical therapy");
+  assert.equal(integratedPt.email, "joshua.cooke.ipt@gmail.com");
+  assert.equal(integratedPt.instagram, "@integratedpt");
+  assert.equal(integratedPt.phone, "919-306-0222");
+  assert.equal(integratedPt.address, "6512 Six Forks Road, Suite 601A, Raleigh NC 27615");
+  assert.equal(integratedPt.hours, "Not published - call first");
+  assert.equal(integratedPt.website, "https://www.integratedpt.co/");
+  assert.equal(integratedPt.emailed, false);
+  assert.equal(integratedPt.rating, 2);
+  assert.equal(integratedPt.visit, false);
+  assert.ok(sixForks.stops.some((stop) => stop.name === "Integrated Physical Therapy"));
+  assert.ok(sixForks.mapsUrl.includes("6512+Six+Forks+Road"));
+  assert.equal(
+    sixForksNames.indexOf("Integrated Physical Therapy"),
+    sixForksNames.indexOf("Sisson Law Firm") + 1
+  );
+
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
@@ -764,9 +848,13 @@ test("clients page renders a dense lead table from the data file", async () => {
     "EYES on North Ridge": "info@eyesonnorthridge.com",
     "Layton & Carraway, P.A.": "Tom@LaytonCarraway.com",
     "Jennifer Chun Immigration Law": "lawchun@gmail.com",
+    "Natural Healthcare & Diagnostics": "karen@drcarrick.com",
+    "Linda M. Stolfo, O.D. (EYEdeals Optometry)": "drstolfo@gmail.com",
+    "Vision Dermatology": "info@visiondermatology.com",
+    "Integrated Physical Therapy": "joshua.cooke.ipt@gmail.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 51);
+  assert.equal(withEmail.length, 55);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
