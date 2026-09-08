@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: six-point ADD prune + rescore (PR #43, merged `596d0a3`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: North Raleigh Today rebuild (PR #44, merged `08e9126`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **20 rows**, Visit · 20, Buyer 3×5 / 2×15, Today 10 `data-today` marks, and no church rows. Churches and named drops are gone. Today loop: Layton & Carraway → Hilton Silvers → Mueller → Jenny Doyle → Peck → Brier Creek Vision → Capital Derm → Hormone Wellness MD → Doctor Direct → Donna Cohen. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **20 rows**, Visit · 20, Today 10 `data-today` marks, label `North Raleigh walk-ins`. Today drive order: Capital Derm → Hampson → Layton → Hilton → Peck → Mueller → Raleigh Pediatric Dentistry → Amos → Jenny Doyle → Hormone Wellness MD. Brier Creek Vision Care, Doctor Direct, and Donna Cohen remain on Visit and are not on Today. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 8, 2026 · /clients rebuild Today North Raleigh loop] — Code
+
+- **Did:** Rebuilt `today` after the ADD prune into a 10-stop Creedmoor → Six Forks → Falls → midtown walk-in from `4133 Lake Lynn Dr`. Kept all five buyer_score 3 keepers; filled with nearby buyer_score 2 stops; dropped Brier Creek Vision Care, Doctor Direct, and Donna Cohen from Today only. Sets, scores, visit, and outcome unchanged.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed. Every Today `stopName` resolves to a set stop. Local browser at 1440 and 390: Today 10 rows in drive order, label `North Raleigh walk-ins`, outliers hidden on Today and still on Visit. Production `/clients` HTTP 200, `x-vercel-cache: MISS`, same 10 names and Maps waypoints.
+- **Shipped:** PR #44 merged to `main` (`08e9126`). Production live.
 
 ### [Tuesday Sep 8, 2026 · /clients ADD prune to 20 KEEP leads] — Code
 
