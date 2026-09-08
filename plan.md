@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: five new leads (PR #32, merged `4326642`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: four new leads (PR #34, merged `090f3b9`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows Advanced Healthcare Solutions, Hilton Silvers & McClanahan PLLC, Layton & Carraway, P.A., EYES on North Ridge, and Jennifer Chun Immigration Law. Visit · 31. Spence is absent. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (74 rows, 51 published emails). Existing names unchanged.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: HIT`) shows Natural Healthcare & Diagnostics, Linda M. Stolfo, O.D. (EYEdeals Optometry), Vision Dermatology, and Integrated Physical Therapy. Visit · 34. Spence is absent. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (78 rows, 55 published emails). Existing names unchanged.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
