@@ -631,8 +631,8 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(ahs.hours, "Mon-Fri 9:00am-5:30pm");
   assert.equal(ahs.typicallyClosed, "Closed Sat, Sun");
   assert.equal(ahs.emailed, false);
-  assert.equal(ahs.rating, 3);
-  assert.equal(ahs.visit, true);
+  assert.equal(ahs.rating, 2);
+  assert.equal(ahs.visit, false);
   assert.ok(sixForks.stops.some((stop) => stop.name === "Advanced Healthcare Solutions"));
   assert.ok(sixForks.mapsUrl.includes("8351+Standonshire+Way"));
   assert.equal(
@@ -686,8 +686,8 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(eyes.address, "6136 Falls of Neuse Rd, Raleigh NC 27609");
   assert.equal(eyes.typicallyClosed, "Closed Sat, Sun, Mon");
   assert.equal(eyes.emailed, false);
-  assert.equal(eyes.rating, 3);
-  assert.equal(eyes.visit, true);
+  assert.equal(eyes.rating, 2);
+  assert.equal(eyes.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "EYES on North Ridge"));
   assert.ok(falls.mapsUrl.includes("6136+Falls+of+Neuse+Rd"));
 
@@ -742,6 +742,11 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(stolfo.visit, true);
   assert.ok(falls.stops.some((stop) => stop.name === "Linda M. Stolfo, O.D. (EYEdeals Optometry)"));
   assert.ok(falls.mapsUrl.includes("8331+Bandford+Way+001"));
+  const champion = stops.find((stop) => stop.name === "Champion Orthodontics");
+  assert.ok(champion, "Champion Orthodontics should be present");
+  assert.equal(champion.emailed, false);
+  assert.equal(champion.rating, 2);
+  assert.equal(champion.visit, false);
   assert.equal(
     fallsNames.indexOf("Linda M. Stolfo, O.D. (EYEdeals Optometry)"),
     fallsNames.indexOf("Champion Orthodontics") + 1
@@ -931,23 +936,26 @@ test("clients page renders a dense lead table from the data file", async () => {
 
   const todayNames = [
     "Campbell Orthodontics",
+    "Brier Creek Vision Care",
+    "Reflex Physical Therapy",
+    "Brier Creek Pediatric Dentistry",
     "FIRST IN SIGHT",
     "Natural Healthcare & Diagnostics",
-    "Advanced Healthcare Solutions",
     "Six Forks Animal Hospital",
     "Lesnik Family Law, P.C.",
-    "Champion Orthodontics",
     "Linda M. Stolfo, O.D. (EYEdeals Optometry)",
-    "EYES on North Ridge",
     "Mantilla Immigration Law Office",
   ];
   assert.ok(data.today, "today loop should be a top-level object");
   assert.equal(data.today.label, "Wed Sep 9 North Raleigh walk-ins");
-  assert.equal(
-    data.today.note,
-    "Published Wednesday hours; walk-in street/suite addresses; clustered North Raleigh."
-  );
+  assert.match(data.today.note, /Brier Creek Vision/);
+  assert.match(data.today.note, /Reflex PT/);
+  assert.match(data.today.note, /Brier Creek Peds/);
+  assert.ok(!data.today.stopNames.includes("Champion Orthodontics"));
+  assert.ok(!data.today.stopNames.includes("Advanced Healthcare Solutions"));
+  assert.ok(!data.today.stopNames.includes("EYES on North Ridge"));
   assert.deepEqual(data.today.stopNames, todayNames);
+  assert.equal(todayNames.length, 10);
   assert.equal(data.sets.length, 7);
   assert.equal(
     data.sets.some((set) => set.id === "today" || set.name === data.today.label),
@@ -960,6 +968,10 @@ test("clients page renders a dense lead table from the data file", async () => {
     assert.ok(stop, `today stop missing from sets: ${name}`);
     return stop;
   });
+  assert.ok(todayStops.every((stop) => stop.visit === true));
+  assert.equal(visitStops.some((stop) => stop.name === "Champion Orthodontics"), false);
+  assert.equal(visitStops.some((stop) => stop.name === "Advanced Healthcare Solutions"), false);
+  assert.equal(visitStops.some((stop) => stop.name === "EYES on North Ridge"), false);
   const mapsUrl = data.today.mapsUrl;
   assert.match(mapsUrl, /^https:\/\/www\.google\.com\/maps\/dir\//);
   assert.ok(html.includes(mapsUrl), "missing Today loop Maps URL");
