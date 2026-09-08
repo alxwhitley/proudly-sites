@@ -38,8 +38,11 @@
           "note": "Call Friday afternoon - they may already be closed.",
           "industry": "Law",
           "emailed": false,
-          "rating": 1,
+          "buyer_score": 1,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -52,8 +55,11 @@
           "note": "Closest medical stop. Shares lobby with Fusion Dental.",
           "industry": "Eye care",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@fusioneyecarenc"
         },
         {
@@ -66,8 +72,11 @@
           "note": "Dated owner-named site.",
           "industry": "Law",
           "emailed": true,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -81,8 +90,11 @@
           "note": "WordPress/Divi. Footer copyright still 2021. Solo founder Dr. Karen Carrick (opened 1996). Named email on stale Divi site. Suite 204 Wind Chime office park (same corridor as Peck Law). Instagram not published.",
           "industry": "Functional medicine",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -96,8 +108,11 @@
           "note": "CLOSED MONDAY.",
           "industry": "Dermatology",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@capitaldermnc"
         },
         {
@@ -111,8 +126,11 @@
           "note": "Wix leftover: Why Naturopathy heading, mailto info@mysite.com. Founder Kelly Oschwald, DPT. Appointment-only private rooms.",
           "industry": "Physical therapy",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@revive.physiotherapy.wellness"
         },
         {
@@ -126,8 +144,11 @@
           "note": "iMatrix leftover (Copyright MH Sub I, LLC dba iMatrix). Broken contact form (No form settings found). Bellsouth inbox + iMatrix admin login in footer. Dr. Timothy Sult since 1988.",
           "industry": "Optometry",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -140,8 +161,11 @@
           "note": "Saturday morning works.",
           "industry": "Veterinary",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@bowmananimalhospital"
         }
       ]
@@ -162,8 +186,11 @@
           "note": "0.3 mi. Flag: they use progressive as worship-style language.",
           "industry": "Church",
           "emailed": false,
-          "rating": 1,
+          "buyer_score": 1,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@baptistgrovenc"
         },
         {
@@ -175,8 +202,11 @@
           "note": "0.2 mi.",
           "industry": "Church",
           "emailed": false,
-          "rating": 1,
+          "buyer_score": 1,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@newpathraleigh"
         },
         {
@@ -189,8 +219,11 @@
           "note": "Brizy DIY leftover HOME titles, shares building with Newpath",
           "industry": "Church",
           "emailed": true,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@northraleighcc"
         },
         {
@@ -204,8 +237,11 @@
           "note": "Wix.",
           "industry": "Church",
           "emailed": true,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -219,8 +255,11 @@
           "note": "iMatrix leftover (MH Sub I, LLC dba iMatrix). Founder/owner Dr. Susan L. Durham. Homepage testimonials frozen Jan-Mar 2019. Brier Creek shopping-center walk-in.",
           "industry": "Optometry",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -234,8 +273,11 @@
           "note": "Founder Chaitali Patel, PT, DPT, OCS, GCS. About page leftover theme junk: Best Digital Agency copy, Lorem ipsum, name@domain.com placeholders. Suite 101 ACC Blvd near Brier Creek.",
           "industry": "Physical therapy",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -248,8 +290,11 @@
           "note": "TeleVox 2009.",
           "industry": "Orthodontics",
           "emailed": true,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@ericcampbellortho"
         },
         {
@@ -262,8 +307,11 @@
           "note": "Next door to Campbell.",
           "industry": "Veterinary",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -277,8 +325,11 @@
           "note": "Leftover WEO Media ASP template (copyright 2022–2026). Drs. Han Lee and Hunter Neill. Appointment-only.",
           "industry": "Orthodontics",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@raleighfamilyortho"
         },
         {
@@ -290,8 +341,11 @@
           "extra": true,
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -305,8 +359,11 @@
           "note": "Wix DIY. Founder Dr. Christi M. Davis, DDS. Homepage 'Now accepting new patients'. Thin sparse Wix vs polished local peds competitors.",
           "industry": "Pediatric dentistry",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         }
       ]
@@ -326,8 +383,11 @@
           "website": "https://drmoreaplasticsurgery.com/",
           "industry": "Plastic surgery",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -341,8 +401,11 @@
           "note": "Founded 1998 by Thomas E. Layton and Ernest R. Carraway, Jr. (both CPAs). Ancient static HTML DIY. Estate/RE closings/wills/tax/elder/business. Also Ernest@LaytonCarraway.com and Katie@LaytonCarraway.com. Suite 201 walk-in. No Instagram published.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -354,8 +417,11 @@
           "website": "https://jnl-law.com/",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -368,8 +434,11 @@
           "note": "Outdated WordPress (2015 assets, old Slider Revolution). Copyright 2024. Homepage typos Marscocci / Estate Planing. Estate/living trusts/special-needs. 2nd office Arden NC. Street-level Six Forks office park.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@the_plain_english_attorney"
         },
         {
@@ -382,8 +451,11 @@
           "note": "WordPress Twenty Twenty-Five default theme. Stock-ish images May 2025 (typo realeastat.webp). Managing partner Steve Lowry; associate Jamie Blue (Campbell Law 2022). Also lawson@ / Cindy@ / Lindsay@lowrylawoffices.com. Six Forks Office Center walk-in.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -397,8 +469,11 @@
           "note": "WordPress/Divi leftover. About page still has live Lorem Ipsum dummy blocks. Dr. Carter (chiropractor/acupuncturist). Fertility + functional/holistic therapies. Suite 105 walk-in. Instagram not published. Footer copyright text messy (2025/2026).",
           "industry": "Functional medicine / fertility",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -410,8 +485,11 @@
           "website": "https://www.847kids.com/",
           "note": "CLOSED FRIDAY.",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@drkevin_drdon"
         },
         {
@@ -425,8 +503,11 @@
           "note": "Boutique 3-attorney RE/business/estate firm. WordPress/Divi ©2021 stale after firm rename. Footer may say WPPODS web design. Named partner emails on contact (also Scott@ / Doug@). Suite 100 street-level Six Forks. No Instagram published. No PI practice.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -440,8 +521,11 @@
           "note": "Independent PLLC (Dr. Jackie H. Price). Classic TeleVox/Offline Marketing leftover vet template + Bellsouth email. Founded 1967 on Six Forks. Street clinic with boarding/grooming.",
           "industry": "Veterinary",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -452,8 +536,11 @@
           "website": "https://www.northhavenraleigh.org/",
           "industry": "Church",
           "emailed": false,
-          "rating": 1,
+          "buyer_score": 1,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -467,8 +554,11 @@
           "note": "Wix DIY. Boutique family law (Tiffany A. Lesnik). Named email on Wix. Homepage banner: currently only accepting consulting cases or waitlist for litigation. Instagram not published.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -480,8 +570,11 @@
           "email": "kevin@sissonlawfirm.com",
           "industry": "Law",
           "emailed": true,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -494,8 +587,11 @@
           "note": "Duda/cdn-website DIY. Founder Josh Cooke. Named Gmail on thin builder site. Suite 601A high-floor — not Visit. Instagram @integratedpt published on site.",
           "industry": "Physical therapy",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@integratedpt"
         }
       ]
@@ -515,8 +611,11 @@
           "website": "https://raleighrealestatelaw.com/",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -529,8 +628,11 @@
           "note": "Same building as Judge.",
           "industry": "Pediatric dentistry",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -542,8 +644,11 @@
           "note": "May be closed Tue/Thu.",
           "industry": "Allergy",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -557,8 +662,11 @@
           "note": "leftover Pharmaceutical Company/Dnnovate WP",
           "industry": "Physical therapy",
           "emailed": true,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@neurobloompt"
         },
         {
@@ -571,8 +679,11 @@
           "note": "Wix DIY. Tuey Amos practicing; Leslie Amos Of Counsel. Blog last dated Apr 2019.",
           "industry": "Law",
           "emailed": true,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@amoslawnc"
         },
         {
@@ -582,8 +693,11 @@
           "website": "https://www.northraleighchurch.org/",
           "industry": "Church",
           "emailed": false,
-          "rating": 1,
+          "buyer_score": 1,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@nraleighchurch"
         },
         {
@@ -597,8 +711,11 @@
           "note": "WP Twenty Twenty DIY, 2/19/2025 weather banner still up",
           "industry": "Periodontics",
           "emailed": true,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@doctor_gums"
         },
         {
@@ -610,8 +727,11 @@
           "website": "https://northridgecma.org/",
           "industry": "Church",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@northridgecma"
         },
         {
@@ -625,8 +745,11 @@
           "note": "GoDaddy Website Builder. Co-founders Dr. Michele Kim, DNP and Melissa Cruz, FNP. Memberships banner; Wake Forest location coming soon. Appointment-only, not walk-in.",
           "industry": "Concierge wellness",
           "emailed": true,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@meliora_wellness_nc"
         },
         {
@@ -640,8 +763,11 @@
           "note": "Squarespace DIY. Solo Brittany Betham, family/estate/residential RE. Suite 35-378 is a mailing/mailbox address, not a walk-in. Thin template.",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -655,8 +781,11 @@
           "note": "Squarespace DIY. Founder Dr. Sandra V. Mokris, OD, FAAO (independently owned, opened ~2022). Nav leftovers: Pricing 404; Meet the Doctor lives at /meetthedoctor. North Ridge shopping-center walk-in. Instagram published on site.",
           "industry": "Optometry",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@eyesonnorthridge"
         },
         {
@@ -670,8 +799,11 @@
           "note": "Wix DIY. ©2022. Solo Len C. Mueller (family law). Team still lists Madison Davis as Law Clerk, J.D. Candidate 2023. Empty blog. Email on contact page. 2nd-floor office condo; Suite 203 listed for sale mid-2026.",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -685,8 +817,11 @@
           "note": "Squarespace DIY leftover demo-form strings walk-ins welcome also Wakefield and Angier",
           "industry": "Orthodontics",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@championorthonc"
         },
         {
@@ -700,8 +835,11 @@
           "note": "Wix DIY (site titles Linda M. Stolfo, O.D. / EYEdeals). Named Gmail on thin Wix. Same Bandford Way complex as Champion Ortho. Instagram not published.",
           "industry": "Optometry",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -714,8 +852,11 @@
           "note": "Church.co template with live 'This is an alert about alerts' placeholder junk. Attendance unpublished; DIY + neglected + email + timing tell clears bar.",
           "industry": "Church",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@mylifehousechurchnc"
         }
       ]
@@ -735,8 +876,11 @@
           "website": "https://www.mcneillawfirm.com/",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -750,8 +894,11 @@
           "note": "GoDaddy Website Builder. Leftover Life Path Legal Partners homepage title. Shawna Vasilko, Chris Pedersen, Miranda Dues. Formed 2024.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@vplawnc"
         },
         {
@@ -762,8 +909,11 @@
           "website": "https://www.julyancantylaw.com/",
           "industry": "Law",
           "emailed": false,
-          "rating": 1,
+          "buyer_score": 1,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -775,8 +925,11 @@
           "email": "kelly@thelawcorner.com",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@thelawcorner"
         },
         {
@@ -788,8 +941,11 @@
           "email": "info@hormonewellnessmd.com",
           "industry": "Hormone wellness",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@hormonewellnessmd"
         },
         {
@@ -802,8 +958,11 @@
           "note": "Attorneys Jorge E. Matta and H. Esteban Diaz (2). Immigration, criminal, family. WordPress Total theme; footer Copyright 2017. Suite 122 walk-in. Hours not published on firm site.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -814,8 +973,11 @@
           "website": "https://www.oakcityestateplanning.com/",
           "industry": "Law",
           "emailed": false,
-          "rating": 1,
+          "buyer_score": 1,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -828,8 +990,11 @@
           "note": "Self-hosted custom HTML on Plesk. Live Coronavirus Safety Procedures and P.A. at Law leftover copy. Copyright 2024. Wayne Roper + John Garrett III (Campbell Law 2021). Also packages@roperlaw.net. 2-story Class B office, surface parking.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -843,8 +1008,11 @@
           "note": "DPCSpot leftover. Drs. Amy Walsh and Soon Kwark. Direct primary care, membership. Opened 2015. Suite 200, appointment/membership.",
           "industry": "Direct primary care",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@doctordirectmd"
         },
         {
@@ -858,8 +1026,11 @@
           "note": "Solo Pedro Mantilla; federal immigration. DIY Bluehost/wb4wp WordPress builder. Suite B strip walk-in. Instagram published on site.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@mantillaimmigration"
         },
         {
@@ -873,8 +1044,11 @@
           "note": "Squarespace. Drs. Carson and Steffany Shearer. Steffany joined Jan 2024. Leftover user@domain.com on site. Appointment-only.",
           "industry": "Functional medicine",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@trianglefunctionalmedicine"
         },
         {
@@ -888,8 +1062,11 @@
           "extra": true,
           "industry": "Church",
           "emailed": true,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@freedomraleigh"
         },
         {
@@ -903,8 +1080,11 @@
           "note": "Google Sites DIY. Solo Jenny Doyle (federal immigration; licensed in Nebraska). Published move: three doors north to 4016 Barrett Ste 103. Email and hours on her own site. Wilmington/Charlotte by appointment only.",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -917,8 +1097,11 @@
           "note": "Three-attorney boutique employment/administrative/licensing/nonprofit corporate. Free Wix subdomain with visible Wix builder branding and mismatched attorney email buttons (Catherine Lee button shows jack@ncl-law.com, etc.); ncl-law.com currently errors. Street office suite and published phone. info@ncl-law.com.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -932,8 +1115,11 @@
           "note": "GoDaddy DIY stock template photos TCVM pet rehab also Dr.Argersinger@wholehealthmpc.com Dr.Williams@wholehealthmpc.com",
           "industry": "Veterinary specialty",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -947,8 +1133,11 @@
           "note": "Squarespace DIY mobile dermatology-focused vet mailing only",
           "industry": "Veterinary",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@faithfulpawsvet"
         },
         {
@@ -961,8 +1150,11 @@
           "note": "Squarespace DIY (+ Church Center). May 2025 Christ Baptist / Capital Community merge; contact page still shows July–Aug transitional schedule. Old christbaptist.org leftover broken.",
           "industry": "Church",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@thekingschapelnc"
         }
       ]
@@ -985,8 +1177,11 @@
           "note": "Solo immigration. Weebly DIY (Proudly powered by Weebly). Dated template. Email published on contact-us.html. Street address + phone. No Instagram published.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1000,8 +1195,11 @@
           "note": "Imp Designs leftover, 2 attorneys",
           "industry": "Law",
           "emailed": true,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1015,8 +1213,11 @@
           "note": "Squarespace leftover lorem, not walk-in",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1027,8 +1228,11 @@
           "website": "https://www.carolinaestatecounsel.com/",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1040,8 +1244,11 @@
           "note": "GoDaddy.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@themortonlawoffices"
         },
         {
@@ -1055,8 +1262,11 @@
           "note": "Wix DIY. ©2022. Homepage still shows old 3200 Blue Ridge Rd and Raleigh Skin Surgery Center leftovers after move to Ed Drive. Founder Dr. Brianna De Souza. Instagram @medspavision published on site.",
           "industry": "Dermatology",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@medspavision"
         },
         {
@@ -1066,8 +1276,11 @@
           "website": "https://www.edgertonimmigration.com/",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1077,8 +1290,11 @@
           "website": "https://wgalaw.com/",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1089,8 +1305,11 @@
           "website": "https://www.trianglesinuscenter.com/",
           "industry": "Sinus",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@trianglesinuscenter"
         },
         {
@@ -1104,8 +1323,11 @@
           "note": "Adobe Muse leftover. Dwight and Brady Allen. First-floor Suite 115, not the Ste 300 virtual suites in the same building.",
           "industry": "Law",
           "emailed": true,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "no_reply",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1119,8 +1341,11 @@
           "note": "WordPress, ©2020, TriMark Digital footer (old, not a recent agency lock-in). William Barrett + Josh Krasner. Employment/labor. High-floor Suite 910 downtown.",
           "industry": "Law",
           "emailed": false,
-          "rating": 2,
+          "buyer_score": 2,
           "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1134,8 +1359,11 @@
           "note": "WordPress leftover template: /our-office/ still shows ASID interior-designer copy and patrick@andrewgreerdesign.com. Frozen 2018–2020 Google reviews. Founder Dr. Donathan Hudgins, single office.",
           "industry": "Optometry",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": "@raleighoptometry"
         },
         {
@@ -1148,8 +1376,11 @@
           "note": "Weebly DIY. Footer copyright 2013–2015. Sparse leftover Weebly family-law solo. Named attorney + Glenwood suite walk-in.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         },
         {
@@ -1163,8 +1394,11 @@
           "note": "Solo estate/business/real estate/civil litigation. Ancient WordPress 3.2.1 on Elegant Themes Chameleon; footer still says Designed by Elegant WordPress Themes | Powered by WordPress; logo alt Chameleon Logo; media uploads from 2012. Named email + phone. Instagram not published on site.",
           "industry": "Law",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         }
       ]
@@ -1187,8 +1421,11 @@
           "note": "Independent Baptist. Google Sites DIY (Report abuse). Old Jan 2022 sermon links still on home next to newer 2025 content. Also publishes pastor email doctorseeler@gmail.com (Rev. Dr. William Seeler). Attendance unpublished; clears via DIY + neglected + email + timing.",
           "industry": "Church",
           "emailed": false,
-          "rating": 3,
+          "buyer_score": 3,
           "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         }
       ]

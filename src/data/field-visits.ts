@@ -2,6 +2,21 @@ import data from "./field-visits.json";
 
 export type FieldVisitIndustryGroup = "church" | "healthcare" | "law";
 
+export type FieldVisitOutcome = "no_reply" | "replied" | "meeting" | "declined" | "closed" | "";
+
+const OUTCOME_LABELS: Record<Exclude<FieldVisitOutcome, "">, string> = {
+  no_reply: "No reply",
+  replied: "Replied",
+  meeting: "Meeting",
+  declined: "Declined",
+  closed: "Closed",
+};
+
+export function outcomeLabel(outcome?: FieldVisitOutcome): string {
+  if (!outcome) return "";
+  return OUTCOME_LABELS[outcome] ?? "";
+}
+
 export type FieldVisitStop = {
   name: string;
   address: string;
@@ -14,8 +29,11 @@ export type FieldVisitStop = {
   extra?: boolean;
   industry?: string;
   emailed?: boolean;
-  rating?: 1 | 2 | 3;
+  buyer_score: 1 | 2 | 3;
   visit?: boolean;
+  outcome: FieldVisitOutcome;
+  ai_visible?: boolean | null;
+  competitors_shown?: string[];
   instagram?: string;
 };
 

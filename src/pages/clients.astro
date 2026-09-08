@@ -10,6 +10,7 @@ import {
   mapsSearchUrl,
   instagramHref,
   instagramLabel,
+  outcomeLabel,
   telHref,
   websiteLabel,
 } from "../data/field-visits";
@@ -30,7 +31,7 @@ const rows = sets.flatMap((set, setIndex) =>
 );
 
 const rowCount = rows.length;
-const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating === 3).length;
+const visitCount = rows.filter(({ stop }) => stop.visit === true).length;
 ---
 
 <BaseLayout
@@ -74,7 +75,8 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
             <th scope="col">Set</th>
             <th scope="col">Stop</th>
             <th scope="col">Sent</th>
-            <th scope="col">Rate</th>
+            <th scope="col">Buyer</th>
+            <th scope="col">Outcome</th>
             <th scope="col">Name</th>
             <th scope="col">Industry</th>
             <th scope="col">Address</th>
@@ -91,7 +93,9 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
             <tr
               data-group={group || undefined}
               data-set={set.id}
-              data-visit={stop.visit === true || stop.rating === 3 ? "true" : "false"}
+              data-visit={stop.visit === true ? "true" : "false"}
+              data-buyer={stop.buyer_score}
+              data-outcome={stop.outcome || undefined}
               data-today={todayOrder.has(stop.name) ? "true" : undefined}
               data-today-order={todayOrder.get(stop.name)}
               class:list={[{ "is-extra": stop.extra, "is-set-start": firstInSet, "is-sent": stop.emailed }]}
@@ -113,7 +117,14 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
                   aria-label={`Sent: ${stop.name}`}
                 />
               </td>
-              <td class="col-rate">{stop.rating ?? ""}</td>
+              <td class="col-buyer">{stop.buyer_score}</td>
+              <td class="col-outcome">
+                {stop.outcome ? (
+                  <span class={`outcome-badge is-${stop.outcome}`}>{outcomeLabel(stop.outcome)}</span>
+                ) : (
+                  ""
+                )}
+              </td>
               <td class="col-name">{stop.name}</td>
               <td class="col-industry">{stop.industry ?? ""}</td>
               <td class="col-address">
@@ -338,11 +349,23 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
     outline: 2px solid #f3c045;
     outline-offset: 2px;
   }
-  .col-rate {
+  .col-buyer {
     font-variant-numeric: tabular-nums;
     text-align: center;
     width: 2.5rem;
     color: #d0d0d0;
+  }
+  .col-outcome {
+    min-width: 5.5rem;
+  }
+  .outcome-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 999px;
+    background: #2a2a2a;
+    color: #d8d8d8;
+    font-size: 11px;
+    line-height: 1.4;
   }
 
   .sheet-scroll {

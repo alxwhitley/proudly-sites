@@ -51,6 +51,23 @@ test("clients page renders a dense lead table from the data file", async () => {
       if (stop.industry) {
         assert.ok(html.includes(decode(stop.industry)), `missing industry for ${stop.name}`);
       }
+      assert.equal("rating" in stop, false, `${stop.name} still has rating`);
+      assert.ok(
+        stop.buyer_score === 1 || stop.buyer_score === 2 || stop.buyer_score === 3,
+        `${stop.name} is missing buyer_score`
+      );
+      assert.equal(typeof stop.visit, "boolean", `${stop.name} visit must stay boolean`);
+      assert.ok(
+        ["", "no_reply", "replied", "meeting", "declined", "closed"].includes(stop.outcome),
+        `${stop.name} has invalid outcome`
+      );
+      assert.equal(
+        stop.outcome,
+        stop.emailed === true ? "no_reply" : "",
+        `${stop.name} outcome should follow emailed`
+      );
+      assert.equal(stop.ai_visible, null, `${stop.name} ai_visible should be unknown`);
+      assert.deepEqual(stop.competitors_shown, [], `${stop.name} competitors_shown should start empty`);
       assert.equal(typeof stop.instagram, "string", `${stop.name} is missing instagram`);
       if (stop.instagram) {
         const handle = stop.instagram.replace(/^@/, "");
@@ -72,7 +89,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(freedom.instagram, "@freedomraleigh");
   assert.equal(freedom.phone, undefined);
   assert.equal(freedom.emailed, true);
-  assert.equal(freedom.rating, 2);
+  assert.equal(freedom.buyer_score, 2);
   assert.equal(freedom.visit, false);
   assert.doesNotMatch(JSON.stringify(freedom), /raleigh@freedomchurch\.cc/);
   const midtown = data.sets.find((set) => set.id === "midtown-six-forks");
@@ -88,7 +105,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(rfo.instagram, "@raleighfamilyortho");
   assert.equal(rfo.phone, "984-254-0585");
   assert.equal(rfo.emailed, false);
-  assert.equal(rfo.rating, 2);
+  assert.equal(rfo.buyer_score, 2);
   assert.equal(rfo.visit, false);
   const leesville = data.sets.find((set) => set.id === "leesville");
   assert.ok(leesville.stops.some((stop) => stop.name === "Raleigh Family Orthodontics"));
@@ -100,7 +117,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(nrcc, "North Raleigh Christian Church should be present");
   assert.equal(nrcc.email, "info@northraleigh.church");
   assert.equal(nrcc.emailed, true);
-  assert.equal(nrcc.rating, 3);
+  assert.equal(nrcc.buyer_score, 3);
   assert.equal(nrcc.visit, true);
   assert.equal(nrcc.instagram, "@northraleighcc");
   assert.ok(leesville.stops.some((stop) => stop.name === "North Raleigh Christian Church"));
@@ -125,7 +142,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(amos.instagram, "@amoslawnc");
   assert.equal(amos.phone, "919-900-7747");
   assert.equal(amos.emailed, true);
-  assert.equal(amos.rating, 2);
+  assert.equal(amos.buyer_score, 2);
   assert.equal(amos.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "Amos & Amos, Attorneys at Law"));
 
@@ -136,7 +153,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(meliora.instagram, "@meliora_wellness_nc");
   assert.equal(meliora.phone, "984-233-0534");
   assert.equal(meliora.emailed, true);
-  assert.equal(meliora.rating, 2);
+  assert.equal(meliora.buyer_score, 2);
   assert.equal(meliora.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "Meliora Wellness"));
 
@@ -147,7 +164,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(betham.instagram, "");
   assert.equal(betham.phone, "919-604-3678");
   assert.equal(betham.emailed, false);
-  assert.equal(betham.rating, 2);
+  assert.equal(betham.buyer_score, 2);
   assert.equal(betham.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "Betham Law, PLLC"));
   const fallsNames = falls.stops.map((stop) => stop.name);
@@ -163,7 +180,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(mueller.instagram, "");
   assert.equal(mueller.phone, "919-676-5770");
   assert.equal(mueller.emailed, false);
-  assert.equal(mueller.rating, 2);
+  assert.equal(mueller.buyer_score, 2);
   assert.equal(mueller.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "The Mueller Law Firm, P.A."));
   assert.ok(falls.mapsUrl.includes("7000+Harps+Mill+Rd"));
@@ -188,7 +205,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(kratt, "Kratt Dedmond & Associates should be present");
   assert.equal(kratt.email, "bkratt@kdanc.com");
   assert.equal(kratt.emailed, true);
-  assert.equal(kratt.rating, 3);
+  assert.equal(kratt.buyer_score, 3);
   assert.equal(kratt.visit, true);
   assert.equal(kratt.instagram, "");
   assert.ok(crabtree.mapsUrl.includes("5623-111+Duraleigh+Rd"));
@@ -208,7 +225,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(allen.instagram, "");
   assert.equal(allen.phone, "919-838-9529");
   assert.equal(allen.emailed, true);
-  assert.equal(allen.rating, 3);
+  assert.equal(allen.buyer_score, 3);
   assert.equal(allen.visit, true);
   assert.ok(crabtree.stops.some((stop) => stop.name === "Allen Law Offices"));
 
@@ -219,7 +236,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(barrett.instagram, "");
   assert.equal(barrett.phone, "919-999-2799");
   assert.equal(barrett.emailed, false);
-  assert.equal(barrett.rating, 2);
+  assert.equal(barrett.buyer_score, 2);
   assert.equal(barrett.visit, false);
   assert.ok(crabtree.stops.some((stop) => stop.name === "Barrett Law Offices, PLLC"));
   assert.ok(crabtree.mapsUrl.includes("5+West+Hargett+Street"));
@@ -236,7 +253,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(doctorDirect.instagram, "@doctordirectmd");
   assert.equal(doctorDirect.phone, "919-277-9866");
   assert.equal(doctorDirect.emailed, false);
-  assert.equal(doctorDirect.rating, 2);
+  assert.equal(doctorDirect.buyer_score, 2);
   assert.equal(doctorDirect.visit, false);
   assert.ok(midtown.stops.some((stop) => stop.name === "Doctor Direct"));
   assert.ok(midtown.mapsUrl.includes("5838+Six+Forks+Road"));
@@ -258,7 +275,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(jennyDoyle.instagram, "");
   assert.equal(jennyDoyle.phone, "919-307-4408");
   assert.equal(jennyDoyle.emailed, false);
-  assert.equal(jennyDoyle.rating, 2);
+  assert.equal(jennyDoyle.buyer_score, 2);
   assert.equal(jennyDoyle.visit, false);
   assert.ok(midtown.stops.some((stop) => stop.name === "Jenny Doyle, Esq. Immigration Counsel, LLC"));
   assert.ok(midtown.mapsUrl.includes("4016+Barrett+Drive"));
@@ -275,7 +292,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(nichols.address, "4700 Homewood Court, Suite 320, Raleigh NC 27609");
   assert.equal(nichols.hours, "Not published - call first");
   assert.equal(nichols.emailed, false);
-  assert.equal(nichols.rating, 3);
+  assert.equal(nichols.buyer_score, 3);
   assert.equal(nichols.visit, true);
   assert.ok(midtown.stops.some((stop) => stop.name === "Nichols, Choi & Lee, PLLC"));
   assert.ok(midtown.mapsUrl.includes("4700+Homewood+Court"));
@@ -292,7 +309,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(triangleFm.instagram, "@trianglefunctionalmedicine");
   assert.equal(triangleFm.phone, "919-758-2622");
   assert.equal(triangleFm.emailed, false);
-  assert.equal(triangleFm.rating, 2);
+  assert.equal(triangleFm.buyer_score, 2);
   assert.equal(triangleFm.visit, false);
   const midtownLoop = data.sets.find((set) => set.id === "midtown-six-forks");
   assert.ok(midtownLoop.stops.some((stop) => stop.name === "Triangle Functional Medicine"));
@@ -307,7 +324,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(vasilko.instagram, "@vplawnc");
   assert.equal(vasilko.phone, "919-503-6680");
   assert.equal(vasilko.emailed, false);
-  assert.equal(vasilko.rating, 3);
+  assert.equal(vasilko.buyer_score, 3);
   assert.equal(vasilko.visit, true);
   assert.ok(midtownLoop.stops.some((stop) => stop.name === "Vasilko & Pedersen"));
   const millbrookNames = midtownLoop.stops.map((stop) => stop.name);
@@ -326,7 +343,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(revive.instagram, "@revive.physiotherapy.wellness");
   assert.equal(revive.phone, "919-670-1310");
   assert.equal(revive.emailed, false);
-  assert.equal(revive.rating, 2);
+  assert.equal(revive.buyer_score, 2);
   assert.equal(revive.visit, false);
   assert.ok(creedmoor.stops.some((stop) => stop.name === "Revive Physiotherapy and Wellness"));
   assert.ok(creedmoor.mapsUrl.includes("7201+Creedmoor+Rd"));
@@ -357,7 +374,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(roper.instagram, "");
   assert.equal(roper.phone, "919-847-1228");
   assert.equal(roper.emailed, false);
-  assert.equal(roper.rating, 3);
+  assert.equal(roper.buyer_score, 3);
   assert.equal(roper.visit, true);
   assert.ok(midtown.stops.some((stop) => stop.name === "The Roper Law Firm, P.A."));
 
@@ -368,7 +385,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(lowry.instagram, "");
   assert.equal(lowry.phone, "919-518-0783");
   assert.equal(lowry.emailed, false);
-  assert.equal(lowry.rating, 3);
+  assert.equal(lowry.buyer_score, 3);
   assert.equal(lowry.visit, true);
   assert.ok(sixForks.stops.some((stop) => stop.name === "Lowry Law Offices"));
   assert.ok(sixForks.mapsUrl.includes("8358+Six+Forks+Rd"));
@@ -380,7 +397,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(marsocci.instagram, "@the_plain_english_attorney");
   assert.equal(marsocci.phone, "919-844-7993");
   assert.equal(marsocci.emailed, false);
-  assert.equal(marsocci.rating, 3);
+  assert.equal(marsocci.buyer_score, 3);
   assert.equal(marsocci.visit, true);
   assert.ok(sixForks.stops.some((stop) => stop.name === "The Law Offices of Jeffrey G. Marsocci, PLLC"));
   assert.ok(sixForks.mapsUrl.includes("8406+Six+Forks+Road"));
@@ -401,7 +418,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(firstInSight.instagram, "");
   assert.equal(firstInSight.phone, "919-845-5555");
   assert.equal(firstInSight.emailed, false);
-  assert.equal(firstInSight.rating, 3);
+  assert.equal(firstInSight.buyer_score, 3);
   assert.equal(firstInSight.visit, true);
   assert.ok(creedmoor.stops.some((stop) => stop.name === "FIRST IN SIGHT"));
   assert.ok(creedmoor.mapsUrl.includes("8015+Creedmoor+Rd"));
@@ -417,7 +434,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(brierCreekVision.instagram, "");
   assert.equal(brierCreekVision.phone, "919-361-2299");
   assert.equal(brierCreekVision.emailed, false);
-  assert.equal(brierCreekVision.rating, 3);
+  assert.equal(brierCreekVision.buyer_score, 3);
   assert.equal(brierCreekVision.visit, true);
   assert.ok(leesville.stops.some((stop) => stop.name === "Brier Creek Vision Care"));
   assert.ok(leesville.mapsUrl.includes("9650+Brier+Creek+Parkway"));
@@ -434,7 +451,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(sixForksAH.instagram, "");
   assert.equal(sixForksAH.phone, "919-847-5854");
   assert.equal(sixForksAH.emailed, false);
-  assert.equal(sixForksAH.rating, 3);
+  assert.equal(sixForksAH.buyer_score, 3);
   assert.equal(sixForksAH.visit, true);
   assert.equal(typeof sixForksAH.typicallyClosed, "string");
   assert.ok(sixForks.stops.some((stop) => stop.name === "Six Forks Animal Hospital"));
@@ -455,7 +472,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(reflex.instagram, "");
   assert.equal(reflex.phone, "919-341-7543");
   assert.equal(reflex.emailed, false);
-  assert.equal(reflex.rating, 3);
+  assert.equal(reflex.buyer_score, 3);
   assert.equal(reflex.visit, true);
   assert.equal(typeof reflex.typicallyClosed, "string");
   assert.ok(leesville.stops.some((stop) => stop.name === "Reflex Physical Therapy"));
@@ -472,7 +489,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(mantilla.instagram, "@mantillaimmigration");
   assert.equal(mantilla.phone, "919-977-4002");
   assert.equal(mantilla.emailed, false);
-  assert.equal(mantilla.rating, 3);
+  assert.equal(mantilla.buyer_score, 3);
   assert.equal(mantilla.visit, true);
   assert.equal(typeof mantilla.typicallyClosed, "string");
   assert.ok(midtown.stops.some((stop) => stop.name === "Mantilla Immigration Law Office"));
@@ -489,7 +506,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(matta.instagram, "");
   assert.equal(matta.phone, "919-703-0470");
   assert.equal(matta.emailed, false);
-  assert.equal(matta.rating, 3);
+  assert.equal(matta.buyer_score, 3);
   assert.equal(matta.visit, true);
   assert.ok(midtown.stops.some((stop) => stop.name === "The Matta Law Firm, PLLC"));
   assert.ok(midtown.mapsUrl.includes("211+E.+Six+Forks+Rd."));
@@ -509,7 +526,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(grace.instagram, "");
   assert.equal(grace.phone, "919-217-4487");
   assert.equal(grace.emailed, false);
-  assert.equal(grace.rating, 3);
+  assert.equal(grace.buyer_score, 3);
   assert.equal(grace.visit, true);
   assert.equal(typeof grace.typicallyClosed, "string");
   assert.equal(grace.extra, undefined);
@@ -525,7 +542,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(kingsChapel.instagram, "@thekingschapelnc");
   assert.equal(kingsChapel.phone, "919-573-5454");
   assert.equal(kingsChapel.emailed, false);
-  assert.equal(kingsChapel.rating, 3);
+  assert.equal(kingsChapel.buyer_score, 3);
   assert.equal(kingsChapel.visit, true);
   assert.ok(midtown.stops.some((stop) => stop.name === "The King's Chapel"));
   assert.ok(midtown.mapsUrl.includes("400+Newton+Rd"));
@@ -539,7 +556,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(lifehouse.instagram, "@mylifehousechurchnc");
   assert.equal(lifehouse.phone, "919-432-5839");
   assert.equal(lifehouse.emailed, false);
-  assert.equal(lifehouse.rating, 3);
+  assert.equal(lifehouse.buyer_score, 3);
   assert.equal(lifehouse.visit, true);
   assert.ok(falls.stops.some((stop) => stop.name === "LifeHouse Church"));
   assert.ok(falls.mapsUrl.includes("11001+Raven+Ridge+Rd"));
@@ -552,7 +569,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(brierPeds.instagram, "");
   assert.equal(brierPeds.phone, "919-806-0200");
   assert.equal(brierPeds.emailed, false);
-  assert.equal(brierPeds.rating, 3);
+  assert.equal(brierPeds.buyer_score, 3);
   assert.equal(brierPeds.visit, true);
   assert.equal(typeof brierPeds.typicallyClosed, "string");
   assert.ok(leesville.stops.some((stop) => stop.name === "Brier Creek Pediatric Dentistry"));
@@ -566,7 +583,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(raleighOptometry.instagram, "@raleighoptometry");
   assert.equal(raleighOptometry.phone, "919-781-2116");
   assert.equal(raleighOptometry.emailed, false);
-  assert.equal(raleighOptometry.rating, 3);
+  assert.equal(raleighOptometry.buyer_score, 3);
   assert.equal(raleighOptometry.visit, true);
   assert.equal(typeof raleighOptometry.typicallyClosed, "string");
   assert.ok(crabtree.stops.some((stop) => stop.name === "Raleigh Optometry"));
@@ -579,7 +596,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(ludwig.instagram, "");
   assert.equal(ludwig.phone, "919-390-6468");
   assert.equal(ludwig.emailed, false);
-  assert.equal(ludwig.rating, 3);
+  assert.equal(ludwig.buyer_score, 3);
   assert.equal(ludwig.visit, true);
   assert.ok(crabtree.stops.some((stop) => stop.name === "Law Office of Constance M. Ludwig"));
   assert.ok(crabtree.mapsUrl.includes("4801+Glenwood+Avenue"));
@@ -603,7 +620,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(donnaCohen.hours, "By appointment; hours not published");
   assert.equal(donnaCohen.typicallyClosed, "Weekend hours not published");
   assert.equal(donnaCohen.emailed, false);
-  assert.equal(donnaCohen.rating, 3);
+  assert.equal(donnaCohen.buyer_score, 3);
   assert.equal(donnaCohen.visit, true);
   assert.ok(crabtree.stops.some((stop) => stop.name === "Donna R. Cohen Attorney at Law, PLLC"));
   assert.ok(crabtree.mapsUrl.includes("2840+Plaza+Place"));
@@ -631,7 +648,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(ahs.hours, "Mon-Fri 9:00am-5:30pm");
   assert.equal(ahs.typicallyClosed, "Closed Sat, Sun");
   assert.equal(ahs.emailed, false);
-  assert.equal(ahs.rating, 2);
+  assert.equal(ahs.buyer_score, 2);
   assert.equal(ahs.visit, false);
   assert.ok(sixForks.stops.some((stop) => stop.name === "Advanced Healthcare Solutions"));
   assert.ok(sixForks.mapsUrl.includes("8351+Standonshire+Way"));
@@ -649,7 +666,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(hsm.address, "7320 Six Forks Road, Suite 100, Raleigh NC 27615");
   assert.equal(hsm.hours, "Not published - call first");
   assert.equal(hsm.emailed, false);
-  assert.equal(hsm.rating, 3);
+  assert.equal(hsm.buyer_score, 3);
   assert.equal(hsm.visit, true);
   assert.ok(sixForks.stops.some((stop) => stop.name === "Hilton Silvers & McClanahan PLLC"));
   assert.ok(sixForks.mapsUrl.includes("7320+Six+Forks+Road"));
@@ -664,7 +681,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(layton.hours, "Not published - call first");
   assert.equal(layton.typicallyClosed, "Closed Sat, Sun");
   assert.equal(layton.emailed, false);
-  assert.equal(layton.rating, 3);
+  assert.equal(layton.buyer_score, 3);
   assert.equal(layton.visit, true);
   assert.ok(sixForks.stops.some((stop) => stop.name === "Layton & Carraway, P.A."));
   assert.ok(sixForks.mapsUrl.includes("8524+Six+Forks+Road"));
@@ -686,7 +703,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(eyes.address, "6136 Falls of Neuse Rd, Raleigh NC 27609");
   assert.equal(eyes.typicallyClosed, "Closed Sat, Sun, Mon");
   assert.equal(eyes.emailed, false);
-  assert.equal(eyes.rating, 2);
+  assert.equal(eyes.buyer_score, 2);
   assert.equal(eyes.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "EYES on North Ridge"));
   assert.ok(falls.mapsUrl.includes("6136+Falls+of+Neuse+Rd"));
@@ -701,7 +718,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(chun.website, "https://www.visa-immigration.com/");
   assert.equal(chun.hours, "Not published - call first");
   assert.equal(chun.emailed, false);
-  assert.equal(chun.rating, 3);
+  assert.equal(chun.buyer_score, 3);
   assert.equal(chun.visit, true);
   assert.ok(crabtree.stops.some((stop) => stop.name === "Jennifer Chun Immigration Law"));
   assert.ok(crabtree.mapsUrl.includes("9104+Glenwood+Avenue"));
@@ -718,7 +735,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(naturalHealthcare.typicallyClosed, "Closed Tue, Thu, Sat, Sun");
   assert.equal(naturalHealthcare.website, "https://drcarrick.com/");
   assert.equal(naturalHealthcare.emailed, false);
-  assert.equal(naturalHealthcare.rating, 3);
+  assert.equal(naturalHealthcare.buyer_score, 3);
   assert.equal(naturalHealthcare.visit, true);
   assert.ok(creedmoor.stops.some((stop) => stop.name === "Natural Healthcare & Diagnostics"));
   assert.ok(creedmoor.mapsUrl.includes("188+Wind+Chime+Ct"));
@@ -738,14 +755,14 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(stolfo.typicallyClosed, "Closed Sat, Sun");
   assert.equal(stolfo.website, "https://www.eyemaxoptometry.net/");
   assert.equal(stolfo.emailed, false);
-  assert.equal(stolfo.rating, 3);
+  assert.equal(stolfo.buyer_score, 3);
   assert.equal(stolfo.visit, true);
   assert.ok(falls.stops.some((stop) => stop.name === "Linda M. Stolfo, O.D. (EYEdeals Optometry)"));
   assert.ok(falls.mapsUrl.includes("8331+Bandford+Way+001"));
   const champion = stops.find((stop) => stop.name === "Champion Orthodontics");
   assert.ok(champion, "Champion Orthodontics should be present");
   assert.equal(champion.emailed, false);
-  assert.equal(champion.rating, 2);
+  assert.equal(champion.buyer_score, 2);
   assert.equal(champion.visit, false);
   assert.equal(
     fallsNames.indexOf("Linda M. Stolfo, O.D. (EYEdeals Optometry)"),
@@ -768,7 +785,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(visionDerm.typicallyClosed, "");
   assert.equal(visionDerm.website, "https://www.visiondermatology.com/");
   assert.equal(visionDerm.emailed, false);
-  assert.equal(visionDerm.rating, 3);
+  assert.equal(visionDerm.buyer_score, 3);
   assert.equal(visionDerm.visit, true);
   assert.ok(crabtree.stops.some((stop) => stop.name === "Vision Dermatology"));
   assert.ok(crabtree.mapsUrl.includes("3811+Ed+Drive"));
@@ -787,7 +804,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(integratedPt.hours, "Not published - call first");
   assert.equal(integratedPt.website, "https://www.integratedpt.co/");
   assert.equal(integratedPt.emailed, false);
-  assert.equal(integratedPt.rating, 2);
+  assert.equal(integratedPt.buyer_score, 2);
   assert.equal(integratedPt.visit, false);
   assert.ok(sixForks.stops.some((stop) => stop.name === "Integrated Physical Therapy"));
   assert.ok(sixForks.mapsUrl.includes("6512+Six+Forks+Road"));
@@ -807,7 +824,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(lesnik.typicallyClosed, "Closed Sat, Sun");
   assert.equal(lesnik.website, "https://www.lesnik-law.com/");
   assert.equal(lesnik.emailed, false);
-  assert.equal(lesnik.rating, 3);
+  assert.equal(lesnik.buyer_score, 3);
   assert.equal(lesnik.visit, true);
   assert.ok(sixForks.stops.some((stop) => stop.name === "Lesnik Family Law, P.C."));
   assert.ok(sixForks.mapsUrl.includes("172+Mine+Lake+Court"));
@@ -923,16 +940,25 @@ test("clients page renders a dense lead table from the data file", async () => {
   const checkedBoxes = html.match(/type="checkbox"[^>]*checked/g) ?? [];
   assert.equal(checkedBoxes.length, emailedTrue.length);
 
-  assert.match(html, />Rate</);
+  assert.match(html, />Buyer</);
+  assert.doesNotMatch(html, />Rate</);
+  assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.ok(stops.every((stop) => stop.rating === 1 || stop.rating === 2 || stop.rating === 3));
-  assert.ok(stops.every((stop) => stop.visit === (stop.rating === 3)));
+  assert.ok(stops.every((stop) => stop.buyer_score === 1 || stop.buyer_score === 2 || stop.buyer_score === 3));
+  assert.equal(
+    (html.match(/data-visit="true"/g) ?? []).length,
+    visitStops.length,
+    "Visit filter marks only visit:true stops"
+  );
   assert.ok(visitStops.length >= 4 && visitStops.length <= 35);
   assert.match(html, new RegExp(`Visit · ${visitStops.length}`));
   for (const stop of visitStops) {
-    assert.ok(html.includes(`data-visit="true"`));
     assert.ok(html.includes(decode(stop.name)), `missing visit stop ${stop.name}`);
   }
+  const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
+  assert.equal(outcomeBadges.length, emailedTrue.length);
+  assert.match(html, />No reply</);
+  assert.doesNotMatch(JSON.stringify(data), /"rating"/);
 
   const todayNames = [
     "Campbell Orthodontics",
