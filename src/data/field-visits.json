@@ -2,6 +2,23 @@
   "home": {
     "address": "4133 Lake Lynn Dr, Raleigh NC 27613"
   },
+  "today": {
+    "label": "Wed Sep 9 North Raleigh walk-ins",
+    "note": "Published Wednesday hours; walk-in street/suite addresses; clustered North Raleigh.",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9317+Leesville+Rd%2C+Raleigh+NC+27613/8015+Creedmoor+Rd+%23201%2C+Raleigh+NC+27613/188+Wind+Chime+Ct%2C+Suite+204%2C+Raleigh+NC+27615/8351+Standonshire+Way%2C+Suite+105%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/172+Mine+Lake+Court%2C+Suite+100%2C+Raleigh+NC+27615/8331+Bandford+Way%2C+Suite+105%2C+Raleigh+NC+27615/8331+Bandford+Way+001%2C+Raleigh+NC+27615/6136+Falls+of+Neuse+Rd%2C+Raleigh+NC+27609/6060+Six+Forks+Rd%2C+Suite+B%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "stopNames": [
+      "Campbell Orthodontics",
+      "FIRST IN SIGHT",
+      "Natural Healthcare & Diagnostics",
+      "Advanced Healthcare Solutions",
+      "Six Forks Animal Hospital",
+      "Lesnik Family Law, P.C.",
+      "Champion Orthodontics",
+      "Linda M. Stolfo, O.D. (EYEdeals Optometry)",
+      "EYES on North Ridge",
+      "Mantilla Immigration Law Office"
+    ]
+  },
   "sets": [
     {
       "id": "creedmoor",
