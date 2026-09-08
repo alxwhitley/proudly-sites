@@ -29,7 +29,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 7);
-  assert.equal(stops.length, 78);
+  assert.equal(stops.length, 79);
 
   for (const set of data.sets) {
     assert.ok(html.includes(set.mapsUrl), `missing loop Maps URL for ${set.name}`);
@@ -790,6 +790,30 @@ test("clients page renders a dense lead table from the data file", async () => {
     sixForksNames.indexOf("Sisson Law Firm") + 1
   );
 
+  const lesnik = stops.find((stop) => stop.name === "Lesnik Family Law, P.C.");
+  assert.ok(lesnik, "Lesnik Family Law, P.C. should be present");
+  assert.equal(lesnik.industry, "Law");
+  assert.equal(lesnik.email, "tiffany@lesnik-law.com");
+  assert.equal(lesnik.instagram, "");
+  assert.equal(lesnik.phone, "919-906-8988");
+  assert.equal(lesnik.address, "172 Mine Lake Court, Suite 100, Raleigh NC 27615");
+  assert.equal(lesnik.hours, "Mon-Fri 10:00am-5:00pm");
+  assert.equal(lesnik.typicallyClosed, "Closed Sat, Sun");
+  assert.equal(lesnik.website, "https://www.lesnik-law.com/");
+  assert.equal(lesnik.emailed, false);
+  assert.equal(lesnik.rating, 3);
+  assert.equal(lesnik.visit, true);
+  assert.ok(sixForks.stops.some((stop) => stop.name === "Lesnik Family Law, P.C."));
+  assert.ok(sixForks.mapsUrl.includes("172+Mine+Lake+Court"));
+  assert.equal(
+    sixForksNames.indexOf("Lesnik Family Law, P.C."),
+    sixForksNames.indexOf("North Haven Church") + 1
+  );
+  assert.equal(
+    sixForksNames.indexOf("Sisson Law Firm"),
+    sixForksNames.indexOf("Lesnik Family Law, P.C.") + 1
+  );
+
   assert.match(html, /Kindrachuk &amp; Gilchrist/);
   const kindrachuk = stops.find((stop) => stop.name === "Kindrachuk & Gilchrist");
   assert.equal(kindrachuk?.industry, undefined);
@@ -852,9 +876,10 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Linda M. Stolfo, O.D. (EYEdeals Optometry)": "drstolfo@gmail.com",
     "Vision Dermatology": "info@visiondermatology.com",
     "Integrated Physical Therapy": "joshua.cooke.ipt@gmail.com",
+    "Lesnik Family Law, P.C.": "tiffany@lesnik-law.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 55);
+  assert.equal(withEmail.length, 56);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);

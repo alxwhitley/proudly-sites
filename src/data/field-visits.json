@@ -299,7 +299,7 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/8351+Standonshire+Way%2C+Suite+105%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/6512+Six+Forks+Road%2C+Suite+601A%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7700+Lead+Mine+Rd%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8520+Six+Forks+Rd%2C+Ste+101%2C+Raleigh+NC+27615/8406+Six+Forks+Road%2C+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/8351+Standonshire+Way%2C+Suite+105%2C+Raleigh+NC+27615/7800+Six+Forks+Rd%2C+Ste+100%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/172+Mine+Lake+Court%2C+Suite+100%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/6512+Six+Forks+Road%2C+Suite+601A%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Plastic Surgical Center of North Raleigh",
@@ -437,6 +437,21 @@
           "emailed": false,
           "rating": 1,
           "visit": false,
+          "instagram": ""
+        },
+        {
+          "name": "Lesnik Family Law, P.C.",
+          "address": "172 Mine Lake Court, Suite 100, Raleigh NC 27615",
+          "hours": "Mon-Fri 10:00am-5:00pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-906-8988",
+          "website": "https://www.lesnik-law.com/",
+          "email": "tiffany@lesnik-law.com",
+          "note": "Wix DIY. Boutique family law (Tiffany A. Lesnik). Named email on Wix. Homepage banner: currently only accepting consulting cases or waitlist for litigation. Instagram not published.",
+          "industry": "Law",
+          "emailed": false,
+          "rating": 3,
+          "visit": true,
           "instagram": ""
         },
         {
