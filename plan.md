@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Today tab for Wed Sep 9 North Raleigh walk-ins (PR #40, merged `6accc1f`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Today loop rebuilt after Alex drop of Champion, Advanced Healthcare, and EYES (PR #41, merged `dc2c7b9`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) has the **Today** mode button, `Open Today loop in Maps`, and `data-today="true"` on exactly these 10 stops in drive order: Campbell Orthodontics → FIRST IN SIGHT → Natural Healthcare & Diagnostics → Advanced Healthcare Solutions → Six Forks Animal Hospital → Lesnik Family Law, P.C. → Champion Orthodontics → Linda M. Stolfo, O.D. (EYEdeals Optometry) → EYES on North Ridge → Mantilla Immigration Law Office. No new General set; existing emailed/rating/visit unchanged. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (79 rows, Visit · 35). Browser pass at 1440 and ~390: Today shows those 10 only, Maps loop href home→stops→home.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **Today** with 10 `data-today` marks and Visit · 32. Champion Orthodontics, Advanced Healthcare Solutions, and EYES on North Ridge are `rating: 2` / `visit: false` and absent from Today. Drive order: Campbell Orthodontics → Brier Creek Vision Care → Reflex Physical Therapy → Brier Creek Pediatric Dentistry → FIRST IN SIGHT → Natural Healthcare & Diagnostics → Six Forks Animal Hospital → Lesnik Family Law, P.C. → Linda M. Stolfo, O.D. (EYEdeals Optometry) → Mantilla Immigration Law Office. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass: Today 10 rows in that order; Visit · 32 hides the three demoted stops.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 8, 2026 · /clients drop Champion, Advanced, EYES; rebuild Today] — Code
+
+- **Did:** Set Champion Orthodontics, Advanced Healthcare Solutions, and EYES on North Ridge to `rating: 2` / `visit: false` (other fields unchanged). Rebuilt the Wed Sep 9 Today loop with Brier Creek Vision Care, Reflex Physical Therapy, and Brier Creek Pediatric Dentistry in drive order. Maps URL rebuilt home → 10 stops → home.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (79 rows, Visit · 32). Local browser: Today shows the new 10; Visit hides the three demoted stops. Production `/clients` HTTP 200, `x-vercel-cache: MISS`, Visit · 32, Maps URL includes Moncreiffe / Brier Creek / ACC Blvd and omits Standonshire / Falls of Neuse Champion suite.
+- **Shipped:** PR #41 merged to `main` (`dc2c7b9`). Production live.
 
 ### [Tuesday Sep 8, 2026 · /clients Today tab Wed North Raleigh walk-ins] — Code
 
