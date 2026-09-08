@@ -686,8 +686,8 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.equal(eyes.address, "6136 Falls of Neuse Rd, Raleigh NC 27609");
   assert.equal(eyes.typicallyClosed, "Closed Sat, Sun, Mon");
   assert.equal(eyes.emailed, false);
-  assert.equal(eyes.rating, 3);
-  assert.equal(eyes.visit, true);
+  assert.equal(eyes.rating, 2);
+  assert.equal(eyes.visit, false);
   assert.ok(falls.stops.some((stop) => stop.name === "EYES on North Ridge"));
   assert.ok(falls.mapsUrl.includes("6136+Falls+of+Neuse+Rd"));
 
@@ -938,20 +938,22 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Campbell Orthodontics",
     "Brier Creek Vision Care",
     "Reflex Physical Therapy",
+    "Brier Creek Pediatric Dentistry",
     "FIRST IN SIGHT",
     "Natural Healthcare & Diagnostics",
     "Six Forks Animal Hospital",
     "Lesnik Family Law, P.C.",
     "Linda M. Stolfo, O.D. (EYEdeals Optometry)",
-    "EYES on North Ridge",
     "Mantilla Immigration Law Office",
   ];
   assert.ok(data.today, "today loop should be a top-level object");
   assert.equal(data.today.label, "Wed Sep 9 North Raleigh walk-ins");
   assert.match(data.today.note, /Brier Creek Vision/);
   assert.match(data.today.note, /Reflex PT/);
+  assert.match(data.today.note, /Brier Creek Peds/);
   assert.ok(!data.today.stopNames.includes("Champion Orthodontics"));
   assert.ok(!data.today.stopNames.includes("Advanced Healthcare Solutions"));
+  assert.ok(!data.today.stopNames.includes("EYES on North Ridge"));
   assert.deepEqual(data.today.stopNames, todayNames);
   assert.equal(todayNames.length, 10);
   assert.equal(data.sets.length, 7);
@@ -969,6 +971,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.ok(todayStops.every((stop) => stop.visit === true));
   assert.equal(visitStops.some((stop) => stop.name === "Champion Orthodontics"), false);
   assert.equal(visitStops.some((stop) => stop.name === "Advanced Healthcare Solutions"), false);
+  assert.equal(visitStops.some((stop) => stop.name === "EYES on North Ridge"), false);
   const mapsUrl = data.today.mapsUrl;
   assert.match(mapsUrl, /^https:\/\/www\.google\.com\/maps\/dir\//);
   assert.ok(html.includes(mapsUrl), "missing Today loop Maps URL");

@@ -4,18 +4,18 @@
   },
   "today": {
     "label": "Wed Sep 9 North Raleigh walk-ins",
-    "note": "Published Wednesday hours; walk-in street/suite addresses; clustered North Raleigh. Champion Ortho and Advanced Healthcare dropped (sites good enough); Brier Creek Vision and Reflex PT in.",
-    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9317+Leesville+Rd%2C+Raleigh+NC+27613/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/7901+ACC+Blvd%2C+Suite+101%2C+Raleigh+NC+27617/8015+Creedmoor+Rd+%23201%2C+Raleigh+NC+27613/188+Wind+Chime+Ct%2C+Suite+204%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/172+Mine+Lake+Court%2C+Suite+100%2C+Raleigh+NC+27615/8331+Bandford+Way+001%2C+Raleigh+NC+27615/6136+Falls+of+Neuse+Rd%2C+Raleigh+NC+27609/6060+Six+Forks+Rd%2C+Suite+B%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "note": "Published Wednesday hours; walk-in street/suite addresses; clustered North Raleigh. Champion Ortho, Advanced Healthcare, and EYES on North Ridge dropped (sites good enough); Brier Creek Vision, Reflex PT, and Brier Creek Peds in.",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9317+Leesville+Rd%2C+Raleigh+NC+27613/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/7901+ACC+Blvd%2C+Suite+101%2C+Raleigh+NC+27617/10411+Moncreiffe+Rd%2C+Suite+105B%2C+Raleigh+NC+27617/8015+Creedmoor+Rd+%23201%2C+Raleigh+NC+27613/188+Wind+Chime+Ct%2C+Suite+204%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/172+Mine+Lake+Court%2C+Suite+100%2C+Raleigh+NC+27615/8331+Bandford+Way+001%2C+Raleigh+NC+27615/6060+Six+Forks+Rd%2C+Suite+B%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
     "stopNames": [
       "Campbell Orthodontics",
       "Brier Creek Vision Care",
       "Reflex Physical Therapy",
+      "Brier Creek Pediatric Dentistry",
       "FIRST IN SIGHT",
       "Natural Healthcare & Diagnostics",
       "Six Forks Animal Hospital",
       "Lesnik Family Law, P.C.",
       "Linda M. Stolfo, O.D. (EYEdeals Optometry)",
-      "EYES on North Ridge",
       "Mantilla Immigration Law Office"
     ]
   },
@@ -655,8 +655,8 @@
           "note": "Squarespace DIY. Founder Dr. Sandra V. Mokris, OD, FAAO (independently owned, opened ~2022). Nav leftovers: Pricing 404; Meet the Doctor lives at /meetthedoctor. North Ridge shopping-center walk-in. Instagram published on site.",
           "industry": "Optometry",
           "emailed": false,
-          "rating": 3,
-          "visit": true,
+          "rating": 2,
+          "visit": false,
           "instagram": "@eyesonnorthridge"
         },
         {
