@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: buyer_score + outcome scoring migration (PR #42, merged `52a8e98`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: six-point ADD prune + rescore (PR #43, merged `596d0a3`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows Buyer + Outcome, no Rate, Visit · 32, and 12 No-reply badges. JSON has `buyer_score`/`outcome` on all 79 stops; `visit` flags and Today drive order unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview, plus production HTML smoke.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **20 rows**, Visit · 20, Buyer 3×5 / 2×15, Today 10 `data-today` marks, and no church rows. Churches and named drops are gone. Today loop: Layton & Carraway → Hilton Silvers → Mueller → Jenny Doyle → Peck → Brier Creek Vision → Capital Derm → Hormone Wellness MD → Doctor Direct → Donna Cohen. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 8, 2026 · /clients ADD prune to 20 KEEP leads] — Code
+
+- **Did:** Removed every stop not on the KEEP list (all churches plus the named healthcare/law drops). Deleted empty Neuse / east. Rescored KEEP `buyer_score` / `visit` / `ai_visible: null`; left emailed, outcome, contact, and notes intact. Rebuilt six set Maps loops and Today as a 10-stop North Raleigh ADD walk-in after the six-point rescore.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (20 rows, Visit · 20, no dropped names). Local browser: General 20; Visit 20; Today 10 in drive order; Churches 0. Production `/clients` HTTP 200, `x-vercel-cache: MISS`, Visit · 20, no church/`Fusion`/`Champion`/`Grace Baptist` rows.
+- **Shipped:** PR #43 merged to `main` (`596d0a3`). Production live.
 
 ### [Tuesday Sep 8, 2026 · /clients buyer_score + outcome] — Code
 
