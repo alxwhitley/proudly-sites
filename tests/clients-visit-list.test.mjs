@@ -22,6 +22,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   assert.doesNotMatch(html, /class="site-header"/);
   assert.match(html, /data-mode="general"/);
   assert.match(html, /data-mode="visit"/);
+  assert.match(html, /data-mode="today"/);
   assert.match(html, /data-filter="all"/);
   assert.match(html, /data-filter="church"/);
   assert.match(html, /data-filter="healthcare"/);
@@ -926,5 +927,64 @@ test("clients page renders a dense lead table from the data file", async () => {
   for (const stop of visitStops) {
     assert.ok(html.includes(`data-visit="true"`));
     assert.ok(html.includes(decode(stop.name)), `missing visit stop ${stop.name}`);
+  }
+
+  const todayNames = [
+    "Campbell Orthodontics",
+    "FIRST IN SIGHT",
+    "Natural Healthcare & Diagnostics",
+    "Advanced Healthcare Solutions",
+    "Six Forks Animal Hospital",
+    "Lesnik Family Law, P.C.",
+    "Champion Orthodontics",
+    "Linda M. Stolfo, O.D. (EYEdeals Optometry)",
+    "EYES on North Ridge",
+    "Mantilla Immigration Law Office",
+  ];
+  assert.ok(data.today, "today loop should be a top-level object");
+  assert.equal(data.today.label, "Wed Sep 9 North Raleigh walk-ins");
+  assert.equal(
+    data.today.note,
+    "Published Wednesday hours; walk-in street/suite addresses; clustered North Raleigh."
+  );
+  assert.deepEqual(data.today.stopNames, todayNames);
+  assert.equal(data.sets.length, 7);
+  assert.equal(
+    data.sets.some((set) => set.id === "today" || set.name === data.today.label),
+    false,
+    "Today stops must not be duplicated as a General set"
+  );
+
+  const todayStops = todayNames.map((name) => {
+    const stop = stops.find((item) => item.name === name);
+    assert.ok(stop, `today stop missing from sets: ${name}`);
+    return stop;
+  });
+  const mapsUrl = data.today.mapsUrl;
+  assert.match(mapsUrl, /^https:\/\/www\.google\.com\/maps\/dir\//);
+  assert.ok(html.includes(mapsUrl), "missing Today loop Maps URL");
+  assert.match(html, /Open Today loop in Maps/);
+  const homeSeg = "4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613";
+  assert.ok(mapsUrl.startsWith(`https://www.google.com/maps/dir/${homeSeg}/`));
+  assert.ok(mapsUrl.endsWith(`/${homeSeg}`));
+  let cursor = mapsUrl.indexOf(homeSeg) + homeSeg.length;
+  for (const stop of todayStops) {
+    const segment = encodeURIComponent(stop.address).replaceAll("%20", "+");
+    const at = mapsUrl.indexOf(segment, cursor);
+    assert.ok(at >= cursor, `Today mapsUrl missing ${stop.name} address in drive order`);
+    cursor = at + segment.length;
+  }
+  const todayMarks = html.match(/data-today="true"/g) ?? [];
+  assert.equal(todayMarks.length, todayNames.length);
+  for (const [index, name] of todayNames.entries()) {
+    assert.ok(
+      html.includes(`data-today="true"`),
+      `missing data-today for ${name}`
+    );
+    assert.match(
+      html,
+      new RegExp(`data-today-order="${index + 1}"`),
+      `missing today order ${index + 1}`
+    );
   }
 });

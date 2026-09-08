@@ -14,8 +14,9 @@ import {
   websiteLabel,
 } from "../data/field-visits";
 
-const { home, sets } = fieldVisits;
+const { home, sets, today } = fieldVisits;
 const homeMaps = mapsSearchUrl(home.address);
+const todayOrder = new Map(today.stopNames.map((name, index) => [name, index + 1]));
 
 const rows = sets.flatMap((set, setIndex) =>
   set.stops.map((stop, stopIndex) => ({
@@ -52,7 +53,12 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
       <nav class="sheet-modes" aria-label="List mode">
         <button type="button" class="is-selected" data-mode="general" aria-pressed="true">General</button>
         <button type="button" data-mode="visit" aria-pressed="false">Visit · {visitCount}</button>
+        <button type="button" data-mode="today" aria-pressed="false">Today</button>
       </nav>
+      <p class="sheet-today-loop" data-today-loop hidden>
+        <a class="today-maps" href={today.mapsUrl} target="_blank" rel="noopener noreferrer">Open Today loop in Maps</a>
+        <span class="today-loop-meta">{today.label}</span>
+      </p>
       <nav class="sheet-tabs" aria-label="Industry filters">
         <button type="button" class="is-selected" data-filter="all" aria-pressed="true">All leads</button>
         <button type="button" data-filter="church" aria-pressed="false">Churches</button>
@@ -86,6 +92,8 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
               data-group={group || undefined}
               data-set={set.id}
               data-visit={stop.visit === true || stop.rating === 3 ? "true" : "false"}
+              data-today={todayOrder.has(stop.name) ? "true" : undefined}
+              data-today-order={todayOrder.get(stop.name)}
               class:list={[{ "is-extra": stop.extra, "is-set-start": firstInSet, "is-sent": stop.emailed }]}
             >
               <td class="col-set">
@@ -150,23 +158,38 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
 <script>
   const modes = document.querySelectorAll<HTMLButtonElement>("[data-mode]");
   const tabs = document.querySelectorAll<HTMLButtonElement>("[data-filter]");
-  const rows = document.querySelectorAll<HTMLTableRowElement>("tbody tr");
+  const rows = [...document.querySelectorAll<HTMLTableRowElement>("tbody tr")];
+  const tbody = document.querySelector("tbody");
   const countEl = document.querySelector("[data-row-count]");
+  const todayLoop = document.querySelector<HTMLElement>("[data-today-loop]");
   let mode = "general";
   let filter = "all";
 
   const applyFilters = () => {
+    if (mode === "today" && tbody) {
+      [...rows]
+        .sort((a, b) => Number(a.dataset.todayOrder ?? 999) - Number(b.dataset.todayOrder ?? 999))
+        .forEach((row) => tbody.appendChild(row));
+    } else if (tbody) {
+      rows.forEach((row) => tbody.appendChild(row));
+    }
+
     let visible = 0;
-    rows.forEach((row) => {
+    const currentRows = tbody
+      ? [...tbody.querySelectorAll<HTMLTableRowElement>("tr")]
+      : rows;
+    currentRows.forEach((row) => {
       const group = row.dataset.group ?? "";
       const visit = row.dataset.visit === "true";
-      const showMode = mode === "general" || visit;
+      const todayStop = row.dataset.today === "true";
+      const showMode = mode === "general" || (mode === "visit" && visit) || (mode === "today" && todayStop);
       const showGroup = filter === "all" || group === filter;
       const show = showMode && showGroup;
       row.hidden = !show;
       if (show) visible += 1;
     });
     if (countEl) countEl.textContent = String(visible);
+    if (todayLoop) todayLoop.hidden = mode !== "today";
     modes.forEach((tab) => {
       const on = tab.dataset.mode === mode;
       tab.classList.toggle("is-selected", on);
@@ -262,6 +285,27 @@ const visitCount = rows.filter(({ stop }) => stop.visit === true || stop.rating 
   }
   .sheet-modes {
     margin-bottom: 6px;
+  }
+  .sheet-today-loop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 8px 12px;
+    margin: 0 0 8px;
+  }
+  .sheet-today-loop[hidden] {
+    display: none;
+  }
+  .today-maps {
+    font-size: 14px;
+    font-weight: 700;
+    color: #e8e8e8;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .today-loop-meta {
+    color: #a3a3a3;
+    font-size: 12px;
   }
   .sheet-modes button,
   .sheet-tabs button {

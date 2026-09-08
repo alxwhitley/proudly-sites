@@ -28,8 +28,16 @@ export type FieldVisitSet = {
   stops: FieldVisitStop[];
 };
 
+export type FieldVisitToday = {
+  label: string;
+  note: string;
+  mapsUrl: string;
+  stopNames: string[];
+};
+
 export type FieldVisitList = {
   home: { address: string };
+  today: FieldVisitToday;
   sets: FieldVisitSet[];
 };
 
