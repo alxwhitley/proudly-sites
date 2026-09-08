@@ -98,7 +98,7 @@ test("clients page renders a dense lead table from the data file", async () => {
   const nrcc = stops.find((stop) => stop.name === "North Raleigh Christian Church");
   assert.ok(nrcc, "North Raleigh Christian Church should be present");
   assert.equal(nrcc.email, "info@northraleigh.church");
-  assert.equal(nrcc.emailed, false);
+  assert.equal(nrcc.emailed, true);
   assert.equal(nrcc.rating, 3);
   assert.equal(nrcc.visit, true);
   assert.equal(nrcc.instagram, "@northraleighcc");
@@ -901,6 +901,7 @@ test("clients page renders a dense lead table from the data file", async () => {
     "Kratt Dedmond & Associates",
     "Meliora Wellness",
     "NeuroBloom Physical Therapy & Wellness",
+    "North Raleigh Christian Church",
     "North Raleigh Periodontics & Implant Center",
     "Sisson Law Firm",
     "The Peck Law Firm",
