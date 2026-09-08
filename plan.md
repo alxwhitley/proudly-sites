@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: North Raleigh Christian Church marked Sent (PR #38, merged `12fa96c`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Today tab for Wed Sep 9 North Raleigh walk-ins (PR #40, merged `6accc1f`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows North Raleigh Christian Church with a checked Sent checkbox (`info@northraleigh.church`, leesville set). No other stops changed. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (79 rows, 56 published emails, 12 emailed). Visit · 35.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) has the **Today** mode button, `Open Today loop in Maps`, and `data-today="true"` on exactly these 10 stops in drive order: Campbell Orthodontics → FIRST IN SIGHT → Natural Healthcare & Diagnostics → Advanced Healthcare Solutions → Six Forks Animal Hospital → Lesnik Family Law, P.C. → Champion Orthodontics → Linda M. Stolfo, O.D. (EYEdeals Optometry) → EYES on North Ridge → Mantilla Immigration Law Office. No new General set; existing emailed/rating/visit unchanged. `npm run build` (15 pages) and `node --test tests/clients-visit-list.test.mjs` passed (79 rows, Visit · 35). Browser pass at 1440 and ~390: Today shows those 10 only, Maps loop href home→stops→home.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 8, 2026 · /clients Today tab Wed North Raleigh walk-ins] — Code
+
+- **Did:** Added a top-level `today` object on `field-visits.json` (no new General set) and a **Today** list-mode button on `/clients`. Clicking Today shows only the 10 Wed Sep 9 North Raleigh walk-ins in drive order, plus a header **Open Today loop in Maps** link (`home → 10 stops → home`). Existing emailed/rating/visit fields unchanged.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (79 rows, Visit · 35). Local browser pass at 1440 and ~390: Today selected, 10 rows in drive order, Maps href correct. Production `https://www.proudlysites.com/clients` HTTP 200, `x-vercel-cache: MISS`, Today button + Maps link + 10 `data-today` marks present.
+- **Shipped:** PR #40 merged to `main` (`6accc1f`). Production live.
 
 ### [Tuesday Sep 8, 2026 · /clients North Raleigh Christian Church emailed] — Code
 
