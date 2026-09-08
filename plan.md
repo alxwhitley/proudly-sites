@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Today loop rebuilt after Alex drop of Champion, Advanced Healthcare, and EYES (PR #41, merged `dc2c7b9`). Always merge and make live.
+**Current Priority:** `/clients` scoring migration is ready to merge and make live (PR #42). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **Today** with 10 `data-today` marks and Visit · 32. Champion Orthodontics, Advanced Healthcare Solutions, and EYES on North Ridge are `rating: 2` / `visit: false` and absent from Today. Drive order: Campbell Orthodontics → Brier Creek Vision Care → Reflex Physical Therapy → Brier Creek Pediatric Dentistry → FIRST IN SIGHT → Natural Healthcare & Diagnostics → Six Forks Animal Hospital → Lesnik Family Law, P.C. → Linda M. Stolfo, O.D. (EYEdeals Optometry) → Mantilla Immigration Law Office. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass: Today 10 rows in that order; Visit · 32 hides the three demoted stops.
+**Verification done:** Local `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (79 rows, 32 `visit:true`, 12 `outcome: no_reply`). Built `/clients` has Buyer + Outcome, no Rate, Visit · 32. Browser pass at 1440 and 390: General shows buyer scores and No-reply badges; Visit filters `visit === true`; Today keeps the existing 10-stop drive order and Maps loop. Production verify follows merge.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 8, 2026 · /clients buyer_score + outcome] — Code
+
+- **Did:** Migrated every stop off `rating` onto `buyer_score` (same 1–3 stand-in), `outcome` (`no_reply` if emailed, else `""`), `ai_visible: null`, and `competitors_shown: []`. `/clients` Rate column is now Buyer; Outcome badge shows when non-empty; Visit tab counts/filters `visit === true` only. Existing visit flags, emailed flags, Instagram/hours, church names, and `today.stopNames` / Maps drive order were not changed.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed. Local preview at 1440 and 390: Buyer + Outcome present, Rate gone, Visit · 32, Today 10 rows in drive order.
+- **Shipped:** PR #42 on `cursor/clients-buyer-score-b73a`. Merge and production smoke next.
 
 ### [Tuesday Sep 8, 2026 · /clients drop Champion, Advanced, EYES; rebuild Today] — Code
 
