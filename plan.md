@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` scoring migration is ready to merge and make live (PR #42). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: buyer_score + outcome scoring migration (PR #42, merged `52a8e98`). Always merge and make live.
 
-**Verification done:** Local `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (79 rows, 32 `visit:true`, 12 `outcome: no_reply`). Built `/clients` has Buyer + Outcome, no Rate, Visit · 32. Browser pass at 1440 and 390: General shows buyer scores and No-reply badges; Visit filters `visit === true`; Today keeps the existing 10-stop drive order and Maps loop. Production verify follows merge.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows Buyer + Outcome, no Rate, Visit · 32, and 12 No-reply badges. JSON has `buyer_score`/`outcome` on all 79 stops; `visit` flags and Today drive order unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview, plus production HTML smoke.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -119,7 +119,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 - **Did:** Migrated every stop off `rating` onto `buyer_score` (same 1–3 stand-in), `outcome` (`no_reply` if emailed, else `""`), `ai_visible: null`, and `competitors_shown: []`. `/clients` Rate column is now Buyer; Outcome badge shows when non-empty; Visit tab counts/filters `visit === true` only. Existing visit flags, emailed flags, Instagram/hours, church names, and `today.stopNames` / Maps drive order were not changed.
 - **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed. Local preview at 1440 and 390: Buyer + Outcome present, Rate gone, Visit · 32, Today 10 rows in drive order.
-- **Shipped:** PR #42 on `cursor/clients-buyer-score-b73a`. Merge and production smoke next.
+- **Shipped:** PR #42 merged to `main` (`52a8e98`). Production live.
 
 ### [Tuesday Sep 8, 2026 · /clients drop Champion, Advanced, EYES; rebuild Today] — Code
 
