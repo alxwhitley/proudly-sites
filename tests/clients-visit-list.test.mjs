@@ -97,16 +97,16 @@ const DROPPED = [
 ];
 
 const TODAY = [
+  "Capital Dermatology of NC",
+  "Hampson Family Law",
   "Layton & Carraway, P.A.",
   "Hilton Silvers & McClanahan PLLC",
-  "The Mueller Law Firm, P.A.",
-  "Jenny Doyle, Esq. Immigration Counsel, LLC",
   "The Peck Law Firm",
-  "Brier Creek Vision Care",
-  "Capital Dermatology of NC",
+  "The Mueller Law Firm, P.A.",
+  "Raleigh Pediatric Dentistry",
+  "Amos & Amos, Attorneys at Law",
+  "Jenny Doyle, Esq. Immigration Counsel, LLC",
   "Hormone Wellness MD",
-  "Doctor Direct",
-  "Donna R. Cohen Attorney at Law, PLLC",
 ];
 
 test("clients page renders the pruned ADD lead table", async () => {
@@ -295,8 +295,8 @@ test("clients page renders the pruned ADD lead table", async () => {
   );
 
   assert.ok(data.today, "today loop should be a top-level object");
-  assert.equal(data.today.label, "North Raleigh ADD walk-ins");
-  assert.match(data.today.note, /six-point ADD rescore/);
+  assert.equal(data.today.label, "North Raleigh walk-ins");
+  assert.match(data.today.note, /ADD prune/);
   assert.deepEqual(data.today.stopNames, TODAY);
   assert.equal(TODAY.length, 10);
   assert.equal(

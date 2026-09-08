@@ -3,20 +3,20 @@
     "address": "4133 Lake Lynn Dr, Raleigh NC 27613"
   },
   "today": {
-    "label": "North Raleigh ADD walk-ins",
-    "note": "Cleaned list after six-point ADD rescore.",
-    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "label": "North Raleigh walk-ins",
+    "note": "Rebuilt after the ADD prune: Creedmoor → Six Forks → Falls → midtown.",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
     "stopNames": [
+      "Capital Dermatology of NC",
+      "Hampson Family Law",
       "Layton & Carraway, P.A.",
       "Hilton Silvers & McClanahan PLLC",
-      "The Mueller Law Firm, P.A.",
-      "Jenny Doyle, Esq. Immigration Counsel, LLC",
       "The Peck Law Firm",
-      "Brier Creek Vision Care",
-      "Capital Dermatology of NC",
-      "Hormone Wellness MD",
-      "Doctor Direct",
-      "Donna R. Cohen Attorney at Law, PLLC"
+      "The Mueller Law Firm, P.A.",
+      "Raleigh Pediatric Dentistry",
+      "Amos & Amos, Attorneys at Law",
+      "Jenny Doyle, Esq. Immigration Counsel, LLC",
+      "Hormone Wellness MD"
     ]
   },
   "sets": [
