@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: North Raleigh Today rebuild (PR #44, merged `08e9126`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: four North Raleigh leads (PR #45, merged `b9bd6f3`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **20 rows**, Visit · 20, Today 10 `data-today` marks, label `North Raleigh walk-ins`. Today drive order: Capital Derm → Hampson → Layton → Hilton → Peck → Mueller → Raleigh Pediatric Dentistry → Amos → Jenny Doyle → Hormone Wellness MD. Brier Creek Vision Care, Doctor Direct, and Donna Cohen remain on Visit and are not on Today. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **24 rows**, Visit · 24, Today 10 `data-today` marks, label `North Raleigh walk-ins`. New stops: Pediatric Possibilities (creedmoor, buyer 3, visit true, ai_visible false, `@pediatricpossibilities`); Six Forks Animal Hospital (six-forks-lead-mine, buyer 3, visit true, ai_visible false, `@sixforksanimalhospital`); Law Offices of Lowry & Associates (six-forks-lead-mine, buyer 3, visit true, ai_visible false, no IG); Raleigh Real Estate Law (six-forks-lead-mine, buyer 2, visit true, ai_visible false, no IG). Today loop unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Wednesday Sep 9, 2026 · /clients add four North Raleigh leads] — Code
+
+- **Did:** Added Pediatric Possibilities to `creedmoor` (same building as Capital Derm) and Six Forks Animal Hospital, Law Offices of Lowry & Associates, and Raleigh Real Estate Law to `six-forks-lead-mine`. `emailed` false, `outcome` empty. Rebuilt those two Maps loops home → stops → home. Left `today.stopNames` unchanged.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (24 rows, Visit · 24, Today 10). Local browser at 1440 and 390: four new names on General/Visit with Sent unchecked; Today still the curated 10. Production `/clients` HTTP 200, `x-vercel-cache: MISS`, Visit · 24, all four names present.
+- **Shipped:** PR #45 merged to `main` (`b9bd6f3`). Production live.
 
 ### [Tuesday Sep 8, 2026 · /clients rebuild Today North Raleigh loop] — Code
 
