@@ -32,6 +32,30 @@ const KEEP = {
   "Barrett Law Offices, PLLC": { buyer_score: 2, visit: true },
   "Law Office of Constance M. Ludwig": { buyer_score: 2, visit: true },
   "Donna R. Cohen Attorney at Law, PLLC": { buyer_score: 2, visit: true },
+  "Pediatric Possibilities": {
+    buyer_score: 3,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["All About Therapy for Kids", "Ivy Rehab for Kids", "Pediatric Therapy Associates"],
+  },
+  "Six Forks Animal Hospital": {
+    buyer_score: 3,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["North Hills Animal Hospital & Resort", "Petfolk North Hills", "Oak Heart Veterinary Hospital"],
+  },
+  "Law Offices of Lowry & Associates": {
+    buyer_score: 3,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["Horsley Law", "Raleigh Real Estate Law", "North Raleigh Law"],
+  },
+  "Raleigh Real Estate Law": {
+    buyer_score: 2,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["Horsley Law", "Midtown Law", "Mann McGibney & Jordan"],
+  },
 };
 
 const DROPPED = [
@@ -48,7 +72,6 @@ const DROPPED = [
   "Plastic Surgical Center of North Raleigh",
   "Advanced Healthcare Solutions",
   "Kindrachuk & Gilchrist",
-  "Six Forks Animal Hospital",
   "Integrated Physical Therapy",
   "Allergy Asthma & Sinus Center",
   "NeuroBloom Physical Therapy & Wellness",
@@ -68,7 +91,6 @@ const DROPPED = [
   "The Law Offices of Jeffrey G. Marsocci, PLLC",
   "Lowry Law Offices",
   "Lesnik Family Law, P.C.",
-  "Raleigh Real Estate Law",
   "Betham Law, PLLC",
   "McNeil Law Firm",
   "Vasilko & Pedersen",
@@ -129,7 +151,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 20);
+  assert.equal(stops.length, 24);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.id === "neuse-east" || set.stops.length === 0),
@@ -172,8 +194,12 @@ test("clients page renders the pruned ADD lead table", async () => {
       assert.equal("rating" in stop, false, `${stop.name} still has rating`);
       assert.equal(stop.buyer_score, expected.buyer_score, `${stop.name} buyer_score`);
       assert.equal(stop.visit, expected.visit, `${stop.name} visit`);
-      assert.equal(stop.ai_visible, null, `${stop.name} ai_visible should be unknown`);
-      assert.deepEqual(stop.competitors_shown, [], `${stop.name} competitors_shown should stay empty`);
+      assert.equal(stop.ai_visible, expected.ai_visible ?? null, `${stop.name} ai_visible`);
+      assert.deepEqual(
+        stop.competitors_shown,
+        expected.competitors_shown ?? [],
+        `${stop.name} competitors_shown`
+      );
       assert.ok(
         ["", "no_reply", "replied", "meeting", "declined", "closed"].includes(stop.outcome),
         `${stop.name} has invalid outcome`
@@ -244,9 +270,13 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Hilton Silvers & McClanahan PLLC": "David@HSMlawyers.com",
     "Layton & Carraway, P.A.": "Tom@LaytonCarraway.com",
     "Jennifer Chun Immigration Law": "lawchun@gmail.com",
+    "Pediatric Possibilities": "office@pediatricpossibilities.com",
+    "Six Forks Animal Hospital": "6forks@bellsouth.net",
+    "Law Offices of Lowry & Associates": "gray@lowrylawoffices.com",
+    "Raleigh Real Estate Law": "closings@raleighrealestatelaw.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 16);
+  assert.equal(withEmail.length, 20);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -279,9 +309,9 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 20);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 20);
-  assert.match(html, /Visit · 20/);
+  assert.equal(visitStops.length, 24);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 24);
+  assert.match(html, /Visit · 24/);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
   assert.match(html, />No reply</);
@@ -291,7 +321,14 @@ test("clients page renders the pruned ADD lead table", async () => {
   const withInstagram = stops.filter((stop) => stop.instagram);
   assert.deepEqual(
     withInstagram.map((stop) => stop.name).sort(),
-    ["Amos & Amos, Attorneys at Law", "Capital Dermatology of NC", "Doctor Direct", "Hormone Wellness MD"]
+    [
+      "Amos & Amos, Attorneys at Law",
+      "Capital Dermatology of NC",
+      "Doctor Direct",
+      "Hormone Wellness MD",
+      "Pediatric Possibilities",
+      "Six Forks Animal Hospital",
+    ]
   );
 
   assert.ok(data.today, "today loop should be a top-level object");
