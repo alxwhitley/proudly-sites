@@ -25,7 +25,7 @@
       "name": "Creedmoor",
       "distance": "~9 mi",
       "note": "Skip Monday (Capital Derm closed).",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/7209+Creedmoor+Rd%2C+Suite+101%2C+Raleigh+NC+27613/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Hampson Family Law",
@@ -79,6 +79,24 @@
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": "@capitaldermnc"
+        },
+        {
+          "name": "Pediatric Possibilities",
+          "address": "7209 Creedmoor Rd, Suite 101, Raleigh NC 27613",
+          "hours": "Mon-Thu 8:00am-6:00pm; Fri 8:00am-2:00pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-844-1100",
+          "website": "https://pediatricpossibilities.com/",
+          "email": "office@pediatricpossibilities.com",
+          "note": "Founder Dawn Rohlik OTR/L since 2005 (~7 OTs). GoDaddy Website Builder DIY with brand typo. Published office@ + phone. Hiring history + direct intake (no waitlist language). Suite 101 Creedmoor walk-in same building as Capital Derm. Money: 2005 founding. AI: not dominant vs All About Therapy / Ivy Rehab for pediatric OT North Raleigh.",
+          "industry": "Pediatric occupational therapy",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["All About Therapy for Kids", "Ivy Rehab for Kids", "Pediatric Therapy Associates"],
+          "instagram": "@pediatricpossibilities"
         }
       ]
     },
@@ -114,8 +132,26 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Suite+200%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
+        {
+          "name": "Raleigh Real Estate Law",
+          "address": "9121 Anson Way, Suite 200, Raleigh NC 27615",
+          "hours": "Mon-Thu 9am-5pm; Fri 9am-noon",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-714-4996",
+          "website": "https://raleighrealestatelaw.com/",
+          "email": "closings@raleighrealestatelaw.com",
+          "note": "Closing boutique Kubio DIY with unfinished team pages. Published closings@. Est. ~2017 + review volume money proxy. Ownership/mobile-closing expansion. Soft AI risk — recheck before outreach. Instagram not published.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Horsley Law", "Midtown Law", "Mann McGibney & Jordan"],
+          "instagram": ""
+        },
         {
           "name": "Layton & Carraway, P.A.",
           "address": "8524 Six Forks Road, Suite 201, Raleigh NC 27615",
@@ -135,6 +171,24 @@
           "instagram": ""
         },
         {
+          "name": "Law Offices of Lowry & Associates",
+          "address": "8358 Six Forks Rd, Suite 104, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-518-0783",
+          "website": "https://lowrylawoffices.com/",
+          "email": "gray@lowrylawoffices.com",
+          "note": "RE/business/estate boutique since ~2003. WP Twenty Twenty-Five default leftover. Named emails on About (also lawson@ / Cindy@ / Lindsay@). Associate Jamie Blue hire = demand/capacity. Suite 104 Six Forks walk-in. Proof lane: Smith Cash for law. Instagram not published.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Horsley Law", "Raleigh Real Estate Law", "North Raleigh Law"],
+          "instagram": ""
+        },
+        {
           "name": "Hilton Silvers & McClanahan PLLC",
           "address": "7320 Six Forks Road, Suite 100, Raleigh NC 27615",
           "hours": "Not published - call first",
@@ -151,6 +205,24 @@
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": ""
+        },
+        {
+          "name": "Six Forks Animal Hospital",
+          "address": "7130 Six Forks Rd, Raleigh NC 27615",
+          "hours": "Mon-Fri 7:15am-6:00pm; Sat 8:00am-12:00pm; Sun 10:00am-11:00am",
+          "typicallyClosed": "",
+          "phone": "919-847-5854",
+          "website": "https://sixforksanimalhospital.com/",
+          "email": "6forks@bellsouth.net",
+          "note": "Independent PLLC since 1967 (Jackie P. Price/Cater owner). iMatrix/VetMatrix leftover + bellsouth email. New Patient Center / New Client Form = accepting. Street-level Six Forks walk-in. Not PE/VetCor/NVA. AI: not dominant vs North Hills / Petfolk / Oak Heart.",
+          "industry": "Veterinary",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["North Hills Animal Hospital & Resort", "Petfolk North Hills", "Oak Heart Veterinary Hospital"],
+          "instagram": "@sixforksanimalhospital"
         },
         {
           "name": "Sisson Law Firm",
