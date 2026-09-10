@@ -5,7 +5,7 @@
   "today": {
     "label": "North Raleigh walk-ins",
     "note": "Rebuilt after the ADD prune: Creedmoor → Six Forks → Falls → midtown.",
-    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
     "stopNames": [
       "Capital Dermatology of NC",
       "Hampson Family Law",
@@ -15,8 +15,10 @@
       "The Mueller Law Firm, P.A.",
       "Raleigh Pediatric Dentistry",
       "Amos & Amos, Attorneys at Law",
+      "Ladd Immigration Law, LLC",
       "Jenny Doyle, Esq. Immigration Counsel, LLC",
-      "Hormone Wellness MD"
+      "Hormone Wellness MD",
+      "Matta Law Firm, PLLC"
     ]
   },
   "sets": [
@@ -247,7 +249,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Pediatric Dentistry",
@@ -284,6 +286,24 @@
           "instagram": "@amoslawnc"
         },
         {
+          "name": "Ladd Immigration Law, LLC",
+          "address": "124 Mine Lake Ct, Raleigh NC 27615",
+          "hours": "Mon-Fri ~9am-5pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-302-9505",
+          "website": "https://laddimmigration.com/home/",
+          "email": "laddimmigration@gmail.com",
+          "note": "Solo Monica Ladd + paralegal team; federal immigration (family + employment). Outdated WordPress 5.9.16 / BeTheme leftover; root domain spam-compromised — use /home/ for real content. Same-day complimentary in-office consults. ~158 Google reviews (4.8) + 17+ yrs money proxy. Not AI-visible vs Edgerton / Bashyam / Araneda. Instagram not published. Caveat: principal not NC State Bar–licensed (federal immigration practice).",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Edgerton Immigration", "Bashyam Global", "Araneda & Stroud"],
+          "instagram": ""
+        },
+        {
           "name": "The Mueller Law Firm, P.A.",
           "address": "7000 Harps Mill Rd #203, Raleigh NC 27615",
           "hours": "Not published - call first",
@@ -307,8 +327,8 @@
       "id": "midtown-six-forks",
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
-      "note": "Law Corner and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "note": "Matta Law and Hormone Wellness same building.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Julyan Canty Law",
@@ -340,6 +360,24 @@
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": "@hormonewellnessmd"
+        },
+        {
+          "name": "Matta Law Firm, PLLC",
+          "address": "211 E Six Forks Rd Suite 122, Raleigh NC 27609",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-703-0470",
+          "website": "https://www.mattalawfirm.com/",
+          "email": "INFO@MATTALAWFIRM.COM",
+          "note": "2 attorneys (Jorge E. Matta, H. Esteban Diaz). Immigration + family + referral-led criminal overlap. WordPress Total theme ©2017; bio pages show spam/malware neglect — DIY/compromised, not recent vertical-agency rebuild. Accepting consultations. Since ~2015 + ~89 Google reviews money proxy. Not AI-visible vs Edgerton / Bashyam / Araneda. Instagram not published (Facebook only). Same building corridor as Hormone Wellness.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Edgerton Immigration", "Bashyam Global", "Araneda & Stroud"],
+          "instagram": ""
         },
         {
           "name": "Doctor Direct",
