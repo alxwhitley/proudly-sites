@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: four North Raleigh leads (PR #45, merged `b9bd6f3`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Ladd Immigration + Matta Law (PR #46, merged `a4e8a05`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **24 rows**, Visit · 24, Today 10 `data-today` marks, label `North Raleigh walk-ins`. New stops: Pediatric Possibilities (creedmoor, buyer 3, visit true, ai_visible false, `@pediatricpossibilities`); Six Forks Animal Hospital (six-forks-lead-mine, buyer 3, visit true, ai_visible false, `@sixforksanimalhospital`); Law Offices of Lowry & Associates (six-forks-lead-mine, buyer 3, visit true, ai_visible false, no IG); Raleigh Real Estate Law (six-forks-lead-mine, buyer 2, visit true, ai_visible false, no IG). Today loop unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **26 rows**, Visit · 26, Today 12 `data-today` marks, label `North Raleigh walk-ins`. New stops: Ladd Immigration Law, LLC (`falls-raven-ridge`, buyer 3, visit true, ai_visible false, no IG); Matta Law Firm, PLLC (`midtown-six-forks`, buyer 3, visit true, ai_visible false, no IG). Today loop inserts Ladd after Amos and Matta after Hormone Wellness. Healthcare entries unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Thursday Sep 10, 2026 · /clients add Ladd Immigration + Matta Law] — Code
+
+- **Did:** Added Ladd Immigration Law, LLC to `falls-raven-ridge` (after Amos, Mine Lake / Falls) and Matta Law Firm, PLLC to `midtown-six-forks` (after Hormone Wellness, same 211 E Six Forks building). `emailed` false, `outcome` empty. Inserted both into `today.stopNames` (12-stop North Raleigh walk-in) and rebuilt Today + those two set Maps loops. Did not remove existing stops or change healthcare entries.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (26 rows, Visit · 26, Today 12). Local browser at 1440 and 390: both names on General/Visit/Today. Production `/clients` HTTP 200, `x-vercel-cache: MISS`, Visit · 26, both names and addresses present.
+- **Shipped:** PR #46 merged to `main` (`a4e8a05`). Production live.
 
 ### [Wednesday Sep 9, 2026 · /clients add four North Raleigh leads] — Code
 
