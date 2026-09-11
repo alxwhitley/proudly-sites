@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Ladd Immigration + Matta Law (PR #46, merged `a4e8a05`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Monroe Wallace + Marsocci (PR #47, merged `68696fa`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **26 rows**, Visit · 26, Today 12 `data-today` marks, label `North Raleigh walk-ins`. New stops: Ladd Immigration Law, LLC (`falls-raven-ridge`, buyer 3, visit true, ai_visible false, no IG); Matta Law Firm, PLLC (`midtown-six-forks`, buyer 3, visit true, ai_visible false, no IG). Today loop inserts Ladd after Amos and Matta after Hormone Wellness. Healthcare entries unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: HIT`) shows **28 rows**, Visit · 28, Today 14 `data-today` marks, label `North Raleigh walk-ins`. New stops: Monroe Wallace Law Firm (`falls-raven-ridge`, buyer 3, visit true, ai_visible false, no IG, `christym@monroewallace.com`); Law Offices of Jeffrey G. Marsocci, PLLC (`six-forks-lead-mine` after Layton, buyer 3, visit true, ai_visible false, `@the_plain_english_attorney`). Today inserts Marsocci after Layton and Monroe Wallace after Mueller. Healthcare entries and existing emailed flags unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Friday Sep 11, 2026 · /clients add Monroe Wallace + Marsocci] — Code
+
+- **Did:** Added Monroe Wallace Law Firm to `falls-raven-ridge` (northern Falls of Neuse Suite 200) and Law Offices of Jeffrey G. Marsocci, PLLC to `six-forks-lead-mine` (after Layton, 8406 Six Forks Suite 102). `emailed` false, `outcome` empty. Inserted both into `today.stopNames` (14-stop North Raleigh walk-in) and rebuilt Today + those two set Maps loops. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (28 rows, Visit · 28, Today 14). Local browser at 1440 and 390: both names on General/Visit/Today with Sent unchecked. Production `/clients` HTTP 200, `x-vercel-cache: HIT`, Visit · 28, both names and addresses present.
+- **Shipped:** PR #47 merged to `main` (`68696fa`). Production live.
 
 ### [Thursday Sep 10, 2026 · /clients add Ladd Immigration + Matta Law] — Code
 
