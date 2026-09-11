@@ -68,6 +68,18 @@ const KEEP = {
     ai_visible: false,
     competitors_shown: ["Edgerton Immigration", "Bashyam Global", "Araneda & Stroud"],
   },
+  "Monroe Wallace Law Firm": {
+    buyer_score: 3,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["Cary Estate Planning", "Lynch & Eatman", "Kirschbaum Nanney"],
+  },
+  "Law Offices of Jeffrey G. Marsocci, PLLC": {
+    buyer_score: 3,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["NC Planning", "NC Wills & Trusts", "Carolina Estate Plan"],
+  },
 };
 
 const DROPPED = [
@@ -134,16 +146,18 @@ const TODAY = [
   "Capital Dermatology of NC",
   "Hampson Family Law",
   "Layton & Carraway, P.A.",
+  "Law Offices of Jeffrey G. Marsocci, PLLC",
   "Hilton Silvers & McClanahan PLLC",
   "The Peck Law Firm",
   "The Mueller Law Firm, P.A.",
+  "Monroe Wallace Law Firm",
   "Raleigh Pediatric Dentistry",
-      "Amos & Amos, Attorneys at Law",
-      "Ladd Immigration Law, LLC",
-      "Jenny Doyle, Esq. Immigration Counsel, LLC",
-      "Hormone Wellness MD",
-      "Matta Law Firm, PLLC",
-    ];
+  "Amos & Amos, Attorneys at Law",
+  "Ladd Immigration Law, LLC",
+  "Jenny Doyle, Esq. Immigration Counsel, LLC",
+  "Hormone Wellness MD",
+  "Matta Law Firm, PLLC",
+];
 
 test("clients page renders the pruned ADD lead table", async () => {
   const html = await readFile(clientsPath, "utf8");
@@ -165,7 +179,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 26);
+  assert.equal(stops.length, 28);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.id === "neuse-east" || set.stops.length === 0),
@@ -290,9 +304,11 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Raleigh Real Estate Law": "closings@raleighrealestatelaw.com",
     "Ladd Immigration Law, LLC": "laddimmigration@gmail.com",
     "Matta Law Firm, PLLC": "INFO@MATTALAWFIRM.COM",
+    "Monroe Wallace Law Firm": "christym@monroewallace.com",
+    "Law Offices of Jeffrey G. Marsocci, PLLC": "jeff@livingtrustlawfirm.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 22);
+  assert.equal(withEmail.length, 24);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -325,9 +341,9 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 26);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 26);
-  assert.match(html, /Visit · 26/);
+  assert.equal(visitStops.length, 28);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 28);
+  assert.match(html, /Visit · 28/);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
   assert.match(html, />No reply</);
@@ -342,6 +358,7 @@ test("clients page renders the pruned ADD lead table", async () => {
       "Capital Dermatology of NC",
       "Doctor Direct",
       "Hormone Wellness MD",
+      "Law Offices of Jeffrey G. Marsocci, PLLC",
       "Pediatric Possibilities",
       "Six Forks Animal Hospital",
     ]
@@ -351,7 +368,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.equal(data.today.label, "North Raleigh walk-ins");
   assert.match(data.today.note, /ADD prune/);
   assert.deepEqual(data.today.stopNames, TODAY);
-  assert.equal(TODAY.length, 12);
+  assert.equal(TODAY.length, 14);
   assert.equal(
     data.sets.some((set) => set.id === "today" || set.name === data.today.label),
     false,
