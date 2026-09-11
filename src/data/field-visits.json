@@ -5,14 +5,16 @@
   "today": {
     "label": "North Raleigh walk-ins",
     "note": "Rebuilt after the ADD prune: Creedmoor → Six Forks → Falls → midtown.",
-    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
     "stopNames": [
       "Capital Dermatology of NC",
       "Hampson Family Law",
       "Layton & Carraway, P.A.",
+      "Law Offices of Jeffrey G. Marsocci, PLLC",
       "Hilton Silvers & McClanahan PLLC",
       "The Peck Law Firm",
       "The Mueller Law Firm, P.A.",
+      "Monroe Wallace Law Firm",
       "Raleigh Pediatric Dentistry",
       "Amos & Amos, Attorneys at Law",
       "Ladd Immigration Law, LLC",
@@ -134,7 +136,7 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Suite+200%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Suite+200%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -171,6 +173,24 @@
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": ""
+        },
+        {
+          "name": "Law Offices of Jeffrey G. Marsocci, PLLC",
+          "address": "8406 Six Forks Road Suite 102, Raleigh NC 27615",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-844-7993",
+          "website": "https://livingtrustlawfirm.com/",
+          "email": "jeff@livingtrustlawfirm.com",
+          "note": "Solo estate/trust/Medicaid + small-business planning boutique (Asheville/Arden second office). Older WordPress livingtrustlawfirm.com with typos (Estate Planing) and webinar-hub leftover — DIY/neglected, not FindLaw/Justia/Scorpion or recent vertical-agency rebuild. jeff@ published in header/footer. Free consults / webinar funnel = demand, not waitlist. Practice since ~1995 + 2 offices money proxy. Not AI-dominant for estate planning North Raleigh vs NC Planning / NC Wills & Trusts / Carolina Estate Plan. Instagram published on own site. Suite 102 Six Forks walk-in ~20 min from Lake Lynn. Proof lane: Smith Cash for law.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["NC Planning", "NC Wills & Trusts", "Carolina Estate Plan"],
+          "instagram": "@the_plain_english_attorney"
         },
         {
           "name": "Law Offices of Lowry & Associates",
@@ -249,8 +269,26 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
+        {
+          "name": "Monroe Wallace Law Firm",
+          "address": "14091 Falls of Neuse Rd Suite 200, Raleigh NC 27614",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-876-1400",
+          "website": "https://monroewallace.com/",
+          "email": "christym@monroewallace.com",
+          "note": "6 attorneys (estate/business/elder). Founded 1978 + 2 Wake offices money proxy. Custom WP Bones theme MW2021 with 2013/2015 media + contact page last modified ~2019 — neglected DIY, not a recent vertical-agency rebuild. Published christym@ on site. Accepting estate/business clients (no waitlist language). Not AI-dominant for estate planning North Raleigh vs Cary Estate Planning / Lynch & Eatman / Kirschbaum. Instagram not published. Falls of Neuse Suite 200 walk-in + phone. Proof lane: Smith Cash for law.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Cary Estate Planning", "Lynch & Eatman", "Kirschbaum Nanney"],
+          "instagram": ""
+        },
         {
           "name": "Raleigh Pediatric Dentistry",
           "address": "10931 Raven Ridge Rd, Ste 105, Raleigh NC 27614",
