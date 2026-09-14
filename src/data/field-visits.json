@@ -460,7 +460,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Jennifer Chun Immigration Law",
@@ -525,6 +525,24 @@
           "outcome": "",
           "ai_visible": null,
           "competitors_shown": [],
+          "instagram": ""
+        },
+        {
+          "name": "Law Offices of Denise Smith Cline, PLLC",
+          "address": "16 North Boylan Avenue, Raleigh NC 27603",
+          "hours": "Not published - call first",
+          "typicallyClosed": "",
+          "phone": "919-602-6225",
+          "website": "https://www.dsclinelaw.com/",
+          "email": "denise@dsclinelaw.com",
+          "note": "Solo Board Certified employment specialist Denise Smith Cline (practice since 2010 after large-firm career; 25+ yrs litigation). Wix DIY site — no named vertical-agency rebuild. Published denise@dsclinelaw.com + phone on own site. Accepting employer/employee counsel, investigations, training, mediation (no waitlist language). Money: 5+ yrs solo + long practice history. Not AI-dominant for employment lawyer North Raleigh vs Noble Law / Oxendine / Crawford. Instagram not published. Street-level Boylan walk-in ~20–25 min from Lake Lynn. Proof lane: Smith Cash for law.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["The Noble Law Firm", "Oxendine Barnes & Associates", "Law Offices of Robert Crawford"],
           "instagram": ""
         },
         {
