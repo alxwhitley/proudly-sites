@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Monroe Wallace + Marsocci (PR #47, merged `68696fa`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Denise Smith Cline (PR #48, merged `84deba0`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: HIT`) shows **28 rows**, Visit · 28, Today 14 `data-today` marks, label `North Raleigh walk-ins`. New stops: Monroe Wallace Law Firm (`falls-raven-ridge`, buyer 3, visit true, ai_visible false, no IG, `christym@monroewallace.com`); Law Offices of Jeffrey G. Marsocci, PLLC (`six-forks-lead-mine` after Layton, buyer 3, visit true, ai_visible false, `@the_plain_english_attorney`). Today inserts Marsocci after Layton and Monroe Wallace after Mueller. Healthcare entries and existing emailed flags unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: HIT`) shows **29 rows**, Visit · 29, Today 14 `data-today` marks, label `North Raleigh walk-ins`. New stop: Law Offices of Denise Smith Cline, PLLC (`crabtree-midtown` after Barrett, 16 North Boylan Avenue, buyer 3, visit true, ai_visible false, no IG, `denise@dsclinelaw.com`). Today left unchanged — no crabtree-midtown stops were on the North Raleigh loop. Healthcare entries and existing emailed flags unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Monday Sep 14, 2026 · /clients add Denise Smith Cline] — Code
+
+- **Did:** Added Law Offices of Denise Smith Cline, PLLC to `crabtree-midtown` after Barrett (16 North Boylan Avenue, downtown/Glenwood corridor with Constance Ludwig and Donna Cohen). `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` false, competitors Noble Law / Oxendine / Crawford, Instagram blank. Rebuilt the crabtree-midtown Maps loop. Left `today.stopNames` and `today.mapsUrl` unchanged. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (29 rows, Visit · 29, Today 14). Local browser at 1440 and 390: Denise on General/Visit/Law, Sent unchecked, hidden on Today. Production `/clients` HTTP 200, `x-vercel-cache: HIT`, Visit · 29, name and Boylan address present.
+- **Shipped:** PR #48 merged to `main` (`84deba0`). Production live.
 
 ### [Friday Sep 11, 2026 · /clients add Monroe Wallace + Marsocci] — Code
 
