@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Denise Smith Cline (PR #48, merged `84deba0`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Fife + Arnette (PR #50, merged `af0de0c`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: HIT`) shows **29 rows**, Visit · 29, Today 14 `data-today` marks, label `North Raleigh walk-ins`. New stop: Law Offices of Denise Smith Cline, PLLC (`crabtree-midtown` after Barrett, 16 North Boylan Avenue, buyer 3, visit true, ai_visible false, no IG, `denise@dsclinelaw.com`). Today left unchanged — no crabtree-midtown stops were on the North Raleigh loop. Healthcare entries and existing emailed flags unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **31 rows**, Visit · 31, Today 14 `data-today` marks, label `North Raleigh walk-ins`. New stops: The Fife Law Firm, P.A. (`six-forks-lead-mine` between Marsocci and Lowry, 8366 Six Forks STE 104, buyer 2, visit true, ai_visible false, no IG, `lance@fife-law.com`) and Arnette Law Offices, PLLC (`leesville` after Brier Creek Vision, 3131 RDU Center Drive Suite 120 Morrisville, buyer 2, visit true, ai_visible false, no IG, `AArnette@Arnette-law.com`). Today left unchanged — curated North Raleigh short list. Healthcare entries and existing emailed flags unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Wednesday Sep 16, 2026 · /clients add Fife + Arnette] — Code
+
+- **Did:** Added The Fife Law Firm, P.A. to `six-forks-lead-mine` between Marsocci and Lowry (8366 Six Forks STE 104, same corridor as 8358 Lowry). Added Arnette Law Offices, PLLC to `leesville` after Brier Creek Vision Care (3131 RDU Center Drive Suite 120, Morrisville — closer I-540 loop than crabtree). Both `emailed` false, `outcome` empty, buyer 2, visit true, `ai_visible` false, Instagram blank. Rebuilt those two set Maps loops. Left `today.stopNames` and `today.mapsUrl` unchanged. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (31 rows, Visit · 31, Today 14). Local browser at 1440 and 390: both names on General/Visit/Law, Sent unchecked, hidden on Today. Production `/clients` HTTP 200, `x-vercel-cache: MISS`, Visit · 31, both names and addresses present.
+- **Shipped:** PR #50 merged to `main` (`af0de0c`). Production live.
 
 ### [Monday Sep 14, 2026 · /clients add Denise Smith Cline] — Code
 
