@@ -109,7 +109,7 @@
       "name": "Leesville / Brier Creek",
       "distance": "~10 mi",
       "note": "One Brier Creek stop.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/3131+RDU+Center+Drive%2C+Suite+120%2C+Morrisville+NC+27560/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Brier Creek Vision Care",
@@ -128,6 +128,24 @@
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": ""
+        },
+        {
+          "name": "Arnette Law Offices, PLLC",
+          "address": "3131 RDU Center Drive, Suite 120, Morrisville NC 27560",
+          "hours": "Not published on own site - call first",
+          "typicallyClosed": "",
+          "phone": "919-747-2208",
+          "website": "https://www.arnette-law.com/",
+          "email": "AArnette@Arnette-law.com",
+          "note": "RE closing boutique (Asekesai Arnette Harris + Tempestt Morton). Wix / Editor X DIY — no Scorpion/FindLaw/Justia footer. Published AArnette@ on own bio page (also info@). Active residential closings / contact CTA (no waitlist). Money: opened Aug 2010 + Birdeye ~143 reviews @ 4.7. Not AI-dominant for North Raleigh RE vs Raleigh Real Estate Law / Moore & Alphin / Capital City Estate Planning. Instagram not published on own site (Facebook only — leave IG blank). Suite 120 RDU Center walk-in ~20–25 min from Lake Lynn via I-540 (edge of radius). Proof lane: Smith Cash for law.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Raleigh Real Estate Law", "Moore & Alphin", "Capital City Estate Planning"],
+          "instagram": ""
         }
       ]
     },
@@ -136,7 +154,7 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Suite+200%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Suite+200%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/8366+Six+Forks+Rd%2C+STE+104%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -191,6 +209,24 @@
           "ai_visible": false,
           "competitors_shown": ["NC Planning", "NC Wills & Trusts", "Carolina Estate Plan"],
           "instagram": "@the_plain_english_attorney"
+        },
+        {
+          "name": "The Fife Law Firm, P.A.",
+          "address": "8366 Six Forks Rd, STE 104, Raleigh NC 27615",
+          "hours": "Mon-Fri 8:30am-5:00pm; Sat-Sun appointment only",
+          "typicallyClosed": "",
+          "phone": "919-870-9130",
+          "website": "https://fife-law.com/",
+          "email": "lance@fife-law.com",
+          "note": "RE/estate/business/traffic boutique (2 attorneys + staff). GoDaddy WordPress + Elementor DIY (godaddy-launch; ~Apr 2026 template rebuild) — not FindLaw/Justia/Scorpion or named vertical-agency. Published lance@ + closings@ on own site. Schedule a Consultation / active closings intake (no waitlist). Money: 25+ years practice history (NC bar ~1999). Not AI-dominant for real estate attorney North Raleigh vs Raleigh Real Estate Law / Moore & Alphin / Capital City Estate Planning / Arnette Law. Instagram not published. STE 104 Six Forks walk-in next to Lowry corridor ~15–20 min from Lake Lynn. Proof lane: Smith Cash for law.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Raleigh Real Estate Law", "Moore & Alphin", "Capital City Estate Planning", "Arnette Law"],
+          "instagram": ""
         },
         {
           "name": "Law Offices of Lowry & Associates",
