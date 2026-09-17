@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Fife + Arnette (PR #50, merged `af0de0c`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Paschal + Varnell (PR #53, merged `c6b0f22`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **31 rows**, Visit · 31, Today 14 `data-today` marks, label `North Raleigh walk-ins`. New stops: The Fife Law Firm, P.A. (`six-forks-lead-mine` between Marsocci and Lowry, 8366 Six Forks STE 104, buyer 2, visit true, ai_visible false, no IG, `lance@fife-law.com`) and Arnette Law Offices, PLLC (`leesville` after Brier Creek Vision, 3131 RDU Center Drive Suite 120 Morrisville, buyer 2, visit true, ai_visible false, no IG, `AArnette@Arnette-law.com`). Today left unchanged — curated North Raleigh short list. Healthcare entries and existing emailed flags unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **33 rows**, Visit · 33, Today 16 `data-today` marks, label `North Raleigh walk-ins`. New stops: John P. Paschal, Attorney at Law, PLLC (`crabtree-midtown` after Donna Cohen, 4904 Waters Edge Drive Suite 100, buyer 2, visit true, ai_visible false, `@johnpaschallaw`, `john@johnpaschallaw.com`) and Varnell Law (`midtown-six-forks` after Jenny Doyle, 308 Millbrook Road Suite D #100, buyer 2, visit true, ai_visible false, no IG, `Caleb@Varnell.Law`). Both added to Today after Matta; set and Today Maps loops include the new addresses before home. Healthcare entries and existing emailed flags unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Thursday Sep 17, 2026 · /clients add Paschal + Varnell] — Code
+
+- **Did:** Added John P. Paschal, Attorney at Law, PLLC to `crabtree-midtown` after Donna Cohen (4904 Waters Edge Drive, Suite 100). Added Varnell Law to `midtown-six-forks` after Jenny Doyle (308 Millbrook Road, Suite D #100, next to the Barrett midtown cluster). Both `emailed` false, `outcome` empty, buyer 2, visit true, `ai_visible` false. Paschal Instagram `@johnpaschallaw`; Varnell Instagram blank. Inserted both into `today.stopNames` after Matta and rebuilt Today plus those two set Maps loops (new addresses before return home). Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (33 rows, Visit · 33, Today 16). Local browser at 1440 and 390: both names on General/Visit/Law/Today, Sent unchecked, hidden on Healthcare. Production `/clients` HTTP 200, `x-vercel-cache: MISS`, Visit · 33, both names and addresses present.
+- **Shipped:** PR #53 merged to `main` (`c6b0f22`). Production live.
 
 ### [Wednesday Sep 16, 2026 · /clients add Fife + Arnette] — Code
 
