@@ -5,7 +5,7 @@
   "today": {
     "label": "North Raleigh walk-ins",
     "note": "Rebuilt after the ADD prune: Creedmoor → Six Forks → Falls → midtown.",
-    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
     "stopNames": [
       "Capital Dermatology of NC",
       "Hampson Family Law",
@@ -20,7 +20,9 @@
       "Ladd Immigration Law, LLC",
       "Jenny Doyle, Esq. Immigration Counsel, LLC",
       "Hormone Wellness MD",
-      "Matta Law Firm, PLLC"
+      "Matta Law Firm, PLLC",
+      "Varnell Law",
+      "John P. Paschal, Attorney at Law, PLLC"
     ]
   },
   "sets": [
@@ -402,7 +404,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Matta Law and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Julyan Canty Law",
@@ -488,6 +490,24 @@
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": ""
+        },
+        {
+          "name": "Varnell Law",
+          "address": "308 Millbrook Road, Suite D #100, Raleigh NC 27609",
+          "hours": "Not published - call first",
+          "typicallyClosed": "Weekend hours not published",
+          "phone": "919-888-0499",
+          "website": "https://varnell.law/",
+          "email": "Caleb@Varnell.Law",
+          "note": "Solo RE closings + estate planning + business formation (ICP; also Wilson office). GoDaddy Website Builder DIY (Starfield/GoDaddy generator meta) — ©2022 template, not FindLaw/Justia/Scorpion or named vertical-agency. Published Caleb@Varnell.Law on own /contact-us (mailto). Active closings / wills-trusts marketing + consultation CTAs (no waitlist). Money: NC bar Aug 2018 (5+ yrs) AND 2 offices (Raleigh Millbrook + Wilson Nash St). Not AI-visible for real estate attorney North Raleigh vs Raleigh Real Estate Law / Moore & Alphin / Capital City Estate Planning / Arnette / Fife. Instagram not published on own site. Suite D #100 multi-tenant Millbrook walk-in (shared building with CPA/other tenants — not Regus/virtual). Also Wilson: (252) 299-5780. Proof lane: Smith Cash for law.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Raleigh Real Estate Law", "Moore & Alphin", "Capital City Estate Planning", "Arnette Law", "The Fife Law Firm"],
+          "instagram": ""
         }
       ]
     },
@@ -496,7 +516,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Jennifer Chun Immigration Law",
@@ -615,6 +635,24 @@
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": ""
+        },
+        {
+          "name": "John P. Paschal, Attorney at Law, PLLC",
+          "address": "4904 Waters Edge Drive, Suite 100, Raleigh NC 27606",
+          "hours": "Not published - schedule consultation / call first",
+          "typicallyClosed": "Weekend hours not published",
+          "phone": "919-809-8160",
+          "website": "https://www.johnpaschallaw.com/",
+          "email": "john@johnpaschallaw.com",
+          "note": "Solo elder law / estate planning / guardianship / estate admin (ICP). Squarespace DIY (server: Squarespace; template 7) — COVID-era homepage still live = neglected DIY, not FindLaw/Justia/Scorpion or recent vertical-agency rebuild. Published john@ on own site header/about/contact. Schedule a Consultation / in-person + virtual intake (no waitlist language). Money: NC bar 2009 (5+ yrs). Not AI-visible for elder law / estate planning North Raleigh vs W.G. Alexander, Capital City Estate Planning, Trusts and Estates Law Group, Omega Elder Law. Instagram published on own Squarespace social accounts. Suite 100 Waters Edge office-park walk-in ~20–25 min from Lake Lynn (SW edge of radius). Proof lane: Smith Cash for law.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["W.G. Alexander & Associates", "Capital City Estate Planning", "Trusts and Estates Law Group", "Omega Elder Law"],
+          "instagram": "@johnpaschallaw"
         }
       ]
     }
