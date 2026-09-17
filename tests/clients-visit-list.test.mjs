@@ -349,6 +349,8 @@ test("clients page renders the pruned ADD lead table", async () => {
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
   assert.deepEqual(emailedTrue.map((stop) => stop.name).sort(), [
     "Amos & Amos, Attorneys at Law",
+    "Law Offices of Lowry & Associates",
+    "Layton & Carraway, P.A.",
     "Sisson Law Firm",
     "The Peck Law Firm",
   ]);
