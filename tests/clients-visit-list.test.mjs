@@ -110,6 +110,18 @@ const KEEP = {
     ai_visible: false,
     competitors_shown: ["Raleigh Real Estate Law", "Moore & Alphin", "Capital City Estate Planning", "Arnette Law", "The Fife Law Firm"],
   },
+  "The Law Offices of John K. Cook, P.A.": {
+    buyer_score: 2,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["Carolina Estate Plan / NC Wills & Trusts", "Trusts and Estates Law Group", "Doyle Law Offices", "Hatcher Legal", "Capital City Estate Planning", "W.G. Alexander"],
+  },
+  "The Law Office of Gregory S. Davis, PLLC": {
+    buyer_score: 2,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["Carolina Estate Plan / NC Wills & Trusts", "Trusts and Estates Law Group", "Doyle Law Offices", "Hatcher Legal", "Capital City Estate Planning", "W.G. Alexander"],
+  },
 };
 
 const DROPPED = [
@@ -210,8 +222,8 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /data-filter="law"/);
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
-  assert.equal(data.sets.length, 6);
-  assert.equal(stops.length, 33);
+  assert.equal(data.sets.length, 7);
+  assert.equal(stops.length, 35);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.id === "neuse-east" || set.stops.length === 0),
@@ -343,9 +355,11 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Arnette Law Offices, PLLC": "AArnette@Arnette-law.com",
     "John P. Paschal, Attorney at Law, PLLC": "john@johnpaschallaw.com",
     "Varnell Law": "Caleb@Varnell.Law",
+    "The Law Offices of John K. Cook, P.A.": "lawofjkc@mindspring.com",
+    "The Law Office of Gregory S. Davis, PLLC": "greg@gsdavislaw.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 29);
+  assert.equal(withEmail.length, 31);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -381,9 +395,9 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 33);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 33);
-  assert.match(html, /Visit · 33/);
+  assert.equal(visitStops.length, 35);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 35);
+  assert.match(html, /Visit · 35/);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
   assert.match(html, />No reply</);
