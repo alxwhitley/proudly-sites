@@ -655,6 +655,50 @@
           "instagram": "@johnpaschallaw"
         }
       ]
+    },
+    {
+      "id": "wake-forest",
+      "name": "Wake Forest",
+      "distance": "~17 mi",
+      "note": "Downtown Wake Forest. Call Davis first.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/215+East+Jones+Avenue%2C+Wake+Forest+NC+27587/525+S.+White+Street%2C+Suite+205%2C+Wake+Forest+NC+27587/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "The Law Offices of John K. Cook, P.A.",
+          "address": "215 East Jones Avenue, Wake Forest NC 27587",
+          "hours": "Mon-Fri 8:00am-5:00pm",
+          "typicallyClosed": "Closed Sat, Sun",
+          "phone": "919-556-4899",
+          "website": "https://www.lawofjkc.com/",
+          "email": "lawofjkc@mindspring.com",
+          "note": "Thryv/Duda DIY neglected; estate/business/estate admin; practicing Wake Forest since 1987; mindspring email. Soft pitch Astro $1.5k or Framer $4–8k + SEO/AI retainer.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Carolina Estate Plan / NC Wills & Trusts", "Trusts and Estates Law Group", "Doyle Law Offices", "Hatcher Legal", "Capital City Estate Planning", "W.G. Alexander"],
+          "instagram": ""
+        },
+        {
+          "name": "The Law Office of Gregory S. Davis, PLLC",
+          "address": "525 S. White Street, Suite 205, Wake Forest NC 27587",
+          "hours": "Not published - call / schedule first",
+          "phone": "919-426-8814",
+          "website": "https://gsdavislaw.com/",
+          "email": "greg@gsdavislaw.com",
+          "note": "Thryv/Duda DIY; Clio Grow + Calendly intake actively accepting; wills/estate, real property, contracts, business formation; NC licensed ~2020. Soft pitch Astro $1.5k or Framer $4–8k + SEO/AI retainer. Suite 205 downtown Wake Forest.",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Carolina Estate Plan / NC Wills & Trusts", "Trusts and Estates Law Group", "Doyle Law Offices", "Hatcher Legal", "Capital City Estate Planning", "W.G. Alexander"],
+          "instagram": ""
+        }
+      ]
     }
   ]
 }
