@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Paschal + Varnell (PR #53, merged `c6b0f22`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Marsocci first-touch emailed (PR #55, merged `8d3db4c`). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **33 rows**, Visit · 33, Today 16 `data-today` marks, label `North Raleigh walk-ins`. New stops: John P. Paschal, Attorney at Law, PLLC (`crabtree-midtown` after Donna Cohen, 4904 Waters Edge Drive Suite 100, buyer 2, visit true, ai_visible false, `@johnpaschallaw`, `john@johnpaschallaw.com`) and Varnell Law (`midtown-six-forks` after Jenny Doyle, 308 Millbrook Road Suite D #100, buyer 2, visit true, ai_visible false, no IG, `Caleb@Varnell.Law`). Both added to Today after Matta; set and Today Maps loops include the new addresses before home. Healthcare entries and existing emailed flags unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on local preview.
+**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **33 rows**, Visit · 33, six `no_reply` badges. Law Offices of Jeffrey G. Marsocci, PLLC is Sent checked with Outcome `No reply` (`jeff@livingtrustlawfirm.com`, message id `1a0b4b1b6d223170`). Roper Law / `wayne@roperlaw.net` is not in `field-visits.json` (ADD prune; `DROPPED`) and was not added. Other emailed stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on production: Marsocci Sent + No reply on General, Law, and Today; Roper absent.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Friday Sep 18, 2026 · /clients Marsocci emailed] — Code
+
+- **Did:** Set `emailed: true` and `outcome: "no_reply"` only on Law Offices of Jeffrey G. Marsocci, PLLC (`six-forks-lead-mine`, `jeff@livingtrustlawfirm.com`) after the Fri Sep 18 first-touch from alex@proudlysites.com (Gmail message id `1a0b4b1b6d223170`). No other fields or stops changed. Roper Law (`wayne@roperlaw.net`, message id `1a0b4b1c8037f4f4`) is not in the current file (ADD prune) and was skipped.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (33 rows, Visit · 33, six Sent / `no_reply`). Production `/clients` HTTP 200, `x-vercel-cache: MISS`, Marsocci Sent checked + No reply. Browser at 1440 and 390: same on General / Law / Today; Peck, Layton, Lowry, Sisson, and Amos remain Sent; Roper absent.
+- **Shipped:** PR #55 merged to `main` (`8d3db4c`). Production live.
 
 ### [Thursday Sep 17, 2026 · /clients add Paschal + Varnell] — Code
 
