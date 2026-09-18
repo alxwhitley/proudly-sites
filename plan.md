@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Marsocci first-touch emailed (PR #55, merged `8d3db4c`). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Cook + Davis Wake Forest law stops (PR #57). Always merge and make live.
 
-**Verification done:** Production `https://www.proudlysites.com/clients` (Vercel production, HTTP 200, `x-vercel-cache: MISS`) shows **33 rows**, Visit · 33, six `no_reply` badges. Law Offices of Jeffrey G. Marsocci, PLLC is Sent checked with Outcome `No reply` (`jeff@livingtrustlawfirm.com`, message id `1a0b4b1b6d223170`). Roper Law / `wayne@roperlaw.net` is not in `field-visits.json` (ADD prune; `DROPPED`) and was not added. Other emailed stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed. Browser pass at 1440 and 390 on production: Marsocci Sent + No reply on General, Law, and Today; Roper absent.
+**Verification done:** Added The Law Offices of John K. Cook, P.A. and The Law Office of Gregory S. Davis, PLLC in a new `wake-forest` set (no prior Wake Forest cluster). Both `emailed: false`, `outcome: ""`. Existing healthcare and law leads unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (35 rows, 7 sets, Visit · 35). Local preview at 1440 and 390: both names on General / Law / Visit; Healthcare still shows Capital Dermatology and hides Cook/Davis.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Friday Sep 18, 2026 · /clients add Cook + Davis] — Code
+
+- **Did:** Added The Law Offices of John K. Cook, P.A. and The Law Office of Gregory S. Davis, PLLC in a new `wake-forest` set (no prior Wake Forest cluster). Both `emailed: false`, `outcome: ""`, buyer 2, visit true. Existing healthcare and other law leads unchanged. Today loop unchanged.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (35 rows, 7 sets, Visit · 35). Local preview at 1440 and 390: both names on General / Law / Visit; Healthcare still shows Capital Dermatology and hides Cook/Davis.
+- **Shipped:** PR #57. Merge and make live.
 
 ### [Friday Sep 18, 2026 · /clients Marsocci emailed] — Code
 
