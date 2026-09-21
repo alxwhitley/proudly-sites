@@ -5,7 +5,7 @@
   "today": {
     "label": "North Raleigh walk-ins",
     "note": "Rebuilt after the ADD prune: Creedmoor → Six Forks → Falls → midtown.",
-    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
     "stopNames": [
       "Capital Dermatology of NC",
       "Hampson Family Law",
@@ -22,7 +22,8 @@
       "Hormone Wellness MD",
       "Matta Law Firm, PLLC",
       "Varnell Law",
-      "John P. Paschal, Attorney at Law, PLLC"
+      "John P. Paschal, Attorney at Law, PLLC",
+      "Bolen Law, PLLC"
     ]
   },
   "sets": [
@@ -516,7 +517,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/1+Glenwood+Ave%2C+Ste.+4-132%2C+Raleigh+NC+27603/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Jennifer Chun Immigration Law",
@@ -653,6 +654,42 @@
           "ai_visible": false,
           "competitors_shown": ["W.G. Alexander & Associates", "Capital City Estate Planning", "Trusts and Estates Law Group", "Omega Elder Law"],
           "instagram": "@johnpaschallaw"
+        },
+        {
+          "name": "Bolen Law, PLLC",
+          "address": "1508 Brooks Ave, Raleigh NC 27607",
+          "hours": "Not published - call first",
+          "typicallyClosed": "Weekend hours not published",
+          "phone": "919-656-3188",
+          "website": "https://www.bolenlegal.com/",
+          "email": "zack@bolenlegal.com",
+          "note": "Solo Zack Bolen — employer-side employment counsel for small/mid NC businesses (hiring/firing, handbooks, EEOC/ESC, workers' comp penalty orders, franchise FDD). Wix DIY (Wix.com Website Builder / static.wixstatic) — not FindLaw/Justia/Scorpion or recent vertical-agency rebuild. Published zack@ on own site. Actively marketing services to businesses (no waitlist). Money: firm since 2019 + ~20 yrs employment practice (NC bar ~2000s). Not AI-visible for employment lawyer North Raleigh vs Noble Law / Martoccio / Faith Herndon / Kathryn Abernethy. Instagram not published on own site. Street-level Brooks Ave walk-in ~13 min from Lake Lynn. Soft pitch Astro $1.5k or Framer $4–8k + SEO/AI retainer. Proof lane: Smith Cash for law. zack@bolenlegal.com",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["The Noble Law Firm", "Martoccio Law Group", "Law Office of Faith Herndon", "Kathryn Abernethy / Justice at Work"],
+          "instagram": ""
+        },
+        {
+          "name": "Ballard Law, PLLC",
+          "address": "1 Glenwood Ave, Ste. 4-132, Raleigh NC 27603",
+          "hours": "Not published - call first",
+          "typicallyClosed": "Weekend hours not published",
+          "phone": "919-341-9703",
+          "website": "https://www.ballardlawpllc.com/",
+          "email": "contact@ballardlawpllc.com",
+          "note": "Solo Meredith Ballard — employee-side employment discrimination (EEOC, severance, accommodations). Squarespace DIY (Squarespace template) — not FindLaw/Justia/Scorpion or named vertical-agency. Published contact@ on own site. Contact/intake CTAs (no waitlist). Money: founding attorney with 5+ yrs practice history (Rising Star / NCAJ). Not AI-visible for employment lawyer North Raleigh vs Noble Law / Martoccio / Faith Herndon / Abernethy. Instagram not published on own site. WeWork One Glenwood shared suite — visit:false (not street-level). Soft pitch Astro $1.5k or Framer $4–8k + SEO/AI retainer. Proof lane: Smith Cash for law. contact@ballardlawpllc.com",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": false,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["The Noble Law Firm", "Martoccio Law Group", "Law Office of Faith Herndon", "Kathryn Abernethy / Justice at Work"],
+          "instagram": ""
         }
       ]
     },
