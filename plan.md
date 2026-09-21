@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Cook + Davis Wake Forest law stops (PR #57). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Donna Cohen emailed after Mon Sep 21 law outreach (PR #58). Always merge and make live.
 
-**Verification done:** Added The Law Offices of John K. Cook, P.A. and The Law Office of Gregory S. Davis, PLLC in a new `wake-forest` set (no prior Wake Forest cluster). Both `emailed: false`, `outcome: ""`. Existing healthcare and law leads unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (35 rows, 7 sets, Visit · 35). Local preview at 1440 and 390: both names on General / Law / Visit; Healthcare still shows Capital Dermatology and hides Cook/Davis.
+**Verification done:** Set `emailed: true` and `outcome: "no_reply"` only on Donna R. Cohen Attorney at Law, PLLC (`crabtree-midtown`, `donna@donnacohenlaw.com`) after the Mon Sep 21 first-touch. No other fields or stops changed. Vasilko & Pedersen (`info@vplawnc.com`) is not in the current file (ADD prune / `DROPPED`) and was not re-added. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (35 rows, Visit · 35, seven Sent / `no_reply`). Local preview at 1440 and 390: Donna Sent checked + No reply on General / Law / Visit; Vasilko absent.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Monday Sep 21, 2026 · /clients Donna Cohen emailed] — Code
+
+- **Did:** Set `emailed: true` and `outcome: "no_reply"` only on Donna R. Cohen Attorney at Law, PLLC (`crabtree-midtown`, `donna@donnacohenlaw.com`) after the Mon Sep 21 first-touch from Proudly law outreach. No other fields or stops changed. Vasilko & Pedersen (`info@vplawnc.com`) is not in the current file (ADD prune) and was skipped.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (35 rows, Visit · 35, seven Sent / `no_reply`). Local preview at 1440 and 390: Donna Sent checked + No reply on General / Law / Visit; Peck, Marsocci, Lowry, Layton, Sisson, and Amos remain Sent; Vasilko absent.
+- **Shipped:** PR #58. Merge and make live.
 
 ### [Friday Sep 18, 2026 · /clients add Cook + Davis] — Code
 
