@@ -324,6 +324,8 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.equal(donnaCohen?.email, "donna@donnacohenlaw.com");
   assert.equal(donnaCohen?.address, "2840 Plaza Place, Suite 315, Raleigh NC 27612");
   assert.equal(donnaCohen?.website, "http://www.donnacohenlaw.com/");
+  assert.equal(donnaCohen?.emailed, true);
+  assert.equal(donnaCohen?.outcome, "no_reply");
 
   const publishedEmails = {
     "The Peck Law Firm": "info@pecklawfirm.net",
@@ -379,6 +381,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   const emailedTrue = stops.filter((stop) => stop.emailed === true);
   assert.deepEqual(emailedTrue.map((stop) => stop.name).sort(), [
     "Amos & Amos, Attorneys at Law",
+    "Donna R. Cohen Attorney at Law, PLLC",
     "Law Offices of Jeffrey G. Marsocci, PLLC",
     "Law Offices of Lowry & Associates",
     "Layton & Carraway, P.A.",
