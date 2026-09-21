@@ -628,10 +628,10 @@
           "email": "donna@donnacohenlaw.com",
           "note": "Solo estate/business/real estate/civil litigation. Ancient WordPress 3.2.1 on Elegant Themes Chameleon; footer still says Designed by Elegant WordPress Themes | Powered by WordPress; logo alt Chameleon Logo; media uploads from 2012. Named email + phone. Instagram not published on site.",
           "industry": "Law",
-          "emailed": false,
+          "emailed": true,
           "buyer_score": 2,
           "visit": true,
-          "outcome": "",
+          "outcome": "no_reply",
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": ""
