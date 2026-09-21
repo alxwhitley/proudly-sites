@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Donna Cohen emailed after Mon Sep 21 law outreach (PR #58). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Bolen Law + Ballard Law added to `crabtree-midtown` (PR #59). Always merge and make live.
 
-**Verification done:** Set `emailed: true` and `outcome: "no_reply"` only on Donna R. Cohen Attorney at Law, PLLC (`crabtree-midtown`, `donna@donnacohenlaw.com`) after the Mon Sep 21 first-touch. No other fields or stops changed. Vasilko & Pedersen (`info@vplawnc.com`) is not in the current file (ADD prune / `DROPPED`) and was not re-added. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (35 rows, Visit · 35, seven Sent / `no_reply`). Local preview at 1440 and 390: Donna Sent checked + No reply on General / Law / Visit; Vasilko absent.
+**Verification done:** Appended Bolen Law, PLLC (Brooks Ave walk-in, buyer 3, visit true) and Ballard Law, PLLC (WeWork One Glenwood, buyer 2, visit false) after Paschal. Added Bolen only to Today. Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (37 rows, Visit · 36). Local preview at 1440 and 390: both names on General / Law; Bolen on Visit / Today; Ballard hidden on Visit / Today; Healthcare still Capital Derm and hides both.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Monday Sep 21, 2026 · /clients add Bolen + Ballard] — Code
+
+- **Did:** Added Bolen Law, PLLC (1508 Brooks Ave, street-level walk-in) and Ballard Law, PLLC (1 Glenwood Ave Ste. 4-132, WeWork, visit false) to `crabtree-midtown` after Paschal. Both `emailed` false, `outcome` empty. Inserted Bolen into `today.stopNames` and rebuilt Today plus the crabtree Maps loop. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (37 rows, Visit · 36, Today 17). Local preview at 1440 and 390: both names on General / Law, Sent unchecked; Bolen on Visit / Today; Ballard hidden on Visit / Today; Healthcare still shows Capital Dermatology.
+- **Shipped:** PR #59. Merge and make live.
 
 ### [Monday Sep 21, 2026 · /clients Donna Cohen emailed] — Code
 
