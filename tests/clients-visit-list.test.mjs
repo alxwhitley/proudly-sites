@@ -473,10 +473,10 @@ test("clients page renders the pruned ADD lead table", async () => {
     withInstagram.map((stop) => stop.name).sort(),
     [
       "Amos & Amos, Attorneys at Law",
+      "Boyette Law, PLLC",
       "Capital Dermatology of NC",
       "Doctor Direct",
       "Hormone Wellness MD",
-      "Boyette Law, PLLC",
       "John P. Paschal, Attorney at Law, PLLC",
       "Law Offices of Jeffrey G. Marsocci, PLLC",
       "Pediatric Possibilities",
