@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Bolen Law + Ballard Law added to `crabtree-midtown` (PR #59). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Boyette Law + Honaker Law added (PR #60). Always merge and make live.
 
-**Verification done:** Appended Bolen Law, PLLC (Brooks Ave walk-in, buyer 3, visit true) and Ballard Law, PLLC (WeWork One Glenwood, buyer 2, visit false) after Paschal. Added Bolen only to Today. Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (37 rows, Visit · 36). Local preview at 1440 and 390: both names on General / Law; Bolen on Visit / Today; Ballard hidden on Visit / Today; Healthcare still Capital Derm and hides both.
+**Verification done:** Added Boyette Law, PLLC (4509 Creedmoor Rd #201, buyer 3, visit true) to `creedmoor` after Hampson and to Today. Added Law Office of Nathaniel W. Honaker, PLLC (5 West Hargett Street, Suite 1010, buyer 2, visit false) to `crabtree-midtown` after Barrett. Honaker is not on Today. Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (39 rows, Visit · 37, Today 18). Local preview at 1440 and 390: both names on General / Law, Sent unchecked; Boyette on Visit / Today; Honaker hidden on Visit / Today; Healthcare still Capital Derm and hides both.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 22, 2026 · /clients add Boyette + Honaker] — Code
+
+- **Did:** Added Boyette Law, PLLC (4509 Creedmoor Rd #201, Creedmoor corridor walk-in) to `creedmoor` after Hampson. Added Law Office of Nathaniel W. Honaker, PLLC (5 West Hargett Street, Suite 1010, same building as Barrett, visit false) to `crabtree-midtown` after Barrett. Both `emailed` false, `outcome` empty. Inserted Boyette into `today.stopNames` after Hampson and rebuilt Today plus the creedmoor and crabtree Maps loops. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (39 rows, Visit · 37, Today 18). Local preview at 1440 and 390: both names on General / Law, Sent unchecked; Boyette on Visit / Today; Honaker hidden on Visit / Today; Healthcare still shows Capital Dermatology.
+- **Shipped:** PR #60. Merge and make live.
 
 ### [Monday Sep 21, 2026 · /clients add Bolen + Ballard] — Code
 
