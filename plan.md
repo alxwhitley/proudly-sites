@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Boyette Law + Honaker Law added (PR #60). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Eldreth Law Firm added (PR #61). Always merge and make live.
 
-**Verification done:** Added Boyette Law, PLLC (4509 Creedmoor Rd #201, buyer 3, visit true) to `creedmoor` after Hampson and to Today. Added Law Office of Nathaniel W. Honaker, PLLC (5 West Hargett Street, Suite 1010, buyer 2, visit false) to `crabtree-midtown` after Barrett. Honaker is not on Today. Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (39 rows, Visit · 37, Today 18). Local preview at 1440 and 390: both names on General / Law, Sent unchecked; Boyette on Visit / Today; Honaker hidden on Visit / Today; Healthcare still Capital Derm and hides both.
+**Verification done:** Added Eldreth Law Firm, PLLC (412 Saint Marys St, Ste C, buyer 3, visit true) to `crabtree-midtown` after Denise Smith Cline and to Today (stop 19). Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (40 rows, Visit · 38, Today 19). Local preview at 1440 and 390: Eldreth on General / Law / Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides Eldreth.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Wednesday Sep 23, 2026 · /clients add Eldreth Law Firm] — Code
+
+- **Did:** Added Eldreth Law Firm, PLLC (412 Saint Marys St, Ste C, Raleigh NC 27605) to `crabtree-midtown` after Denise Smith Cline. `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` false, Instagram blank. Inserted into `today.stopNames` after Bolen and rebuilt Today plus the crabtree Maps loop. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (40 rows, Visit · 38, Today 19). Local preview at 1440 and 390: Eldreth on General / Law / Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides Eldreth.
+- **Shipped:** PR #61. Merge and make live.
 
 ### [Tuesday Sep 22, 2026 · /clients add Boyette + Honaker] — Code
 

@@ -5,7 +5,7 @@
   "today": {
     "label": "North Raleigh walk-ins",
     "note": "Rebuilt after the ADD prune: Creedmoor → Six Forks → Falls → midtown.",
-    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/4509+Creedmoor+Rd+%23201%2C+Raleigh+NC+27612/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/4509+Creedmoor+Rd+%23201%2C+Raleigh+NC+27612/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/412+Saint+Marys+St%2C+Ste+C%2C+Raleigh+NC+27605/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
     "stopNames": [
       "Capital Dermatology of NC",
       "Hampson Family Law",
@@ -24,7 +24,8 @@
       "Matta Law Firm, PLLC",
       "Varnell Law",
       "John P. Paschal, Attorney at Law, PLLC",
-      "Bolen Law, PLLC"
+      "Bolen Law, PLLC",
+      "Eldreth Law Firm, PLLC"
     ]
   },
   "sets": [
@@ -536,7 +537,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/5+West+Hargett+Street%2C+Suite+1010%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/1+Glenwood+Ave%2C+Ste.+4-132%2C+Raleigh+NC+27603/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/5+West+Hargett+Street%2C+Suite+1010%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/412+Saint+Marys+St%2C+Ste+C%2C+Raleigh+NC+27605/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/1+Glenwood+Ave%2C+Ste.+4-132%2C+Raleigh+NC+27603/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Jennifer Chun Immigration Law",
@@ -637,6 +638,24 @@
           "outcome": "",
           "ai_visible": false,
           "competitors_shown": ["The Noble Law Firm", "Oxendine Barnes & Associates", "Law Offices of Robert Crawford"],
+          "instagram": ""
+        },
+        {
+          "name": "Eldreth Law Firm, PLLC",
+          "address": "412 Saint Marys St, Ste C, Raleigh NC 27605",
+          "hours": "Not published - call first",
+          "typicallyClosed": "Weekend hours not published",
+          "phone": "919-833-5322",
+          "website": "https://eldrethlaw.com/",
+          "email": "justin@eldrethlaw.com",
+          "note": "Business, estate-probate, commercial real estate, and IP. WordPress DIY, spam-compromised / neglected. Also has a Cary office; primary visit address is Raleigh Saint Marys. Instagram not published. justin@eldrethlaw.com",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Fourscore Business Law", "Liles Law", "C. Todd Cammack", "Morningstar Law Group", "NC Wills & Trusts", "Jeffrey G. Marsocci", "Manning Fulton", "Trusts and Estates Law Group", "Lynch & Eatman", "Strauss Attorneys", "Boyette Law"],
           "instagram": ""
         },
         {
