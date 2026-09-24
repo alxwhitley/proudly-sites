@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Eldreth Law Firm added (PR #61). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Campbell Family Law added (PR #62). Always merge and make live.
 
-**Verification done:** Added Eldreth Law Firm, PLLC (412 Saint Marys St, Ste C, buyer 3, visit true) to `crabtree-midtown` after Denise Smith Cline and to Today (stop 19). Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (40 rows, Visit · 38, Today 19). Local preview at 1440 and 390: Eldreth on General / Law / Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides Eldreth.
+**Verification done:** Added Campbell Family Law (117 Edinburgh South Drive, Suite 207, Cary NC 27511, buyer 2, visit true) to `leesville` after Arnette Law Offices and to Today (stop 20). Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (41 rows, Visit · 39, Today 20). Local preview at 1440 and 390: Campbell on General / Law / Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides Campbell.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Thursday Sep 24, 2026 · /clients add Campbell Family Law] — Code
+
+- **Did:** Added Campbell Family Law (117 Edinburgh South Drive, Suite 207, Cary NC 27511) to `leesville` after Arnette Law Offices, PLLC. `emailed` false, `outcome` empty, buyer 2, visit true, `ai_visible` false, Instagram blank. Appended the name to `today.stopNames` and added the address to the Leesville and Today Maps loops. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (41 rows, Visit · 39, Today 20). Local preview at 1440 and 390: Campbell on General / Law / Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides Campbell.
+- **Shipped:** PR #62. Merge and make live.
 
 ### [Wednesday Sep 23, 2026 · /clients add Eldreth Law Firm] — Code
 

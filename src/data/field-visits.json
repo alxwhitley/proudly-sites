@@ -5,7 +5,7 @@
   "today": {
     "label": "North Raleigh walk-ins",
     "note": "Rebuilt after the ADD prune: Creedmoor → Six Forks → Falls → midtown.",
-    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/4509+Creedmoor+Rd+%23201%2C+Raleigh+NC+27612/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/412+Saint+Marys+St%2C+Ste+C%2C+Raleigh+NC+27605/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+    "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7209+Creedmoor+Rd%2C+Ste+105%2C+Raleigh+NC+27613/6500+Creedmoor+Rd%2C+Ste+112%2C+Raleigh+NC+27613/4509+Creedmoor+Rd+%23201%2C+Raleigh+NC+27612/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/186+Wind+Chime+Ct%2C+Ste+202%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/412+Saint+Marys+St%2C+Ste+C%2C+Raleigh+NC+27605/117+Edinburgh+South+Drive%2C+Suite+207%2C+Cary+NC+27511/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
     "stopNames": [
       "Capital Dermatology of NC",
       "Hampson Family Law",
@@ -25,7 +25,8 @@
       "Varnell Law",
       "John P. Paschal, Attorney at Law, PLLC",
       "Bolen Law, PLLC",
-      "Eldreth Law Firm, PLLC"
+      "Eldreth Law Firm, PLLC",
+      "Campbell Family Law"
     ]
   },
   "sets": [
@@ -132,7 +133,7 @@
       "name": "Leesville / Brier Creek",
       "distance": "~10 mi",
       "note": "One Brier Creek stop.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/3131+RDU+Center+Drive%2C+Suite+120%2C+Morrisville+NC+27560/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/3131+RDU+Center+Drive%2C+Suite+120%2C+Morrisville+NC+27560/117+Edinburgh+South+Drive%2C+Suite+207%2C+Cary+NC+27511/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Brier Creek Vision Care",
@@ -168,6 +169,24 @@
           "outcome": "",
           "ai_visible": false,
           "competitors_shown": ["Raleigh Real Estate Law", "Moore & Alphin", "Capital City Estate Planning"],
+          "instagram": ""
+        },
+        {
+          "name": "Campbell Family Law",
+          "address": "117 Edinburgh South Drive, Suite 207, Cary NC 27511",
+          "hours": "Not published - call first",
+          "typicallyClosed": "Weekend hours not published",
+          "phone": "919-578-6440",
+          "website": "https://campbellfamilylaw.net/",
+          "email": "rachel@campbellfamilylaw.net",
+          "note": "2-attorney Cary family/divorce boutique (Rachel C. Campbell Board Certified Family Law Specialist + Kristin E. Pennock). Older small-firm WordPress-style DIY on SiteGround — not FindLaw/Justia/Scorpion or recent named vertical-agency rebuild. Published rachel@ on own homepage Contact Us mailto. Active consult/contact CTAs (no waitlist). Money: Rachel practicing Wake family law since ~2004; firm opened 2014. Not AI-visible for family law North Raleigh vs Raleigh Law Center / Armendariz / Jerkins / Parker Bryan / Vitale / Oak City / Fresh Start / Rosen / Bosquez Porter / Hampson. Instagram not published on own site. Suite 207 Edinburgh South walk-in ~15–20 min from Lake Lynn (Cary edge). Soft pitch Astro $1.5k or Framer $4–8k + SEO/AI retainer. Proof lane: Smith Cash for law. rachel@campbellfamilylaw.net",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Raleigh Law Center", "Armendariz Law", "Jerkins Family Law", "Parker Bryan Family Law", "Vitale Family Law", "Oak City Family Law", "Fresh Start Family Law", "Rosen Law Firm", "Bosquez Porter Family Law", "Hampson Family Law"],
           "instagram": ""
         }
       ]
