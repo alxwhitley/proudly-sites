@@ -104,6 +104,12 @@ const KEEP = {
     ai_visible: false,
     competitors_shown: ["Raleigh Real Estate Law", "Moore & Alphin", "Capital City Estate Planning"],
   },
+  "Campbell Family Law": {
+    buyer_score: 2,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: ["Raleigh Law Center", "Armendariz Law", "Jerkins Family Law", "Parker Bryan Family Law", "Vitale Family Law", "Oak City Family Law", "Fresh Start Family Law", "Rosen Law Firm", "Bosquez Porter Family Law", "Hampson Family Law"],
+  },
   "John P. Paschal, Attorney at Law, PLLC": {
     buyer_score: 2,
     visit: true,
@@ -234,6 +240,7 @@ const TODAY = [
     "John P. Paschal, Attorney at Law, PLLC",
     "Bolen Law, PLLC",
     "Eldreth Law Firm, PLLC",
+    "Campbell Family Law",
   ];
 
 test("clients page renders the pruned ADD lead table", async () => {
@@ -256,7 +263,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 7);
-  assert.equal(stops.length, 40);
+  assert.equal(stops.length, 41);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.id === "neuse-east" || set.stops.length === 0),
@@ -399,6 +406,28 @@ test("clients page renders the pruned ADD lead table", async () => {
     "crabtree-midtown"
   );
 
+  const campbell = stops.find((stop) => stop.name === "Campbell Family Law");
+  assert.equal(campbell?.email, "rachel@campbellfamilylaw.net");
+  assert.equal(campbell?.phone, "919-578-6440");
+  assert.equal(campbell?.address, "117 Edinburgh South Drive, Suite 207, Cary NC 27511");
+  assert.equal(campbell?.website, "https://campbellfamilylaw.net/");
+  assert.equal(campbell?.visit, true);
+  assert.equal(campbell?.buyer_score, 2);
+  assert.equal(campbell?.ai_visible, false);
+  assert.equal(campbell?.emailed, false);
+  assert.equal(campbell?.outcome, "");
+  assert.equal(campbell?.instagram, "");
+  assert.equal(campbell?.industry, "Law");
+  assert.equal(
+    data.sets.find((set) => set.stops.some((stop) => stop.name === "Campbell Family Law"))?.id,
+    "leesville"
+  );
+  const leesville = data.sets.find((set) => set.id === "leesville");
+  assert.deepEqual(
+    leesville?.stops.map((stop) => stop.name),
+    ["Brier Creek Vision Care", "Arnette Law Offices, PLLC", "Campbell Family Law"]
+  );
+
   const honaker = stops.find((stop) => stop.name === "Law Office of Nathaniel W. Honaker, PLLC");
   assert.equal(honaker?.email, "nathan@nwh-law.com");
   assert.equal(honaker?.address, "5 West Hargett Street, Suite 1010, Raleigh NC 27601");
@@ -436,6 +465,7 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Eldreth Law Firm, PLLC": "justin@eldrethlaw.com",
     "The Fife Law Firm, P.A.": "lance@fife-law.com",
     "Arnette Law Offices, PLLC": "AArnette@Arnette-law.com",
+    "Campbell Family Law": "rachel@campbellfamilylaw.net",
     "John P. Paschal, Attorney at Law, PLLC": "john@johnpaschallaw.com",
     "Varnell Law": "Caleb@Varnell.Law",
     "The Law Offices of John K. Cook, P.A.": "lawofjkc@mindspring.com",
@@ -446,7 +476,7 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Law Office of Nathaniel W. Honaker, PLLC": "nathan@nwh-law.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 36);
+  assert.equal(withEmail.length, 37);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -483,9 +513,9 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 38);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 38);
-  assert.match(html, /Visit · 38/);
+  assert.equal(visitStops.length, 39);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 39);
+  assert.match(html, /Visit · 39/);
   assert.equal((html.match(/data-visit="false"/g) ?? []).length, 2);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
@@ -513,7 +543,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.equal(data.today.label, "North Raleigh walk-ins");
   assert.match(data.today.note, /ADD prune/);
   assert.deepEqual(data.today.stopNames, TODAY);
-  assert.equal(TODAY.length, 19);
+  assert.equal(TODAY.length, 20);
   assert.equal(
     data.sets.some((set) => set.id === "today" || set.name === data.today.label),
     false,
