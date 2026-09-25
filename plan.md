@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Campbell Family Law added (PR #62). Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: McNeil Law Firm and C. Todd Cammack added. Always merge and make live.
 
-**Verification done:** Added Campbell Family Law (117 Edinburgh South Drive, Suite 207, Cary NC 27511, buyer 2, visit true) to `leesville` after Arnette Law Offices and to Today (stop 20). Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (41 rows, Visit · 39, Today 20). Local preview at 1440 and 390: Campbell on General / Law / Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides Campbell.
+**Verification done:** Added McNeil Law Firm, PLLC (226 West Millbrook Road, Raleigh NC 27609, buyer 3, visit true) to `midtown-six-forks` after Varnell and to Today after Varnell. Added The Law Offices of C. Todd Cammack (2142 Pine Drive, Raleigh NC 27608, buyer 2, visit false) to `crabtree-midtown` after Ballard, kept off Today. Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (43 rows, Visit · 40, Today 21). Local preview at 1440 and 390: McNeil on General / Law / Visit / Today after Varnell, Sent unchecked; Cammack on General / Law only, hidden on Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides both.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Friday Sep 25, 2026 · /clients add McNeil and Cammack] — Code
+
+- **Did:** Added McNeil Law Firm, PLLC (226 West Millbrook Road, Raleigh NC 27609) to `midtown-six-forks` after Varnell Law. `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` false, Instagram blank. Inserted the name into `today.stopNames` after Varnell and rebuilt the Midtown and Today Maps loops so Millbrook stays together before Waters Edge. Added The Law Offices of C. Todd Cammack (2142 Pine Drive, Raleigh NC 27608) to `crabtree-midtown` after Ballard Law. `emailed` false, `outcome` empty, buyer 2, visit false, `ai_visible` false, Instagram blank. Left Cammack off Today. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (43 rows, Visit · 40, Today 21). Local preview at 1440 and 390: McNeil on General / Law / Visit / Today after Varnell, Sent unchecked; Cammack on General / Law only, hidden on Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides both.
+- **Shipped:** PR #63. Merge and make live.
 
 ### [Thursday Sep 24, 2026 · /clients add Campbell Family Law] — Code
 
