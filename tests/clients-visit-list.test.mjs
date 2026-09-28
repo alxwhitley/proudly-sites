@@ -146,6 +146,12 @@ const KEEP = {
     ai_visible: false,
     competitors_shown: ["The Noble Law Firm", "Martoccio Law Group", "Law Office of Faith Herndon", "Kathryn Abernethy / Justice at Work"],
   },
+  "Littlewood Law, PLLC": {
+    buyer_score: 3,
+    visit: false,
+    ai_visible: false,
+    competitors_shown: ["Morningstar Law Group", "Longleaf Law Partners", "Smith Anderson", "Williams Mullen", "Wyrick Robbins"],
+  },
   "Boyette Law, PLLC": {
     buyer_score: 3,
     visit: true,
@@ -275,7 +281,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 7);
-  assert.equal(stops.length, 43);
+  assert.equal(stops.length, 44);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.id === "neuse-east" || set.stops.length === 0),
@@ -480,6 +486,32 @@ test("clients page renders the pruned ADD lead table", async () => {
   );
   assert.equal(data.today.stopNames.includes("The Law Offices of C. Todd Cammack"), false);
 
+  const littlewood = stops.find((stop) => stop.name === "Littlewood Law, PLLC");
+  assert.equal(littlewood?.email, "grey@littlewoodlawfirm.com");
+  assert.equal(littlewood?.phone, "919-518-9508");
+  assert.equal(littlewood?.address, "3700 Glenwood Avenue, Suite 405, Raleigh NC 27612");
+  assert.equal(littlewood?.website, "https://www.littlewoodlawfirm.com/");
+  assert.equal(littlewood?.visit, false);
+  assert.equal(littlewood?.buyer_score, 3);
+  assert.equal(littlewood?.ai_visible, false);
+  assert.equal(littlewood?.emailed, false);
+  assert.equal(littlewood?.outcome, "");
+  assert.equal(littlewood?.instagram, "");
+  assert.equal(littlewood?.industry, "Law");
+  assert.equal(
+    data.sets.find((set) => set.stops.some((stop) => stop.name === "Littlewood Law, PLLC"))?.id,
+    "crabtree-midtown"
+  );
+  assert.equal(data.today.stopNames.includes("Littlewood Law, PLLC"), false);
+  const crabtree = data.sets.find((set) => set.id === "crabtree-midtown");
+  const crabtreeNames = crabtree?.stops.map((stop) => stop.name) ?? [];
+  assert.equal(crabtreeNames[crabtreeNames.indexOf("Ballard Law, PLLC") + 1], "Littlewood Law, PLLC");
+  assert.equal(
+    crabtreeNames[crabtreeNames.indexOf("Littlewood Law, PLLC") + 1],
+    "The Law Offices of C. Todd Cammack"
+  );
+  assert.equal(data.today.mapsUrl.includes("3700+Glenwood+Avenue"), false);
+
   const honaker = stops.find((stop) => stop.name === "Law Office of Nathaniel W. Honaker, PLLC");
   assert.equal(honaker?.email, "nathan@nwh-law.com");
   assert.equal(honaker?.address, "5 West Hargett Street, Suite 1010, Raleigh NC 27601");
@@ -528,9 +560,10 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Law Office of Nathaniel W. Honaker, PLLC": "nathan@nwh-law.com",
     "McNeil Law Firm, PLLC": "john@mcneillawfirm.com",
     "The Law Offices of C. Todd Cammack": "todd@ctcammacklaw.com",
+    "Littlewood Law, PLLC": "grey@littlewoodlawfirm.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 39);
+  assert.equal(withEmail.length, 40);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -570,7 +603,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.equal(visitStops.length, 40);
   assert.equal((html.match(/data-visit="true"/g) ?? []).length, 40);
   assert.match(html, /Visit · 40/);
-  assert.equal((html.match(/data-visit="false"/g) ?? []).length, 3);
+  assert.equal((html.match(/data-visit="false"/g) ?? []).length, 4);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
   assert.match(html, />No reply</);

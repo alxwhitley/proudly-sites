@@ -575,7 +575,7 @@
       "name": "Crabtree / midtown",
       "distance": "~16 mi",
       "note": "Triangle Sinus closes Friday noon.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/5+West+Hargett+Street%2C+Suite+1010%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/412+Saint+Marys+St%2C+Ste+C%2C+Raleigh+NC+27605/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/1+Glenwood+Ave%2C+Ste.+4-132%2C+Raleigh+NC+27603/2142+Pine+Drive%2C+Raleigh+NC+27608/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9104+Glenwood+Avenue%2C+Raleigh+NC+27617/2501+Blue+Ridge+Rd%2C+Ste+300%2C+Raleigh+NC+27607/3717+Benson+Dr%2C+Raleigh+NC+27609/5+West+Hargett+Street%2C+Suite+910%2C+Raleigh+NC+27601/5+West+Hargett+Street%2C+Suite+1010%2C+Raleigh+NC+27601/16+North+Boylan+Avenue%2C+Raleigh+NC+27603/412+Saint+Marys+St%2C+Ste+C%2C+Raleigh+NC+27605/4801+Glenwood+Avenue%2C+Suite+200%2C+Raleigh+NC+27612/2840+Plaza+Place%2C+Suite+315%2C+Raleigh+NC+27612/4904+Waters+Edge+Drive%2C+Suite+100%2C+Raleigh+NC+27606/1508+Brooks+Ave%2C+Raleigh+NC+27607/1+Glenwood+Ave%2C+Ste.+4-132%2C+Raleigh+NC+27603/3700+Glenwood+Avenue%2C+Suite+405%2C+Raleigh+NC+27612/2142+Pine+Drive%2C+Raleigh+NC+27608/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Jennifer Chun Immigration Law",
@@ -783,6 +783,24 @@
           "outcome": "",
           "ai_visible": false,
           "competitors_shown": ["The Noble Law Firm", "Martoccio Law Group", "Law Office of Faith Herndon", "Kathryn Abernethy / Justice at Work"],
+          "instagram": ""
+        },
+        {
+          "name": "Littlewood Law, PLLC",
+          "address": "3700 Glenwood Avenue, Suite 405, Raleigh NC 27612",
+          "hours": "Not published - call first",
+          "typicallyClosed": "Weekend hours not published",
+          "phone": "919-518-9508",
+          "website": "https://www.littlewoodlawfirm.com/",
+          "email": "grey@littlewoodlawfirm.com",
+          "note": "4-attorney commercial real estate + corporate boutique (G. Grey Littlewood, Will Pully, J.B. Brewer IV, Graham Goldstein joined 2025). WordPress Genesis Altitude Pro DIY/neglected (site ~2020, no named vertical-agency footer). Published grey@ and will@ on own attorney pages; info@ on contact. Demand: 2025 associate hire. Money: firm founded Nov 2019 (~7 yrs). Not AI-visible for commercial RE North Raleigh vs Morningstar / Longleaf / Smith Anderson / Williams Mullen / Wyrick. Instagram not published on own site (Facebook + LinkedIn only). Suite 405 mid-floor — visit false, keep off Today. Soft pitch Astro $1.5k or Framer $4–8k + SEO/AI retainer. Proof lane: Smith Cash for law. grey@littlewoodlawfirm.com",
+          "industry": "Law",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": false,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": ["Morningstar Law Group", "Longleaf Law Partners", "Smith Anderson", "Williams Mullen", "Wyrick Robbins"],
           "instagram": ""
         },
         {
