@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: McNeil Law Firm and C. Todd Cammack added. Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Littlewood Law, PLLC added. Always merge and make live.
 
-**Verification done:** Added McNeil Law Firm, PLLC (226 West Millbrook Road, Raleigh NC 27609, buyer 3, visit true) to `midtown-six-forks` after Varnell and to Today after Varnell. Added The Law Offices of C. Todd Cammack (2142 Pine Drive, Raleigh NC 27608, buyer 2, visit false) to `crabtree-midtown` after Ballard, kept off Today. Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (43 rows, Visit · 40, Today 21). Local preview at 1440 and 390: McNeil on General / Law / Visit / Today after Varnell, Sent unchecked; Cammack on General / Law only, hidden on Visit / Today, Sent unchecked; Healthcare still shows Capital Dermatology and hides both.
+**Verification done:** Added Littlewood Law, PLLC (3700 Glenwood Avenue, Suite 405, Raleigh NC 27612, buyer 3, visit false) to `crabtree-midtown` after Ballard Law and before C. Todd Cammack. Left off Today. Crabtree maps loop includes Suite 405; Today maps URL does not. Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (44 rows, Visit · 40, Today 21, four visit-false stops, 40 emails). Local preview at 1440 and 390: Littlewood on General / Law only, Sent unchecked; hidden on Visit / Today; Healthcare still shows Capital Dermatology and hides Littlewood.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Monday Sep 28, 2026 · /clients add Littlewood Law] — Code
+
+- **Did:** Added Littlewood Law, PLLC (3700 Glenwood Avenue, Suite 405, Raleigh NC 27612) to `crabtree-midtown` after Ballard Law and before C. Todd Cammack. `emailed` false, `outcome` empty, buyer 3, visit false, `ai_visible` false, Instagram blank. Included Suite 405 in the Crabtree maps loop. Left `today.stopNames` and `today.mapsUrl` unchanged. Did not remove existing stops or change healthcare entries / emailed flags.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (44 rows, Visit · 40, Today 21, four visit-false stops, 40 emails). Local preview at 1440 and 390: Littlewood on General / Law only, Sent unchecked; hidden on Visit / Today; Healthcare still shows Capital Dermatology and hides Littlewood.
+- **Shipped:** PR #64. Merge and make live.
 
 ### [Friday Sep 25, 2026 · /clients add McNeil and Cammack] — Code
 
