@@ -176,6 +176,17 @@ const KEEP = {
     ai_visible: false,
     competitors_shown: ["Hammer Law PLLC", "Manning Fulton", "Young Moore", "Smith Debnam", "Marzella Law Group"],
   },
+  "Baptist Grove Church": { buyer_score: 1, visit: false },
+  "Newpath Church": { buyer_score: 1, visit: false },
+  "North Raleigh Christian Church": { buyer_score: 3, visit: true },
+  "Triangle Christian Center": { buyer_score: 3, visit: true },
+  "North Haven Church": { buyer_score: 1, visit: false },
+  "North Raleigh Church of Christ": { buyer_score: 1, visit: false },
+  "North Ridge Church": { buyer_score: 2, visit: false },
+  "LifeHouse Church": { buyer_score: 3, visit: true },
+  "Freedom Church Raleigh": { buyer_score: 2, visit: false },
+  "The King's Chapel": { buyer_score: 3, visit: true },
+  "Grace Baptist Church": { buyer_score: 3, visit: true },
 };
 
 const DROPPED = [
@@ -224,17 +235,6 @@ const DROPPED = [
   "The Morton Law Offices",
   "Edgerton Immigration Law",
   "Allen Law Offices",
-  "Baptist Grove Church",
-  "Newpath Church",
-  "North Raleigh Christian Church",
-  "Triangle Christian Center",
-  "North Haven Church",
-  "North Raleigh Church of Christ",
-  "North Ridge Church",
-  "LifeHouse Church",
-  "Freedom Church Raleigh",
-  "The King's Chapel",
-  "Grace Baptist Church",
 ];
 
 const TODAY = [
@@ -280,13 +280,18 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /data-filter="law"/);
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
-  assert.equal(data.sets.length, 7);
-  assert.equal(stops.length, 44);
+  assert.equal(data.sets.length, 8);
+  assert.equal(stops.length, 55);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
-    data.sets.some((set) => set.id === "neuse-east" || set.stops.length === 0),
+    data.sets.some((set) => set.stops.length === 0),
     false,
     "empty sets must be removed"
+  );
+  assert.equal(
+    data.sets.some((set) => set.id === "neuse-east"),
+    true,
+    "Neuse / east returns with Grace Baptist"
   );
 
   for (const set of data.sets) {
@@ -296,6 +301,7 @@ test("clients page renders the pruned ADD lead table", async () => {
     assert.ok(set.mapsUrl.endsWith(`/${homeSeg}`));
     let cursor = set.mapsUrl.indexOf(homeSeg) + homeSeg.length;
     for (const stop of set.stops) {
+      if (stop.extra) continue;
       const segment = encodeURIComponent(stop.address).replaceAll("%20", "+");
       const at = set.mapsUrl.indexOf(segment, cursor);
       assert.ok(at >= cursor, `${set.id} mapsUrl missing ${stop.name} in set order`);
@@ -319,7 +325,6 @@ test("clients page renders the pruned ADD lead table", async () => {
       }
       if (stop.industry) {
         assert.ok(html.includes(decode(stop.industry)), `missing industry for ${stop.name}`);
-        assert.notEqual(stop.industry, "Church", `${stop.name} must not be a church`);
       }
       assert.equal("rating" in stop, false, `${stop.name} still has rating`);
       assert.equal(stop.buyer_score, expected.buyer_score, `${stop.name} buyer_score`);
@@ -360,8 +365,16 @@ test("clients page renders the pruned ADD lead table", async () => {
     );
     assert.doesNotMatch(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
-  assert.equal(stops.filter((stop) => stop.industry === "Church").length, 0);
-  assert.doesNotMatch(html, /data-group="church"/);
+  const churches = stops.filter((stop) => stop.industry === "Church");
+  assert.equal(churches.length, 11);
+  assert.equal((html.match(/data-group="church"/g) ?? []).length, 11);
+  assert.ok(churches.every((stop) => stop.emailed === false));
+  assert.ok(churches.every((stop) => stop.outcome === ""));
+  assert.equal(
+    data.today.stopNames.some((name) => churches.some((stop) => stop.name === name)),
+    false,
+    "churches stay off the Today stop list"
+  );
 
   const peck = stops.find((stop) => stop.name === "The Peck Law Firm");
   assert.equal(peck?.emailed, true);
@@ -443,7 +456,15 @@ test("clients page renders the pruned ADD lead table", async () => {
   const leesville = data.sets.find((set) => set.id === "leesville");
   assert.deepEqual(
     leesville?.stops.map((stop) => stop.name),
-    ["Brier Creek Vision Care", "Arnette Law Offices, PLLC", "Campbell Family Law"]
+    [
+      "Baptist Grove Church",
+      "Newpath Church",
+      "North Raleigh Christian Church",
+      "Triangle Christian Center",
+      "Brier Creek Vision Care",
+      "Arnette Law Offices, PLLC",
+      "Campbell Family Law",
+    ]
   );
 
   const mcneil = stops.find((stop) => stop.name === "McNeil Law Firm, PLLC");
@@ -561,9 +582,15 @@ test("clients page renders the pruned ADD lead table", async () => {
     "McNeil Law Firm, PLLC": "john@mcneillawfirm.com",
     "The Law Offices of C. Todd Cammack": "todd@ctcammacklaw.com",
     "Littlewood Law, PLLC": "grey@littlewoodlawfirm.com",
+    "North Raleigh Christian Church": "info@northraleigh.church",
+    "Triangle Christian Center": "joelwhitfield@trianglecc.org",
+    "LifeHouse Church": "info@mylifehousechurch.com",
+    "Freedom Church Raleigh": "info@freedomchurchraleigh.com",
+    "The King's Chapel": "info@thekingschapel.com",
+    "Grace Baptist Church": "grace.baptist.raleigh@gmail.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 40);
+  assert.equal(withEmail.length, 46);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -600,10 +627,10 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 40);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 40);
-  assert.match(html, /Visit · 40/);
-  assert.equal((html.match(/data-visit="false"/g) ?? []).length, 4);
+  assert.equal(visitStops.length, 45);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 45);
+  assert.match(html, /Visit · 45/);
+  assert.equal((html.match(/data-visit="false"/g) ?? []).length, 10);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
   assert.match(html, />No reply</);
@@ -615,15 +642,55 @@ test("clients page renders the pruned ADD lead table", async () => {
     withInstagram.map((stop) => stop.name).sort(),
     [
       "Amos & Amos, Attorneys at Law",
+      "Baptist Grove Church",
       "Boyette Law, PLLC",
       "Capital Dermatology of NC",
       "Doctor Direct",
+      "Freedom Church Raleigh",
       "Hormone Wellness MD",
       "John P. Paschal, Attorney at Law, PLLC",
       "Law Offices of Jeffrey G. Marsocci, PLLC",
+      "LifeHouse Church",
+      "Newpath Church",
+      "North Raleigh Christian Church",
+      "North Raleigh Church of Christ",
+      "North Ridge Church",
       "Pediatric Possibilities",
       "Six Forks Animal Hospital",
+      "The King's Chapel",
     ]
+  );
+
+  const freedom = stops.find((stop) => stop.name === "Freedom Church Raleigh");
+  assert.equal(freedom?.email, "info@freedomchurchraleigh.com");
+  assert.equal(freedom?.instagram, "@freedomraleigh");
+  assert.equal(freedom?.extra, true);
+  assert.equal(freedom?.phone, undefined);
+  assert.equal(freedom?.visit, false);
+  assert.equal(freedom?.buyer_score, 2);
+  assert.equal(data.today.mapsUrl.includes("Spring+Forest"), false);
+  assert.equal(
+    data.sets.find((set) => set.stops.some((stop) => stop.name === "Freedom Church Raleigh"))?.id,
+    "midtown-six-forks"
+  );
+  assert.equal(
+    data.sets.find((set) => set.id === "midtown-six-forks")?.mapsUrl.includes("400+Newton+Rd"),
+    true
+  );
+  assert.equal(
+    data.sets.find((set) => set.id === "midtown-six-forks")?.mapsUrl.includes("Spring+Forest"),
+    false
+  );
+
+  const grace = stops.find((stop) => stop.name === "Grace Baptist Church");
+  assert.equal(grace?.email, "grace.baptist.raleigh@gmail.com");
+  assert.equal(grace?.address, "3305 Old Milburnie Rd, Raleigh NC 27604");
+  assert.equal(grace?.visit, true);
+  assert.equal(grace?.buyer_score, 3);
+  assert.equal(grace?.instagram, "");
+  assert.equal(
+    data.sets.find((set) => set.stops.some((stop) => stop.name === "Grace Baptist Church"))?.id,
+    "neuse-east"
   );
 
   assert.ok(data.today, "today loop should be a top-level object");

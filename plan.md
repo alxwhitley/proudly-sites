@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Littlewood Law, PLLC added. Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: eleven historical churches restored. Always merge and make live.
 
-**Verification done:** Added Littlewood Law, PLLC (3700 Glenwood Avenue, Suite 405, Raleigh NC 27612, buyer 3, visit false) to `crabtree-midtown` after Ballard Law and before C. Todd Cammack. Left off Today. Crabtree maps loop includes Suite 405; Today maps URL does not. Healthcare and existing law stops unchanged. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (44 rows, Visit · 40, Today 21, four visit-false stops, 40 emails). Local preview at 1440 and 390: Littlewood on General / Law only, Sent unchecked; hidden on Visit / Today; Healthcare still shows Capital Dermatology and hides Littlewood.
+**Verification done:** Restored every church that had been on `src/data/field-visits.json` before the Sep 8 prune (`596d0a3`), into the original sets. Sent is unchecked and outcome is empty on all eleven, including Freedom Church Raleigh, North Raleigh Christian Church, and Triangle Christian Center, which history had marked emailed. Churches show on General and on the existing Churches filter. Visit includes the five `visit: true` churches. Today stop list and Today maps URL are unchanged. Freedom stays `extra` and off the Midtown weekday maps loop. Perry Creek Church and Mount Pleasant Baptist Church were not in field-visit history, so they were not added. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (55 rows, Visit · 45, Today 21, 11 churches). Local preview at 1440 and 390: General shows all 11 churches; Churches filter shows only those 11; Healthcare and Law hide them; Visit shows 5 churches; Today shows 0.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 

@@ -133,9 +133,76 @@
       "id": "leesville",
       "name": "Leesville / Brier Creek",
       "distance": "~10 mi",
-      "note": "One Brier Creek stop.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/3131+RDU+Center+Drive%2C+Suite+120%2C+Morrisville+NC+27560/117+Edinburgh+South+Drive%2C+Suite+207%2C+Cary+NC+27511/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "note": "Sunday works for churches.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7109+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Rd%2C+Raleigh+NC+27613/9225+Leesville+Road%2C+Raleigh+NC+27613/11100+Fellowship+Dr%2C+Raleigh+NC+27617/9650+Brier+Creek+Parkway%2C+Suite+107%2C+Raleigh+NC+27617/3131+RDU+Center+Drive%2C+Suite+120%2C+Morrisville+NC+27560/117+Edinburgh+South+Drive%2C+Suite+207%2C+Cary+NC+27511/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
+        {
+          "name": "Baptist Grove Church",
+          "address": "7109 Leesville Rd, Raleigh NC 27613",
+          "hours": "Sunday worship 8am and 10am. Weekday office not published.",
+          "phone": "919-787-4528",
+          "website": "https://baptistgrovechurch.org/",
+          "note": "0.3 mi. Flag: they use progressive as worship-style language.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 1,
+          "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@baptistgrovenc"
+        },
+        {
+          "name": "Newpath Church",
+          "address": "9225 Leesville Rd, Raleigh NC 27613",
+          "hours": "Sunday Raleigh service 9:15am. Weekday office not published.",
+          "phone": "919-307-7803",
+          "website": "https://newpathchurch.com/",
+          "note": "0.2 mi.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 1,
+          "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@newpathraleigh"
+        },
+        {
+          "name": "North Raleigh Christian Church",
+          "address": "9225 Leesville Road, Raleigh NC 27613",
+          "hours": "Sunday worship 11:15am. Wednesday students RESET 6:15pm. Weekday office not published.",
+          "phone": "919-912-9127",
+          "website": "https://www.northraleigh.church/",
+          "email": "info@northraleigh.church",
+          "note": "Brizy DIY leftover HOME titles, shares building with Newpath",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@northraleighcc"
+        },
+        {
+          "name": "Triangle Christian Center",
+          "address": "11100 Fellowship Dr, Raleigh NC 27617",
+          "hours": "Office Mon-Fri 9am-5pm; Sunday 10:15am",
+          "typicallyClosed": "Closed Sat",
+          "phone": "919-846-0470",
+          "website": "https://www.trianglechristiancenter.com/",
+          "email": "joelwhitfield@trianglecc.org",
+          "note": "Wix.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": ""
+        },
         {
           "name": "Brier Creek Vision Care",
           "address": "9650 Brier Creek Parkway, Suite 107, Raleigh NC 27617",
@@ -197,7 +264,7 @@
       "name": "Six Forks / Lead Mine",
       "distance": "~9 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Suite+200%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/8366+Six+Forks+Rd%2C+STE+104%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/9121+Anson+Way%2C+Suite+200%2C+Raleigh+NC+27615/8524+Six+Forks+Road%2C+Suite+201%2C+Raleigh+NC+27615/8406+Six+Forks+Road+Suite+102%2C+Raleigh+NC+27615/8366+Six+Forks+Rd%2C+STE+104%2C+Raleigh+NC+27615/8358+Six+Forks+Rd%2C+Suite+104%2C+Raleigh+NC+27615/7320+Six+Forks+Road%2C+Suite+100%2C+Raleigh+NC+27615/7130+Six+Forks+Rd%2C+Raleigh+NC+27615/6620+Six+Forks+Rd%2C+Raleigh+NC+27615/6512+Six+Forks+Rd%2C+Ste+604B%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Raleigh Real Estate Law",
@@ -326,6 +393,21 @@
           "instagram": "@sixforksanimalhospital"
         },
         {
+          "name": "North Haven Church",
+          "address": "6620 Six Forks Rd, Raleigh NC 27615",
+          "hours": "Sunday worship 10:30am. Weekday office not published.",
+          "phone": "919-847-4291",
+          "website": "https://www.northhavenraleigh.org/",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 1,
+          "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": ""
+        },
+        {
           "name": "Sisson Law Firm",
           "address": "6512 Six Forks Rd, Ste 604B, Raleigh NC 27615",
           "hours": "Not published - call first",
@@ -348,7 +430,7 @@
       "name": "Falls / Raven Ridge",
       "distance": "~13 mi",
       "note": "Avoid Friday.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/14091+Falls+of+Neuse+Rd+Suite+200%2C+Raleigh+NC+27614/11001+Raven+Ridge+Rd%2C+Raleigh+NC+27614/10931+Raven+Ridge+Rd%2C+Ste+105%2C+Raleigh+NC+27614/9204-200+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/8701+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/7601+Falls+of+Neuse+Rd%2C+Raleigh+NC+27615/124+Mine+Lake+Ct%2C+Raleigh+NC+27615/7000+Harps+Mill+Rd+%23203%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Monroe Wallace Law Firm",
@@ -367,6 +449,23 @@
           "ai_visible": false,
           "competitors_shown": ["Cary Estate Planning", "Lynch & Eatman", "Kirschbaum Nanney"],
           "instagram": ""
+        },
+        {
+          "name": "LifeHouse Church",
+          "address": "11001 Raven Ridge Rd, Raleigh NC 27614",
+          "hours": "Sunday worship 10:00am. Weekday office not published.",
+          "phone": "919-432-5839",
+          "website": "https://mylifehousechurch.com/",
+          "email": "info@mylifehousechurch.com",
+          "note": "Church.co template with live 'This is an alert about alerts' placeholder junk. Attendance unpublished; DIY + neglected + email + timing tell clears bar.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@mylifehousechurchnc"
         },
         {
           "name": "Raleigh Pediatric Dentistry",
@@ -401,6 +500,36 @@
           "ai_visible": null,
           "competitors_shown": [],
           "instagram": "@amoslawnc"
+        },
+        {
+          "name": "North Raleigh Church of Christ",
+          "address": "8701 Falls of Neuse Rd, Raleigh NC 27615",
+          "hours": "Sunday 10am; Wed 7pm. No public phone.",
+          "website": "https://www.northraleighchurch.org/",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 1,
+          "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@nraleighchurch"
+        },
+        {
+          "name": "North Ridge Church",
+          "address": "7601 Falls of Neuse Rd, Raleigh NC 27615",
+          "hours": "Office Mon-Thu 9am-3pm; Sunday 10:30am",
+          "typicallyClosed": "Closed Fri, Sat",
+          "phone": "919-847-1929",
+          "website": "https://northridgecma.org/",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@northridgecma"
         },
         {
           "name": "Ladd Immigration Law, LLC",
@@ -445,7 +574,7 @@
       "name": "Midtown Six Forks",
       "distance": "~12 mi",
       "note": "Matta Law and Hormone Wellness same building.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/226+West+Millbrook+Road%2C+Raleigh+NC+27609/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4208+Six+Forks+Rd%2C+Ste+1000%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd%2C+Bldg+A+Ste+120%2C+Raleigh+NC+27609/211+E+Six+Forks+Rd+Suite+122%2C+Raleigh+NC+27609/5838+Six+Forks+Road%2C+Suite+200%2C+Raleigh+NC+27609/4016+Barrett+Drive%2C+Suite+103%2C+Raleigh+NC+27609/308+Millbrook+Road%2C+Suite+D+%23100%2C+Raleigh+NC+27609/226+West+Millbrook+Road%2C+Raleigh+NC+27609/400+Newton+Rd%2C+Raleigh+NC+27615/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Julyan Canty Law",
@@ -515,6 +644,24 @@
           "instagram": "@doctordirectmd"
         },
         {
+          "name": "Freedom Church Raleigh",
+          "address": "Sunday — Millbrook High School, 2201 Spring Forest Rd, Raleigh NC 27615. Office — 2013 New Hope Church Rd, Raleigh NC 27604",
+          "hours": "Sunday 9am and 10:45am at Millbrook HS. Office Mon-Thu 8am-5pm (New Hope Church Rd)",
+          "typicallyClosed": "Closed Friday (office). No Sunday office hours at the 27604 address.",
+          "website": "https://www.freedomchurchraleigh.com/",
+          "email": "info@freedomchurchraleigh.com",
+          "note": "Wix. Freedom Church (Hereford) plant. Pastors Josh and Rose Snowzell. Public launch 2023; Millbrook HS since 2024 after growth.",
+          "extra": true,
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": false,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@freedomraleigh"
+        },
+        {
           "name": "Jenny Doyle, Esq. Immigration Counsel, LLC",
           "address": "4016 Barrett Drive, Suite 103, Raleigh NC 27609",
           "hours": "Mon-Fri 9am-5pm by appointment; Sat by appointment",
@@ -567,6 +714,23 @@
           "ai_visible": false,
           "competitors_shown": ["Raleigh Law Center", "Kelly Thompson Family Law", "Raleigh Divorce Law Firm", "Wake Family Law Group", "Parker Bryan Family Law"],
           "instagram": ""
+        },
+        {
+          "name": "The King's Chapel",
+          "address": "400 Newton Rd, Raleigh NC 27615",
+          "hours": "Sunday Life Groups 9am; Worship 10:30am. Wednesday Family Night resumes Sep 16. Weekday office not published.",
+          "phone": "919-573-5454",
+          "website": "https://www.thekingschapel.com/",
+          "email": "info@thekingschapel.com",
+          "note": "Squarespace DIY (+ Church Center). May 2025 Christ Baptist / Capital Community merge; contact page still shows July–Aug transitional schedule. Old christbaptist.org leftover broken.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@thekingschapelnc"
         }
       ]
     },
@@ -863,6 +1027,33 @@
           "outcome": "",
           "ai_visible": false,
           "competitors_shown": ["Carolina Estate Plan / NC Wills & Trusts", "Trusts and Estates Law Group", "Doyle Law Offices", "Hatcher Legal", "Capital City Estate Planning", "W.G. Alexander"],
+          "instagram": ""
+        }
+      ]
+    },
+    {
+      "id": "neuse-east",
+      "name": "Neuse / east",
+      "distance": "~20 mi",
+      "note": "Sunday for Grace Baptist.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/3305+Old+Milburnie+Rd%2C+Raleigh+NC+27604/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "Grace Baptist Church",
+          "address": "3305 Old Milburnie Rd, Raleigh NC 27604",
+          "hours": "Sunday School 9:30am; Sunday Worship 10:30am",
+          "typicallyClosed": "Weekday office not published",
+          "phone": "919-217-4487",
+          "website": "https://www.gracebchurch.net/",
+          "email": "grace.baptist.raleigh@gmail.com",
+          "note": "Independent Baptist. Google Sites DIY (Report abuse). Old Jan 2022 sermon links still on home next to newer 2025 content. Also publishes pastor email doctorseeler@gmail.com (Rev. Dr. William Seeler). Attendance unpublished; clears via DIY + neglected + email + timing.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
           "instagram": ""
         }
       ]
