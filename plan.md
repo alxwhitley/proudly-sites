@@ -1,8 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: eleven historical churches restored. Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Hudson Memorial Presbyterian Church added to Midtown Six Forks. Always merge and make live.
 
-**Verification done:** Restored every church that had been on `src/data/field-visits.json` before the Sep 8 prune (`596d0a3`), into the original sets. Sent is unchecked and outcome is empty on all eleven, including Freedom Church Raleigh, North Raleigh Christian Church, and Triangle Christian Center, which history had marked emailed. Churches show on General and on the existing Churches filter. Visit includes the five `visit: true` churches. Today stop list and Today maps URL are unchanged. Freedom stays `extra` and off the Midtown weekday maps loop. Perry Creek Church and Mount Pleasant Baptist Church were not in field-visit history, so they were not added. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (55 rows, Visit · 45, Today 21, 11 churches). Local preview at 1440 and 390: General shows all 11 churches; Churches filter shows only those 11; Healthcare and Law hide them; Visit shows 5 churches; Today shows 0.
+**Verification done:** Added Hudson Memorial Presbyterian Church (4921 Six Forks Rd, Raleigh NC 27609) to `midtown-six-forks` after Freedom Church Raleigh and before Jenny Doyle. `industry` Church, `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` false, Instagram blank. Included 4921 Six Forks on the Midtown set maps loop only. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not remove or edit existing stops. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (56 rows, Visit · 46, Today 21, 12 churches). Local preview at 1440 and 390: Hudson on General and Churches (12), Sent unchecked; on Visit; hidden on Today, Healthcare, and Law.
 
 **Next Action:** Confirm a real end-to-end Web3Forms submission lands in the intended inbox (only mocked-network testing has been done so far). Then continue the remaining follow-up backlog (Legacy Renovations proof imagery, remaining case-study product placeholders, etc.).
 
@@ -114,6 +114,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Sep 29, 2026 · /clients add Hudson Memorial Presbyterian Church] — Code
+
+- **Did:** Added Hudson Memorial Presbyterian Church (4921 Six Forks Rd, Raleigh NC 27609) to `midtown-six-forks` after Freedom Church Raleigh. `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` false, Instagram blank. Included the address on the Midtown maps loop. Left `today.stopNames` and `today.mapsUrl` unchanged. Did not remove or edit existing stops.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (56 rows, Visit · 46, Today 21, 12 churches). Local preview at 1440 and 390: Hudson on General / Churches / Visit, Sent unchecked; hidden on Today, Healthcare, and Law.
+- **Shipped:** Open PR. Merge and make live.
 
 ### [Monday Sep 28, 2026 · /clients add Littlewood Law] — Code
 

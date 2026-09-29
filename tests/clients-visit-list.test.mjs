@@ -185,6 +185,12 @@ const KEEP = {
   "North Ridge Church": { buyer_score: 2, visit: false },
   "LifeHouse Church": { buyer_score: 3, visit: true },
   "Freedom Church Raleigh": { buyer_score: 2, visit: false },
+  "Hudson Memorial Presbyterian Church": {
+    buyer_score: 3,
+    visit: true,
+    ai_visible: false,
+    competitors_shown: [],
+  },
   "The King's Chapel": { buyer_score: 3, visit: true },
   "Grace Baptist Church": { buyer_score: 3, visit: true },
 };
@@ -281,7 +287,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 8);
-  assert.equal(stops.length, 55);
+  assert.equal(stops.length, 56);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.stops.length === 0),
@@ -366,8 +372,8 @@ test("clients page renders the pruned ADD lead table", async () => {
     assert.doesNotMatch(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
   const churches = stops.filter((stop) => stop.industry === "Church");
-  assert.equal(churches.length, 11);
-  assert.equal((html.match(/data-group="church"/g) ?? []).length, 11);
+  assert.equal(churches.length, 12);
+  assert.equal((html.match(/data-group="church"/g) ?? []).length, 12);
   assert.ok(churches.every((stop) => stop.emailed === false));
   assert.ok(churches.every((stop) => stop.outcome === ""));
   assert.equal(
@@ -586,11 +592,12 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Triangle Christian Center": "joelwhitfield@trianglecc.org",
     "LifeHouse Church": "info@mylifehousechurch.com",
     "Freedom Church Raleigh": "info@freedomchurchraleigh.com",
+    "Hudson Memorial Presbyterian Church": "info@hmpc.org",
     "The King's Chapel": "info@thekingschapel.com",
     "Grace Baptist Church": "grace.baptist.raleigh@gmail.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 46);
+  assert.equal(withEmail.length, 47);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -627,9 +634,9 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 45);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 45);
-  assert.match(html, /Visit · 45/);
+  assert.equal(visitStops.length, 46);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 46);
+  assert.match(html, /Visit · 46/);
   assert.equal((html.match(/data-visit="false"/g) ?? []).length, 10);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
