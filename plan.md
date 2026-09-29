@@ -119,7 +119,7 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 
 - **Did:** Added Hudson Memorial Presbyterian Church (4921 Six Forks Rd, Raleigh NC 27609) to `midtown-six-forks` after Freedom Church Raleigh. `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` false, Instagram blank. Included the address on the Midtown maps loop. Left `today.stopNames` and `today.mapsUrl` unchanged. Did not remove or edit existing stops.
 - **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (56 rows, Visit · 46, Today 21, 12 churches). Local preview at 1440 and 390: Hudson on General / Churches / Visit, Sent unchecked; hidden on Today, Healthcare, and Law.
-- **Shipped:** Open PR. Merge and make live.
+- **Shipped:** PR #66. Merge and make live.
 
 ### [Monday Sep 28, 2026 · /clients add Littlewood Law] — Code
 
