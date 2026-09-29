@@ -193,6 +193,12 @@ const KEEP = {
   },
   "The King's Chapel": { buyer_score: 3, visit: true },
   "Grace Baptist Church": { buyer_score: 3, visit: true },
+  "Cary First Baptist Church": { buyer_score: 3, visit: true },
+  "Good Hope Baptist Church": { buyer_score: 2, visit: true },
+  "Waypoint Church": { buyer_score: 2, visit: true },
+  "Ridgecrest Baptist Church": { buyer_score: 3, visit: true },
+  "Neuse Baptist Church": { buyer_score: 3, visit: true },
+  "Woodland Baptist Church": { buyer_score: 3, visit: true },
 };
 
 const DROPPED = [
@@ -286,8 +292,8 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /data-filter="law"/);
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
-  assert.equal(data.sets.length, 8);
-  assert.equal(stops.length, 56);
+  assert.equal(data.sets.length, 11);
+  assert.equal(stops.length, 62);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.stops.length === 0),
@@ -372,8 +378,8 @@ test("clients page renders the pruned ADD lead table", async () => {
     assert.doesNotMatch(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
   const churches = stops.filter((stop) => stop.industry === "Church");
-  assert.equal(churches.length, 12);
-  assert.equal((html.match(/data-group="church"/g) ?? []).length, 12);
+  assert.equal(churches.length, 18);
+  assert.equal((html.match(/data-group="church"/g) ?? []).length, 18);
   assert.ok(churches.every((stop) => stop.emailed === false));
   assert.ok(churches.every((stop) => stop.outcome === ""));
   assert.equal(
@@ -595,9 +601,15 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Hudson Memorial Presbyterian Church": "info@hmpc.org",
     "The King's Chapel": "info@thekingschapel.com",
     "Grace Baptist Church": "grace.baptist.raleigh@gmail.com",
+    "Cary First Baptist Church": "office@caryfbc.org",
+    "Good Hope Baptist Church": "info@goodhopechurch.org",
+    "Waypoint Church": "danny@waypointrdu.com",
+    "Ridgecrest Baptist Church": "rbcoffice@discoverrbc.org",
+    "Neuse Baptist Church": "office@neusebaptist.com",
+    "Woodland Baptist Church": "office@woodlandwakeforest.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 47);
+  assert.equal(withEmail.length, 53);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -634,9 +646,9 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 46);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 46);
-  assert.match(html, /Visit · 46/);
+  assert.equal(visitStops.length, 52);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 52);
+  assert.match(html, /Visit · 52/);
   assert.equal((html.match(/data-visit="false"/g) ?? []).length, 10);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
@@ -652,12 +664,15 @@ test("clients page renders the pruned ADD lead table", async () => {
       "Baptist Grove Church",
       "Boyette Law, PLLC",
       "Capital Dermatology of NC",
+      "Cary First Baptist Church",
       "Doctor Direct",
       "Freedom Church Raleigh",
+      "Good Hope Baptist Church",
       "Hormone Wellness MD",
       "John P. Paschal, Attorney at Law, PLLC",
       "Law Offices of Jeffrey G. Marsocci, PLLC",
       "LifeHouse Church",
+      "Neuse Baptist Church",
       "Newpath Church",
       "North Raleigh Christian Church",
       "North Raleigh Church of Christ",
@@ -665,6 +680,7 @@ test("clients page renders the pruned ADD lead table", async () => {
       "Pediatric Possibilities",
       "Six Forks Animal Hospital",
       "The King's Chapel",
+      "Waypoint Church",
     ]
   );
 

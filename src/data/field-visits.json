@@ -1075,6 +1075,140 @@
           "instagram": ""
         }
       ]
+    },
+    {
+      "id": "cary-west",
+      "name": "Cary / West Cary",
+      "distance": "~9–11 mi",
+      "note": "Churches. Weekday office for Cary First; Good Hope best on Sunday.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/218+S+Academy+St%2C+Cary+NC+27511/6628+Good+Hope+Church+Rd%2C+Cary+NC+27519/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "Cary First Baptist Church",
+          "address": "218 S Academy St, Cary NC 27511",
+          "hours": "Office Mon-Thu 8am-4pm; Fri 8am-1pm. Sunday worship 8:00am & 10:30am; Life Groups 9am.",
+          "typicallyClosed": "Closed Sat. Sunday is worship only.",
+          "phone": "919-467-6356",
+          "website": "https://www.caryfirst.com/",
+          "email": "office@caryfbc.org",
+          "note": "Wix DIY (Wix.com Website Builder generator). SBC/NC Baptist, downtown Cary. Size: NC Baptist ChurchPOP ACP AM worship 310 (2025), up from 195 (2021); membership reporting ~975. Two Sunday services (8:00 & 10:30). Publishes office@caryfbc.org on own site. Trigger: hiring a Pastor of Next Gen & Digital Ministry (NC Baptist job board) + interim youth pastor per NC Baptist article; attendance growth. ~9 mi from 27613.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@caryfirstbaptist"
+        },
+        {
+          "name": "Good Hope Baptist Church",
+          "address": "6628 Good Hope Church Rd, Cary NC 27519",
+          "hours": "Sunday small groups 9am; worship 10:30am. Weekday office hours not published.",
+          "typicallyClosed": "Weekday office hours not published — call first",
+          "phone": "919-467-8526",
+          "website": "https://goodhopechurch.org/",
+          "email": "info@goodhopechurch.org",
+          "note": "Self-built WordPress/Divi (no designer credit; footer still reads © 1895-2025). Multinational SBC/NC Baptist church in west Cary. Size: ChurchPOP ACP AM worship 338 (2025), up from 224 (2021/2022). Publishes info@ and secretary@goodhopechurch.org. Trigger: posted a full-time Worship Ministry Director role (RBA, Apr 2026) and just affirmed Hallie Ford as new Worship Director; hosts two other congregations on campus. Buyer 2: WordPress core is current, so neglect signal is only the stale footer. ~10.5 mi from 27613.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@goodhopenc"
+        }
+      ]
+    },
+    {
+      "id": "durham-chapel-hill",
+      "name": "Durham / Chapel Hill",
+      "distance": "~15–18 mi",
+      "note": "Churches. Ridgecrest office open weekdays; Waypoint best on Sunday.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/6804+Farrington+Rd%2C+Chapel+Hill+NC+27517/1104+Milton+Rd%2C+Durham+NC+27712/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "Waypoint Church",
+          "address": "6804 Farrington Rd, Chapel Hill NC 27517",
+          "hours": "Sunday worship 9:00am & 11:00am.",
+          "typicallyClosed": "Weekday office hours not published",
+          "website": "https://www.waypointrdu.com/",
+          "email": "danny@waypointrdu.com",
+          "note": "Wix DIY (Wix.com Website Builder; © 2020; Plan-a-Visit page still shows placeholder 'Heading 1' blocks). Non-denominational, NC Baptist-affiliated; Durham/Chapel Hill line. Size: ChurchPOP ACP AM worship 375 (2025), up from 155 (2021); 4 full-time + ~10 part-time staff. Publishes danny@waypointrdu.com (About) and grace@waypointrdu.com (Visit). Trigger: two Sunday services (9 & 11) after fast growth. Buyer 2: has a part-time Communications Director (possible in-house web owner). ~15 mi from 27613.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@waypointrdu"
+        },
+        {
+          "name": "Ridgecrest Baptist Church",
+          "address": "1104 Milton Rd, Durham NC 27712",
+          "hours": "Office Mon-Fri 8am-4pm. Sunday 9:15am Traditional (Worship Center); 10:30am Exalt (Gym); Connect Groups 9:15 & 10:15am.",
+          "typicallyClosed": "Closed Sat. Sunday is worship only.",
+          "phone": "919-477-5426",
+          "website": "https://www.discoverrbc.org/",
+          "email": "rbcoffice@discoverrbc.org",
+          "note": "Squarespace DIY. SBC/NC Baptist, north Durham. Size: ChurchPOP ACP AM worship 400 (2025), up from 300 (2023). Publishes rbcoffice@discoverrbc.org on own site. Trigger: running two worship services, with the contemporary Exalt service meeting in the gym (outgrowing the worship center); attendance growth. ~17.5 mi from 27613.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": ""
+        }
+      ]
+    },
+    {
+      "id": "wake-forest-east",
+      "name": "Louisburg Rd / Wake Forest east",
+      "distance": "~13–16 mi",
+      "note": "Churches. Call ahead; weekday office hours not published.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4444+Louisburg+Rd%2C+Wake+Forest+NC+27587/190+Woodland+Church+Rd%2C+Wake+Forest+NC+27587/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "Neuse Baptist Church",
+          "address": "4444 Louisburg Rd, Wake Forest NC 27587",
+          "hours": "Sunday School 9:30am; worship 10:30am; evening 6pm; Spanish service 11:30am. Wed 7pm.",
+          "typicallyClosed": "Weekday office hours not published — call first",
+          "phone": "919-876-0440",
+          "website": "https://neusebaptist.com/",
+          "email": "office@neusebaptist.com",
+          "note": "Duda builder (multiscreensite) DIY. Independent, conservative Baptist on Louisburg Rd near Rolesville. Size: no ACP published; staff of 7 (pastor, 3 assistant pastors incl. Spanish/music/youth, admin, financial secretary, intern), English + Spanish services, orchestra and kids choir. Publishes office@neusebaptist.com and staff emails. Trigger: new youth pastor (Pastor Jeff Kean) welcomed in 2026; Spanish ministry 4 years in and growing. ~13 mi from 27613.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@neusebaptist"
+        },
+        {
+          "name": "Woodland Baptist Church",
+          "address": "190 Woodland Church Rd, Wake Forest NC 27587",
+          "hours": "Sunday worship 10:00am; Sunday School 11:15am. Wed nights Sep-May from 5pm.",
+          "typicallyClosed": "Weekday office hours not published — call first",
+          "phone": "919-556-5455",
+          "website": "http://www.woodlandwakeforest.com/",
+          "email": "office@woodlandwakeforest.com",
+          "note": "Weebly DIY (editmysite); Join-the-Team page last updated 2/26/2024. SBC/NC Baptist, east of Wake Forest. Size: ChurchPOP ACP AM worship 368 (2024), up from 110 (2021). Publishes office@woodlandwakeforest.com on its Staff page. Trigger: rapid growth; added Minister of Students (Feb 2025) and Children's Minister (Jan 2023); 'Woodland is going and growing' hiring page. Previously skipped for the ~20-min radius; now inside 20 mi (~16 mi from 27613).",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": ""
+        }
+      ]
     }
   ]
 }
