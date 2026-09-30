@@ -1,6 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Hudson Memorial Presbyterian Church added to Midtown Six Forks. Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Rolesville Baptist Church added to Louisburg Rd / Wake Forest east. Always merge and make live.
+
+**Verification done:** Appended Rolesville Baptist Church (301 E Young St, Rolesville NC 27571) to `wake-forest-east` after Woodland Baptist. `industry` Church, `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` null, Instagram blank. Inserted 301 E Young St on that set's maps loop after Woodland and before the return to 4133 Lake Lynn Dr. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not remove or edit existing stops.
 
 **Verification done:** Added Hudson Memorial Presbyterian Church (4921 Six Forks Rd, Raleigh NC 27609) to `midtown-six-forks` after Freedom Church Raleigh and before Jenny Doyle. `industry` Church, `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` false, Instagram blank. Included 4921 Six Forks on the Midtown set maps loop only. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not remove or edit existing stops. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (56 rows, Visit · 46, Today 21, 12 churches). Local preview at 1440 and 390: Hudson on General and Churches (12), Sent unchecked; on Visit; hidden on Today, Healthcare, and Law.
 

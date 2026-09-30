@@ -1170,7 +1170,7 @@
       "name": "Louisburg Rd / Wake Forest east",
       "distance": "~13–16 mi",
       "note": "Churches. Call ahead; weekday office hours not published.",
-      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4444+Louisburg+Rd%2C+Wake+Forest+NC+27587/190+Woodland+Church+Rd%2C+Wake+Forest+NC+27587/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/4444+Louisburg+Rd%2C+Wake+Forest+NC+27587/190+Woodland+Church+Rd%2C+Wake+Forest+NC+27587/301+E+Young+St%2C+Rolesville+NC+27571/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
       "stops": [
         {
           "name": "Neuse Baptist Church",
@@ -1199,6 +1199,24 @@
           "website": "http://www.woodlandwakeforest.com/",
           "email": "office@woodlandwakeforest.com",
           "note": "Weebly DIY (editmysite); Join-the-Team page last updated 2/26/2024. SBC/NC Baptist, east of Wake Forest. Size: ChurchPOP ACP AM worship 368 (2024), up from 110 (2021). Publishes office@woodlandwakeforest.com on its Staff page. Trigger: rapid growth; added Minister of Students (Feb 2025) and Children's Minister (Jan 2023); 'Woodland is going and growing' hiring page. Previously skipped for the ~20-min radius; now inside 20 mi (~16 mi from 27613).",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": ""
+        },
+        {
+          "name": "Rolesville Baptist Church",
+          "address": "301 E Young St, Rolesville NC 27571",
+          "hours": "Sunday worship 8:25am & 10:30am; Sunday School 9:30am (all ages). 8:25am service live-streamed on Facebook.",
+          "typicallyClosed": "Weekday office hours not published — call/email secretary first",
+          "phone": "919-556-3654",
+          "website": "https://www.rolesvillebaptist.org/",
+          "email": "secretary@rolesvillebaptist.org",
+          "note": "Older church CMS (content.cfm) DIY/neglected site. SBC / Raleigh Baptist Association. Size: ChurchPOP ACP AM worship ~325 (2023–2025 reported 325; avg ~309). Publishes secretary@rolesvillebaptist.org on own site (footer/contact/staff). Trigger: two Sunday worship services (8:25 & 10:30) — second-service growth signal; blended traditional/contemporary. Staff is pastoral/admin/music only (no communications/creative hire). ~14 mi from zip 27613 / Lake Lynn. Instagram not published on site.",
           "industry": "Church",
           "emailed": false,
           "buyer_score": 3,
