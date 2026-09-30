@@ -199,6 +199,7 @@ const KEEP = {
   "Ridgecrest Baptist Church": { buyer_score: 3, visit: true },
   "Neuse Baptist Church": { buyer_score: 3, visit: true },
   "Woodland Baptist Church": { buyer_score: 3, visit: true },
+  "Rolesville Baptist Church": { buyer_score: 3, visit: true },
 };
 
 const DROPPED = [
@@ -293,7 +294,7 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
   assert.equal(data.sets.length, 11);
-  assert.equal(stops.length, 62);
+  assert.equal(stops.length, 63);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.stops.length === 0),
@@ -378,8 +379,8 @@ test("clients page renders the pruned ADD lead table", async () => {
     assert.doesNotMatch(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
   const churches = stops.filter((stop) => stop.industry === "Church");
-  assert.equal(churches.length, 18);
-  assert.equal((html.match(/data-group="church"/g) ?? []).length, 18);
+  assert.equal(churches.length, 19);
+  assert.equal((html.match(/data-group="church"/g) ?? []).length, 19);
   assert.ok(churches.every((stop) => stop.emailed === false));
   assert.ok(churches.every((stop) => stop.outcome === ""));
   assert.equal(
@@ -607,9 +608,10 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Ridgecrest Baptist Church": "rbcoffice@discoverrbc.org",
     "Neuse Baptist Church": "office@neusebaptist.com",
     "Woodland Baptist Church": "office@woodlandwakeforest.com",
+    "Rolesville Baptist Church": "secretary@rolesvillebaptist.org",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 53);
+  assert.equal(withEmail.length, 54);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -646,9 +648,9 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 52);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 52);
-  assert.match(html, /Visit · 52/);
+  assert.equal(visitStops.length, 53);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 53);
+  assert.match(html, /Visit · 53/);
   assert.equal((html.match(/data-visit="false"/g) ?? []).length, 10);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
