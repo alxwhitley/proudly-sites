@@ -2,7 +2,7 @@
 
 **Current Priority:** `/clients` is live. Latest: Macedonia Baptist Church added as Holly Springs Rd / SW Raleigh-Cary. Always merge and make live.
 
-**Verification done:** Appended a new set `holly-springs-sw` (Holly Springs Rd / SW Raleigh-Cary) with one stop, Macedonia Baptist Church (7100 Holly Springs Rd, Raleigh NC 27606). `industry` Church, `emailed` false, `outcome` empty, buyer 2, visit true, `ai_visible` false, Instagram `@mbc_nc`. Maps loop is Lake Lynn → 7100 Holly Springs Rd → Lake Lynn. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not add other stops.
+**Verification done:** Appended a new set `holly-springs-sw` (Holly Springs Rd / SW Raleigh-Cary) with one stop, Macedonia Baptist Church (7100 Holly Springs Rd, Raleigh NC 27606). `industry` Church, `emailed` false, `outcome` empty, buyer 2, visit true, `ai_visible` false, Instagram `@mbc_nc`. Maps loop is Lake Lynn → 7100 Holly Springs Rd → Lake Lynn. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not add other stops. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (64 rows, Visit · 54, Today 21, 20 churches). Local preview at 1440 and 390: Macedonia on General and Churches (20), Sent unchecked; on Visit; hidden on Today, Healthcare, and Law.
 
 **Verification done:** Appended Rolesville Baptist Church (301 E Young St, Rolesville NC 27571) to `wake-forest-east` after Woodland Baptist. `industry` Church, `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` null, Instagram blank. Inserted 301 E Young St on that set's maps loop after Woodland and before the return to 4133 Lake Lynn Dr. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not remove or edit existing stops.
 
@@ -118,6 +118,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Thursday Oct 1, 2026 · /clients add Macedonia Baptist Church] — Code
+
+- **Did:** Added a new set `holly-springs-sw` (Holly Springs Rd / SW Raleigh-Cary) with Macedonia Baptist Church (7100 Holly Springs Rd, Raleigh NC 27606). `emailed` false, `outcome` empty, buyer 2, visit true, `ai_visible` false, Instagram `@mbc_nc`. Maps loop returns to Lake Lynn. Left `today` unchanged. Did not add other stops.
+- **Verified:** `npm run build` (15 routes) and `tests/clients-visit-list.test.mjs` passed (64 rows, Visit · 54, Today 21, 20 churches). Local preview at 1440 and 390: Macedonia on General / Churches / Visit, Sent unchecked; hidden on Today, Healthcare, and Law.
+- **Shipped:** PR #69. Merge and make live.
 
 ### [Tuesday Sep 29, 2026 · /clients add Hudson Memorial Presbyterian Church] — Code
 
