@@ -1227,6 +1227,33 @@
           "instagram": ""
         }
       ]
+    },
+    {
+      "id": "holly-springs-sw",
+      "name": "Holly Springs Rd / SW Raleigh-Cary",
+      "distance": "~14 mi",
+      "note": "Sunday for Macedonia (two services 9 & 10:45). Weekday office hours not published — call/email info@ first.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/7100+Holly+Springs+Rd%2C+Raleigh+NC+27606/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "Macedonia Baptist Church",
+          "address": "7100 Holly Springs Rd, Raleigh NC 27606",
+          "hours": "Sunday worship 9:00am & 10:45am (two services). MBC Kids at both; Middle School & Youth at 10:45 only. Weekday office hours not published.",
+          "typicallyClosed": "Weekday office hours not published — call/email info@ first. Sunday is worship.",
+          "phone": "919-851-3216",
+          "website": "https://mbcnc.org/",
+          "email": "info@mbcnc.org",
+          "note": "MotoCMS DIY website builder (moto- widgets / mt-content; not Church.co/Subsplash/Nucleus). SBC/NC Baptist, Raleigh Association; serves Raleigh/Cary on Holly Springs Rd near Cary Parkway. Size: ChurchPOP ACP AM worship 260 (2025), prior years ~175–180 (avg ~167). Publishes info@mbcnc.org on own site (also pastor@, xp@, families@, connections@). Trigger: two Sunday worship services (9:00 & 10:45) — second-service growth signal. Instagram @mbc_nc published on own site. Soft buyer note: has a Communications and Connections Coordinator on staff (buyer_score 2). ~13.7 mi drive from zip 27613 / Lake Lynn.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": false,
+          "competitors_shown": [],
+          "instagram": "@mbc_nc"
+        }
+      ]
     }
   ]
 }

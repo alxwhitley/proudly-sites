@@ -1,6 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Rolesville Baptist Church added to Louisburg Rd / Wake Forest east. Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Macedonia Baptist Church added as Holly Springs Rd / SW Raleigh-Cary. Always merge and make live.
+
+**Verification done:** Appended a new set `holly-springs-sw` (Holly Springs Rd / SW Raleigh-Cary) with one stop, Macedonia Baptist Church (7100 Holly Springs Rd, Raleigh NC 27606). `industry` Church, `emailed` false, `outcome` empty, buyer 2, visit true, `ai_visible` false, Instagram `@mbc_nc`. Maps loop is Lake Lynn → 7100 Holly Springs Rd → Lake Lynn. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not add other stops.
 
 **Verification done:** Appended Rolesville Baptist Church (301 E Young St, Rolesville NC 27571) to `wake-forest-east` after Woodland Baptist. `industry` Church, `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` null, Instagram blank. Inserted 301 E Young St on that set's maps loop after Woodland and before the return to 4133 Lake Lynn Dr. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not remove or edit existing stops.
 
