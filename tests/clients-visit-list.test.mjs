@@ -206,6 +206,8 @@ const KEEP = {
     ai_visible: false,
     competitors_shown: [],
   },
+  "The Gathering Community Church": { buyer_score: 2, visit: true },
+  "Grace Hill Church": { buyer_score: 3, visit: true },
 };
 
 const DROPPED = [
@@ -299,8 +301,8 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.match(html, /data-filter="law"/);
   assert.match(html, /4133 Lake Lynn Dr, Raleigh NC 27613/);
   assert.match(html, new RegExp(`data-row-count[^>]*>${stops.length}<`));
-  assert.equal(data.sets.length, 12);
-  assert.equal(stops.length, 64);
+  assert.equal(data.sets.length, 14);
+  assert.equal(stops.length, 66);
   assert.deepEqual(names.sort(), Object.keys(KEEP).sort());
   assert.equal(
     data.sets.some((set) => set.stops.length === 0),
@@ -385,8 +387,8 @@ test("clients page renders the pruned ADD lead table", async () => {
     assert.doesNotMatch(html, new RegExp(name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
   }
   const churches = stops.filter((stop) => stop.industry === "Church");
-  assert.equal(churches.length, 20);
-  assert.equal((html.match(/data-group="church"/g) ?? []).length, 20);
+  assert.equal(churches.length, 22);
+  assert.equal((html.match(/data-group="church"/g) ?? []).length, 22);
   assert.ok(churches.every((stop) => stop.emailed === false));
   assert.ok(churches.every((stop) => stop.outcome === ""));
   assert.equal(
@@ -616,9 +618,11 @@ test("clients page renders the pruned ADD lead table", async () => {
     "Woodland Baptist Church": "office@woodlandwakeforest.com",
     "Rolesville Baptist Church": "secretary@rolesvillebaptist.org",
     "Macedonia Baptist Church": "info@mbcnc.org",
+    "The Gathering Community Church": "hello@thegathering.cc",
+    "Grace Hill Church": "info@gracehillchatham.com",
   };
   const withEmail = stops.filter((stop) => stop.email);
-  assert.equal(withEmail.length, 55);
+  assert.equal(withEmail.length, 57);
   for (const [name, email] of Object.entries(publishedEmails)) {
     const stop = stops.find((item) => item.name === name);
     assert.equal(stop?.email, email, `${name} email`);
@@ -655,9 +659,9 @@ test("clients page renders the pruned ADD lead table", async () => {
   assert.doesNotMatch(html, />Rate</);
   assert.match(html, />Outcome</);
   const visitStops = stops.filter((stop) => stop.visit === true);
-  assert.equal(visitStops.length, 54);
-  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 54);
-  assert.match(html, /Visit · 54/);
+  assert.equal(visitStops.length, 56);
+  assert.equal((html.match(/data-visit="true"/g) ?? []).length, 56);
+  assert.match(html, /Visit · 56/);
   assert.equal((html.match(/data-visit="false"/g) ?? []).length, 10);
   const outcomeBadges = html.match(/class="outcome-badge is-no_reply"/g) ?? [];
   assert.equal(outcomeBadges.length, emailedTrue.length);
@@ -677,6 +681,7 @@ test("clients page renders the pruned ADD lead table", async () => {
       "Doctor Direct",
       "Freedom Church Raleigh",
       "Good Hope Baptist Church",
+      "Grace Hill Church",
       "Hormone Wellness MD",
       "John P. Paschal, Attorney at Law, PLLC",
       "Law Offices of Jeffrey G. Marsocci, PLLC",
@@ -689,6 +694,7 @@ test("clients page renders the pruned ADD lead table", async () => {
       "North Ridge Church",
       "Pediatric Possibilities",
       "Six Forks Animal Hospital",
+      "The Gathering Community Church",
       "The King's Chapel",
       "Waypoint Church",
     ]

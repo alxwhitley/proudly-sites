@@ -1,6 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: Macedonia Baptist Church added as Holly Springs Rd / SW Raleigh-Cary. Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: The Gathering Community Church (Fuquay-Varina) and Grace Hill Church (Pittsboro / Chatham) added as their own sets. Always merge and make live.
+
+**Verification done:** Appended two new sets, `fuquay-varina` and `pittsboro-chatham`, each with one church stop. The Gathering Community Church (501 Wake Chapel Rd, Fuquay-Varina NC 27526) is buyer 2, visit true, Instagram `@onegathering`. Grace Hill Church (705 NC Hwy 902, Pittsboro NC 27312) is buyer 3, visit true, Instagram `@ghc_chatham`. Both are `industry` Church, `emailed` false, `outcome` empty, `ai_visible` null. Each maps loop is Lake Lynn → stop → Lake Lynn. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged.
 
 **Verification done:** Appended a new set `holly-springs-sw` (Holly Springs Rd / SW Raleigh-Cary) with one stop, Macedonia Baptist Church (7100 Holly Springs Rd, Raleigh NC 27606). `industry` Church, `emailed` false, `outcome` empty, buyer 2, visit true, `ai_visible` false, Instagram `@mbc_nc`. Maps loop is Lake Lynn → 7100 Holly Springs Rd → Lake Lynn. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not add other stops. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (64 rows, Visit · 54, Today 21, 20 churches). Local preview at 1440 and 390: Macedonia on General and Churches (20), Sent unchecked; on Visit; hidden on Today, Healthcare, and Law.
 
@@ -118,6 +120,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Monday Oct 5, 2026 · /clients add Fuquay-Varina and Pittsboro churches] — Code
+
+- **Did:** Added set `fuquay-varina` (The Gathering Community Church, 501 Wake Chapel Rd) and set `pittsboro-chatham` (Grace Hill Church, 705 NC Hwy 902). Both `emailed` false, `outcome` empty, visit true. Gathering is buyer 2 with Instagram `@onegathering`; Grace Hill is buyer 3 with Instagram `@ghc_chatham`. Each maps loop returns to Lake Lynn. Left `today` unchanged.
+- **Verified:** `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (66 rows, Visit · 56, Today 21, 22 churches). Local preview at 1440 and 390: both names on General, Churches (22), and Visit, Sent unchecked; hidden on Today, Healthcare, and Law. Production check follows merge.
+- **Shipped:** Merge and make live.
 
 ### [Thursday Oct 1, 2026 · /clients add Macedonia Baptist Church] — Code
 
