@@ -1254,6 +1254,60 @@
           "instagram": "@mbc_nc"
         }
       ]
+    },
+    {
+      "id": "fuquay-varina",
+      "name": "Fuquay-Varina",
+      "distance": "~28 mi",
+      "note": "Church. Sunday for The Gathering (9:45 & 11:15). No weekday office hours or phone on site — email hello@ first.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/501+Wake+Chapel+Rd%2C+Fuquay-Varina+NC+27526/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "The Gathering Community Church",
+          "address": "501 Wake Chapel Rd, Fuquay-Varina NC 27526",
+          "hours": "Sunday worship 9:45am & 11:15am in person (site FAQ still lists three services incl. 8:30am); online 9:45am. Wednesday youth (ONE) 6:30pm.",
+          "typicallyClosed": "Weekday office hours not published — email hello@ first. Sunday is worship.",
+          "phone": "919-291-9913",
+          "website": "https://www.thegathering.cc/",
+          "email": "hello@thegathering.cc",
+          "note": "WordPress (Divi theme) DIY and stale: footer still © 2021, and the site contradicts itself on service times (homepage/Times page say 9:45 & 11:15; FAQ says three services at 8:30, 9:45 & 11:15). SBC/NC Baptist, Little River Association; organized 2012. Size: ChurchPOP ACP AM worship 228 (2024), up from 150 (2021); 2025 not reported. Publishes hello@thegathering.cc on own site (also joe@ for Lead Pastor Joe Monk, pray@). Trigger: multiple Sunday services (two in person, FAQ lists three), a second-service growth signal. Small staff (Lead Pastor, Children's Director, Student Pastor); no communications staff. Buyer 2: size is from the 2024 ACP only (2025 unreported), and service times are unclear. Phone is from NC Baptist ChurchPOP (not published on site). Instagram @onegathering is published in the site's social links. ~27.5 mi drive from zip 27613 / Lake Lynn.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 2,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@onegathering"
+        }
+      ]
+    },
+    {
+      "id": "pittsboro-chatham",
+      "name": "Pittsboro / Chatham",
+      "distance": "~37 mi",
+      "note": "Church. Sunday for Grace Hill (three services 8:30, 10 & 11:30). Weekday office hours not published — call/email info@ first.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/705+NC+Hwy+902%2C+Pittsboro+NC+27312/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "Grace Hill Church",
+          "address": "705 NC Hwy 902, Pittsboro NC 27312",
+          "hours": "Sunday worship 8:30am, 10:00am & 11:30am (three services). Weekday office hours not published.",
+          "typicallyClosed": "Weekday office hours not published — call/email info@ first. Sunday is worship.",
+          "phone": "919-704-8978",
+          "website": "https://gracehillchatham.com/",
+          "email": "info@gracehillchatham.com",
+          "note": "WordPress.com DIY (Lodestar theme). The homepage still shows unedited 'Panel 3 Placeholder / Panel 4 Placeholder' slider blocks. SBC/NC Baptist, Sandy Creek Association; elder-led church organized 2017, Pittsboro/Chatham County. Size: ChurchPOP ACP AM worship 249 (2025), up from 202 (2024), 175 (2023), 115 (2022) and 90 (2021). Publishes info@gracehillchatham.com on own site (also lee@ and spencer@ pastor emails). Trigger: three Sunday worship services (8:30, 10 & 11:30) after rapid growth, so it's outgrowing its room and its site. No communications staff listed (two staff pastors: Lee Callicutt, Preaching & Teaching; Spencer Andrews, Discipleship). Instagram @ghc_chatham is published on own site. ~36.9 mi drive from zip 27613 / Lake Lynn.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@ghc_chatham"
+        }
+      ]
     }
   ]
 }
