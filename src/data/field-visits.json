@@ -1308,6 +1308,33 @@
           "instagram": "@ghc_chatham"
         }
       ]
+    },
+    {
+      "id": "rougemont-north-durham",
+      "name": "Rougemont / North Durham County",
+      "distance": "~33 mi",
+      "note": "Church. Sunday for Red Mountain (two services 8:45 & 11:00). Weekday office hours not published — call 919-477-3657 or email pastordave@ first.",
+      "mapsUrl": "https://www.google.com/maps/dir/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613/1322+Red+Mountain+Rd%2C+Rougemont+NC+27572/4133+Lake+Lynn+Dr%2C+Raleigh%2C+NC+27613",
+      "stops": [
+        {
+          "name": "Red Mountain Baptist Church",
+          "address": "1322 Red Mountain Rd, Rougemont NC 27572",
+          "hours": "Sunday worship 8:45am & 11:00am (two identical services), Sunday School 10:00am; Wednesday Bible study 7:00pm. Weekday office hours not published.",
+          "typicallyClosed": "Weekday office hours not published — call/email first. Sunday is worship.",
+          "phone": "919-477-3657",
+          "website": "https://redmountainbaptist.com/",
+          "email": "pastordave@redmountainbaptist.com",
+          "note": "DIY WordPress on the dated ChurchThemes.com 'Saved' theme (v2.4, footer 'Powered by ChurchThemes.com'; logo/assets from 2020); contact page is form-only but the pastor's email is published in the site footer and staff page. Traditional NC Baptist church (Triangle West Baptist Network, founded 1881), Rougemont / north Durham County. Size: ChurchPOP ACP AM worship 213 (2025), up from 194 (2024), 157 (2023), 135 (2022) and 108 (2021). Trigger: two identical Sunday services (8:45 & 11:00) after steady growth, plus an active bus fund. No communications staff listed (Lead Pastor Dave Pryor since 2004, Pastoral Intern Lance Ellis, Youth Pastor Cameron Lewis). Instagram @red_mountain_baptist is linked on own site. ~33 mi drive from zip 27613 / Lake Lynn.",
+          "industry": "Church",
+          "emailed": false,
+          "buyer_score": 3,
+          "visit": true,
+          "outcome": "",
+          "ai_visible": null,
+          "competitors_shown": [],
+          "instagram": "@red_mountain_baptist"
+        }
+      ]
     }
   ]
 }

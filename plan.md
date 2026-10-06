@@ -1,6 +1,8 @@
 ## Now
 
-**Current Priority:** `/clients` is live. Latest: The Gathering Community Church (Fuquay-Varina) and Grace Hill Church (Pittsboro / Chatham) added as their own sets. Always merge and make live.
+**Current Priority:** `/clients` is live. Latest: Red Mountain Baptist Church (Rougemont / North Durham County) added as its own set. Always merge and make live.
+
+**Verification done:** Appended a new set `rougemont-north-durham` (Rougemont / North Durham County, ~33 mi) with one stop, Red Mountain Baptist Church (1322 Red Mountain Rd, Rougemont NC 27572). `industry` Church, `emailed` false, `outcome` empty, buyer 3, visit true, `ai_visible` null, Instagram `@red_mountain_baptist`. Maps loop is Lake Lynn → 1322 Red Mountain Rd → Lake Lynn. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged. Did not edit other sets or stops. `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (67 rows, Visit · 57, Today 21, 23 churches). Local preview at 1440 and 390: Red Mountain on General and Churches (23), Sent unchecked; on Visit; hidden on Today (still 21). Production check follows merge.
 
 **Verification done:** Appended two new sets, `fuquay-varina` and `pittsboro-chatham`, each with one church stop. The Gathering Community Church (501 Wake Chapel Rd, Fuquay-Varina NC 27526) is buyer 2, visit true, Instagram `@onegathering`. Grace Hill Church (705 NC Hwy 902, Pittsboro NC 27312) is buyer 3, visit true, Instagram `@ghc_chatham`. Both are `industry` Church, `emailed` false, `outcome` empty, `ai_visible` null. Each maps loop is Lake Lynn → stop → Lake Lynn. Left `today` (label, note, `mapsUrl`, and `stopNames`) unchanged.
 
@@ -120,6 +122,12 @@ Handoff from the 2026-08-06 overnight Services + Work run (branch `overnight/ser
 **Build-gate failures / reverted pages:** none. Every page passed `npm run build`; nothing was reverted.
 
 ## Recent
+
+### [Tuesday Oct 6, 2026 · /clients add Red Mountain Baptist Church] — Code
+
+- **Did:** Added set `rougemont-north-durham` (Red Mountain Baptist Church, 1322 Red Mountain Rd, Rougemont NC 27572). `emailed` false, `outcome` empty, buyer 3, visit true, Instagram `@red_mountain_baptist`. Maps loop returns to Lake Lynn. Left `today` unchanged.
+- **Verified:** `npm run build` (15 pages) and `tests/clients-visit-list.test.mjs` passed (67 rows, Visit · 57, Today 21, 23 churches). Local preview at 1440 and 390: name on General, Churches (23), and Visit, Sent unchecked; hidden on Today (21). Production check follows merge.
+- **Shipped:** PR #71. Merge and make live.
 
 ### [Monday Oct 5, 2026 · /clients add Fuquay-Varina and Pittsboro churches] — Code
 
