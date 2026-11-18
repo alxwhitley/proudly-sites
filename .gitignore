@@ -71,3 +71,4 @@ src/plugins/impeccable-live.client.ts
 # impeccable-live-ignore-end
 .vercel
 .env*
+.claude/settings.local.json
